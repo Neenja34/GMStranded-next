@@ -42,7 +42,7 @@ Rain.m_tblSounds = {
 			"whm/thunder_close02.mp3",
 			"whm/thunder_close03.mp3",
 			"whm/thunder_close04.mp3",
-		}, 
+		},
 		[2] = {	--Kinda Close
 			"whm/thunder_1.mp3",
 			"whm/thunder_2.mp3",
@@ -50,11 +50,11 @@ Rain.m_tblSounds = {
 			"whm/thunder_distant01.mp3",
 			"whm/thunder_distant02.mp3",
 			"whm/thunder_distant03.mp3",
-		}, 
+		},
 		[3] = {	--Distant
 			"whm/thunder_far_away_1.mp3",
 			"whm/thunder_far_away_2.mp3",
-		}, 
+		},
 	},
 	RainLoop = "whm/crucial_surfacerain_med_loop.wav",
 }
@@ -67,10 +67,10 @@ function Rain:Start( intDuration, intTimeOffset )
 	self.m_intIndoorFadeStart = nil
 
 	--these were random, but lets hard code them so we don't have to network it lol
-	self.m_intFadeInRainTime = 25 --math.random( self.m_tblRainTime.min, self.m_tblRainTime.max )
-	self.m_intFadeOutRainTime = 30 --math.random( self.m_tblRainTime.min, self.m_tblRainTime.max )
-	self.m_intFadeInTime = 25 +self.m_intFadeInRainTime --math.random( self.m_tblFadeInTime.min, self.m_tblFadeInTime.max ) +self.m_intFadeInRainTime
-	self.m_intFadeOutTime = 30 +self.m_intFadeOutRainTime --math.random( self.m_tblFadeOutTime.min, self.m_tblFadeOutTime.max ) +self.m_intFadeOutRainTime
+	self.m_intFadeInRainTime = 25
+	self.m_intFadeOutRainTime = 30
+	self.m_intFadeInTime = 25 + self.m_intFadeInRainTime
+	self.m_intFadeOutTime = 30 + self.m_intFadeOutRainTime
 
 	self.m_intDurationToFadeOut = intDuration -self.m_intFadeOutTime
 
@@ -102,13 +102,13 @@ function Rain:Indoors()
 
 	for _, vec in pairs( self.m_tblTraceVectors ) do
 		tr = util.TraceLine{
-			start = plyPos +vec, 
-			endpos = plyPos +vec +(vector_up *1e9),
+			start = plyPos + vec, 
+			endpos = plyPos + vec + (vector_up * 1e9),
 			filter = LocalPlayer()
 		}
 
 		if !tr.HitSky then
-			bIndoors = bIndoors +1
+			bIndoors = bIndoors + 1
 		end
 	end
 
@@ -116,19 +116,18 @@ function Rain:Indoors()
 end
 
 function Rain:Think()
-	local time = CurTime() +self.m_intStartOffset
 
-	if self.m_bFadingOut or time > self.m_intStartTime +self.m_intDurationToFadeOut then
+	local time = CurTime() + self.m_intStartOffset
+
+	if self.m_bFadingOut or time > self.m_intStartTime + self.m_intDurationToFadeOut then
 		if !self.m_intStopTime then
 			self:FadeOut()
 		end
-		
 		self:UpdateFadeOut()
-	elseif time <= self.m_intStartTime +self.m_intFadeInTime then
+	elseif time <= self.m_intStartTime + self.m_intFadeInTime then
 		if !self.m_bFadingIn then
 			self:FadeIn()
 		end
-		
 		self:UpdateFadeIn()
 	else
 		self.m_bFadingIn = false
@@ -138,23 +137,28 @@ function Rain:Think()
 		self:UpdateRainSounds( 1 )
 		self:PlayThunderFX()
 	end
+
 end
 
 function Rain:FadeIn()
+
 	self.m_bFadingIn = true
 
 	if self.m_intStartOffset > self.m_intFadeInRainTime then
 		self.m_intFadeInOffset = self.m_intStartOffset -self.m_intFadeInRainTime
 	end
+
 end
 
 function Rain:FadeOut()
+
 	self.m_bFadingOut = true
 	self.m_intStopTime = CurTime()
 
 	if self.m_intStartOffset > self.m_intDurationToFadeOut then
 		self.m_intFadeOffset = self.m_intStartOffset -self.m_intDurationToFadeOut
 	end
+
 end
 
 function Rain:UpdateFadeIn()

@@ -169,18 +169,18 @@ function Rain:UpdateFadeIn()
 		self.m_intStartRainFadeTime = CurTime()
 	end
 
-	local rainScaler = (time -self.m_intStartRainFadeTime) /self.m_intFadeInRainTime
+	local rainScaler = (time -self.m_intStartRainFadeTime) / self.m_intFadeInRainTime
 	self:UpdateRainFX( Lerp(rainScaler, 0, 1) )
 	self:UpdateRainSounds( Lerp(rainScaler, 0, 1) )
 end
 
 function Rain:UpdateFadeOut()
-	local time = CurTime() +(self.m_intFadeOffset or 0)
+	local time = CurTime() + (self.m_intFadeOffset or 0)
 
 	self:PlayThunderFX()
 
-	if time < self.m_intStopTime +self.m_intFadeOutRainTime then --During rain particle fade out
-		local rainScaler = (time -self.m_intStopTime) /self.m_intFadeOutRainTime
+	if time < self.m_intStopTime + self.m_intFadeOutRainTime then --During rain particle fade out
+		local rainScaler = (time -self.m_intStopTime) / self.m_intFadeOutRainTime
 		self:UpdateRainFX( Lerp(rainScaler, 1, 0) )
 		self:UpdateRainSounds( Lerp(rainScaler, 1, 0) )
 
@@ -191,7 +191,7 @@ function Rain:UpdateFadeOut()
 		self.m_pRainSound:FadeOut( 1 )
 	end
 
-	if time > self.m_intStopTime +self.m_intFadeOutTime then
+	if time > self.m_intStopTime + self.m_intFadeOutTime then
 		 WHM:ForceStop( self.ID )
 	end
 end
@@ -199,7 +199,7 @@ end
 --FX
 function Rain:PlayThunderFX()
 	if !self.m_intLastThunderTime then
-		self.m_intLastThunderTime = math.random( self.m_tblThunderTime.min, self.m_tblThunderTime.max ) +CurTime()
+		self.m_intLastThunderTime = math.random( self.m_tblThunderTime.min, self.m_tblThunderTime.max ) + CurTime()
 		return
 	end
 
@@ -210,7 +210,7 @@ function Rain:PlayThunderFX()
 			return
 		end
 
-		local pos = LocalPlayer():GetPos() +Vector( math.random(-100, 100), math.random(-100, 100), 50 )
+		local pos = LocalPlayer():GetPos() + Vector( math.random(-100, 100), math.random(-100, 100), 50 )
 		local volume = self.m_intRainScaler <= 0.3 and math.Rand( 0.6, 0.8 ) or math.Rand( 0.8, 0.9 )
 		if self.m_bFadingIn then --during fadein
 			sound.Play( table.Random(self.m_tblSounds.Thunder[3]), pos, 120, math.random(70, 120), volume )
@@ -229,14 +229,14 @@ function Rain:UpdateRainFX( intRainScaler )
 		self.m_intLastPartUpdate = CurTime()
 	end
 
-	if CurTime() < self.m_intLastPartUpdate +self.m_intPartUpdateRate then
+	if CurTime() < self.m_intLastPartUpdate + self.m_intPartUpdateRate then
 		return
 	else
 		self.m_intLastPartUpdate = nil
 	end
 
 	--rain stuff
-	self:AddRainParts( math.Round(self.m_intMaxRainParts *intRainScaler))
+	self:AddRainParts( math.Round( self.m_intMaxRainParts * intRainScaler ) )
 	self.m_intRainScaler = intRainScaler
 end
 
@@ -252,7 +252,7 @@ function Rain:UpdateRainSounds( intScaler )
 			self.m_intOutdoorFadeStart = nil
 		end
 
-		local fadeScaler = math.min( (CurTime() -self.m_intIndoorFadeStart) /self.m_intIndoorFadeTime, 1 )
+		local fadeScaler = math.min( (CurTime() -self.m_intIndoorFadeStart) / self.m_intIndoorFadeTime, 1 )
 		self.m_intCurVolume = Lerp( fadeScaler, self.m_intCurVolume, self.m_intVolumeInside )
 		self.m_intCurPitch = Lerp( fadeScaler, self.m_intCurPitch, self.m_intPitchInside )
 	else
@@ -261,17 +261,17 @@ function Rain:UpdateRainSounds( intScaler )
 			self.m_intIndoorFadeStart = nil
 		end
 
-		local fadeScaler = math.min( (CurTime() -self.m_intOutdoorFadeStart) /self.m_intIndoorFadeTime, 1 )
+		local fadeScaler = math.min( (CurTime() -self.m_intOutdoorFadeStart) / self.m_intIndoorFadeTime, 1 )
 		self.m_intCurVolume = Lerp( fadeScaler, self.m_intCurVolume, self.m_intVolumeOutside )
 		self.m_intCurPitch = Lerp( fadeScaler, self.m_intCurPitch, self.m_intPitchOutside )
 	end
 
-	self.m_intCurVolume = self.m_intCurVolume *intScaler
+	self.m_intCurVolume = self.m_intCurVolume * intScaler
 
 	if !self.m_pRainSound:IsPlaying() then
 		self.m_pRainSound:PlayEx( 0, 100 )
 	else
-		self.m_pRainSound:ChangeVolume( self.m_intCurVolume *GetConVarNumber("sgs_rain_volume"), 0 )
+		self.m_pRainSound:ChangeVolume( self.m_intCurVolume * GetConVarNumber( "sgs_rain_volume" ), 0 )
 		self.m_pRainSound:ChangePitch( self.m_intCurPitch, 0 )
 	end
 end
