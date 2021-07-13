@@ -62,7 +62,7 @@ end
 function ENT:Use( ply )
 
 	if CurTime() < ply.lastuse + 1 then return end
-	
+
 	if self.enabled == false then 
 		ply:SendMessage("This cache is disabled!", 60, Color(255, 255, 0, 255))
 		ply.lastuse = CurTime()
@@ -72,14 +72,14 @@ function ENT:Use( ply )
 	net.Start("UpdateCacheTable")
 		net.WriteTable( self.POwner.pbosscontents )
 	net.Send( ply )
-	
+
 	ply.openpcache = self
-	
+
 	net.Start("sgs_openrcache")
 		net.WriteString( "pb" )
 		net.WriteInt( self.max, 16)
 	net.Send( ply )
-	
+
 	ply.lastuse = CurTime()
 
 end
