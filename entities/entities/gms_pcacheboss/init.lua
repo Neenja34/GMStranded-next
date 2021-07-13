@@ -77,7 +77,7 @@ function ENT:Use( ply )
 
 	net.Start("sgs_openrcache")
 		net.WriteString( "pb" )
-		net.WriteInt( self.max, 16)
+		net.WriteInt( self.max, 16 )
 	net.Send( ply )
 
 	ply.lastuse = CurTime()
