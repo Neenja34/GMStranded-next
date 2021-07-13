@@ -13,24 +13,6 @@ local outlineThickness = CreateClientConVar( "sgs_crosshair_outline_thickness", 
 CreateClientConVar( "sgs_crosshair_color", "255,255,255,255", true, false, "" )
 CreateClientConVar( "sgs_crosshair_outline_color", "0,0,0,255", true, false, "" )
 
---[[ function GetCrosshairColor( args )
-
-	if !#args == 4 then return end
-	if tonumber( args[ 1 ] ) == nil then return end
-	if tonumber( args[ 2 ] ) == nil then return end
-	if tonumber( args[ 3 ] ) == nil then return end
-	if tonumber( args[ 4 ] ) == nil then return end
-
-	chcolor = {}
-	chcolor.r = tonumber( args[ 1 ] )
-	chcolor.g = tonumber( args[ 2 ] )
-	chcolor.b = tonumber( args[ 3 ] )
-	chcolor.a = tonumber( args[ 4 ] )
-
-end
-concommand.Add("sgs_getcrosshaircolor", SGS_GetCrosshairColor)
- ]]
-
 function SGS_DrawCrosshair()
 
 	if !LocalPlayer():Alive() then return end
@@ -90,6 +72,192 @@ function SGS_DrawCrosshair()
 end
 hook.Add( "HUDPaint", "SGS_DrawCrosshair", SGS_DrawCrosshair )
 
+/*---------------------------------
+----------New Scoreboard-----------
+---------------------------------*/
+local PANEL = {}
+function PANEL:Init()
+
+	self:SetPos((ScrW() / 2) - 400, ScrH() * 0.1)
+	self:SetSize(815, ScrH() * 0.8)
+	self:SetVisible(false)
+	self:DrawFrame()
+
+end
+
+function PANEL:Paint( w, h )
+
+	draw.SimpleTextOutlined( " |G4P| Stranded (Project Gull)", "ScoreboardDefaultTitle", 8, 0, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT, 2, Color(0,0,0,255))
+
+end
+
+function PANEL:DrawFrame()
+
+	if SGS.ScoreBoardPanel then
+		SGS.ScoreBoardPanel:Remove()
+	end
+
+	SGS.ScoreBoardPanel = vgui.Create("DPanelList", self)
+	SGS.ScoreBoardPanel:SetPos(8,40)
+	SGS.ScoreBoardPanel:SetSize(800, ScrH() * 0.7)
+	SGS.ScoreBoardPanel:EnableVerticalScrollbar( true )
+
+	for k, v in pairs( team.GetAllTeams() ) do
+		if #team.GetPlayers( k ) <= 0 then continue end
+		if k == 1002 then continue end
+
+		local teambanner = vgui.Create( "DPanel" )
+		teambanner:SetSize( 782, 25 )
+		teambanner.Paint = function()
+			surface.SetFont( "ScoreboardDefault" )
+			surface.SetTextColor( Color(0, 0, 0, 255) )
+			surface.SetDrawColor( team.GetColor( k ) )
+			surface.DrawRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
+			surface.SetDrawColor(Color(0,0,0,255))
+			surface.DrawOutlinedRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
+			local tw, th = surface.GetTextSize( team.GetName( k ) )
+			surface.SetTextPos( 400 - (tw / 2), 12 - (th / 2) )
+			surface.DrawText( team.GetName( k ) )
+		end
+		SGS.ScoreBoardPanel:AddItem( teambanner )
+
+		local titlebarbanner = vgui.Create( "DPanel" )
+		titlebarbanner:SetSize( 782, 20 )
+		titlebarbanner.Paint = function()
+			surface.SetFont( "SGS_RCacheMenuText" )
+			surface.SetTextColor( Color(0, 0, 0, 255) )
+			surface.SetDrawColor( Color(255, 255, 255, 255) )
+			surface.DrawRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
+			surface.SetDrawColor(Color(0,0,0,255))
+			surface.DrawOutlinedRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
+			local _, th = surface.GetTextSize( "I" )
+			surface.SetTextPos( 5, 10 - (th / 2) )
+			surface.DrawText("Name:")
+			surface.SetTextPos( 400, 10 - (th / 2) )
+			surface.DrawText("Level:")
+			surface.SetTextPos( 510, 10 - (th / 2) )
+			surface.DrawText("Voice Channel:")
+			surface.SetTextPos( 640, 10 - (th / 2) )
+			surface.DrawText("Ping:")
+			surface.SetTextPos( 685, 10 - (th / 2) )
+			surface.DrawText("Mute:")
+			surface.SetTextPos( 720, 10 - (th / 2) )
+			surface.DrawText("Gag:")
+			surface.SetTextPos( 760, 10 - (th / 2) )
+			surface.DrawText("Stats:")
+		end
+		SGS.ScoreBoardPanel:AddItem( titlebarbanner )
+
+		for _, ply in pairs(player.GetAll()) do
+			if ply then
+				if ply:Team() == k then
+					local playerbanner = vgui.Create( "DPanel" )
+					playerbanner:SetSize( 782, 20 )
+					local pname = ply:Nick()
+					local pslvl = ply:GetNWString("survival", "0")
+					if ply:IsUserGroup("usera") then pslvl = "1" end
+					local pvc = ply:GetNWString("voicechannel", "A")
+					if ply:IsUserGroup("usera") then pvc = "A" end
+					local pping = ply:Ping()
+					playerbanner.Paint = function()
+						surface.SetFont( "SGS_RCacheMenuText" )
+						surface.SetTextColor( Color(0, 0, 0, 255) )
+						surface.SetDrawColor( Color(255, 255, 255, 255) )
+						surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+						surface.SetDrawColor(Color(0,0,0,255))
+						surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+						local tw, th = surface.GetTextSize( pname )
+						surface.SetTextPos( 5, 10 - (th / 2) )
+						if ply:GetNWBool( "afk", false ) then
+							surface.SetTextColor( Color(255, 0, 0, 255) )
+							surface.DrawText( "*AFK*" )
+							surface.SetTextColor( Color(0, 0, 0, 255) )
+							surface.SetTextPos( 45, 10 - (th / 2) )
+							surface.DrawText( pname )
+						else
+							surface.DrawText( pname )
+						end
+						surface.SetTextPos( 410, 10 - (th / 2) )
+						surface.DrawText( pslvl )
+						surface.SetTextPos( 550, 10 - (th / 2) )
+						surface.DrawText( pvc )
+						surface.SetTextPos( 648, 10 - (th / 2) )
+						surface.DrawText( pping )
+					end
+
+					gagbutton = vgui.Create("DImageButton", playerbanner)
+					gagbutton:SetSize( 16, 16 )
+					gagbutton:SetPos( 725, 2 )
+					if ply:IsMuted() then
+						gagbutton:SetImage( "icon32/muted.png" )
+					else
+						gagbutton:SetImage( "icon32/unmuted.png" )
+					end
+					gagbutton.DoClick = function() ply:SetMuted( !ply:IsMuted() ) self:DrawFrame() end
+
+					mutebutton = vgui.Create("DImageButton", playerbanner)
+					mutebutton:SetSize( 16, 16 )
+					mutebutton:SetPos( 690, 2 )
+					if ply.ismuted then
+						mutebutton:SetImage( "icon32/muted.png" )
+					else
+						mutebutton:SetImage( "icon32/unmuted.png" )
+					end
+					mutebutton.DoClick = function()
+						if ply.ismuted then
+							ply.ismuted = false
+						else
+							ply.ismuted = true
+						end
+						self:DrawFrame()
+					end
+
+					statsbutton = vgui.Create("DImageButton", playerbanner)
+					statsbutton:SetSize( 16, 16 )
+					statsbutton:SetPos( 765, 2 )
+					statsbutton:SetImage( "icon16/table_edit.png" )
+					statsbutton.DoClick = function() RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() ) end
+
+					SGS.ScoreBoardPanel:AddItem( playerbanner )
+				end
+			end
+		end
+
+		local blankbar = vgui.Create( "DPanel" )
+		blankbar:SetSize( 782, 12 )
+		blankbar.Paint = function()
+			surface.SetDrawColor( Color(255, 255, 255, 0) )
+			surface.DrawRect( 0, 0, blankbar:GetWide(), blankbar:GetTall() )
+		end
+		SGS.ScoreBoardPanel:AddItem( blankbar )
+	end
+
+end
+vgui.Register("sgs_newscoreboard", PANEL, "EditablePanel")
+
+function GM:ScoreboardShow()
+
+	if ( !IsValid(SGS.ScoreBoard) ) then
+		SGS.ScoreBoard = vgui.Create("sgs_newscoreboard")
+	end
+
+	if ( IsValid(SGS.ScoreBoard) ) then
+		SGS.ScoreBoard:Show()
+		SGS.ScoreBoard:DrawFrame()
+		SGS.ScoreBoard:MakePopup()
+		SGS.ScoreBoard:SetKeyboardInputEnabled( false )
+	end
+
+end
+
+function GM:ScoreboardHide()
+
+	if ( IsValid(SGS.ScoreBoard) ) then
+		SGS.ScoreBoard:Hide()
+	end
+
+end
+
 /*--------------------------------
 ---------HotBar Panels------------
 --------------------------------*/
@@ -136,7 +304,10 @@ function PANEL:Paint()
 end
 
 function PANEL:DrawOthers()
-	if IsValid( SGS.HotBarContainer ) then SGS.HotBarContainer:Remove() end
+
+	if IsValid( SGS.HotBarContainer ) then
+		SGS.HotBarContainer:Remove()
+	end
 
 	SGS.HotBarContainer = vgui.Create( "DIconLayout", self)
 	SGS.HotBarContainer:SetSize( 688, 48 )
@@ -146,15 +317,23 @@ function PANEL:DrawOthers()
 
 	local ugroup = "guest"
 
-	if LocalPlayer():IsMember() then ugroup = "member" end
-	if LocalPlayer():IsDonator() then ugroup = "donator" end
+	if LocalPlayer():IsMember() then
+		ugroup = "member"
+	end
+
+	if LocalPlayer():IsDonator() then
+		ugroup = "donator"
+	end
 
 	for i = 1, 10 do
+
 		local HotBarSlot = vgui.Create( "sgs_HotBarslot" )
 		HotBarSlot:SetSize( 48, 48 )
 		HotBarSlot.slotID = i
 		SGS.HotBarContainer:Add( HotBarSlot )
+
 		HotBarSlot:Receiver( "HotbarDrop", function( pnl, tbl, dropped, menu, x, y )
+
 			if !dropped then return end
 			surface.PlaySound( "ui/buttonclickrelease.wav" )
 			if tbl[1].dropType == "tool" then
@@ -162,14 +341,19 @@ function PANEL:DrawOthers()
 			elseif tbl[1].dropType == "spell" then
 				SGS_AssignHotBarSpell( pnl.slotID, tbl[1].spell, true )
 			end
+
 		end )
+
 		HotBarSlot:Receiver( "resourceDrop", function( pnl, tbl, dropped, menu, x, y )
+
 			if !dropped then return end
 			surface.PlaySound( "ui/buttonclickrelease.wav" )
 			if tbl[1].dropType == "consumable" then
 				SGS_AssignHotBarConsumable( pnl.slotID, tbl[1].res, true )
 			end
+
 		end )
+
 		if SGS.HotBarcontents[i] then
 			if SGS_HotBarReturnType( SGS.HotBarcontents[i] ) == "tool" then
 				HotBarSlot:SetUpSlot( i, ugroup, "tool" )
@@ -211,6 +395,7 @@ function PANEL:DrawOthers()
 		end
 		HotBarSlot:SetUpSlot( i, ugroup, "none" )
 	end
+
 end
 vgui.Register("sgs_HotBar", PANEL, "EditablePanel")
 
@@ -336,6 +521,7 @@ surface.CreateFont( "DeathNotice1",
 	weight		= 800,
 	shadow		= true
 })
+
 surface.CreateFont( "DeathNotice2",
 {
 	font		= "Helvetica",
@@ -343,6 +529,7 @@ surface.CreateFont( "DeathNotice2",
 	weight		= 800,
 	shadow		= true
 })
+
 surface.CreateFont( "DeathNotice3",
 {
 	font		= "Helvetica",
@@ -350,6 +537,7 @@ surface.CreateFont( "DeathNotice3",
 	weight		= 800,
 	shadow		= true
 })
+
 surface.CreateFont( "DeathNotice4",
 {
 	font		= "Helvetica",
@@ -357,6 +545,7 @@ surface.CreateFont( "DeathNotice4",
 	weight		= 800,
 	shadow		= true
 })
+
 surface.CreateFont( "DeathNotice5",
 {
 	font		= "Helvetica",
@@ -364,6 +553,7 @@ surface.CreateFont( "DeathNotice5",
 	weight		= 800,
 	shadow		= false
 })
+
 surface.CreateFont( "DeathNotice6",
 {
 	font		= "Tahoma",
@@ -371,7 +561,6 @@ surface.CreateFont( "DeathNotice6",
 	weight		= 800,
 	shadow		= false
 })
-
 
 --DEATH HUD
 function SGS_DeathHUD()
@@ -396,6 +585,7 @@ hook.Add( "HUDPaint", "SGS_DeathHUD", SGS_DeathHUD )
 
 --DEATH HUD
 function SGS_DeathHUD2()
+
 	if LocalPlayer():Alive() then return end
 	if LocalPlayer():GetNWBool( "displaydeathnotice", false ) then return end
 	draw.DrawText( "You Are Near Death!", "DeathNotice5", ScrW() / 2 - 2, 148, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
@@ -414,10 +604,6 @@ function SGS_DeathHUD2()
 end
 hook.Add( "HUDPaint", "SGS_DeathHUD2", SGS_DeathHUD2 )
 
-
-
-
-
 surface.CreateFont( "UnlockFont1",
 {
 	font		= "Tahoma",
@@ -425,6 +611,7 @@ surface.CreateFont( "UnlockFont1",
 	weight		= 800,
 	shadow		= false
 })
+
 surface.CreateFont( "UnlockFont2",
 {
 	font		= "Tahoma",
@@ -450,8 +637,8 @@ function SGS_UnlockHUD()
 end
 hook.Add( "HUDPaint", "SGS_UnlockHUD", SGS_UnlockHUD )
 
-
 function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, roughness, bClockwise )
+
 	local triarc = {}
 	local deg2rad = math.pi / 180
 
@@ -468,12 +655,14 @@ function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, rough
 		endang = temp
 		temp = nil
 	end
+
 	-- Define step
 	local roughness = math.max( roughness or 1, 1 )
 	local step = roughness
 	if bClockwise then
 		step = math.abs( roughness ) * -1
 	end
+
 	-- Create the inner circle's points.
 	local inner = {}
 	local r = radius - thickness
@@ -484,6 +673,7 @@ function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, rough
 			y = cy + (math.sin(rad) * r)
 		} )
 	end
+
 	-- Create the outer circle's points.
 	local outer = {}
 	for deg = startang, endang, step do
@@ -493,6 +683,7 @@ function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, rough
 			y = cy + (math.sin(rad) * radius)
 		} )
 	end
+
 	-- Triangulate the points.
 	for tri = 1, #inner * 2 do -- twice as many triangles as there are degrees.
 		local p1,p2,p3
@@ -507,6 +698,7 @@ function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, rough
 	end
 	-- Return a table of triangles to draw.
 	return triarc
+
 end
 
 function surface.DrawArc( arc )
@@ -567,37 +759,36 @@ hook.Add( "PostRenderVGUI", "Circles", function()
 	if CurTime() >= SGS.hudtimer[ "etime" ] then
 		SGS.hudtimer[ "display" ] = false
 	end
+
 end )
 
-
---surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
 surface.CreateFont( "SGS_NEWHUD1", {
 	font	=	"tahoma",
 	size	=	12
 	}
 )
---surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
+
 surface.CreateFont( "SGS_NEWHUD5", {
 	font	=	"tahoma",
 	size	=	12,
 	weight	=	800
 	}
 )
---surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
+
 surface.CreateFont( "SGS_NEWHUD2", {
 	font	=	"tahoma",
 	size	=	14,
 	weight	=	800
 	}
 )
---surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
+
 surface.CreateFont( "SGS_NEWHUD3", {
 	font	=	"tahoma",
 	size	=	17,
 	weight	=	800
 	}
 )
---surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
+
 surface.CreateFont( "SGS_NEWHUD4", {
 	font	=	"tahoma",
 	size	=	17,
@@ -606,8 +797,19 @@ surface.CreateFont( "SGS_NEWHUD4", {
 )
 
 function SGS_GetTotalSurvivalLevels()
-	local total = SGS.levels[ "woodcutting" ] + SGS.levels[ "mining" ] + SGS.levels[ "construction" ] + SGS.levels[ "smithing" ] + SGS.levels[ "farming" ] + SGS.levels[ "fishing" ] + SGS.levels[ "cooking" ] + SGS.levels[ "combat" ] + SGS.levels[ "alchemy" ] + SGS.levels[ "arcane" ] - 10
+
+	local total = SGS.levels[ "woodcutting" ] +
+	SGS.levels[ "mining" ] +
+	SGS.levels[ "construction" ] +
+	SGS.levels[ "smithing" ] +
+	SGS.levels[ "farming" ] +
+	SGS.levels[ "fishing" ] +
+	SGS.levels[ "cooking" ] +
+	SGS.levels[ "combat" ] +
+	SGS.levels[ "alchemy" ] +
+	SGS.levels[ "arcane" ] - 10
 	return total
+
 end
 
 CreateClientConVar( "sgs_enablehudnumbers", "0", true, false )
@@ -624,9 +826,14 @@ houseIcon = Material( "vgui/hud/house.png" )
 bleedIcon = Material( "vgui/hud/blood.png" )
 brokenIcon = Material( "vgui/hud/brokenbone.png" )
 melonaidsIcon = Material( "vgui/hud/melonaids.png" )
+
 function SGS_AllThingsHUD()
+
 	if SGS.accepttos == false then return end
-	if LocalPlayer().showKeybinds == nil then LocalPlayer().showKeybinds = true end
+	if LocalPlayer().showKeybinds == nil then
+		LocalPlayer().showKeybinds = true
+	end
+
 	local lastExp = SGS.last_skill_exp or "mining"
 	local skillFade = SGS.skillFade or 1
 	--Drawing the Needs Bars
@@ -672,8 +879,8 @@ function SGS_AllThingsHUD()
 	surface.DrawRect( ScrW() - 99, 98, 90, 20 ) --Clock Inner 3
 
 	if LocalPlayer().showKeybinds then
-	surface.DrawRect( x, 6, 126, 126 ) --Keybinds Outter
-	surface.DrawRect( x + 3, 9, 120, 20 ) --Keybinds Inner
+		surface.DrawRect( x, 6, 126, 126 ) --Keybinds Outter
+		surface.DrawRect( x + 3, 9, 120, 20 ) --Keybinds Inner
 	end
 
 	--Icons
@@ -692,6 +899,7 @@ function SGS_AllThingsHUD()
 	surface.DrawTexturedRect( x + 5, y - 119, 16, 16 )
 	surface.SetMaterial( coinsIcon	)
 	surface.DrawTexturedRect( ScrW() - 90 , 74, 16, 16 )
+
 	if LocalPlayer():Sheltered() then
 		surface.SetDrawColor( 255, 255, 255, 180 )
 		surface.SetMaterial( houseIcon	)
@@ -763,24 +971,28 @@ function SGS_AllThingsHUD()
 	surface.DrawRect( x + 102, y - 17, w, 14 )
 
 	if GetConVar("sgs_enablehudnumbers"):GetBool() then
+
 		surface.SetFont( "SGS_NEWHUD2" )
 		local message = math.Clamp( math.ceil(( LocalPlayer():Health() / LocalPlayer():GetMaxHealth() ) * 100), 0, 100 ) .. "%"
 		local w, _ = surface.GetTextSize( message )
 		surface.SetTextColor( 120, 120, 120, 255 )
 		surface.SetTextPos( x + 134 - (w / 2), y - 93 )
 		surface.DrawText( message )
+
 		surface.SetFont( "SGS_NEWHUD2" )
 		local message = math.ceil(( SGS.needs["hunger"] / SGS.maxneeds ) * 100) .. "%"
 		local w, _ = surface.GetTextSize( message )
 		surface.SetTextColor( 120, 120, 120, 255 )
 		surface.SetTextPos( x + 170 - (w / 2), y - 65 )
 		surface.DrawText( message )
+
 		surface.SetFont( "SGS_NEWHUD2" )
 		local message = math.ceil(( SGS.needs["thirst"] / SGS.maxneeds ) * 100) .. "%"
 		local w, _ = surface.GetTextSize( message )
 		surface.SetTextColor( 120, 120, 120, 255 )
 		surface.SetTextPos( x + 170 - (w / 2), y - 41 )
 		surface.DrawText( message )
+
 		surface.SetFont( "SGS_NEWHUD2" )
 		local message = math.ceil(( SGS.needs["fatigue"] / SGS.maxneeds ) * 100) .. "%"
 		local w, _ = surface.GetTextSize( message )
@@ -888,9 +1100,11 @@ function SGS_AllThingsHUD()
 	surface.SetTextPos( ScrW() - 90 , 100 )
 	surface.DrawText( "V: " .. GAMEMODE.Version )
 
-		if SGS.questmenuopen == true then
+	if SGS.questmenuopen == true then
+
 		local x = ( ScrW() - 500 )
 		local y = 5
+
 		if LocalPlayer():GetNWString("Quest") == nil then
 			quest = "None at the moment"
 		else
@@ -913,46 +1127,50 @@ function SGS_AllThingsHUD()
 
 		surface.SetFont( "SGS_NEWHUD5" )
 		surface.SetTextColor( 255, 255, 255, 255 )
+
 		local offset = 15
 		local percent = 100 - ((LocalPlayer():GetNWInt("daytimer") / 1440) * 100)
+
 		surface.SetTextPos( x + 6 , y + 30 + offset * 0 )
 		surface.DrawText( "Time left:" )
 		surface.SetDrawColor( 200, 200, 0, 210 )
 		surface.DrawRect( x + 6 , y + 45 , 200 * (percent / 100), 15 )
 		surface.SetTextPos( x + ((200 * (percent / 100)) / 2), y + 30 + offset * 1 )
 		surface.DrawText( math.Round(percent) .. "%" )
+
 		if LocalPlayer():GetNWBool("hasquest") == true then
-		surface.SetTextPos( x + 6 , y + 30 + offset * 2 )
-		surface.SetDrawColor( 200, 200, 30, 210 )
-		surface.DrawText( "Daily: " .. quest )
-		surface.SetDrawColor( 200, 200, 0, 210 )
-		surface.DrawRect( x + 6 , y + 75 , amounttodo * 7, 15 )
-		surface.SetTextPos( x + amounttodo * 3, y + 30 + offset * 3 )
-		surface.DrawText( amounttodo )
+			surface.SetTextPos( x + 6 , y + 30 + offset * 2 )
+			surface.SetDrawColor( 200, 200, 30, 210 )
+			surface.DrawText( "Daily: " .. quest )
+			surface.SetDrawColor( 200, 200, 0, 210 )
+			surface.DrawRect( x + 6 , y + 75 , amounttodo * 7, 15 )
+			surface.SetTextPos( x + amounttodo * 3, y + 30 + offset * 3 )
+			surface.DrawText( amounttodo )
 		else
-		surface.SetTextPos( x + 6 , y + 30 + offset * 2 )
-		surface.DrawText( "Daily: Waiting for refresh." )
+			surface.SetTextPos( x + 6 , y + 30 + offset * 2 )
+			surface.DrawText( "Daily: Waiting for refresh." )
 		end
 		if LocalPlayer():GetNWBool("haswquest") == true then
-		surface.SetTextPos( x + 6 , y + 30 + offset * 5 )
-		surface.SetDrawColor( 200, 200, 30, 210 )
-		surface.DrawText( "Weekly: " .. LocalPlayer():GetNWString("Weekly") )
-		surface.SetDrawColor( 200, 200, 0, 210 )
-		surface.DrawRect( x + 6 , y + 120 , LocalPlayer():GetNWInt("wamounttodo") * 7, 15 )
-		surface.SetTextPos( x + LocalPlayer():GetNWInt("wamounttodo") * 3, y + 30 + offset * 6 )
-		surface.DrawText( LocalPlayer():GetNWInt("wamounttodo") )
+			surface.SetTextPos( x + 6 , y + 30 + offset * 5 )
+			surface.SetDrawColor( 200, 200, 30, 210 )
+			surface.DrawText( "Weekly: " .. LocalPlayer():GetNWString("Weekly") )
+			surface.SetDrawColor( 200, 200, 0, 210 )
+			surface.DrawRect( x + 6 , y + 120 , LocalPlayer():GetNWInt("wamounttodo") * 7, 15 )
+			surface.SetTextPos( x + LocalPlayer():GetNWInt("wamounttodo") * 3, y + 30 + offset * 6 )
+			surface.DrawText( LocalPlayer():GetNWInt("wamounttodo") )
 		else
-		surface.SetTextPos( x + 6 , y + 30 + offset * 5 )
-		surface.DrawText( "Weekly: Waiting for refresh." )
+			surface.SetTextPos( x + 6 , y + 30 + offset * 5 )
+			surface.DrawText( "Weekly: Waiting for refresh." )
 		end
+
 		surface.SetTextPos( x + 6 , y + 30 + offset * 7 )
 		if LocalPlayer():GetNWInt("whenisweekly") == 7 then
-		whenisweekly = 0
+			whenisweekly = 0
 		else
-		whenisweekly = LocalPlayer():GetNWInt("whenisweekly")
+			whenisweekly = LocalPlayer():GetNWInt("whenisweekly")
 		end
 		surface.DrawText( "Weekly refreshes every 7 dailies! " .. whenisweekly .. "/7" )
-		end
+	end
 
 	if LocalPlayer().showKeybinds then
 		--Keybinds
@@ -986,7 +1204,6 @@ function SGS_AllThingsHUD()
 		local line = (ScrH() - 120) + (msg.drawline * 15)
 		local tab = ScrW() - 396
 		local col = msg.Col
-		--draw.SimpleTextOutlined(txt,"ScoreboardText",tab,line,col,0,0,0.5,Color(100,100,100,150))
 		draw.SimpleText(txt,"SGS_HUD2",tab,line,col,0,0)
 		GAMEMODE.CheckTotalMessages()
 	end
@@ -1090,7 +1307,7 @@ function SGS_OpenSkillMenu()
 		SGS.commandsmenuopen = false
 	end
 end
-hook.Add( "Think", "SGS_OpenSkillMenu", SGS_OpenSkillMenu )
+hook.Add( "HUDPaint", "SGS_OpenSkillMenu", SGS_OpenSkillMenu )
 
 function SGS_OpenQuestMenu()
 	if SGS == nil then return end
@@ -1111,4 +1328,4 @@ function SGS_OpenQuestMenu()
 		end
 	end
 end
-hook.Add( "Think", "SGS_OpenQuestMenu", SGS_OpenQuestMenu )
+hook.Add( "HUDPaint", "SGS_OpenQuestMenu", SGS_OpenQuestMenu )
