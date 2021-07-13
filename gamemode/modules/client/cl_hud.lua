@@ -87,7 +87,7 @@ end
 
 function PANEL:Paint( w, h )
 
-	draw.SimpleTextOutlined( " |G4P| Stranded (Project Gull)", "ScoreboardDefaultTitle", 8, 0, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT, 2, Color(0,0,0,255))
+	draw.SimpleTextOutlined( "|G4P| Stranded (Project Gull)", "ScoreboardDefaultTitle", 8, 0, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT, 2, Color(0,0,0,255))
 
 end
 
@@ -109,15 +109,17 @@ function PANEL:DrawFrame()
 		local teambanner = vgui.Create( "DPanel" )
 		teambanner:SetSize( 782, 25 )
 		teambanner.Paint = function()
+
 			surface.SetFont( "ScoreboardDefault" )
 			surface.SetTextColor( Color(0, 0, 0, 255) )
 			surface.SetDrawColor( team.GetColor( k ) )
 			surface.DrawRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
-			surface.SetDrawColor(Color(0,0,0,255))
+			surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
 			surface.DrawOutlinedRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
 			local tw, th = surface.GetTextSize( team.GetName( k ) )
-			surface.SetTextPos( 400 - (tw / 2), 12 - (th / 2) )
+			surface.SetTextPos( 400 - ( tw / 2), 12 - ( th / 2) )
 			surface.DrawText( team.GetName( k ) )
+
 		end
 		SGS.ScoreBoardPanel:AddItem( teambanner )
 
@@ -151,22 +153,32 @@ function PANEL:DrawFrame()
 		for _, ply in pairs(player.GetAll()) do
 			if ply then
 				if ply:Team() == k then
+
 					local playerbanner = vgui.Create( "DPanel" )
 					playerbanner:SetSize( 782, 20 )
-					local pname = ply:Nick()
+
 					local pslvl = ply:GetNWString("survival", "0")
-					if ply:IsUserGroup("usera") then pslvl = "1" end
+					if ply:IsUserGroup("usera") then
+						pslvl = "1"
+					end
+
 					local pvc = ply:GetNWString("voicechannel", "A")
-					if ply:IsUserGroup("usera") then pvc = "A" end
+					if ply:IsUserGroup("usera") then
+						pvc = "A"
+					end
+
 					local pping = ply:Ping()
+					local pname = ply:Nick()
 					playerbanner.Paint = function()
+
 						surface.SetFont( "SGS_RCacheMenuText" )
 						surface.SetTextColor( Color(0, 0, 0, 255) )
 						surface.SetDrawColor( Color(255, 255, 255, 255) )
 						surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
 						surface.SetDrawColor(Color(0,0,0,255))
 						surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-						local tw, th = surface.GetTextSize( pname )
+
+						local tr, th = surface.GetTextSize( pname )
 						surface.SetTextPos( 5, 10 - (th / 2) )
 						if ply:GetNWBool( "afk", false ) then
 							surface.SetTextColor( Color(255, 0, 0, 255) )
@@ -183,9 +195,10 @@ function PANEL:DrawFrame()
 						surface.DrawText( pvc )
 						surface.SetTextPos( 648, 10 - (th / 2) )
 						surface.DrawText( pping )
+
 					end
 
-					gagbutton = vgui.Create("DImageButton", playerbanner)
+					gagbutton = vgui.Create( "DImageButton", playerbanner )
 					gagbutton:SetSize( 16, 16 )
 					gagbutton:SetPos( 725, 2 )
 					if ply:IsMuted() then
@@ -193,9 +206,13 @@ function PANEL:DrawFrame()
 					else
 						gagbutton:SetImage( "icon32/unmuted.png" )
 					end
-					gagbutton.DoClick = function() ply:SetMuted( !ply:IsMuted() ) self:DrawFrame() end
 
-					mutebutton = vgui.Create("DImageButton", playerbanner)
+					gagbutton.DoClick = function()
+						ply:SetMuted( !ply:IsMuted() )
+						self:DrawFrame()
+					end
+
+					mutebutton = vgui.Create( "DImageButton", playerbanner )
 					mutebutton:SetSize( 16, 16 )
 					mutebutton:SetPos( 690, 2 )
 					if ply.ismuted then
@@ -203,20 +220,19 @@ function PANEL:DrawFrame()
 					else
 						mutebutton:SetImage( "icon32/unmuted.png" )
 					end
+
 					mutebutton.DoClick = function()
-						if ply.ismuted then
-							ply.ismuted = false
-						else
-							ply.ismuted = true
-						end
+						ply.ismuted = !ply.ismuted
 						self:DrawFrame()
 					end
 
-					statsbutton = vgui.Create("DImageButton", playerbanner)
+					statsbutton = vgui.Create( "DImageButton", playerbanner )
 					statsbutton:SetSize( 16, 16 )
 					statsbutton:SetPos( 765, 2 )
 					statsbutton:SetImage( "icon16/table_edit.png" )
-					statsbutton.DoClick = function() RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() ) end
+					statsbutton.DoClick = function()
+						RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() )
+					end
 
 					SGS.ScoreBoardPanel:AddItem( playerbanner )
 				end
@@ -226,8 +242,10 @@ function PANEL:DrawFrame()
 		local blankbar = vgui.Create( "DPanel" )
 		blankbar:SetSize( 782, 12 )
 		blankbar.Paint = function()
+
 			surface.SetDrawColor( Color(255, 255, 255, 0) )
 			surface.DrawRect( 0, 0, blankbar:GetWide(), blankbar:GetTall() )
+
 		end
 		SGS.ScoreBoardPanel:AddItem( blankbar )
 	end
@@ -237,11 +255,11 @@ vgui.Register("sgs_newscoreboard", PANEL, "EditablePanel")
 
 function GM:ScoreboardShow()
 
-	if ( !IsValid(SGS.ScoreBoard) ) then
+	if ( !IsValid( SGS.ScoreBoard ) ) then
 		SGS.ScoreBoard = vgui.Create("sgs_newscoreboard")
 	end
 
-	if ( IsValid(SGS.ScoreBoard) ) then
+	if ( IsValid( SGS.ScoreBoard ) ) then
 		SGS.ScoreBoard:Show()
 		SGS.ScoreBoard:DrawFrame()
 		SGS.ScoreBoard:MakePopup()
@@ -252,7 +270,7 @@ end
 
 function GM:ScoreboardHide()
 
-	if ( IsValid(SGS.ScoreBoard) ) then
+	if ( IsValid( SGS.ScoreBoard ) ) then
 		SGS.ScoreBoard:Hide()
 	end
 
@@ -287,7 +305,11 @@ function PANEL:Init()
 
 	SGS.hotbarinit = true
 	function ReloadHotBar()
-		if IsValid( self ) then self:DrawOthers() end
+
+		if IsValid( self ) then
+			self:DrawOthers()
+		end
+
 	end
 	concommand.Add( "sgs_refreshhotbar", ReloadHotBar )
 
@@ -354,42 +376,41 @@ function PANEL:DrawOthers()
 
 		end )
 
-		if SGS.HotBarcontents[i] then
-			if SGS_HotBarReturnType( SGS.HotBarcontents[i] ) == "tool" then
+		if SGS.HotBarcontents[ i ] then
+			if SGS_HotBarReturnType( SGS.HotBarcontents[ i ] ) == "tool" then
 				HotBarSlot:SetUpSlot( i, ugroup, "tool" )
-				if SGS_CheckOwnership(SGS.HotBarcontents[i]) then
-					local item = SGS_ReverseToolLookup(SGS.HotBarcontents[i])
-					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot)
+				if SGS_CheckOwnership( SGS.HotBarcontents[ i ] ) then
+					local item = SGS_ReverseToolLookup( SGS.HotBarcontents[ i ] )
+					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot )
 					HotBarButton:SetupButton( 0, 0, 48, 48, item, i, "tool" )
 				else
-					SGS.HotBarcontents[i] = nil
-					LocalPlayer():SetPData("sgs13HotBar_slot" .. tostring(i), "NONE")
+					SGS.HotBarcontents[ i ] = nil
+					LocalPlayer():SetPData( "sgs13HotBar_slot" .. tostring( i ), "NONE" )
 				end
-			elseif SGS_HotBarReturnType( SGS.HotBarcontents[i] ) == "edible" then
+			elseif SGS_HotBarReturnType( SGS.HotBarcontents[ i ] ) == "edible" then
 				HotBarSlot:SetUpSlot( i, ugroup, "edible" )
-				if SGS_CheckInventory(SGS.HotBarcontents[i]) then
-					local item = SGS_ReverseFoodLookup(SGS.HotBarcontents[i])
-					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot)
+				if SGS_CheckInventory( SGS.HotBarcontents[ i ] ) then
+					local item = SGS_ReverseFoodLookup( SGS.HotBarcontents[ i ] )
+					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot )
 					HotBarButton:SetupButton( 0, 0, 48, 48, item, i, "edible" )
 				else
-					SGS.HotBarcontents[i] = nil
-					LocalPlayer():SetPData("sgs13HotBar_slot" .. tostring(i), "NONE")
+					SGS.HotBarcontents[ i ] = nil
+					LocalPlayer():SetPData("sgs13HotBar_slot" .. tostring( i ), "NONE")
 				end
-			elseif SGS_HotBarReturnType( SGS.HotBarcontents[i] ) == "potion" then
+			elseif SGS_HotBarReturnType( SGS.HotBarcontents[ i ] ) == "potion" then
 				HotBarSlot:SetUpSlot( i, ugroup, "potion" )
-				if SGS_CheckInventory(SGS.HotBarcontents[i]) then
-					local item = SGS_ReversePotionLookup(SGS.HotBarcontents[i])
-					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot)
+				if SGS_CheckInventory( SGS.HotBarcontents[ i ] ) then
+					local item = SGS_ReversePotionLookup( SGS.HotBarcontents[ i ] )
+					local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot )
 					HotBarButton:SetupButton( 0, 0, 48, 48, item, i, "potion" )
 				else
-					SGS.HotBarcontents[i] = nil
-					LocalPlayer():SetPData("sgs13HotBar_slot" .. tostring(i), "NONE")
+					SGS.HotBarcontents[ i ] = nil
+					LocalPlayer():SetPData( "sgs13HotBar_slot" .. tostring( i ), "NONE" )
 				end
-			elseif SGS_HotBarReturnType( SGS.HotBarcontents[i] ) == "spell" then
+			elseif SGS_HotBarReturnType( SGS.HotBarcontents[ i ] ) == "spell" then
 				HotBarSlot:SetUpSlot( i, ugroup, "spell" )
-				local item = SGS_ReverseSpellLookup(SGS.HotBarcontents[i])
-				--print( item )
-				local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot)
+				local item = SGS_ReverseSpellLookup( SGS.HotBarcontents[ i ] )
+				local HotBarButton = vgui.Create( "sgs_HotBarbutton", HotBarSlot )
 				HotBarButton:SetupButton( 0, 0, 48, 48, item, i, "spell" )
 			end
 		end
@@ -397,7 +418,7 @@ function PANEL:DrawOthers()
 	end
 
 end
-vgui.Register("sgs_HotBar", PANEL, "EditablePanel")
+vgui.Register( "sgs_HotBar", PANEL, "EditablePanel" )
 
 
 /*--------------------------------
