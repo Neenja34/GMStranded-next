@@ -97,9 +97,9 @@ function PANEL:DrawFrame()
 		SGS.ScoreBoardPanel:Remove()
 	end
 
-	SGS.ScoreBoardPanel = vgui.Create("DPanelList", self)
-	SGS.ScoreBoardPanel:SetPos(8,40)
-	SGS.ScoreBoardPanel:SetSize(800, ScrH() * 0.7)
+	SGS.ScoreBoardPanel = vgui.Create( "DPanelList", self )
+	SGS.ScoreBoardPanel:SetPos( 8, 40 )
+	SGS.ScoreBoardPanel:SetSize( 800, ScrH() * 0.7 )
 	SGS.ScoreBoardPanel:EnableVerticalScrollbar( true )
 
 	for k, v in pairs( team.GetAllTeams() ) do
@@ -126,44 +126,46 @@ function PANEL:DrawFrame()
 		local titlebarbanner = vgui.Create( "DPanel" )
 		titlebarbanner:SetSize( 782, 20 )
 		titlebarbanner.Paint = function()
+
 			surface.SetFont( "SGS_RCacheMenuText" )
-			surface.SetTextColor( Color(0, 0, 0, 255) )
-			surface.SetDrawColor( Color(255, 255, 255, 255) )
+			surface.SetTextColor( Color( 0, 0, 0, 255 ) )
+			surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
 			surface.DrawRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
-			surface.SetDrawColor(Color(0,0,0,255))
+			surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
 			surface.DrawOutlinedRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
 			local _, th = surface.GetTextSize( "I" )
-			surface.SetTextPos( 5, 10 - (th / 2) )
-			surface.DrawText("Name:")
-			surface.SetTextPos( 400, 10 - (th / 2) )
-			surface.DrawText("Level:")
-			surface.SetTextPos( 510, 10 - (th / 2) )
-			surface.DrawText("Voice Channel:")
-			surface.SetTextPos( 640, 10 - (th / 2) )
-			surface.DrawText("Ping:")
-			surface.SetTextPos( 685, 10 - (th / 2) )
-			surface.DrawText("Mute:")
-			surface.SetTextPos( 720, 10 - (th / 2) )
-			surface.DrawText("Gag:")
-			surface.SetTextPos( 760, 10 - (th / 2) )
-			surface.DrawText("Stats:")
+			surface.SetTextPos( 5, 10 - ( th / 2 ) )
+			surface.DrawText( "Name:" )
+			surface.SetTextPos( 400, 10 - ( th / 2 ) )
+			surface.DrawText( "Level:" )
+			surface.SetTextPos( 510, 10 - ( th / 2 ) )
+			surface.DrawText( "Voice Channel:" )
+			surface.SetTextPos( 640, 10 - ( th / 2 ) )
+			surface.DrawText( "Ping:" )
+			surface.SetTextPos( 685, 10 - ( th / 2 ) )
+			surface.DrawText( "Mute:" )
+			surface.SetTextPos( 720, 10 - ( th / 2 ) )
+			surface.DrawText( "Gag:" )
+			surface.SetTextPos( 760, 10 - ( th / 2 ) )
+			surface.DrawText( "Stats:" )
+
 		end
 		SGS.ScoreBoardPanel:AddItem( titlebarbanner )
 
-		for _, ply in pairs(player.GetAll()) do
+		for _, ply in pairs( player.GetAll() ) do
 			if ply then
 				if ply:Team() == k then
 
 					local playerbanner = vgui.Create( "DPanel" )
 					playerbanner:SetSize( 782, 20 )
 
-					local pslvl = ply:GetNWString("survival", "0")
-					if ply:IsUserGroup("usera") then
+					local pslvl = ply:GetNWString( "survival", "0" )
+					if ply:IsUserGroup( "usera" ) then
 						pslvl = "1"
 					end
 
-					local pvc = ply:GetNWString("voicechannel", "A")
-					if ply:IsUserGroup("usera") then
+					local pvc = ply:GetNWString( "voicechannel", "A" )
+					if ply:IsUserGroup( "usera" ) then
 						pvc = "A"
 					end
 
@@ -172,28 +174,28 @@ function PANEL:DrawFrame()
 					playerbanner.Paint = function()
 
 						surface.SetFont( "SGS_RCacheMenuText" )
-						surface.SetTextColor( Color(0, 0, 0, 255) )
-						surface.SetDrawColor( Color(255, 255, 255, 255) )
+						surface.SetTextColor( Color( 0, 0, 0, 255 ) )
+						surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
 						surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-						surface.SetDrawColor(Color(0,0,0,255))
+						surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
 						surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
 
 						local tr, th = surface.GetTextSize( pname )
-						surface.SetTextPos( 5, 10 - (th / 2) )
+						surface.SetTextPos( 5, 10 - ( th / 2 ) )
 						if ply:GetNWBool( "afk", false ) then
-							surface.SetTextColor( Color(255, 0, 0, 255) )
+							surface.SetTextColor( Color( 255, 0, 0, 255 ) )
 							surface.DrawText( "*AFK*" )
-							surface.SetTextColor( Color(0, 0, 0, 255) )
-							surface.SetTextPos( 45, 10 - (th / 2) )
+							surface.SetTextColor( Color( 0, 0, 0, 255 ) )
+							surface.SetTextPos( 45, 10 - ( th / 2 ) )
 							surface.DrawText( pname )
 						else
 							surface.DrawText( pname )
 						end
-						surface.SetTextPos( 410, 10 - (th / 2) )
+						surface.SetTextPos( 410, 10 - ( th / 2 ) )
 						surface.DrawText( pslvl )
-						surface.SetTextPos( 550, 10 - (th / 2) )
+						surface.SetTextPos( 550, 10 - ( th / 2 ) )
 						surface.DrawText( pvc )
-						surface.SetTextPos( 648, 10 - (th / 2) )
+						surface.SetTextPos( 648, 10 - ( th / 2 ) )
 						surface.DrawText( pping )
 
 					end
@@ -243,7 +245,7 @@ function PANEL:DrawFrame()
 		blankbar:SetSize( 782, 12 )
 		blankbar.Paint = function()
 
-			surface.SetDrawColor( Color(255, 255, 255, 0) )
+			surface.SetDrawColor( Color( 255, 255, 255, 0 ) )
 			surface.DrawRect( 0, 0, blankbar:GetWide(), blankbar:GetTall() )
 
 		end
@@ -251,12 +253,12 @@ function PANEL:DrawFrame()
 	end
 
 end
-vgui.Register("sgs_newscoreboard", PANEL, "EditablePanel")
+vgui.Register( "sgs_newscoreboard", PANEL, "EditablePanel" )
 
 function GM:ScoreboardShow()
 
 	if ( !IsValid( SGS.ScoreBoard ) ) then
-		SGS.ScoreBoard = vgui.Create("sgs_newscoreboard")
+		SGS.ScoreBoard = vgui.Create( "sgs_newscoreboard" )
 	end
 
 	if ( IsValid( SGS.ScoreBoard ) ) then
