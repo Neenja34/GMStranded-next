@@ -311,18 +311,6 @@ function PANEL:DrawFrame()
 		AlchList:SetSpaceX( 3 )
 		AlchList:SetSpaceY( 3 )
 
-
-		/*
-			
-		local AlchList = vgui.Create( "DPanelList", SGS.farminggroup)
-		AlchList:SetSize( 130,210 )
-		AlchList:SetPos( 0, 200 )
-		AlchList:EnableVerticalScrollbar( true )
-		AlchList:EnableHorizontal( false )
-		AlchList:SetPadding( 4 )
-		AlchList:AddItem( AlchLabel )
-		*/
-
 		for _, v in pairs( SGS.Seeds[ "fruit" ] ) do
 			if SGS.resources[v.resource] then
 				if SGS.resources[v.resource] >= 1 then
@@ -2213,34 +2201,21 @@ function PANEL:DrawFrame()
 end
 vgui.Register("sgs_newscoreboard", PANEL, "EditablePanel")
 
-
---[[---------------------------------------------------------
-   Name: gamemode:ScoreboardShow( )
-   Desc: Sets the scoreboard to visible
------------------------------------------------------------]]
 function GM:ScoreboardShow()
 
 	if ( !IsValid(SGS.ScoreBoard) ) then
-	
 		SGS.ScoreBoard = vgui.Create("sgs_newscoreboard")
-		
 	end
-	
+
 	if ( IsValid(SGS.ScoreBoard) ) then
-	
 		SGS.ScoreBoard:Show()
 		SGS.ScoreBoard:DrawFrame()
 		SGS.ScoreBoard:MakePopup()
 		SGS.ScoreBoard:SetKeyboardInputEnabled( false )
-		
 	end
 
 end
 
---[[---------------------------------------------------------
-   Name: gamemode:ScoreboardHide( )
-   Desc: Hides the scoreboard
------------------------------------------------------------]]
 function GM:ScoreboardHide()
 
 	if ( IsValid(SGS.ScoreBoard) ) then
