@@ -103,6 +103,7 @@ function PANEL:DrawFrame()
 	SGS.ScoreBoardPanel:EnableVerticalScrollbar( true )
 
 	for k, v in pairs( team.GetAllTeams() ) do
+
 		if #team.GetPlayers( k ) <= 0 then continue end
 		if k == 1002 then continue end
 
@@ -153,91 +154,89 @@ function PANEL:DrawFrame()
 		SGS.ScoreBoardPanel:AddItem( titlebarbanner )
 
 		for _, ply in pairs( player.GetAll() ) do
-			if ply then
-				if ply:Team() == k then
+			if ply && ply:Team() == k then
 
-					local playerbanner = vgui.Create( "DPanel" )
-					playerbanner:SetSize( 782, 20 )
+				local playerbanner = vgui.Create( "DPanel" )
+				playerbanner:SetSize( 782, 20 )
 
-					local pslvl = ply:GetNWString( "survival", "0" )
-					if ply:IsUserGroup( "usera" ) then
-						pslvl = "1"
-					end
-
-					local pvc = ply:GetNWString( "voicechannel", "A" )
-					if ply:IsUserGroup( "usera" ) then
-						pvc = "A"
-					end
-
-					local pping = ply:Ping()
-					local pname = ply:Nick()
-					playerbanner.Paint = function()
-
-						surface.SetFont( "SGS_RCacheMenuText" )
-						surface.SetTextColor( Color( 0, 0, 0, 255 ) )
-						surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
-						surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-						surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
-						surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-
-						local tr, th = surface.GetTextSize( pname )
-						surface.SetTextPos( 5, 10 - ( th / 2 ) )
-						if ply:GetNWBool( "afk", false ) then
-							surface.SetTextColor( Color( 255, 0, 0, 255 ) )
-							surface.DrawText( "*AFK*" )
-							surface.SetTextColor( Color( 0, 0, 0, 255 ) )
-							surface.SetTextPos( 45, 10 - ( th / 2 ) )
-							surface.DrawText( pname )
-						else
-							surface.DrawText( pname )
-						end
-						surface.SetTextPos( 410, 10 - ( th / 2 ) )
-						surface.DrawText( pslvl )
-						surface.SetTextPos( 550, 10 - ( th / 2 ) )
-						surface.DrawText( pvc )
-						surface.SetTextPos( 648, 10 - ( th / 2 ) )
-						surface.DrawText( pping )
-
-					end
-
-					gagbutton = vgui.Create( "DImageButton", playerbanner )
-					gagbutton:SetSize( 16, 16 )
-					gagbutton:SetPos( 725, 2 )
-					if ply:IsMuted() then
-						gagbutton:SetImage( "icon32/muted.png" )
-					else
-						gagbutton:SetImage( "icon32/unmuted.png" )
-					end
-
-					gagbutton.DoClick = function()
-						ply:SetMuted( !ply:IsMuted() )
-						self:DrawFrame()
-					end
-
-					mutebutton = vgui.Create( "DImageButton", playerbanner )
-					mutebutton:SetSize( 16, 16 )
-					mutebutton:SetPos( 690, 2 )
-					if ply.ismuted then
-						mutebutton:SetImage( "icon32/muted.png" )
-					else
-						mutebutton:SetImage( "icon32/unmuted.png" )
-					end
-
-					mutebutton.DoClick = function()
-						ply.ismuted = !ply.ismuted
-						self:DrawFrame()
-					end
-
-					statsbutton = vgui.Create( "DImageButton", playerbanner )
-					statsbutton:SetSize( 16, 16 )
-					statsbutton:SetPos( 765, 2 )
-					statsbutton:SetImage( "icon16/table_edit.png" )
-					statsbutton.DoClick = function()
-						RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() )
-					end
-
-					SGS.ScoreBoardPanel:AddItem( playerbanner )
+				local pslvl = ply:GetNWString( "survival", "0" )
+				if ply:IsUserGroup( "usera" ) then
+					pslvl = "1"
 				end
+
+				local pvc = ply:GetNWString( "voicechannel", "A" )
+				if ply:IsUserGroup( "usera" ) then
+					pvc = "A"
+				end
+
+				local pping = ply:Ping()
+				local pname = ply:Nick()
+				playerbanner.Paint = function()
+
+					surface.SetFont( "SGS_RCacheMenuText" )
+					surface.SetTextColor( Color( 0, 0, 0, 255 ) )
+					surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
+					surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+					surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
+					surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+
+					local tr, th = surface.GetTextSize( pname )
+					surface.SetTextPos( 5, 10 - ( th / 2 ) )
+					if ply:GetNWBool( "afk", false ) then
+						surface.SetTextColor( Color( 255, 0, 0, 255 ) )
+						surface.DrawText( "*AFK*" )
+						surface.SetTextColor( Color( 0, 0, 0, 255 ) )
+						surface.SetTextPos( 45, 10 - ( th / 2 ) )
+						surface.DrawText( pname )
+					else
+						surface.DrawText( pname )
+					end
+					surface.SetTextPos( 410, 10 - ( th / 2 ) )
+					surface.DrawText( pslvl )
+					surface.SetTextPos( 550, 10 - ( th / 2 ) )
+					surface.DrawText( pvc )
+					surface.SetTextPos( 648, 10 - ( th / 2 ) )
+					surface.DrawText( pping )
+
+				end
+
+				gagbutton = vgui.Create( "DImageButton", playerbanner )
+				gagbutton:SetSize( 16, 16 )
+				gagbutton:SetPos( 725, 2 )
+				if ply:IsMuted() then
+					gagbutton:SetImage( "icon32/muted.png" )
+				else
+					gagbutton:SetImage( "icon32/unmuted.png" )
+				end
+
+				gagbutton.DoClick = function()
+					ply:SetMuted( !ply:IsMuted() )
+					self:DrawFrame()
+				end
+
+				mutebutton = vgui.Create( "DImageButton", playerbanner )
+				mutebutton:SetSize( 16, 16 )
+				mutebutton:SetPos( 690, 2 )
+				if ply.ismuted then
+					mutebutton:SetImage( "icon32/muted.png" )
+				else
+					mutebutton:SetImage( "icon32/unmuted.png" )
+				end
+
+				mutebutton.DoClick = function()
+					ply.ismuted = !ply.ismuted
+					self:DrawFrame()
+				end
+
+				statsbutton = vgui.Create( "DImageButton", playerbanner )
+				statsbutton:SetSize( 16, 16 )
+				statsbutton:SetPos( 765, 2 )
+				statsbutton:SetImage( "icon16/table_edit.png" )
+				statsbutton.DoClick = function()
+					RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() )
+				end
+
+				SGS.ScoreBoardPanel:AddItem( playerbanner )
 			end
 		end
 
@@ -250,6 +249,7 @@ function PANEL:DrawFrame()
 
 		end
 		SGS.ScoreBoardPanel:AddItem( blankbar )
+
 	end
 
 end
