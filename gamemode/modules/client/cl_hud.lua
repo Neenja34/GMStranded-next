@@ -17,6 +17,18 @@ function SGS_DrawCrosshair()
 
 	if !LocalPlayer():Alive() then return end
 
+	local trace = LocalPlayer():GetEyeTraceNoCursor()
+	local hitpos = trace.HitPos
+	local pos = hitpos:ToScreen()
+
+	if SGS.person == "third" then
+		crosshairX = pos.x
+		crosshairY = pos.y
+	else
+		crosshairX = ScrW() / 2
+		crosshairY = ScrH() / 2
+	end
+
 	if SGS.hudtimer[ "display" ] == true then return end
 
 	if outline:GetBool() then
@@ -26,23 +38,23 @@ function SGS_DrawCrosshair()
 
 		surface.SetDrawColor( Color( outlinecolor[ 1 ], outlinecolor[ 2 ], outlinecolor[ 3 ], outlinecolor[ 4 ] ) )
 
-		surface.DrawRect( ( ScrW() / 2 ) - gap:GetInt() - length:GetInt() - ( outlineThickness:GetInt() / 2 ),
-							( ScrH() / 2 ) - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
+		surface.DrawRect( crosshairX - gap:GetInt() - length:GetInt() - ( outlineThickness:GetInt() / 2 ),
+							crosshairY - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
 							length:GetInt() + outlineThickness:GetInt(),
 							thickness:GetInt() + outlineThickness:GetInt() ) --Left
 
-		surface.DrawRect( ( ScrW() / 2 ) - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
-							( ScrH() / 2 ) - gap:GetInt() - length:GetInt() - ( outlineThickness:GetInt() / 2 ),
+		surface.DrawRect( crosshairX - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
+							crosshairY - gap:GetInt() - length:GetInt() - ( outlineThickness:GetInt() / 2 ),
 							thickness:GetInt() + outlineThickness:GetInt(),
 							length:GetInt() + outlineThickness:GetInt() ) --Up
 
-		surface.DrawRect( ( ScrW() / 2 ) + gap:GetInt() - ( outlineThickness:GetInt() / 2 ),
-							( ScrH() / 2 ) - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
+		surface.DrawRect( crosshairX + gap:GetInt() - ( outlineThickness:GetInt() / 2 ),
+							crosshairY - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
 							length:GetInt() + outlineThickness:GetInt(),
 							thickness:GetInt() + outlineThickness:GetInt() ) --Right
 
-		surface.DrawRect( ( ScrW() / 2 ) - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
-							( ScrH() / 2 ) + gap:GetInt() - ( outlineThickness:GetInt() / 2 ),
+		surface.DrawRect( crosshairX - ( thickness:GetInt() / 2 ) - ( outlineThickness:GetInt() / 2 ),
+							crosshairY + gap:GetInt() - ( outlineThickness:GetInt() / 2 ),
 							thickness:GetInt() + outlineThickness:GetInt(),
 							length:GetInt() + outlineThickness:GetInt() ) --Down
 
@@ -52,21 +64,20 @@ function SGS_DrawCrosshair()
 	color = string.Split( GetConVar( "sgs_crosshair_color" ):GetString(), "," )
 
 	surface.SetDrawColor( Color( color[ 1 ], color[ 2 ], color[ 3 ], color[ 4 ] ) )
-
-	surface.DrawRect( ( ScrW() / 2 ) - gap:GetInt() - length:GetInt(),
-						( ScrH() / 2 ) - ( thickness:GetInt() / 2 ),
+	surface.DrawRect( crosshairX - gap:GetInt() - length:GetInt(),
+						crosshairY - ( thickness:GetInt() / 2 ),
 						length:GetInt(), thickness:GetInt() ) --Left
 
-	surface.DrawRect( ( ScrW() / 2 ) - ( thickness:GetInt() / 2 ),
-						( ScrH() / 2 ) - gap:GetInt() - length:GetInt(),
+	surface.DrawRect( crosshairX - ( thickness:GetInt() / 2 ),
+						crosshairY - gap:GetInt() - length:GetInt(),
 						thickness:GetInt(), length:GetInt() ) --Up
 
-	surface.DrawRect( ( ScrW() / 2 ) + gap:GetInt(),
-						( ScrH() / 2 ) - ( thickness:GetInt() / 2 ),
+	surface.DrawRect( crosshairX + gap:GetInt(),
+						crosshairY - ( thickness:GetInt() / 2 ),
 						length:GetInt(), thickness:GetInt() ) --Right
 
-	surface.DrawRect( ( ScrW() / 2 ) - ( thickness:GetInt() / 2 ),
-						( ScrH() / 2 ) + gap:GetInt(),
+	surface.DrawRect( crosshairX - ( thickness:GetInt() / 2 ),
+						crosshairY + gap:GetInt(),
 						thickness:GetInt(), length:GetInt() ) --Down
 
 end
