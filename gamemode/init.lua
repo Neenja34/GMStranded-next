@@ -42,6 +42,10 @@ if !file.Exists( "sgstranded/saves/inventory", "DATA" ) then
 	file.CreateDir( "sgstranded/saves/inventory" )
 end
 
+if !file.Exists( "sgstranded/saves/inventory/PCacheMeteoric", "DATA" ) then
+	file.CreateDir( "sgstranded/saves/inventory/PCacheMeteoric" )
+end
+
 if !file.Exists( "sgstranded/saves/inventory/PCacheBoss", "DATA" ) then
 	file.CreateDir( "sgstranded/saves/inventory/PCacheBoss" )
 end
@@ -558,8 +562,6 @@ function GM:PlayerSpawn( ply )
 	if !(ply:GetInitialized() == INITSTATE_OK) then
 		GAMEMODE:PlayerSpawnAsSpectator( ply )
 	else
-		--player_manager.SetPlayerClass( ply, "player_stranded" )
-
 		-- Stop observer mode
 		ply:UnSpectate()
 
@@ -615,6 +617,8 @@ function GM:PlayerSpawn( ply )
 			ply:SetWalkSpeed( 160 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 			ply:SetRunSpeed( 240 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 		end
+
+		ply:SetJumpPower( 160 + ( gLevel.cfg.jump * gLevel.getSkill( "gLevel.jumpPower", ply ) ) )
 
 		timer.Simple(5,function() ply:SetSurvivalLevelStats() end)
 
@@ -2228,9 +2232,6 @@ function PlayerMeta:ElixirEffect(skill)
 	if skill == "speed" then
 		self.trail1 = util.SpriteTrail( self, 7, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
 		self.trail2 = util.SpriteTrail( self, 6, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
-	--[[ elseif skill == "waterbreathing" then
-	elseif skill == "gravity" then
-	elseif skill == "luck" then ]]
 	else
 		local ent = ents.Create("gms_elixorb")
 			ent.self = self
@@ -5209,14 +5210,12 @@ function SGS_StopElixirEffect( ply )
 			if ply.brokenleg then
 				ply:SetWalkSpeed( 75 )
 				ply:SetRunSpeed( 140 )
+			elseif GAMEMODE.Tribes:GetTribeLevel( ply ) >= 6 then
+				ply:SetWalkSpeed( 192 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
+				ply:SetRunSpeed( 288 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 			else
-				if GAMEMODE.Tribes:GetTribeLevel( ply ) >= 6 then
-					ply:SetWalkSpeed( 192 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
-					ply:SetRunSpeed( 288 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
-				else
-					ply:SetWalkSpeed( 160 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
-					ply:SetRunSpeed( 240 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
-				end
+				ply:SetWalkSpeed( 160 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
+				ply:SetRunSpeed( 240 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 			end
 		end
 		if ply.elixir == "gravity" then
