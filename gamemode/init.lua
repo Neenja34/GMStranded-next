@@ -613,9 +613,13 @@ function GM:PlayerSpawn( ply )
 		if GAMEMODE.Tribes:GetTribeLevel( ply ) >= 6 then
 			ply:SetWalkSpeed( 192 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 			ply:SetRunSpeed( 288 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
+			--ply:SendMessage( "Tribe Walk speed: " .. ply:GetWalkSpeed(), 60, Color( 0, 255, 0, 255 ) )
+			--ply:SendMessage( "Tribe Run speed: " .. ply:GetRunSpeed(), 60, Color( 0, 255, 0, 255 ) )
 		else
 			ply:SetWalkSpeed( 160 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
 			ply:SetRunSpeed( 240 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", ply ) ) )
+			--ply:SendMessage( "Walk speed: " .. ply:GetWalkSpeed(), 60, Color( 0, 255, 0, 255 ) )
+			--ply:SendMessage( "Run speed: " .. ply:GetRunSpeed(), 60, Color( 0, 255, 0, 255 ) )
 		end
 
 		ply:SetJumpPower( 160 + ( gLevel.cfg.jump * gLevel.getSkill( "gLevel.jumpPower", ply ) ) )
@@ -5476,9 +5480,13 @@ function PlayerMeta:UnbreakLeg( silent )
 	if GAMEMODE.Tribes:GetTribeLevel( self ) >= 6 then
 		self:SetWalkSpeed( 192 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
 		self:SetRunSpeed( 288 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
+		--self:SendMessage( "Unbreak Tribe Walk speed: " .. self:GetWalkSpeed(), 60, Color( 0, 255, 0, 255 ) )
+		--self:SendMessage( "Unbreak Tribe Run speed: " .. self:GetRunSpeed(), 60, Color( 0, 255, 0, 255 ) )
 	else
 		self:SetWalkSpeed( 160 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
 		self:SetRunSpeed( 240 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
+		--self:SendMessage( "Unbreak Walk speed: " .. self:GetWalkSpeed(), 60, Color( 0, 255, 0, 255 ) )
+		--self:SendMessage( "Unbreak Run speed: " .. self:GetRunSpeed(), 60, Color( 0, 255, 0, 255 ) )
 	end
 
 	self:SetJumpPower( 160 + ( gLevel.cfg.jump * gLevel.getSkill( "gLevel.jumpPower", self ) ) )
