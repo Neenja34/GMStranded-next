@@ -3399,7 +3399,7 @@ net.Receive( "cl_topcache4", function( l, ply )
 		net.WriteTable( ent.POwner.p4contents )
 	net.Send( ply )
 
-	timer.Simple( 0.2, function() RunConsoleCommand( "sgs_refreshrcachelist" ) end )
+	timer.Simple( 0.2, function() ply:ConCommand( "sgs_refreshrcachelist" ) end )
 
 end )
 
