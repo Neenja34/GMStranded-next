@@ -5,20 +5,41 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 --Return: Nothing
 ENT.rotate = 0
 function ENT:Draw()
+
 	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-		if dis > SGS.drawdistance / 4 then 
+
+	if self.world == GAMEMODE.Worlds:GetWorld( pl ) then
+		local dis = pl:GetPos():DistToSqr(self:GetPos())
+		if SGS.drawdistance == nil then return end
+
+		if dis < SGS.drawdistance / 4 then
+			self:DrawModel()
+			if !self.shadowcreated then
+				self:DrawShadow( true )
+				self.shadowcreated = true
+			end
+		elseif self.shadowcreated then
+			self:DestroyShadow()
+			self:DrawShadow( false )
+			self.shadowcreated = false
+		end
+	else
 		self:DestroyShadow()
-		return 
+		self:DrawShadow( false )
+		self.shadowcreated = false
 	end
-	self:CreateShadow()
-	self.Entity:DrawModel()
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
+
+	self:DrawShadow( false )
+	self.shadowcreated = false
+	self.world = GAMEMODE.Worlds:GetWorld( self )
+	self.visible = true
+
 end
 
 --Return true if this entity is translucent.
@@ -34,5 +55,9 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	self:RenderDistanceCheck( LocalPlayer(), true )
+	self:NextThink( CurTime() + 1 )
+
 end
 

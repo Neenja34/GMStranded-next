@@ -14,20 +14,16 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 local MAT_SHIELD = Material("Models/effects/comball_tape")
 
 function ENT:Draw()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-	if dis > SGS.drawdistance / 2 then
-		self:DestroyShadow()
-		return
-	end
-	self:CreateShadow()
-	self:DrawModel()
+
+	self:DrawOnRenderDistance()
+
 end
 
 local MAT_SHIELD = Material("models/alyx/emptool_glow")
 function ENT:DrawTranslucent()
+
 	local pl = LocalPlayer()
+
 	local dis = pl:GetPos():DistToSqr(self:GetPos())
 	if SGS.drawdistance == nil then return end
 	if dis > SGS.drawdistance / 2 then
@@ -40,13 +36,20 @@ function ENT:DrawTranslucent()
 	self:DrawModel()
 	render.MaterialOverride()
 	self:SetModelScale(1,0)
+
 end
 
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
-self.s = 40
+
+	self:DrawShadow( false )
+	self.shadowcreated = false
+	self.world = GAMEMODE.Worlds:GetWorld( self )
+	self.visible = true
+	self.s = 40
+
 end
 
 --Return true if this entity is translucent.
@@ -62,4 +65,8 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	self:RenderDistanceCheck( LocalPlayer(), true )
+	self:NextThink( CurTime() + 1 )
+
 end

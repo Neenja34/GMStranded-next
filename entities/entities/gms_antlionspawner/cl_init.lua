@@ -5,7 +5,7 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 --Return: Nothing
 function ENT:Draw()
 	if self:GetNWBool("draw", true) then
-		self.Entity:DrawModel()
+		self:DrawModel()
 	end
 end
 
@@ -27,5 +27,9 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	self:RenderDistanceCheck( LocalPlayer(), false )
+	self:NextThink( CurTime() + 1 )
+
 end
 

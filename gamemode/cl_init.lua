@@ -1,6 +1,7 @@
 include( "shared.lua" )
 
 local PlayerMeta = FindMetaTable( "Player" )
+local EntityMeta = FindMetaTable( "Entity")
 
 local files, dirs = file.Find("gmstranded/gamemode/modules/client/*.lua", "LUA")
 for k, v in pairs( files ) do
@@ -2115,6 +2116,40 @@ function PlayerMeta:GetMaxStructures()
 	if self:IsMember() then maxS = SGS.maxmemberstructures end
 	if self:IsDonator() then maxS = SGS.maxdonatorstructures end
 	return maxS
+end
+
+function EntityMeta:RenderDistanceCheck( pl, static )
+
+	if SGS.drawdistance == nil then return end
+
+	local world = self.world
+	if !static then
+		world = GAMEMODE.Worlds:GetWorld( self )
+	end
+
+	if world == pl.world then
+		local dis = pl:GetPos():DistToSqr(self:GetPos())
+		self.visible = dis < SGS.drawdistance
+	else
+		self.visible = false
+	end
+
+end
+
+function EntityMeta:DrawOnRenderDistance()
+
+	if self.visible then
+		self:DrawModel()
+		if !self.shadowcreated then
+			self:DrawShadow( true )
+			self.shadowcreated = true
+		end
+	elseif self.shadowcreated then
+		self:DestroyShadow()
+		self:DrawShadow( false )
+		self.shadowcreated = false
+	end
+
 end
 
 net.Receive("GAT_ColorMessage", function(length )

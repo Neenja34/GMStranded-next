@@ -18,17 +18,10 @@ ENT.Shaft = Material("effects/ar2ground2");
 ENT.LightSettings = "cl_staff_dynlights_flight";
 
 function ENT:Draw()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-		if dis > SGS.drawdistance / 2 then 
-		self:DestroyShadow()
-		return 
-	end
-	self:CreateShadow()
-	self:DrawModel()
-end
 
+	self:DrawOnRenderDistance()
+
+end
 
 function ENT:DrawTranslucent()
 	if(!self.StartPos) then self.StartPos = self:GetPos() end; -- Needed for several workarounds
@@ -50,7 +43,13 @@ end
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
-self.s = 40
+
+	self:DrawShadow( false )
+	self.shadowcreated = false
+	self.world = GAMEMODE.Worlds:GetWorld( self )
+	self.visible = true
+	self.s = 40
+
 end
 
 --Return true if this entity is translucent.
@@ -66,4 +65,8 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	self:RenderDistanceCheck( LocalPlayer(), true )
+	self:NextThink( CurTime() + 1 )
+
 end
