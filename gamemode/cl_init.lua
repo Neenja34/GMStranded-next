@@ -1,7 +1,7 @@
 include( "shared.lua" )
 
 local PlayerMeta = FindMetaTable( "Player" )
-local EntityMeta = FindMetaTable( "Entity")
+local EntityMeta = FindMetaTable( "Entity" )
 
 local files, dirs = file.Find("gmstranded/gamemode/modules/client/*.lua", "LUA")
 for k, v in pairs( files ) do
@@ -19,10 +19,9 @@ SGS.hudtimer = SGS.hudtimer or {}
 SGS.inventory = SGS.inventory or {}
 SGS.needs = SGS.needs or {}
 SGS.pmodels = SGS.pmodels or {}
-SGS.drawdistance = 36000000
+SGS.drawdistance = CreateClientConVar( "sgs_drawdistance", "36000000", true, false, "", 0, 50000000 ) or 36000000
 SGS.tier = "1"
 lightdistance = CreateClientConVar( "sgs_lightdistance", "1000000", true, false, "", 0, 50000000 ) or 1000000
---SGS.drawlights = lightdistance:GetInt()
 SGS.voicechannels = SGS.voicechannels or {}
 SGS.plantcount = 0
 SGS.maxplants = 0
@@ -40,26 +39,10 @@ SGS.itemsdestroyed = ""
 SGS.toolsdropped = ""
 LocalPlayer().achievementstart = -10
 
-
---[[
-SGS.HotBarcontents[1] = nil
-SGS.HotBarcontents[2] = nil
-SGS.HotBarcontents[3] = nil
-SGS.HotBarcontents[4] = nil
-SGS.HotBarcontents[5] = nil
-SGS.HotBarcontents[6] = nil
-SGS.HotBarcontents[7] = nil
-SGS.HotBarcontents[8] = nil
-SGS.HotBarcontents[9] = nil
-SGS.HotBarcontents[10] = nil
-]]
-
 function GM:Think()
-	--self.World:Think()
 end
 
 function GM:HUDPaint()
-	--self.World:HUDPaint()
 end
 
 function GM:AddNotify( str, type, duration )
@@ -67,7 +50,7 @@ function GM:AddNotify( str, type, duration )
 end
 
 function GM:InitPostEntity()
-	--self.World:InitPostEntity()
+
 	timer.Create(
 		"sgs_readyforinfo",
 		5,

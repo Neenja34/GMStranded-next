@@ -3,20 +3,20 @@ include("shared.lua")
 --Called when it's time to draw the entity.
 --Return: Nothing
 function ENT:Draw()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-		if dis > SGS.drawdistance / 8 then 
-		self:DestroyShadow()
-		return 
-	end
-	self:CreateShadow()
-	self.Entity:DrawModel()
+
+	self:DrawOnRenderDistance()
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
+
+	self:DrawShadow( false )
+	self.shadowcreated = false
+	self.world = GAMEMODE.Worlds:GetWorld( self )
+	self.visible = true
+
 end
 
 --Return true if this entity is translucent.
@@ -32,4 +32,8 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	self:RenderDistanceCheck( LocalPlayer(), false )
+	self:NextThink( CurTime() + 1 )
+
 end

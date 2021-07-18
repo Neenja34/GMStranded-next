@@ -27,9 +27,5 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
-
-	self:RenderDistanceCheck( LocalPlayer(), false )
-	self:NextThink( CurTime() + 1 )
-
 end
 

@@ -35,7 +35,7 @@ end
 --Return: Nothing
 function ENT:Think()
 
-	self:RenderDistanceCheck( LocalPlayer(), false )
+	self:RenderDistanceCheck( LocalPlayer(), true )
 	self:NextThink( CurTime() + 1 )
 
 end
