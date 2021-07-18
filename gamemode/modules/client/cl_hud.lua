@@ -16,20 +16,19 @@ CreateClientConVar( "sgs_crosshair_outline_color", "0,0,0,255", true, false, "" 
 function SGS_DrawCrosshair()
 
 	if !LocalPlayer():Alive() then return end
-
-	local trace = LocalPlayer():GetEyeTraceNoCursor()
-	local hitpos = trace.HitPos
-	local pos = hitpos:ToScreen()
+	if SGS.hudtimer[ "display" ] == true then return end
 
 	if SGS.person == "third" then
+		local trace = LocalPlayer():GetEyeTraceNoCursor()
+		local hitpos = trace.HitPos
+		local pos = hitpos:ToScreen()
+
 		crosshairX = pos.x
 		crosshairY = pos.y
 	else
 		crosshairX = ScrW() / 2
 		crosshairY = ScrH() / 2
 	end
-
-	if SGS.hudtimer[ "display" ] == true then return end
 
 	if outline:GetBool() then
 
