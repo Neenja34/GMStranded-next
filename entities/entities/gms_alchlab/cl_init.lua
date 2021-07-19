@@ -17,11 +17,6 @@ function ENT:Initialize()
 
 end
 
---Called when the SENT is spawned
---Return: Nothing
-function ENT:Initialize()
-end
-
 --Return true if this entity is translucent.
 --Return: Boolean
 function ENT:IsTranslucent()
