@@ -4,18 +4,15 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 --Return: Nothing
 function ENT:Draw()
 
-	self:DrawOnRenderDistance()
+	if self:GetParent().visible then
+		self:DrawModel()
+	end
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
-
-	self:DrawShadow( false )
-	self.shadowcreated = false
-	self.world = GAMEMODE.Worlds:GetWorld( self )
-	self.visible = true
-
 end
 
 --Return true if this entity is translucent.
@@ -31,9 +28,4 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
-
-	self:RenderDistanceCheck( LocalPlayer(), true )
-	self:SetNextClientThink( CurTime() + 1 )
-	return true
-
 end

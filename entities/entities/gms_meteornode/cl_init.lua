@@ -43,7 +43,14 @@ end
 --Return: Nothing
 function ENT:Think()
 
-	self:RenderDistanceCheck( LocalPlayer(), false )
+	local pl = LocalPlayer()
+
+	if self.world == pl.world then
+		self.visible = true
+	else
+		self.visible = false
+	end
+
 	self:SetNextClientThink( CurTime() + 1 )
 	return true
 

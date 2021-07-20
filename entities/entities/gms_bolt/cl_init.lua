@@ -7,22 +7,33 @@ local wave = Material( "sprites/gmdm_pickups/light" )
 
 function ENT:Draw()
 
-	if(!self.StartPos) then self.StartPos = self:GetPos() end; -- Needed for several workarounds
-	local color = self:GetColor()
-	local start = self:GetPos();
+	if self.visible then
 
-	render.SetMaterial(wave);
-	render.DrawSprite( start, self.s, self.s, color	);
+		local color = self:GetColor()
+		local start = self:GetPos()
+		render.SetMaterial( wave )
+		render.DrawSprite( start, self.s, self.s, color	)
+
+	end
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
+
 	self.s = 64
-	
 	self.r = self:GetColor().r
 	self.g = self:GetColor().g
 	self.b = self:GetColor().b
+	self.world = GAMEMODE.Worlds:GetWorld( self )
+
+	if self.world == LocalPlayer().world then
+		self.visible = true
+	else
+		self.visible = false
+	end
+
 end
 
 --Return true if this entity is translucent.
@@ -38,11 +49,8 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if dis > lightdistance:GetInt() * 5 then return end
-	if SGS.showlights == false then return end
 
+	if SGS.showlights == false then return end
 
 	local dlight = DynamicLight( self:EntIndex() )
 	if ( dlight ) then
@@ -52,9 +60,10 @@ function ENT:Think()
 		dlight.b = self.b
 		dlight.Brightness = 0.3
 		dlight.MinLight = 0.05
-		dlight.Size = 256	
+		dlight.Size = 256
 		dlight.Decay = 210 * 2
 		dlight.DieTime = CurTime() + 1
 		dlight.Style = 5
 	end
+
 end
