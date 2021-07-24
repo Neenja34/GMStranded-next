@@ -1840,11 +1840,11 @@ function SGS_HUD_Main()
 			local Width, Height = surface.GetTextSize(PropOwner)
 			Width = Width + 25
 
-			
+
 			surface.SetDrawColor( 0, 0, 0, 210 )
 			surface.DrawRect( ScrW() - (Width + 8) - 110, 6, Width + 12, Height + 16 )
 			surface.DrawRect( ScrW() - (Width + 8) - 107, 9, Width + 6, Height + 10 )
-			
+
 			draw.SimpleText(PropOwner, "SGS_HUD2", ScrW() - (Width / 2) - 115, 21, Color(255, 255, 255, 255), 1, 1)
 		end
 	end
@@ -1869,7 +1869,7 @@ function SGS_HUD_Main()
 
 	--TRANSLATED RESOURCE DISPLAY--
 	local tr = util.TraceLine(util.GetPlayerTrace(LocalPlayer()))
-	if(tr.HitNonWorld) then
+	if (tr.HitNonWorld) then
 		if tr.Entity:IsValid() then
 			if tr.Entity:GetPos():DistToSqr( LocalPlayer():GetPos() ) <= 62500 then
 				if SGS_LookupResourceTranslation( tr.Entity:GetClass() ) then
@@ -1880,20 +1880,6 @@ function SGS_HUD_Main()
 			end
 		end
 	end
-
-	--[[
-	--Messages Window--
-
-	draw.RoundedBoxEx( 16, ScrW() - 400, ScrH() - 95, 230, 95, Color(80, 80, 80, 150), true, false, false, false ) --Outter Box
-	draw.RoundedBoxEx( 16, ScrW() - 170, ScrH() - 90, 170, 90, Color(80, 80, 80, 150), false, false, false, false ) --Outter Box 2
-	draw.RoundedBoxEx( 2, ScrW() - 20, ScrH() - 95, 20, 5, Color(80, 80, 80, 150), false, false, false, false ) --Outter Box 2
-	draw.RoundedBoxEx( 16, ScrW() - 395, ScrH() - 90, 395, 90, Color(50, 50, 50, 255), true, false, false, false ) --Inner Box
-
-	--XP Window--
-	local xpheight = 14 + ( #GAMEMODE.InfoXPMessages * 15 )
-	draw.RoundedBoxEx( 4, ScrW() - 220, ScrH() - 90 - xpheight, 210, xpheight, Color(80, 80, 80, 150), true, true, false, false ) --Outter Box
-	draw.RoundedBoxEx( 4, ScrW() - 215, ScrH() - 85 - xpheight, 200, xpheight - 5, Color(50, 50, 50, 255), true, true, false, false ) --Inner Box
-	]]
 
 end
 hook.Add( "HUDPaint", "SGS_HUDMain", SGS_HUD_Main)
@@ -2082,7 +2068,7 @@ end
 function PlayerMeta:CurrentEquippedTool()
 	local tool = "None"
 	if IsValid( self:GetActiveWeapon() ) then
-		tool = SGS_ReverseToolLookup( self:GetActiveWeapon():GetClass()).title
+		tool = SGS_ReverseToolLookup( self:GetActiveWeapon():GetClass() ).title
 	end
 	return tool
 end
@@ -2135,7 +2121,7 @@ function EntityMeta:DrawOnRenderDistance()
 
 end
 
-net.Receive("GAT_ColorMessage", function(length )
+net.Receive( "GAT_ColorMessage", function( length )
 	local message = net.ReadTable()
 	chat.AddText( unpack( message ) )
 end)

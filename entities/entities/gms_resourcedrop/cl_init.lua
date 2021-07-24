@@ -100,7 +100,7 @@ function ENT:Think()
 		return
 	end
 
-	self:SetNextClientThink( CurTime() + 1)
+	self:SetNextClientThink( CurTime() + 1 )
 	return true
 
 end

@@ -115,24 +115,60 @@ function PlayerMeta:IsMember()
 	if self:IsUserGroup("member") then
 		return true
 	end
-	
+
 	if self:IsUserGroup("moderator") then
 		return true
 	end
-	
+
 	if self:IsUserGroup("veteran") then
 		return true
 	end
-	
+
 	if self:IsUserGroup("supporter") then
 		return true
 	end
-	
+
 	if self:IsUserGroup("admin") then
 		return true
 	end
-	
+
 	if self:IsDonator() then
+		return true
+	end
+
+	if self:IsUserGroup("bossdonator") then
+		return true
+	end
+
+	if self:IsUserGroup("voiddonator") then
+		return true
+	end
+
+	if self:IsUserGroup("bossmod") then
+		return true
+	end
+
+	if self:IsUserGroup("voidmod") then
+		return true
+	end
+
+	if self:IsUserGroup("donateadmin") then
+		return true
+	end
+
+	if self:IsUserGroup("bossadmin") then
+		return true
+	end
+
+	if self:IsUserGroup("voidadmin") then
+		return true
+	end
+
+	if self:IsUserGroup("moddonator") then
+		return true
+	end
+
+	if self:IsUserGroup("developer") then
 		return true
 	end
 

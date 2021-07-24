@@ -8,7 +8,6 @@ function ENT:Draw()
 
 end
 
-
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
@@ -34,7 +33,7 @@ end
 --Return: Nothing
 function ENT:Think()
 
-	self:RenderDistanceCheck( LocalPlayer(), true )
+	self:RenderDistanceCheck( LocalPlayer(), false )
 	self:SetNextClientThink( CurTime() + 1 )
 	return true
 

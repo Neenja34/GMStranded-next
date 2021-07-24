@@ -33,7 +33,7 @@ end
 --Return: Nothing
 function ENT:Think()
 
-	self:RenderDistanceCheck( LocalPlayer(), false )
+	self:RenderDistanceCheck( LocalPlayer(), true )
 	self:SetNextClientThink( CurTime() + 1 )
 	return true
 
