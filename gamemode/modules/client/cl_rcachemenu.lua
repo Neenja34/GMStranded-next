@@ -108,8 +108,8 @@ function PANEL:DrawFrame()
 			rcachelimit = rcachelimit + v
 		end
 
-		RCacheLimitLabel:SetText( rcachelimit .. " / " .. SGS.cmax)
-		YourInventoryLimitLabel:SetText( tostring( SGS.curinv ) .. " / " .. tostring( SGS.maxinv ) )
+		RCacheLimitLabel:SetText( rcachelimit .. " / " .. SGS.cmax )
+		YourInventoryLimitLabel:SetText( SGS.curinv .. " / " .. SGS.maxinv )
 
 		PlayerInventory:Clear()
 		for k, v in SortedPairs( SGS.resources ) do
