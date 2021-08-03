@@ -262,7 +262,7 @@ function PANEL:DrawFrame()
 		blankbar:SetSize( 782, 12 )
 		blankbar.Paint = function()
 
-			surface.SetDrawColor( white )
+			surface.SetDrawColor( 255, 255, 255, 0 )
 			surface.DrawRect( 0, 0, blankbar:GetWide(), blankbar:GetTall() )
 
 		end
