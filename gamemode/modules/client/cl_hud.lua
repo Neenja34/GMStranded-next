@@ -13,6 +13,15 @@ local outlineThickness = CreateClientConVar( "sgs_crosshair_outline_thickness", 
 CreateClientConVar( "sgs_crosshair_color", "255,255,255,255", true, false, "" )
 CreateClientConVar( "sgs_crosshair_outline_color", "0,0,0,255", true, false, "" )
 
+local color = {}
+local outlinecolor = {}
+
+local white = Color( 255, 255, 255, 255 )
+local black = Color( 0, 0, 0, 255 )
+local red = Color( 255, 0, 0, 255 )
+local yellow = Color( 255, 255, 0, 255 )
+local cyan = Color( 0, 255, 255, 255 )
+
 function SGS_DrawCrosshair()
 
 	if !LocalPlayer():Alive() then return end
@@ -32,7 +41,6 @@ function SGS_DrawCrosshair()
 
 	if outline:GetBool() then
 
-		local outlinecolor = {}
 		outlinecolor = string.Split( GetConVar( "sgs_crosshair_outline_color" ):GetString(), "," )
 
 		surface.SetDrawColor( Color( outlinecolor[ 1 ], outlinecolor[ 2 ], outlinecolor[ 3 ], outlinecolor[ 4 ] ) )
@@ -59,7 +67,6 @@ function SGS_DrawCrosshair()
 
 	end
 
-	local color = {}
 	color = string.Split( GetConVar( "sgs_crosshair_color" ):GetString(), "," )
 
 	surface.SetDrawColor( Color( color[ 1 ], color[ 2 ], color[ 3 ], color[ 4 ] ) )
@@ -97,7 +104,7 @@ end
 
 function PANEL:Paint( w, h )
 
-	draw.SimpleTextOutlined( "|G4P| Stranded (Project Gull)", "ScoreboardDefaultTitle", 8, 0, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT, 2, Color(0,0,0,255))
+	draw.SimpleTextOutlined( "|G4P| Stranded (Project Gull)", "ScoreboardDefaultTitle", 8, 0, white, TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT, 2, black)
 
 end
 
@@ -122,10 +129,10 @@ function PANEL:DrawFrame()
 		teambanner.Paint = function()
 
 			surface.SetFont( "ScoreboardDefault" )
-			surface.SetTextColor( Color(0, 0, 0, 255) )
+			surface.SetTextColor( black )
 			surface.SetDrawColor( team.GetColor( k ) )
 			surface.DrawRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
-			surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
+			surface.SetDrawColor( black )
 			surface.DrawOutlinedRect( 0, 0, teambanner:GetWide(), teambanner:GetTall() )
 			local tw, th = surface.GetTextSize( team.GetName( k ) )
 			surface.SetTextPos( 400 - ( tw / 2), 12 - ( th / 2) )
@@ -139,10 +146,10 @@ function PANEL:DrawFrame()
 		titlebarbanner.Paint = function()
 
 			surface.SetFont( "SGS_RCacheMenuText" )
-			surface.SetTextColor( Color( 0, 0, 0, 255 ) )
-			surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
+			surface.SetTextColor( black )
+			surface.SetDrawColor( white )
 			surface.DrawRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
-			surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
+			surface.SetDrawColor( black )
 			surface.DrawOutlinedRect( 0, 0, titlebarbanner:GetWide(), titlebarbanner:GetTall() )
 			local _, th = surface.GetTextSize( "I" )
 			surface.SetTextPos( 5, 10 - ( th / 2 ) )
@@ -164,97 +171,98 @@ function PANEL:DrawFrame()
 		SGS.ScoreBoardPanel:AddItem( titlebarbanner )
 
 		for _, ply in pairs( player.GetAll() ) do
-			if ply && ply:Team() == k then
 
-				local playerbanner = vgui.Create( "DPanel" )
-				playerbanner:SetSize( 782, 20 )
+			if ply && ply:Team() == k then continue end
 
-				local pslvl = ply:GetNWString( "survival", "0" )
-				if ply:IsUserGroup( "usera" ) then
-					pslvl = "1"
-				end
+			local playerbanner = vgui.Create( "DPanel" )
+			playerbanner:SetSize( 782, 20 )
 
-				local pvc = ply:GetNWString( "voicechannel", "A" )
-				if ply:IsUserGroup( "usera" ) then
-					pvc = "A"
-				end
-
-				local pping = ply:Ping()
-				local pname = ply:Nick()
-				playerbanner.Paint = function()
-
-					surface.SetFont( "SGS_RCacheMenuText" )
-					surface.SetTextColor( Color( 0, 0, 0, 255 ) )
-					surface.SetDrawColor( Color( 255, 255, 255, 255 ) )
-					surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-					surface.SetDrawColor( Color( 0, 0, 0, 255 ) )
-					surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
-
-					local tr, th = surface.GetTextSize( pname )
-					surface.SetTextPos( 5, 10 - ( th / 2 ) )
-					if ply:GetNWBool( "afk", false ) then
-						surface.SetTextColor( Color( 255, 0, 0, 255 ) )
-						surface.DrawText( "*AFK*" )
-						surface.SetTextColor( Color( 0, 0, 0, 255 ) )
-						surface.SetTextPos( 45, 10 - ( th / 2 ) )
-						surface.DrawText( pname )
-					else
-						surface.DrawText( pname )
-					end
-					surface.SetTextPos( 410, 10 - ( th / 2 ) )
-					surface.DrawText( pslvl )
-					surface.SetTextPos( 550, 10 - ( th / 2 ) )
-					surface.DrawText( pvc )
-					surface.SetTextPos( 648, 10 - ( th / 2 ) )
-					surface.DrawText( pping )
-
-				end
-
-				gagbutton = vgui.Create( "DImageButton", playerbanner )
-				gagbutton:SetSize( 16, 16 )
-				gagbutton:SetPos( 725, 2 )
-				if ply:IsMuted() then
-					gagbutton:SetImage( "icon32/muted.png" )
-				else
-					gagbutton:SetImage( "icon32/unmuted.png" )
-				end
-
-				gagbutton.DoClick = function()
-					ply:SetMuted( !ply:IsMuted() )
-					self:DrawFrame()
-				end
-
-				mutebutton = vgui.Create( "DImageButton", playerbanner )
-				mutebutton:SetSize( 16, 16 )
-				mutebutton:SetPos( 690, 2 )
-				if ply.ismuted then
-					mutebutton:SetImage( "icon32/muted.png" )
-				else
-					mutebutton:SetImage( "icon32/unmuted.png" )
-				end
-
-				mutebutton.DoClick = function()
-					ply.ismuted = !ply.ismuted
-					self:DrawFrame()
-				end
-
-				statsbutton = vgui.Create( "DImageButton", playerbanner )
-				statsbutton:SetSize( 16, 16 )
-				statsbutton:SetPos( 765, 2 )
-				statsbutton:SetImage( "icon16/table_edit.png" )
-				statsbutton.DoClick = function()
-					RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() )
-				end
-
-				SGS.ScoreBoardPanel:AddItem( playerbanner )
+			local pslvl = ply:GetNWString( "survival", "0" )
+			if ply:IsUserGroup( "usera" ) then
+				pslvl = "1"
 			end
+
+			local pvc = ply:GetNWString( "voicechannel", "A" )
+			if ply:IsUserGroup( "usera" ) then
+				pvc = "A"
+			end
+
+			local pping = ply:Ping()
+			local pname = ply:Nick()
+			playerbanner.Paint = function()
+
+				surface.SetFont( "SGS_RCacheMenuText" )
+				surface.SetTextColor( black )
+				surface.SetDrawColor( white )
+				surface.DrawRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+				surface.SetDrawColor( black )
+				surface.DrawOutlinedRect( 0, 0, playerbanner:GetWide(), playerbanner:GetTall() )
+
+				local tr, th = surface.GetTextSize( pname )
+				surface.SetTextPos( 5, 10 - ( th / 2 ) )
+				if ply:GetNWBool( "afk", false ) then
+					surface.SetTextColor( red )
+					surface.DrawText( "*AFK*" )
+					surface.SetTextColor( black )
+					surface.SetTextPos( 45, 10 - ( th / 2 ) )
+					surface.DrawText( pname )
+				else
+					surface.DrawText( pname )
+				end
+				surface.SetTextPos( 410, 10 - ( th / 2 ) )
+				surface.DrawText( pslvl )
+				surface.SetTextPos( 550, 10 - ( th / 2 ) )
+				surface.DrawText( pvc )
+				surface.SetTextPos( 648, 10 - ( th / 2 ) )
+				surface.DrawText( pping )
+
+			end
+
+			gagbutton = vgui.Create( "DImageButton", playerbanner )
+			gagbutton:SetSize( 16, 16 )
+			gagbutton:SetPos( 725, 2 )
+			if ply:IsMuted() then
+				gagbutton:SetImage( "icon32/muted.png" )
+			else
+				gagbutton:SetImage( "icon32/unmuted.png" )
+			end
+
+			gagbutton.DoClick = function()
+				ply:SetMuted( !ply:IsMuted() )
+				self:DrawFrame()
+			end
+
+			mutebutton = vgui.Create( "DImageButton", playerbanner )
+			mutebutton:SetSize( 16, 16 )
+			mutebutton:SetPos( 690, 2 )
+			if ply.ismuted then
+				mutebutton:SetImage( "icon32/muted.png" )
+			else
+				mutebutton:SetImage( "icon32/unmuted.png" )
+			end
+
+			mutebutton.DoClick = function()
+				ply.ismuted = !ply.ismuted
+				self:DrawFrame()
+			end
+
+			statsbutton = vgui.Create( "DImageButton", playerbanner )
+			statsbutton:SetSize( 16, 16 )
+			statsbutton:SetPos( 765, 2 )
+			statsbutton:SetImage( "icon16/table_edit.png" )
+			statsbutton.DoClick = function()
+				RunConsoleCommand( "sgs_viewplayerstats", ply:Nick() )
+			end
+
+			SGS.ScoreBoardPanel:AddItem( playerbanner )
+
 		end
 
 		local blankbar = vgui.Create( "DPanel" )
 		blankbar:SetSize( 782, 12 )
 		blankbar.Paint = function()
 
-			surface.SetDrawColor( Color( 255, 255, 255, 0 ) )
+			surface.SetDrawColor( white )
 			surface.DrawRect( 0, 0, blankbar:GetWide(), blankbar:GetTall() )
 
 		end
@@ -297,19 +305,16 @@ function PANEL:Init()
 
 	self.x = ScrW()
 	self.y = ScrH()
-	
 	self.sizex = self.x * 0.8
 	self.sizey = self.y * 0.8
-	
 	self:SetSize( self.sizex, self.sizey )
-    self:SetPos((ScrW() / 2) - (self.sizex / 2), (ScrH() / 2) - (self.sizey / 2))
-    self:SetVisible(false)
-	
+	self:SetPos( ( ScrW() / 2 ) - ( self.sizex / 2 ), ( ScrH() / 2 ) - ( self.sizey / 2 ) )
+	self:SetVisible( false )
 	self.time = SGS.tostime
 	self.nextthink = CurTime() + 1
 	self.bdisabled = true
-
 	self:DrawFrame()
+
 end
 
 function PANEL:Paint( w, h )
@@ -318,16 +323,12 @@ function PANEL:Paint( w, h )
 end
 
 function PANEL:DrawFrame()
-	--HTMLPanel = vgui.Create("DPanel", self)
-	--HTMLPanel:SetPos(8,64)
-	--HTMLPanel:SetSize(782, 500)
-	
-	
+
 	HTMLTest = vgui.Create("DHTML", self)
 	HTMLTest:SetPos(12,12)
 	HTMLTest:SetSize( self.sizex - 24, self.sizey - 68 )
 	HTMLTest:OpenURL("http://neenja.nn.pe/guide")
-	
+
 	TOSbutton = vgui.Create( "DButton", self )
 	TOSbutton:SetSize( 120, 40 )
 	TOSbutton:SetPos( 12, self.sizey - 52  )
@@ -338,7 +339,7 @@ function PANEL:DrawFrame()
 		RunConsoleCommand("sgs_accepttos")
 		self:Remove()
 	end
-	
+
 	TOSbutton2 = vgui.Create( "DButton", self )
 	TOSbutton2:SetSize( 120, 40 )
 	TOSbutton2:SetPos( 140, self.sizey - 52 )
@@ -346,8 +347,7 @@ function PANEL:DrawFrame()
 	TOSbutton2.DoClick = function( TOSbutton2 )
 		RunConsoleCommand("disconnect")
 	end
-	
-	
+
 end
 
 
@@ -377,15 +377,13 @@ function PANEL:Init()
 
 	self.x = ScrW()
 	self.y = ScrH()
-	
 	self.sizex = self.x * 0.8
 	self.sizey = self.y * 0.8
-	
 	self:SetSize( self.sizex, self.sizey )
-    self:SetPos((ScrW() / 2) - (self.sizex / 2), (ScrH() / 2) - (self.sizey / 2))
-    self:SetVisible(false)
-	
+	self:SetPos((ScrW() / 2) - (self.sizex / 2), (ScrH() / 2) - (self.sizey / 2))
+	self:SetVisible(false)
 	self:DrawFrame()
+
 end
 
 function PANEL:Paint( w, h )
@@ -399,7 +397,7 @@ function PANEL:DrawFrame()
 	HTMLTest:SetPos(12,12)
 	HTMLTest:SetSize( self.sizex - 24, self.sizey - 68 )
 	HTMLTest:OpenURL("http://neenja.nn.pe/guide")
-	
+
 	TOSbutton = vgui.Create( "DButton", self )
 	TOSbutton:SetSize( 120, 40 )
 	TOSbutton:SetPos( 12, self.sizey - 52  )
@@ -407,8 +405,7 @@ function PANEL:DrawFrame()
 	TOSbutton.DoClick = function( TOSbutton )
 		self:Remove()
 	end
-	
-	
+
 end
 
 vgui.Register("sgs_helppanel", PANEL, "Panel")
@@ -419,14 +416,12 @@ vgui.Register("sgs_helppanel", PANEL, "Panel")
 local PANEL = {}
 
 function PANEL:Init()
-    self:SetPos((ScrW() / 2) - 400, 30)
-    self:SetSize(800, 650)
-    self:SetVisible(false)
-	
-	
+
+	self:SetPos((ScrW() / 2) - 400, 30)
+	self:SetSize(800, 650)
+	self:SetVisible(false)
 	self:DrawFrame()
-	
-	
+
 end
 
 function PANEL:Paint( w, h )
@@ -436,16 +431,16 @@ function PANEL:Paint( w, h )
 end
 
 function PANEL:DrawFrame()
+
 	HTMLPanel = vgui.Create("DPanel", self)
 	HTMLPanel:SetPos(8,64)
 	HTMLPanel:SetSize(782, 500)
-	
-	
+
 	HTMLTest = vgui.Create("DHTML", HTMLPanel)
 	HTMLTest:SetPos(0,0)
 	HTMLTest:Dock( FILL )
 	HTMLTest:OpenURL("http://neenja.nn.pe/")
-	
+
 	HelpButton = vgui.Create( "DButton", self )
 	HelpButton:SetSize( 120, 40 )
 	HelpButton:SetPos( 8, 572 )
@@ -454,8 +449,6 @@ function PANEL:DrawFrame()
 		self:Remove()
 	end
 
-	
-	
 end
 vgui.Register("sgs_wikipanel", PANEL, "EditablePanel")
 
@@ -626,7 +619,7 @@ function PANEL:Paint()
 	local bnumber = tostring( self.index )
 	if bnumber == "10" then bnumber = "0" end
 
-	draw.SimpleText(bnumber, "HotBarnumbers", 3, 1, Color(255, 255,255, 255), 0, 0)
+	draw.SimpleText(bnumber, "HotBarnumbers", 3, 1, white, 0, 0)
 
 end
 
@@ -707,12 +700,12 @@ function PANEL:PaintOver()
 
 	local bnumber = tostring( self.index )
 	if bnumber == "10" then bnumber = "0" end
-	draw.SimpleText( bnumber, "HotBarnumbers", 3, 1, Color( 255, 255,255, 255 ), 0, 0 )
+	draw.SimpleText( bnumber, "HotBarnumbers", 3, 1, white, 0, 0 )
 
 	if self.btype == "edible" or self.btype == "potion" then
 		local count = SGS.resources[ SGS.HotBarcontents[ self.index ] ] or 0
 		local len = string.len( tostring( count ) )
-		draw.SimpleText( tostring( count ), "HotBarnumbers", 38 - ( (len * 7) - 7 ), 34, Color( 255, 255, 0, 255 ), 0, 0 )
+		draw.SimpleText( tostring( count ), "HotBarnumbers", 38 - ( (len * 7) - 7 ), 34, yellow, 0, 0 )
 	end
 
 end
@@ -773,7 +766,7 @@ function SGS_DeathHUD()
 	draw.RoundedBoxEx( 4, ScrW() / 2 - 296, ScrH() / 2 - 221, 592, 442, Color( 50, 50, 50, 200 ), true, true, true, true )
 	local keyword = "respawn"
 	if LocalPlayer():Alive() then keyword = "close" end
-	draw.DrawText( "Press Jump (Defult: Space) to " .. keyword .. "!", "DeathNotice4", ScrW() / 2, ScrH() / 2 - 210, Color( 255, 255, 255, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "Press Jump (Defult: Space) to " .. keyword .. "!", "DeathNotice4", ScrW() / 2, ScrH() / 2 - 210, white, TEXT_ALIGN_CENTER )
 	draw.DrawText( "You Have Died!", "DeathNotice1", ScrW() / 2, ScrH() / 2 - 190, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
 	draw.DrawText( "You Were Killed By: ", "DeathNotice2", ScrW() / 2 - 280, ScrH() / 2 - 130 , Color( 255, 20, 20, 255 ), TEXT_ALIGN_LEFT )
 	draw.DrawText( SGS.killerstring, "DeathNotice2", ScrW() / 2 - 80, ScrH() / 2 - 130 , Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT )
@@ -781,9 +774,9 @@ function SGS_DeathHUD()
 	draw.DrawText( "Items Destroyed: ", "DeathNotice2", ScrW() / 2 - 80, ScrH() / 2 - 80 , Color( 255, 20, 20, 255 ), TEXT_ALIGN_LEFT )
 	draw.DrawText( "Tools Dropped: ", "DeathNotice2", ScrW() / 2 + 140, ScrH() / 2 - 80 , Color( 255, 20, 20, 255 ), TEXT_ALIGN_LEFT )
 
-	draw.DrawText( SGS.itemsdropped, "DeathNotice3", ScrW() / 2 - 280, ScrH() / 2 - 50 , Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT )
-	draw.DrawText( SGS.itemsdestroyed, "DeathNotice3", ScrW() / 2 - 80, ScrH() / 2 - 50 , Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT )
-	draw.DrawText( SGS.toolsdropped, "DeathNotice3", ScrW() / 2 + 140, ScrH() / 2 - 50 , Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT )
+	draw.DrawText( SGS.itemsdropped, "DeathNotice3", ScrW() / 2 - 280, ScrH() / 2 - 50 , white, TEXT_ALIGN_LEFT )
+	draw.DrawText( SGS.itemsdestroyed, "DeathNotice3", ScrW() / 2 - 80, ScrH() / 2 - 50 , white, TEXT_ALIGN_LEFT )
+	draw.DrawText( SGS.toolsdropped, "DeathNotice3", ScrW() / 2 + 140, ScrH() / 2 - 50 , white, TEXT_ALIGN_LEFT )
 end
 hook.Add( "HUDPaint", "SGS_DeathHUD", SGS_DeathHUD )
 
@@ -792,17 +785,17 @@ function SGS_DeathHUD2()
 
 	if LocalPlayer():Alive() then return end
 	if LocalPlayer():GetNWBool( "displaydeathnotice", false ) then return end
-	draw.DrawText( "You Are Near Death!", "DeathNotice5", ScrW() / 2 - 2, 148, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "You Are Near Death!", "DeathNotice5", ScrW() / 2 - 2, 148, black, TEXT_ALIGN_CENTER )
 	draw.DrawText( "You Are Near Death!", "DeathNotice5", ScrW() / 2, 150, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
-	draw.DrawText( "Unless Resurrected You Will Die In:", "DeathNotice1", ScrW() / 2 - 2, 208, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "Unless Resurrected You Will Die In:", "DeathNotice1", ScrW() / 2 - 2, 208, black, TEXT_ALIGN_CENTER )
 	draw.DrawText( "Unless Resurrected You Will Die In:", "DeathNotice1", ScrW() / 2, 210, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
 	local timeleft = math.Clamp( LocalPlayer():GetNWInt("deathtotaltime", 60) - ( math.floor( CurTime() ) - LocalPlayer():GetNWInt("lastdeathtime") ), 0, LocalPlayer():GetNWInt("deathtotaltime", 60) )
-	draw.DrawText( timeleft, "DeathNotice6", ScrW() / 2 -2, 298, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( timeleft, "DeathNotice6", ScrW() / 2 -2, 298, black, TEXT_ALIGN_CENTER )
 	draw.DrawText( timeleft, "DeathNotice6", ScrW() / 2, 300, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
 
-	draw.DrawText( "Press Reload (Default: R) To Skip Timer", "DeathNotice2", ScrW() / 2 -2, 430, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "Press Reload (Default: R) To Skip Timer", "DeathNotice2", ScrW() / 2 -2, 430, black, TEXT_ALIGN_CENTER )
 	draw.DrawText( "Press Reload (Default: R) To Skip Timer", "DeathNotice2", ScrW() / 2, 432, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
-	draw.DrawText( "Some items may be lost.", "DeathNotice2", ScrW() / 2 -2, 600, Color( 0, 0, 0, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "Some items may be lost.", "DeathNotice2", ScrW() / 2 -2, 600, black, TEXT_ALIGN_CENTER )
 	draw.DrawText( "Some items may be lost.", "DeathNotice2", ScrW() / 2, 600, Color( 255, 20, 20, 255 ), TEXT_ALIGN_CENTER )
 
 end
@@ -834,10 +827,10 @@ function SGS_UnlockHUD()
 	draw.RoundedBoxEx( 4, ScrW() / 2 - unlock_window_w / 2, unlock_window_top, unlock_window_w, unlock_window_h, Color( 80, 80, 80, 150 ), true, true, true, true )
 	draw.RoundedBoxEx( 4, ScrW() / 2 - ( unlock_window_w / 2 - 4 ), unlock_window_top + 4, unlock_window_w - 8, unlock_window_h - 8, Color( 50, 50, 50, 150 ), true, true, true, true )
 
-	draw.DrawText( "Congratulations!", "UnlockFont1", ScrW() / 2 - 2, unlock_window_top + 10, Color( 255, 255, 255, 255 ), TEXT_ALIGN_CENTER )
-	draw.DrawText( "You have reached " .. LocalPlayer().skillunlocktbl[ 1 ] .. " level: " .. LocalPlayer().skillunlocktbl[ 2 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 35, Color( 255, 255, 255, 255 ), TEXT_ALIGN_CENTER )
-	draw.DrawText( LocalPlayer().skillunlocktbl[ 3 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 60, Color( 255, 255, 255, 255 ), TEXT_ALIGN_CENTER )
-	draw.DrawText( LocalPlayer().skillunlocktbl[ 4 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 75, Color( 255, 255, 255, 255 ), TEXT_ALIGN_CENTER )
+	draw.DrawText( "Congratulations!", "UnlockFont1", ScrW() / 2 - 2, unlock_window_top + 10, white, TEXT_ALIGN_CENTER )
+	draw.DrawText( "You have reached " .. LocalPlayer().skillunlocktbl[ 1 ] .. " level: " .. LocalPlayer().skillunlocktbl[ 2 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 35, white, TEXT_ALIGN_CENTER )
+	draw.DrawText( LocalPlayer().skillunlocktbl[ 3 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 60, white, TEXT_ALIGN_CENTER )
+	draw.DrawText( LocalPlayer().skillunlocktbl[ 4 ], "UnlockFont2", ScrW() / 2 - 2, unlock_window_top + 75, white, TEXT_ALIGN_CENTER )
 end
 hook.Add( "HUDPaint", "SGS_UnlockHUD", SGS_UnlockHUD )
 
@@ -848,7 +841,7 @@ function surface.PrecacheArc( cx, cy, radius, thickness, startang, endang, rough
 
 	-- Correct start/end ang
 	local startang, endang = startang or 0, endang or 0
-	if bClockwise and startang < endang then
+	if bClockwise && startang < endang then
 		local temp = startang
 		startang = endang
 		endang = temp
@@ -958,7 +951,7 @@ hook.Add( "PostRenderVGUI", "Circles", function()
 		false
 	)
 
-	draw.SimpleTextOutlined( SGS.hudtimer[ "text" ], "SGS_HUD3", ScrW() / 2  , ( ScrH() / 2 ) -50, Color( 255, 255, 255, 255 ), 1, 1, 1, Color( 0,0,0,255 ) )
+	draw.SimpleTextOutlined( SGS.hudtimer[ "text" ], "SGS_HUD3", ScrW() / 2  , ( ScrH() / 2 ) -50, white, 1, 1, 1, black )
 
 	if CurTime() >= SGS.hudtimer[ "etime" ] then
 		SGS.hudtimer[ "display" ] = false
@@ -1088,7 +1081,7 @@ function SGS_AllThingsHUD()
 	end
 
 	--Icons
-	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.SetDrawColor( white )
 	surface.SetMaterial( hungerIcon	)
 	surface.DrawTexturedRect( x + 80, y - 65, 14, 14 )
 	surface.SetMaterial( thirstIcon	)
@@ -1133,7 +1126,7 @@ function SGS_AllThingsHUD()
 		surface.SetDrawColor( 0, 0, 0, 210 )
 		surface.DrawRect( x + 235, y - 20, 160, 20 ) --Oxygen Outter
 		surface.DrawRect( x + 265, y - 17, 127, 14 ) --Oxygen Inner
-		surface.SetDrawColor( 255, 255, 255, 255 )
+		surface.SetDrawColor( white )
 		surface.SetMaterial( oxygenIcon	)
 		surface.DrawTexturedRect( x + 242, y - 18, 16, 16 )
 		surface.SetDrawColor( 0, 255, 255, 210 )
@@ -1146,7 +1139,7 @@ function SGS_AllThingsHUD()
 		surface.SetDrawColor( 0, 0, 0, 210 )
 		surface.DrawRect( x + 235, y - 44, 160, 20 ) --Potion Outter
 		surface.DrawRect( x + 265, y - 41, 127, 14 ) --Potion Inner
-		surface.SetDrawColor( 255, 255, 255, 255 )
+		surface.SetDrawColor( white )
 		surface.SetMaterial( potionIcon	)
 		surface.DrawTexturedRect( x + 242, y - 42, 16, 16 )
 		surface.SetDrawColor( 255, 80, 255, 210 )
@@ -1226,7 +1219,7 @@ function SGS_AllThingsHUD()
 
 	--Player Name
 	surface.SetFont( "SGS_NEWHUD1" )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white )
 	surface.SetTextPos( x + 28, y - 142 )
 	surface.DrawText( LocalPlayer():GetName() )
 
@@ -1238,7 +1231,7 @@ function SGS_AllThingsHUD()
 
 	--Survival Level Text
 	surface.SetFont( "SGS_NEWHUD5" )
-	surface.SetTextColor( Color(255,255,255,255) )
+	surface.SetTextColor( white )
 	surface.SetTextPos( ScrW() - 399, y - 138 )
 	surface.DrawText( "Survival lvl: " .. SGS.levels["survival"])
 	local message = curLvl .. " / " .. SGS.levels["survival"] * 20
@@ -1275,19 +1268,19 @@ function SGS_AllThingsHUD()
 	local time = tostring(SGS_CheckTimeForHour( SGS.time )) .. ":" .. tostring(SGS_CheckTimeForMinute( SGS.time ))
 	w2, h2 = surface.GetTextSize(time)
 	surface.SetTextPos( ScrW() - 52 - (w2 / 2), 10 )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white )
 	surface.DrawText( time )
 	surface.SetFont( "SGS_NEWHUD4" )
 	w, h = surface.GetTextSize(day)
 	surface.SetTextPos( ScrW() - 52 - (w / 2), 30 )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white )
 	surface.DrawText( day )
 
 	surface.SetFont( "SGS_NEWHUD3" )
-	surface.SetTextColor( 255, 0, 0, 255 )
+	surface.SetTextColor( red )
 	surface.SetTextPos( ScrW() - 86 , 50 )
 	surface.DrawText( "PVP:"  )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white)
 	surface.SetTextPos( ScrW() - 50 , 50 )
 	if LocalPlayer():GetNWBool("inpvp", false) == true then
 		surface.DrawText( "ON"  )
@@ -1296,11 +1289,11 @@ function SGS_AllThingsHUD()
 	end
 	surface.SetFont( "SGS_NEWHUD3" )
 	surface.SetTextPos( ScrW() - 70 , 74 )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white )
 	surface.DrawText( SGS.gtokens )
 
 	surface.SetFont( "SGS_NEWHUD2" )
-	surface.SetTextColor( 255, 255, 255, 255 )
+	surface.SetTextColor( white )
 	surface.SetTextPos( ScrW() - 90 , 100 )
 	surface.DrawText( "V: " .. GAMEMODE.Version )
 
@@ -1324,13 +1317,13 @@ function SGS_AllThingsHUD()
 		surface.SetDrawColor( 0, 0, 0, 210 )
 		surface.DrawRect( x , y , 240, 160 ) --Icon Outter
 		surface.DrawRect( x + 3 , y + 3 , 240 - 6, 20 ) --Icon Inner
-		surface.SetTextColor( 255, 0, 0, 255 )
+		surface.SetTextColor( red )
 		surface.SetFont( "SGS_NEWHUD3" )
 		surface.SetTextPos( x + 50 , y + 3  )
 		surface.DrawText( "Quests" )
 
 		surface.SetFont( "SGS_NEWHUD5" )
-		surface.SetTextColor( 255, 255, 255, 255 )
+		surface.SetTextColor( white )
 
 		local offset = 15
 		local percent = 100 - ((LocalPlayer():GetNWInt("daytimer") / 1440) * 100)
@@ -1381,9 +1374,9 @@ function SGS_AllThingsHUD()
 		local modi = 12
 		surface.SetFont( "SGS_HUD2" )
 		surface.SetTextPos( x + 15 , 11 )
-		surface.SetTextColor( 0, 255, 255, 255 )
+		surface.SetTextColor( cyan )
 		surface.DrawText( "Game Keybinds" )
-		surface.SetTextColor( 255, 255, 255, 255 )
+		surface.SetTextColor( white )
 		surface.SetTextPos( x + 10 , 32 + modi * 0 )
 		surface.DrawText( "F1: Skills Menu" )
 		surface.SetTextPos( x + 10 , 32 + modi * 1 )
@@ -1436,9 +1429,9 @@ function SGS_AllThingsHUD()
 			surface.SetDrawColor( 0, 0, 0, 210 )
 			surface.SetFont( "SGS_NEWHUD5" )
 			surface.SetTextPos( x + 10, y + 4 )
-			surface.SetTextColor( Color(255,255,255,255) )
+			surface.SetTextColor( white )
 			surface.DrawText( Cap(skill) .. ": " .. curlevel )
-			surface.SetTextColor( Color(255,255,255,255) )
+			surface.SetTextColor( white )
 			local message = curexp .. " / " .. nextexp
 			local w, _ = surface.GetTextSize( message )
 			surface.SetTextPos( x + 248 - w , y + 4 )
@@ -1454,11 +1447,11 @@ function SGS_AllThingsHUD()
 		surface.DrawRect( x - 72, y - 65, 144, 20 ) --Icon Inner
 		surface.SetFont( "SGS_NEWHUD3" )
 		surface.SetTextPos( x - 48 , y - 65 )
-		surface.SetTextColor( 255, 0, 0, 255 )
+		surface.SetTextColor( red )
 		surface.DrawText( "YOU ARE AFK" )
 		surface.SetFont( "SGS_NEWHUD2" )
 		surface.SetTextPos( x - 48 , y - 42 )
-		surface.SetTextColor( 255, 255, 255, 255 )
+		surface.SetTextColor( white )
 		surface.DrawText( "Time AFK: " .. SGS.afktime .. "m" )
 		surface.SetFont( "SGS_NEWHUD1" )
 		surface.SetTextPos( x - 65 , y - 30 )
@@ -1472,13 +1465,13 @@ function SGS_AllThingsHUD()
 		surface.SetDrawColor( 0, 0, 0, 210 )
 		surface.DrawRect( x , y , 240, 160 ) --Icon Outter
 		surface.DrawRect( x + 3 , y + 3 , 240 - 6, 20 ) --Icon Inner
-		surface.SetTextColor( 255, 0, 0, 255 )
+		surface.SetTextColor( red )
 		surface.SetFont( "SGS_NEWHUD3" )
 		surface.SetTextPos( x + 50 , y + 3  )
 		surface.DrawText( "F7 - Commands List" )
 
 		surface.SetFont( "SGS_NEWHUD5" )
-		surface.SetTextColor( 255, 255, 255, 255 )
+		surface.SetTextColor( white )
 		local offset = 15
 		surface.SetTextPos( x + 6 , y + 30 + offset * 0 )
 		surface.DrawText( "!sleep - Sleeps for 10 seconds." )
