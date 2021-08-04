@@ -14,6 +14,12 @@ for k, v in pairs( files ) do
 	AddCSLuaFile( "gmstranded/gamemode/modules/client/skybox/" .. v )
 end
 
+local files, dirs = file.Find("gmstranded/gamemode/modules/client/hud/*.lua", "LUA")
+for k, v in pairs( files ) do
+	ServerLog("Stranded: Loading module (" .. v .. ")\n")
+	AddCSLuaFile( "gmstranded/gamemode/modules/client/hud/" .. v )
+end
+
 local files, dirs = file.Find("gmstranded/gamemode/modules/server/*.lua", "LUA")
 for k, v in pairs( files ) do
 	ServerLog("Stranded: Loading module (" .. v .. ")\n")
@@ -207,9 +213,9 @@ timer.Create("sgs_makesuregamemodeinit", 10, 0, MakeSureInit)
 function SGS_SetNeeds( ply )
 
 	ply.needs = {}
-	ply.needs["hunger"] = ply.maxneeds
-	ply.needs["thirst"] = ply.maxneeds
-	ply.needs["fatigue"] = ply.maxneeds
+	ply.needs[ "hunger" ] = ply.maxneeds
+	ply.needs[ "thirst" ] = ply.maxneeds
+	ply.needs[ "fatigue" ] = ply.maxneeds
 	ply:SendNeeds()
 
 end
@@ -1218,10 +1224,10 @@ function PlayerMeta:DrinkBottleWater()
 end
 
 function PlayerMeta:DrinkWater( val )
-	if self.needs["thirst"] < self.maxneeds and self.needs["thirst"] > (self.maxneeds - val) then
-		self.needs["thirst"] = self.maxneeds
-	elseif self.needs["thirst"] < (self.maxneeds - val) then
-		self.needs["thirst"] = self.needs["thirst"] + val
+	if self.needs[ "thirst" ] < self.maxneeds and self.needs[ "thirst" ] > (self.maxneeds - val) then
+		self.needs[ "thirst" ] = self.maxneeds
+	elseif self.needs[ "thirst" ] < (self.maxneeds - val) then
+		self.needs[ "thirst" ] = self.needs[ "thirst" ] + val
 	end
 	self:AddStat( "general1", 1 )
 	self:EmitSound(Sound("npc/barnacle/barnacle_gulp"..math.random(1,2)..".wav"), 60, math.random(70, 130))
@@ -1288,7 +1294,7 @@ end
 function SGS_ChatSleep( ply, text, public )
 
   if (string.sub(string.lower(text), 1, 6) == "!sleep") then
-		if ply.needs["fatigue"] <= ( math.floor(ply.maxneeds / 2) ) then
+		if ply.needs[ "fatigue" ] <= ( math.floor(ply.maxneeds / 2) ) then
 			ply:Sleep(10, false, true)
 			return false
 		else
@@ -1302,7 +1308,7 @@ hook.Add( "PlayerSay", "SGS_ChatSleep", SGS_ChatSleep )
 
 function SGS_ConSleep( ply, com, args )
 
-	if ply.needs["fatigue"] <= ( math.floor( ply.maxneeds / 2 ) ) then
+	if ply.needs[ "fatigue" ] <= ( math.floor( ply.maxneeds / 2 ) ) then
 		ply:Sleep(10, false, true)
 		return
 	else
@@ -8009,16 +8015,16 @@ function PlayerMeta:Resurrect()
 
 		if !( GAMEMODE.Tribes:GetTribeLevel( self ) >= 7 ) then
 			self:SetHealth( self:GetMaxHealth() * 0.5 )
-			self.needs["hunger"] = self.maxneeds * 0.2
-			self.needs["thirst"] = self.maxneeds * 0.2
-			self.needs["fatigue"] = self.maxneeds * 0.2
+			self.needs[ "hunger" ] = self.maxneeds * 0.2
+			self.needs[ "thirst" ] = self.maxneeds * 0.2
+			self.needs[ "fatigue" ] = self.maxneeds * 0.2
 			self.res_sickness = CurTime() + 300
 			self:SendNeeds()
 		else
 			self:SetHealth( self:GetMaxHealth() * 0.75 )
-			self.needs["hunger"] = self.maxneeds * 0.5
-			self.needs["thirst"] = self.maxneeds * 0.5
-			self.needs["fatigue"] = self.maxneeds * 0.5
+			self.needs[ "hunger" ] = self.maxneeds * 0.5
+			self.needs[ "thirst" ] = self.maxneeds * 0.5
+			self.needs[ "fatigue" ] = self.maxneeds * 0.5
 			self.res_sickness = CurTime() + 180
 			self:SendNeeds()
 		end

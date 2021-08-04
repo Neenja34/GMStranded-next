@@ -9,6 +9,12 @@ for k, v in pairs( files ) do
 	include( "gmstranded/gamemode/modules/client/" .. v )
 end
 
+local files, dirs = file.Find("gmstranded/gamemode/modules/client/hud/*.lua", "LUA")
+for k, v in pairs( files ) do
+	print("Stranded: Loading module (" .. v .. ")")
+	include( "gmstranded/gamemode/modules/client/hud/" .. v )
+end
+
 include( "gmstranded/gamemode/modules/client/skybox/cl_worldskies.lua" )
 
 SGS.resources = SGS.resources or {}
@@ -980,21 +986,22 @@ net.Receive( "sgs_receiveexpmessage", function( len )
 	SGS.last_skill_amt = amt
 end )
 
-hook.Add("Think", "SkillBarFade", function()
+hook.Add( "Think", "SkillBarFade", function()
 	if !SGS.skillFade then SGS.skillFade = 0 end
 	if !SGS.skillFadeTime then SGS.skillFadeTime = CurTime() - 10 end
-	
+
 	if SGS.skillFade <= 0 then return end
-	
+
 	if CurTime() < SGS.skillFadeTime then return end
 	SGS.skillFade = SGS.skillFade - 0.01
+
 end )
 
 net.Receive( "sgs_updateneeds", function( length )
 
-	SGS.needs["fatigue"] = net.ReadInt( 32 )
-	SGS.needs["hunger"] = net.ReadInt( 32 )
-	SGS.needs["thirst"] = net.ReadInt( 32 )
+	SGS.needs[ "fatigue" ] = net.ReadInt( 32 )
+	SGS.needs[ "hunger" ] = net.ReadInt( 32 )
+	SGS.needs[ "thirst" ] = net.ReadInt( 32 )
 
 end )
 
@@ -1805,9 +1812,9 @@ function SGS_HUD_Main()
 
 	if !SGS.needs then
 		SGS.needs = {}
-		SGS.needs["fatigue"] = 1000
-		SGS.needs["hunger"] = 1000
-		SGS.needs["thirst"] = 1000
+		SGS.needs[ "fatigue" ] = 1000
+		SGS.needs[ "hunger" ] = 1000
+		SGS.needs[ "thirst" ] = 1000
 	end
 
 
