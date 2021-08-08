@@ -61,7 +61,7 @@ function SGS_GetTotalSurvivalLevels()
 
 end
 
-CreateClientConVar( "sgs_enablehudnumbers", "0", true, false )
+CreateClientConVar( "sgs_enablehudnumbers", "0", true, false, "", 0, 2 )
 hungerIcon = Material( "vgui/hud/hunger.png", "noclamp smooth" )
 thirstIcon = Material( "vgui/hud/thirst.png", "noclamp smooth" )
 energyIcon = Material( "vgui/hud/energy.png" )
@@ -219,37 +219,7 @@ function SGS_DrawHUD()
 	local w = ( SGS.needs[ "fatigue" ] / SGS.maxneeds ) * 127
 	surface.DrawRect( x + 102, y - 17, w, 14 )
 
-	if GetConVar( "sgs_enablehudnumbers" ):GetBool() then
-
-		surface.SetFont( "SGS_NEWHUD2" )
-		local message = math.Clamp( math.ceil( ( LocalPlayer():Health() / LocalPlayer():GetMaxHealth() ) * 100 ), 0, 100 ) .. "%"
-		local w, _ = surface.GetTextSize( message )
-		surface.SetTextColor( gray )
-		surface.SetTextPos( x + 134 - ( w / 2 ), y - 93 )
-		surface.DrawText( message )
-
-		surface.SetFont( "SGS_NEWHUD2" )
-		local message = math.ceil( ( SGS.needs[ "hunger" ] / SGS.maxneeds ) * 100 ) .. "%"
-		local w, _ = surface.GetTextSize( message )
-		surface.SetTextColor( gray )
-		surface.SetTextPos( x + 170 - ( w / 2 ), y - 65 )
-		surface.DrawText( message )
-
-		surface.SetFont( "SGS_NEWHUD2" )
-		local message = math.ceil( ( SGS.needs[ "thirst" ] / SGS.maxneeds ) * 100 ) .. "%"
-		local w, _ = surface.GetTextSize( message )
-		surface.SetTextColor( gray )
-		surface.SetTextPos( x + 170 - ( w / 2 ), y - 41 )
-		surface.DrawText( message )
-
-		surface.SetFont( "SGS_NEWHUD2" )
-		local message = math.ceil( ( SGS.needs[ "fatigue" ] / SGS.maxneeds ) * 100 ) .. "%"
-		local w, _ = surface.GetTextSize( message )
-		surface.SetTextColor( gray )
-		surface.SetTextPos( x + 170 - ( w / 2 ), y - 17 )
-		surface.DrawText( message )
-
-	end
+	HudValues()
 
 	--Survival Exp Bar
 	local curLvl = SGS_GetTotalSurvivalLevels()
@@ -559,6 +529,77 @@ function SGS_DrawHUD()
 
 end
 hook.Add( "HUDPaint", "SGS_DrawHUD", SGS_DrawHUD )
+
+function HudValues()
+
+	local x = 6
+	local y = ScrH() - 6
+
+	if GetConVar( "sgs_enablehudnumbers" ):GetInt() == 1 then
+
+		local health = math.Clamp( math.ceil( ( LocalPlayer():Health() / LocalPlayer():GetMaxHealth() ) * 100 ), 0, 100 ) .. "%"
+		local hunger = math.ceil( ( SGS.needs[ "hunger" ] / SGS.maxneeds ) * 100 ) .. "%"
+		local thirst = math.ceil( ( SGS.needs[ "thirst" ] / SGS.maxneeds ) * 100 ) .. "%"
+		local fatigue = math.ceil( ( SGS.needs[ "fatigue" ] / SGS.maxneeds ) * 100 ) .. "%"
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( health )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 134 - ( w / 2 ), y - 93 )
+		surface.DrawText( health )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( hunger )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 65 )
+		surface.DrawText( hunger )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( thirst )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 41 )
+		surface.DrawText( thirst )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( fatigue )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 17 )
+		surface.DrawText( fatigue )
+
+	elseif GetConVar( "sgs_enablehudnumbers" ):GetInt() == 2 then
+
+		local health = LocalPlayer():Health() .. " / " .. LocalPlayer():GetMaxHealth()
+		local hunger = SGS.needs[ "hunger" ] .. " / " .. SGS.maxneeds
+		local thirst = SGS.needs[ "thirst" ] .. " / " .. SGS.maxneeds
+		local fatigue = SGS.needs[ "fatigue" ] .. " / " .. SGS.maxneeds
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( health )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 134 - ( w / 2 ), y - 93 )
+		surface.DrawText( health )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( hunger )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 65 )
+		surface.DrawText( hunger )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( thirst )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 41 )
+		surface.DrawText( thirst )
+
+		surface.SetFont( "SGS_NEWHUD2" )
+		local w, _ = surface.GetTextSize( fatigue )
+		surface.SetTextColor( gray )
+		surface.SetTextPos( x + 170 - ( w / 2 ), y - 17 )
+		surface.DrawText( fatigue )
+
+	end
+
+end
 
 function SGS_OpenSkillMenu()
 
