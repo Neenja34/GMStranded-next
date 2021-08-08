@@ -23,17 +23,18 @@ SWEP.WElements = {
 local SwingSound = Sound( "weapons/slam/throw.wav" )
 local Mins, Maxs = Vector(-12, -12, -12), Vector(12, 12, 12)
 function SWEP:PrimaryAttack( right )
-	local ply = self.Owner
-	self.Owner:SetAnimation( PLAYER_ATTACK1 )
+
+	local ply = self:GetOwner()
+	ply:SetAnimation( PLAYER_ATTACK1 )
 	self:SendWeaponAnim( ACT_VM_MISSCENTER )
 	if IsFirstTimePredicted() then
-		self.Owner:SetAnimation( PLAYER_ATTACK1 )
+		ply:SetAnimation( PLAYER_ATTACK1 )
 	end
 
-	force = self.Owner:EyeAngles():Forward()
+	force = ply:EyeAngles():Forward()
 	local td = {}
- 
-	self.Weapon:SetNextPrimaryFire(CurTime() + 0.8)
+
+	self:SetNextPrimaryFire(CurTime() + 0.8)
 	if CLIENT then return end
 	ply:EmitSound( SwingSound )
 
@@ -42,13 +43,13 @@ function SWEP:PrimaryAttack( right )
 	td.filter = ply
 	td.mins = Mins
 	td.maxs = Maxs
-	
+
 	if ( ply:IsPlayer() ) then
 		ply:LagCompensation( true )
 	end
-	
+
 	tr = util.TraceHull(td)
-	
+
 	if ( ply:IsPlayer() ) then
 		ply:LagCompensation( false )
 	end
@@ -60,27 +61,30 @@ function SWEP:PrimaryAttack( right )
 				dmg = DamageInfo()
 				dmg:SetDamageType(DMG_GENERIC)
 				dmg:SetDamage(math.random(8,12))
-				
+
 				dmg:SetAttacker(ply)
 				dmg:SetInflictor(ply)
 				dmg:SetDamageForce(force * 20000)
 				ent:TakeDamageInfo(dmg)
-			end		
+			end
 		end
 		SGS_EmitHitSound( tr.MatType, tr.HitPos )
 	end
-	
-	ply:ViewPunch(Angle(math.Rand(-2, 0), 5, math.Rand(-2, 2)))
+
+	if ply:GetInfo( "sgs_viewpunch_enable" ) == "1" then
+		ply:ViewPunch( Angle( math.Rand( -2, 0 ), 5, math.Rand( -2, 2 ) ) )
+	end
 
 end
- 
+
 function SWEP:SecondaryAttack()
 end
 
 function SWEP:Deploy()
-	self.Owner:GetViewModel():SetPlaybackRate(1.3)
-	self.Weapon:SetNextPrimaryFire(CurTime() + 0.8)
+
+	self:GetOwner():GetViewModel():SetPlaybackRate(1.3)
+	self:SetNextPrimaryFire(CurTime() + 0.8)
 	self:SendWeaponAnim(ACT_VM_DRAW)
 	return true
-end
 
+end

@@ -28,6 +28,7 @@ SGS.pmodels = SGS.pmodels or {}
 SGS.drawdistance = 36000000
 SGS.tier = "1"
 lightdistance = CreateClientConVar( "sgs_lightdistance", "1000000", true, false, "", 0, 50000000 ) or 1000000
+CreateClientConVar( "sgs_viewpunch_enable", "1", true, true, "", 0, 1 )
 SGS.voicechannels = SGS.voicechannels or {}
 SGS.plantcount = 0
 SGS.maxplants = 0
@@ -62,58 +63,32 @@ function GM:InitPostEntity()
 		5,
 		0,
 		function()
+
 			if LocalPlayer():GetInitialized() == INITSTATE_ASKING then
 				net.Start( "sgs_readytoload" )
 				net.SendToServer()
 			else
 				timer.Remove( "sgs_readyforinfo" )
-				for k, v in pairs( ents.GetAll() ) do
-					if v:GetNWBool("waterfall") then
-						ParticleEffectAttach( "thw_waterfall_01", PATTACH_ABSORIGIN, v, 0 )
-					end
-					if v:GetNWBool("waterfalltop") then
-						ParticleEffectAttach( "waterfall_topsplash", PATTACH_ABSORIGIN, v, 0 )
-					end
-					if v:GetNWBool("waterfallbase") then
-						ParticleEffectAttach( "waterfall_base_01", PATTACH_ABSORIGIN, v, 0 )
-					end
-				end
 			end
 		end
 	)
+
 end
 
-
-hook.Add("InitPostEntity", "draw_waterfalls", function()
-	timer.Simple( 1, function()
-		for k, v in pairs( ents.GetAll() ) do
-			if v:GetNWBool("waterfall") then
-				ParticleEffectAttach( "thw_waterfall_01", PATTACH_ABSORIGIN, v, 0 )
-			end
-			if v:GetNWBool("waterfalltop") then
-				ParticleEffectAttach( "waterfall_topsplash", PATTACH_ABSORIGIN, v, 0 )
-			end
-			if v:GetNWBool("waterfallbase") then
-				ParticleEffectAttach( "waterfall_base_01", PATTACH_ABSORIGIN, v, 0 )
-			end
-		end
-	end )
-end )
-
 //--ALL CREDIT FOR THE MATERIAL FUNCTIONS BELOW TO AVON FROM THE STARGATE ADDON PACK--//
-function SGS.MaterialFromVMT(name,VMT)
-	if(type(VMT) ~= "string" or type(name) ~= "string") then return Material("") end; -- Return a dummy Material
-	local t = util.KeyValuesToTable("\"material\"{"..VMT.."}");
-	for shader,params in pairs(t) do
-		return CreateMaterial(name,shader,params);
+function SGS.MaterialFromVMT( name, VMT )
+	if ( type( VMT ) ~= "string" or type( name ) ~= "string" ) then return Material( "" ) end -- Return a dummy Material
+	local t = util.KeyValuesToTable( "\"material\"{" .. VMT .. "}" )
+	for shader, params in pairs( t ) do
+		return CreateMaterial( name, shader, params )
 	end
 end
 
 //--ALL CREDIT FOR THE MATERIAL FUNCTIONS BELOW TO AVON FROM THE STARGATE ADDON PACK--//
-function SGS.MaterialCopy(name,filename)
-	if(type(filename) ~= "string" or type(name) ~= "string") then return Material("") end; -- Return a dummy Material
-	filename = "../materials/"..filename:Trim():gsub(".vmt$","")..".vmt";
-	return SGS.MaterialFromVMT(name,file.Read(filename));
+function SGS.MaterialCopy( name, filename )
+	if ( type( filename ) ~= "string" or type( name ) ~= "string" ) then return Material( "" ) end -- Return a dummy Material
+	filename = "../materials/"  .. filename:Trim():gsub( ".vmt$", "" ) .. ".vmt"
+	return SGS.MaterialFromVMT( name, file.Read( filename ) )
 end
 
 function PlayerInit()
@@ -2104,7 +2079,7 @@ function EntityMeta:RenderDistanceCheck( pl, static )
 	end
 
 	if world == pl.world then
-		local dis = pl:GetPos():DistToSqr(self:GetPos())
+		local dis = pl:GetPos():DistToSqr( self:GetPos() )
 		self.visible = dis < SGS.drawdistance
 	else
 		self.visible = false

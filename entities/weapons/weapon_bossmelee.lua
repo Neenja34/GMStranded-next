@@ -1,11 +1,11 @@
 AddCSLuaFile()
-SWEP.Weight = 1 
+SWEP.Weight = 1
 SWEP.PrintName = "Boss Rod"
 SWEP.Author = "MrPresident"
 SWEP.Purpose = "Melee Combat"
 SWEP.Instructions = "Primary Attack - Attack"
 SWEP.Category = "Melee"
- 
+
 SWEP.ViewModelFOV = 57
 SWEP.ViewModel = "models/rods/c_boss_rod/c_boss_rod.mdl"
 SWEP.WorldModel = "models/rods/c_boss_rod/c_boss_rod.mdl"
@@ -17,18 +17,20 @@ SWEP.Secondary.ClipSize = -1
 SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic = false
 SWEP.Secondary.Ammo = "none"
- 
+
 SWEP.Slot = 5
 SWEP.SlotPos = 3
- 
+
 SWEP.UseHands = true
 SWEP.FiresUnderwater = true
 
 local SwingSound = Sound( "weapons/slam/throw.wav" )
- 
- 
+
+
 function SWEP:Initialize()
+
 	self:SetWeaponHoldType( "melee" )
+
 end
 
 function SWEP:Deploy()
@@ -43,42 +45,42 @@ function SWEP:SetupDataTables()
 end
 
 function SWEP:UpdateNextIdle()
-	local vm = self.Owner:GetViewModel()
+	local vm = self:GetOwner():GetViewModel()
 	self:SetNextIdle( CurTime() + vm:SequenceDuration() )
 end
- 
+
 local Mins, Maxs = Vector(-12, -12, -12), Vector(12, 12, 12)
 function SWEP:PrimaryAttack( right )
 
-	local ply = self.Owner
-	force = self.Owner:EyeAngles():Forward()
+	local ply = self:GetOwner()
+	force = ply:EyeAngles():Forward()
 	local td = {}
- 
+
 	ply:SetAnimation( PLAYER_ATTACK1 )
-	
+
 	local anim = "swing"
-	
+
 	local vm = ply:GetViewModel()
 	vm:SendViewModelMatchingSequence( vm:LookupSequence( anim ) )
 
-	self.Weapon:SetNextPrimaryFire(CurTime() + 0.8)
+	self:SetNextPrimaryFire(CurTime() + 0.8)
 	self:UpdateNextIdle()
 	if CLIENT then return end
 	ply:EmitSound( SwingSound )
 
 	if ply:GetLevel("combat") >= 35 then
-		td.start = self.Owner:GetShootPos()
+		td.start = ply:GetShootPos()
 		td.endpos = td.start + force * 100
-		td.filter = self.Owner
+		td.filter = ply
 		td.mins = Mins
 		td.maxs = Maxs
-	
+
 		if ( ply:IsPlayer() ) then
 			ply:LagCompensation( true )
 		end
-		
+
 		tr = util.TraceHull(td)
-		
+
 		if ( ply:IsPlayer() ) then
 			ply:LagCompensation( false )
 		end
@@ -90,21 +92,24 @@ function SWEP:PrimaryAttack( right )
 					dmg = DamageInfo()
 					dmg:SetDamageType( DMG_DISSOLVE )
 					dmg:SetDamage( math.random(60,74) )
-					
-					dmg:SetAttacker(self.Owner)
-					dmg:SetInflictor(self.Owner)
+
+					dmg:SetAttacker(ply)
+					dmg:SetInflictor(ply)
 					ent:TakeDamageInfo(dmg)
-				end		
+				end
 			end
 			SGS_EmitHitSound( tr.MatType, tr.HitPos )
 		end
-		
-		self.Owner:ViewPunch(Angle(math.Rand(-2, 0), 5, math.Rand(-2, 2)))
+
+		if ply:GetInfo( "sgs_viewpunch_enable" ) == "1" then
+			ply:ViewPunch( Angle( math.Rand( -2, 0 ), 5, math.Rand( -2, 2 ) ) )
+		end
+
 	else
 		ply:SendMessage("This weapon requires a level 35 or higher in combat.", 60, Color(255, 125, 0, 255))
 	end
- 
+
 end
- 
+
 function SWEP:SecondaryAttack()
 end
