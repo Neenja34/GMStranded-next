@@ -10,11 +10,12 @@ end
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
+
 	self:DrawShadow( false )
 	self:SetLOD( -1 )
 	self.world = GAMEMODE.Worlds:GetWorld( self )
 	self.shadowcreated = false
-	self.world = GAMEMODE.Worlds:GetWorld( self )
+
 end
 
 --Return true if this entity is translucent.
