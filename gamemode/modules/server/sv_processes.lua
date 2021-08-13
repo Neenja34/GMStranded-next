@@ -3366,6 +3366,8 @@ end
 function SGS_Harvest_Stop(ply, plant)
 
 	if !ply:IsValid() then return end
+
+	plant:CheckPlant()
 	
 	if !IsValid(plant) then
 		ply:Freeze( false )
