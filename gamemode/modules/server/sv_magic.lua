@@ -1462,10 +1462,6 @@ SPELL.func = function( self )
 	self.tribecacheent = ents.Create( "gms_tribecache" )
 	self.tribecacheent:SetPos( self:TraceFromEyes(140).HitPos )
 
-	if GAMEMODE.Tribes:GetTribeLevel( self ) >= 10 then capacity = 10000
-	elseif GAMEMODE.Tribes:GetTribeLevel( self ) >= 8 then capacity = 7500
-	else capacity = 5000 end
-
 	self.tribecacheent:Spawn()
 	self.tribecacheent.tribeid = GAMEMODE.Tribes:GetPlayersTribe( self )
 	self.tribecacheent.owner = self

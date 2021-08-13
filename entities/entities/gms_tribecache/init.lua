@@ -30,8 +30,13 @@ function ENT:Initialize()
 	self:CacheEnable()
 	self.tribeid = self.tribeid or 0
 
-	self.max = capacity
+	local capacity = 5000
+	local tribe = GAMEMODE.Tribes.tblTribes[ self.tribeid ]
+	if tribe.level >= 10 then capacity = 10000
+	elseif tribe.level >= 8 then capacity = 7500
+	end
 
+	self.max = capacity
 end
 
 function ENT:SetResourceDropInfo( rType, rAmt )
@@ -58,7 +63,7 @@ end
 
 function ENT:GetFreeSpace()
 
-	return capacity - self:GetTotalResources()
+	return self.max - self:GetTotalResources()
 
 end
 
@@ -133,15 +138,15 @@ function ENT:StartTouch( ent2 )
 	print( owner1, owner2 )
 
 	if ent2:GetClass() == "gms_resourcedrop" then
-		if self:GetTotalResources() >= capacity then return end
+		if self:GetTotalResources() >= self.max then return end
 
 		for k, v in pairs(ent2.contents) do
-			if self:GetTotalResources() + v <= capacity then
+			if self:GetTotalResources() + v <= self.max then
 				self:SetResourceDropInfo( k, v )
 				ent2:Remove()
 			else
 				local ply = ent2:CPPIGetOwner()
-				local n = capacity - self:GetTotalResources()
+				local n = self.max - self:GetTotalResources()
 				local nn = v - n
 
 				self:SetResourceDropInfo( k, n )
