@@ -3332,30 +3332,24 @@ function SGS_Harvest_Tree_Seed_Stop(ply, tree, lvl, modi)
 end
 
 function SGS_Harvest_Start(ply, len, plant)
-	if ply.inprocess == true then
-		return
-	end
-	
+
 	if !ply:Alive() then
 		ply:SendMessage("You can't do this while dead.",3,Color(255,0,0,255))
 		return
 	end
-	
-	if ply.amode then
-		return
-	end
-	
-	if !IsValid(plant) then
-		return
-	end
-	
+
+	if ply.amode then return end
+	if !IsValid(plant) then return end
+	if plant.rtotal <= 0 then return end
+	if ply.inprocess == true then return end
+
 	ply:Freeze( true )
 	ply.inprocess = true
 	ply.stable = { "physics/wood/wood_strain2.wav", "physics/wood/wood_strain4.wav" }
 	ply:EmitSound(ply.stable[math.random(#ply.stable)], 60, math.random(80,120))
 	ply.ps = true
 	ply.processtype = "harvest"
-	
+
 	local txt = "Harvesting..."
 	ply:SetNWString("action", txt)
 	SGS_StartTimer( ply, txt, len, "farming" )
@@ -3367,24 +3361,6 @@ function SGS_Harvest_Stop(ply, plant)
 
 	if !ply:IsValid() then return end
 
-	plant:CheckPlant()
-	
-	if !IsValid(plant) then
-		ply:Freeze( false )
-		ply.inprocess = false
-	ply.processtype = "idle"
-		ply:SetNWString("action", "Idle")
-		ply.ps = false
-		ply:SendMessage("There is nothing left to harvest.", 60, Color(255, 0, 0, 255))
-		return
-	end
-	
-	ply:Freeze( false )
-	ply.inprocess = false
-	ply.processtype = "idle"
-	ply:SetNWString("action", "Idle")
-	ply.ps = false
-	
 	if ply.level == nil then
 		ply:SendMessage("CRITICAL ERROR #100. Please report this error code.", 60, Color(255, 0, 0, 255))
 		return
@@ -3393,19 +3369,35 @@ function SGS_Harvest_Stop(ply, plant)
 		ply:SendMessage("CRITICAL ERROR #001. Please report this error code.", 60, Color(255, 0, 0, 255))
 		return
 	end
-	
-	
-	
+
+	plant:CheckPlant()
+
+	if !IsValid(plant) then
+		ply:Freeze( false )
+		ply.inprocess = false
+		ply.processtype = "idle"
+		ply:SetNWString("action", "Idle")
+		ply.ps = false
+		ply:SendMessage("There is nothing left to harvest.", 60, Color(255, 0, 0, 255))
+		return
+	end
+
+	ply:Freeze( false )
+	ply.inprocess = false
+	ply.processtype = "idle"
+	ply:SetNWString("action", "Idle")
+	ply.ps = false
+
 	local lvlmodi = ( ply.level[ "farming" ] * 0.05 ) + 1
-	
+
 	if math.random( 1, 100 ) * lvlmodi >= 30 then
-		
+
 		/* check to see if we found a relic instead of a seed */
 		if math.random(1, 650) == 1 then
 			ply:FoundRelic()
 			return --Break out of the function so we don't find a seed as well
 		end
-		
+
 		/* check to see if we found an artifact */
 		if math.random(1, 650) == 1 then
 			ply:FoundArtifact()
@@ -3418,7 +3410,7 @@ function SGS_Harvest_Stop(ply, plant)
 			plant.rtotal = 1
 		end
 		plant.rtotal = plant.rtotal - 1
-				
+
 		if math.random(1,10) == 1 then
 			ply:SendMessage("You found a " .. CapAll(string.gsub(plant.seed, "_", " ")) .. ".", 60, Color(0, 255, 0, 255))
 			ply:AddResource( plant.seed, 1 )
@@ -3433,6 +3425,7 @@ function SGS_Harvest_Stop(ply, plant)
 	end
 	ply:CheckBot()
 	ply:RandomFindChance()
+
 end
 
 -------------

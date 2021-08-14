@@ -66,6 +66,7 @@ function ENT:Think()
 
 	self:NextThink(CurTime() + 1)
 	return true
+
 end
 
 --Called when an entity touches this SENT.

@@ -13,13 +13,11 @@ for k, v in pairs( files ) do
 	ServerLog("Stranded: Loading module (" .. v .. ")\n")
 	AddCSLuaFile( "gmstranded/gamemode/modules/client/skybox/" .. v )
 end
-
 local files, dirs = file.Find("gmstranded/gamemode/modules/client/hud/*.lua", "LUA")
 for k, v in pairs( files ) do
 	ServerLog("Stranded: Loading module (" .. v .. ")\n")
 	AddCSLuaFile( "gmstranded/gamemode/modules/client/hud/" .. v )
 end
-
 local files, dirs = file.Find("gmstranded/gamemode/modules/server/*.lua", "LUA")
 for k, v in pairs( files ) do
 	ServerLog("Stranded: Loading module (" .. v .. ")\n")
@@ -388,30 +386,21 @@ end
 
 function EntityMeta:CheckPlant()
 
-	if self.rtotal <= 0 then
-		if IsValid(self.owner) then
-			if self.owner:IsPlayer() then
-				self.owner.tplants = self.owner.tplants - 1
-				self.owner:UpdatePlantCount()
-			end
-			if self.slab then
-				self.slab.locked = false
-			end
-		end
-		self:Remove()
-	end
+	if self.rtotal == nil then return end
+	if !IsValid(self.owner) then return end
+	if !self.owner:IsPlayer() then return end
 
-	if CurTime() >= self.dtime then
-		if IsValid(self.owner) then
-			if self.owner:IsPlayer() then
-				self.owner.tplants = self.owner.tplants - 1
-				self.owner:UpdatePlantCount()
-			end
-			if self.slab then
-				self.slab.locked = false
-			end
+	if CurTime() >= self.dtime || self.rtotal <= 0 then
+
+		self.owner.tplants = self.owner.tplants - 1
+		self.owner:UpdatePlantCount()
+
+		if self.slab then
+			self.slab.locked = false
 		end
+
 		self:Remove()
+
 	end
 
 end
