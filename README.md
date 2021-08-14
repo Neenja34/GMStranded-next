@@ -1,3 +1,4 @@
 # GMStranded-next
 
-One day HolyShot learns to use pc
+One day Moltenn understands... wait, no he will not!
+
