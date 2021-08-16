@@ -1713,77 +1713,47 @@ function PlayerMeta:ShouldShowName()
 
 end
 
+local minDist = 360000
+local maxDist = 4000000
 
-
-local enablenames = true
-local enabletitles = true
-local textalign = 1
-local distancemulti = 0.6
+local black = Color( 0, 0, 0, 255 )
+local white = Color( 255, 255, 255, 255 )
 function DrawNameTitle()
 
-	local vStart = LocalPlayer():GetPos()
-	local vEnd
+	for k, v in pairs( player.GetAll() ) do
 
-	for k, v in pairs(player.GetAll()) do
-
-		if v:GetNWBool("adminmode", false) then continue end
+		if v:GetNWBool( "adminmode", false ) then continue end
 		if v:Team() == 1002 then continue end
 		if v:ShouldShowName() == false then continue end
 		if v == LocalPlayer() then continue end
 
+		local teamColor = team.GetColor( v:Team() )
+		local me = LocalPlayer():GetPos()
+		local target = v:GetPos()
+		local dist = me:DistToSqr( target )
+		local pos = ( target + Vector( 0, 0, v:OBBMaxs().z + 15 ) ):ToScreen()
 
-		local vStart = LocalPlayer():GetPos()
-		local vEnd = v:GetPos() + Vector(0,0,25)
-		local trace = {}
+		if dist < minDist then
 
-		trace.start = vStart
-		trace.endpos = vEnd
-		local trace = util.TraceLine( trace )
+			draw.SimpleTextOutlined( v:Name(), "SGS_HUD3", pos.x, pos.y - 25, teamColor, 1, 1, 1, black )
+			draw.SimpleTextOutlined( "[" .. team.GetName( v:Team() ) .. "]", "SGS_HUD3", pos.x, pos.y - 10, teamColor, 1, 1, 1, black )
 
-		if trace.HitWorld then
-			local mepos = LocalPlayer():GetPos()
-			local tpos = v:GetPos()
-			local tdist = mepos:Distance(tpos)
-			if tdist <= 2000 then
-
-				local zadj = 0.03334 * tdist
-				local pos = v:GetPos() + Vector(0,0,v:OBBMaxs().z + 5 + zadj)
-				pos = pos:ToScreen()
-				draw.RoundedBoxEx( 2, pos.x - 4, pos.y - 4, 8, 8, team.GetColor(v:Team()), true, true, true, true )
-
+			if v:GetNWBool( "inpvp", false ) then
+				draw.SimpleTextOutlined( "::PvP::", "SGS_HUD3", pos.x, pos.y + 5, Color( 255, 0, 0, alphavalue ), 1, 1, 1, black )
 			end
-		else
-			local mepos = LocalPlayer():GetPos()
-			local tpos = v:GetPos()
-			local tdist = mepos:Distance(tpos)
 
-			if tdist <= 600 then
-				local zadj = 0.03334 * tdist
-				local pos = v:GetPos() + Vector(0,0,v:OBBMaxs().z + 5 + zadj)
-				pos = pos:ToScreen()
+		elseif dist < maxDist then
 
-				if v != LocalPlayer() then
-					draw.SimpleTextOutlined( v:Name(), "SGS_HUD3", pos.x, pos.y - 25, team.GetColor(v:Team()), textalign, 1,1,Color(0,0,0,255))
-					draw.SimpleTextOutlined("[" .. team.GetName( v:Team() ) .. "]", "SGS_HUD3", pos.x, pos.y - 10, team.GetColor(v:Team()),textalign,1,1,Color(0,0,0,255))
-					if v:GetNWBool("inpvp", false) then
-						draw.SimpleTextOutlined("::PvP::", "SGS_HUD3", pos.x, pos.y + 5, Color(255,0,0,alphavalue),textalign,1,1,Color(0,0,0,255))
-					end
-				end
-			elseif tdist > 600 and tdist <= 2000 then
+			draw.RoundedBoxEx( 2, pos.x - 4, pos.y - 4, 8, 8, teamColor, true, true, true, true )
 
-				local zadj = 0.03334 * tdist
-				local pos = v:GetPos() + Vector(0,0,v:OBBMaxs().z + 5 + zadj)
-				pos = pos:ToScreen()
-				draw.RoundedBoxEx( 2, pos.x - 4, pos.y - 4, 8, 8, team.GetColor(v:Team()), true, true, true, true )
-
-			end
 		end
+
 	end
+
 end
-hook.Add("HUDPaint", "DrawNameTitle", DrawNameTitle)
+hook.Add( "HUDPaint", "DrawNameTitle", DrawNameTitle )
 
 function SGS_HUD_Main()
-	pl = LocalPlayer()
 
 	if !SGS.needs then
 		SGS.needs = {}
@@ -1792,75 +1762,75 @@ function SGS_HUD_Main()
 		SGS.needs[ "thirst" ] = 1000
 	end
 
-
 	if SGS.accepttos == false then return end
+	if LocalPlayer():InVehicle() then return end
+
 	--SPP DISPLAY--
-	local tr = util.TraceLine(util.GetPlayerTrace(LocalPlayer()))
-	if (tr.HitNonWorld) then
-		if (tr.Entity:IsValid() and !tr.Entity:IsPlayer() and !LocalPlayer():InVehicle()) then
-			local PropOwner = "Owner: "
-			local OwnerObj = tr.Entity:GetNWEntity("OwnerObj", false)
-			if (OwnerObj and OwnerObj:IsValid() and OwnerObj:IsPlayer()) then
-				PropOwner = PropOwner .. OwnerObj:Name()
-			else
-				OwnerObj = tr.Entity:GetNWString("Owner", "N/A")
-				if (type(OwnerObj) == "string") then
-					PropOwner = PropOwner .. OwnerObj
-				elseif (IsValid(OwnerObj) and OwnerObj:IsPlayer()) then
-					PropOwner = PropOwner .. OwnerObj:Name()
-				else
-					PropOwner = PropOwner .. "N/A"
-				end
-			end
-			if tr.Entity:GetNWBool("shared", false) then
-				PropOwner = PropOwner .. " (SHARED)"
-			end
-			if tr.Entity:GetNWBool("tribeshared", false) then
-				PropOwner = PropOwner .. " (TRIBE)"
-			end
-			surface.SetFont( "SGS_HUD2" )
-			local Width, Height = surface.GetTextSize(PropOwner)
-			Width = Width + 25
+	local tr = util.TraceLine( util.GetPlayerTrace( LocalPlayer() ) )
+	if tr.HitWorld then return end
+	if !tr.Entity:IsValid() then return end
+	if tr.Entity:IsPlayer() then return end
 
+	local PropOwner = "Owner: "
+	local OwnerObj = tr.Entity:GetNWEntity( "OwnerObj", false )
 
-			surface.SetDrawColor( 0, 0, 0, 210 )
-			surface.DrawRect( ScrW() - (Width + 8) - 110, 6, Width + 12, Height + 16 )
-			surface.DrawRect( ScrW() - (Width + 8) - 107, 9, Width + 6, Height + 10 )
-
-			draw.SimpleText(PropOwner, "SGS_HUD2", ScrW() - (Width / 2) - 115, 21, Color(255, 255, 255, 255), 1, 1)
+	if ( OwnerObj and OwnerObj:IsValid() and OwnerObj:IsPlayer() ) then
+		PropOwner = PropOwner .. OwnerObj:Name()
+	else
+		OwnerObj = tr.Entity:GetNWString( "Owner", "N/A" )
+		if ( type( OwnerObj ) == "string" ) then
+			PropOwner = PropOwner .. OwnerObj
+		elseif ( IsValid( OwnerObj ) and OwnerObj:IsPlayer() ) then
+			PropOwner = PropOwner .. OwnerObj:Name()
+		else
+			PropOwner = PropOwner .. "N/A"
 		end
 	end
+
+	if tr.Entity:GetNWBool( "shared", false ) then
+		PropOwner = PropOwner .. " (SHARED)"
+	end
+
+	if tr.Entity:GetNWBool( "tribeshared", false ) then
+		PropOwner = PropOwner .. " (TRIBE)"
+	end
+
+	surface.SetFont( "SGS_HUD2" )
+	local Width, Height = surface.GetTextSize( PropOwner )
+	Width = Width + 25
+
+	surface.SetDrawColor( 0, 0, 0, 210 )
+	surface.DrawRect( ScrW() - ( Width + 8 ) - 110, 6, Width + 12, Height + 16 )
+	surface.DrawRect( ScrW() - ( Width + 8 ) - 107, 9, Width + 6, Height + 10 )
+
+	draw.SimpleText( PropOwner, "SGS_HUD2", ScrW() - ( Width / 2 ) - 115, 21, white, 1, 1 )
 
 	--TREE OWNER DISPLAY--
-	local tr = util.TraceLine(util.GetPlayerTrace(LocalPlayer()))
-	if (tr.HitNonWorld) then
-		if tr.Entity:IsValid() and tr.Entity:IsTree() then
-			if tr.Entity:GetPos():DistToSqr( LocalPlayer():GetPos() ) <= 62500 then
-				local PropOwner = "Planted By: "
-				local owner = "World"
-				if SGS.trees[tr.Entity] then
-					owner = SGS.trees[tr.Entity]
-				end
-				local OwnerObj = owner
-				PropOwner = PropOwner .. OwnerObj
+	if tr.Entity:GetPos():DistToSqr( LocalPlayer():GetPos() ) <= 62500 then
 
-				draw.SimpleTextOutlined(PropOwner, "SGS_HUD2", ScrW() / 2 , ( ScrH() / 2 ) + 80, Color(255, 255, 255, 255), 1, 1, 1, Color(0,0,0,255))
-			end
-		end
-	end
+		if tr.Entity:IsTree() then
 
-	--TRANSLATED RESOURCE DISPLAY--
-	local tr = util.TraceLine(util.GetPlayerTrace(LocalPlayer()))
-	if (tr.HitNonWorld) then
-		if tr.Entity:IsValid() then
-			if tr.Entity:GetPos():DistToSqr( LocalPlayer():GetPos() ) <= 62500 then
-				if SGS_LookupResourceTranslation( tr.Entity:GetClass() ) then
-					local translated = SGS_LookupResourceTranslation( tr.Entity:GetClass() )
-					draw.SimpleTextOutlined(translated.name, "SGS_HUD2", ScrW() / 2 , ( ScrH() / 2 ) + 52, Color(255, 100, 100, 255), 1, 1, 1, Color(0,0,0,255))
-					draw.SimpleTextOutlined("Required Level: " .. translated.rlvl, "SGS_HUD2", ScrW() / 2, ( ScrH() / 2 ) + 66, Color(255, 255, 255, 255), 1, 1, 1, Color(0,0,0,255))
-				end
+			local TreeOwner = "Planted By: "
+			local owner = "World"
+			if SGS.trees[tr.Entity] then
+				owner = SGS.trees[tr.Entity]
 			end
+			local OwnerObj = owner
+			TreeOwner = TreeOwner .. OwnerObj
+
+			draw.SimpleTextOutlined( TreeOwner, "SGS_HUD2", ScrW() / 2 , ( ScrH() / 2 ) + 80, white, 1, 1, 1, black )
+
 		end
+
+		--TRANSLATED RESOURCE DISPLAY--
+		if SGS_LookupResourceTranslation( tr.Entity:GetClass() ) then
+
+			local translated = SGS_LookupResourceTranslation( tr.Entity:GetClass() )
+			draw.SimpleTextOutlined( translated.name, "SGS_HUD2", ScrW() / 2 , ( ScrH() / 2 ) + 52, Color( 255, 100, 100, 255 ), 1, 1, 1, black )
+			draw.SimpleTextOutlined( "Required Level: " .. translated.rlvl, "SGS_HUD2", ScrW() / 2, ( ScrH() / 2 ) + 66, white, 1, 1, 1, black )
+
+		end
+
 	end
 
 end
