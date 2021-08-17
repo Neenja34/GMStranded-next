@@ -12,6 +12,16 @@ local npcs = {
 	["npc_hunter"] = {},
 }
 
+function GetAllNpcs()
+	local all = {}
+	for _, v in pairs(npcs) do
+		for i, npc in pairs(v) do
+			table.insert(all, npc)
+		end
+	end
+	return all
+end
+
 function DrawNPCName()
 	local me = LocalPlayer():GetPos()
 	for class, npcTable in pairs( npcs ) do
@@ -61,22 +71,13 @@ function GetNpcs()
 end
 hook.Add( "Think", "DrawNPCName", DrawNPCName )
 
-function GetAllNpcs()
-	local all = {}
-	for _, v in pairs(npcs) do
-		for i, npc in pairs(v) do
-			table.insert(all, npc)
-		end
-	end
-	return all
-end
-
 local MAT_SHIELD = Material("models/props_combine/com_shield001a")
 hook.Add( "PreDrawTranslucentRenderables", "DrawShields", function()
 	local npcsAndPlayers = GetAllNpcs()
 	table.Merge(npcsAndPlayers, player.GetAll())
 
     for k, v in pairs(npcsAndPlayers) do
+		if !IsValid(v) then continue end
         if !v:GetNWBool( "shielded" ) then continue end
 		MAT_SHIELD:SetFloat( "$bluramount", 0 )
 		MAT_SHIELD:SetFloat( "$refractamount", 0.01 )
@@ -90,6 +91,7 @@ local Laser = Material( "cable/blue_elec" )
 hook.Add( "PreDrawTranslucentRenderables", "DrawHunterBeams", function()
 	local boss = nil
 	for k, v in pairs( npcs["npc_hunter"] ) do
+		if !IsValid(v) then continue end
 		if v.ispet then continue end
 		boss = v
 		break
@@ -105,6 +107,7 @@ end )
 hook.Add( "Think", "EnragedHunterFlames", function()
 	if CurTime() < ( LocalPlayer().nexthunterparticle or CurTime() ) then return end
 	for k, v in pairs( npcs["npc_hunter"] ) do
+		if !IsValid(v) then continue end
 		if !v:GetNWBool("enraged", false) then continue end
 		local ED = EffectData()
 		ED:SetOrigin( v:GetAttachment(5).Pos )
