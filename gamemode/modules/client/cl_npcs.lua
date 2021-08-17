@@ -45,7 +45,7 @@ function GetNpcs()
 	-- First we cull invalid npcs from the lists
 	local entitiesToRemove = {}
 	for _, v in pairs(npcs) do
-		for i, npc in pairs(table.Reverse(v)) do
+		for i, npc in pairs(table.Copy(v)) do
 			if IsValid(npc) then continue end
 			table.remove(v, i)
 		end
