@@ -22,20 +22,17 @@ end
 local MAT_SHIELD = Material("models/alyx/emptool_glow")
 function ENT:DrawTranslucent()
 
-	local pl = LocalPlayer()
+	if self.visible then
 
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-	if dis > SGS.drawdistance / 2 then
-		return
+		MAT_SHIELD:SetFloat( "$bluramount", 1 )
+		MAT_SHIELD:SetFloat( "$refractamount", 10 )
+		render.MaterialOverride(MAT_SHIELD)
+		self:SetModelScale( math.abs( math.sin( CurTime() * 2 ) / 7.5 ) + 1.05 , 0)
+		self:DrawModel()
+		render.MaterialOverride()
+		self:SetModelScale(1,0)
+
 	end
-	MAT_SHIELD:SetFloat( "$bluramount", 1 )
-	MAT_SHIELD:SetFloat( "$refractamount", 10 )
-	render.MaterialOverride(MAT_SHIELD)
-	self:SetModelScale( math.abs( math.sin( CurTime() * 2 ) / 7.5 ) + 1.05 , 0)
-	self:DrawModel()
-	render.MaterialOverride()
-	self:SetModelScale(1,0)
 
 end
 

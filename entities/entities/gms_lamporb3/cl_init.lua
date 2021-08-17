@@ -19,20 +19,18 @@ ENT.LightSettings = "cl_staff_dynlights_flight";
 
 function ENT:Draw()
 
-	if self.visible then
+	if !self:GetParent().visible then return end
 
-		local color = self:GetColor()
-		local start = self:GetPos();
+	local color = self:GetColor()
+	local start = self:GetPos();
 
-		render.SetMaterial( self.Glow )
-		for i = 1, 2 do
-			render.DrawSprite(
-				start,
-				self.Sizes[2],self.Sizes[2],
-				color
-			)
-		end
-
+	render.SetMaterial( self.Glow )
+	for i = 1, 2 do
+		render.DrawSprite(
+			start,
+			self.Sizes[2],self.Sizes[2],
+			color
+		)
 	end
 
 end
@@ -65,30 +63,23 @@ function ENT:Think()
 
 	local pl = LocalPlayer()
 
-	if self.world == pl.world then
+	if !self:GetParent().visible then return end
 
-		local dis = pl:GetPos():DistToSqr( self:GetPos() )
-		if dis < lightdistance:GetInt() then
-			self.visible = true
-		else
-			self.visible = false
-			return
-		end
+	local dis = pl:GetPos():DistToSqr( self:GetPos() )
+	if dis > lightdistance:GetInt() then return end
 
-		local dlight = DynamicLight( self:EntIndex() )
-		if ( dlight ) then
-			dlight.Pos = self:GetPos() + Vector( 0, 0, 30 )
-			dlight.r = 255
-			dlight.g = 50
-			dlight.b = 50
-			dlight.Brightness = 0.5
-			dlight.MinLight = 0.05
-			dlight.Size = 512
-			dlight.Decay = 210 * 2
-			dlight.DieTime = CurTime() + 1
-			dlight.Style = 5
-		end
-
+	local dlight = DynamicLight( self:EntIndex() )
+	if ( dlight ) then
+		dlight.Pos = self:GetPos() + Vector( 0, 0, 30 )
+		dlight.r = 255
+		dlight.g = 50
+		dlight.b = 50
+		dlight.Brightness = 0.5
+		dlight.MinLight = 0.05
+		dlight.Size = 512
+		dlight.Decay = 210 * 2
+		dlight.DieTime = CurTime() + 1
+		dlight.Style = 5
 	end
 
 end

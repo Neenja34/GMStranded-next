@@ -19,20 +19,18 @@ ENT.LightSettings = "cl_staff_dynlights_flight"
 
 function ENT:Draw()
 
-	if self.visible then
+	if !self:GetParent().visible then return end
 
-		local color = self:GetColor()
-		local start = self:GetPos();
+	local color = self:GetColor()
+	local start = self:GetPos();
 
-		render.SetMaterial( self.Glow )
-		for i = 1, 2 do
-			render.DrawSprite(
-				start,
-				self.Sizes[2],self.Sizes[2],
-				color
-			)
-		end
-
+	render.SetMaterial( self.Glow )
+	for i = 1, 2 do
+		render.DrawSprite(
+			start,
+			self.Sizes[2],self.Sizes[2],
+			color
+		)
 	end
 
 end
@@ -65,13 +63,10 @@ function ENT:Think()
 
 	local pl = LocalPlayer()
 
-	if self.world == pl.world then
-		local dis = pl:GetPos():DistToSqr( self:GetPos() )
-		self.visible = dis < lightdistance:GetInt()
-	else
-		self.visible = false
-		return
-	end
+	if !self:GetParent().visible then return end
+
+	local dis = pl:GetPos():DistToSqr( self:GetPos() )
+	if dis > lightdistance:GetInt() then return end
 
 	local dlight = DynamicLight( self:EntIndex() )
 	if ( dlight ) then
