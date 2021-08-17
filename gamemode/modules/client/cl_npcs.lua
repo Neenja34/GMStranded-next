@@ -69,7 +69,7 @@ function GetNpcs()
 		table.insert(npcTable, v)
 	end
 end
-hook.Add( "Think", "DrawNPCName", DrawNPCName )
+hook.Add( "Think", "GetNpcs", GetNpcs )
 
 local MAT_SHIELD = Material("models/props_combine/com_shield001a")
 hook.Add( "PreDrawTranslucentRenderables", "DrawShields", function()
