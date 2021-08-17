@@ -19,19 +19,18 @@ ENT.LightSettings = "cl_staff_dynlights_flight"
 
 function ENT:Draw()
 
-	if self.visible then
-		local color = self:GetColor()
-		local start = self:GetPos();
+	if !self.visible then return end
 
-		render.SetMaterial( self.Glow )
-		for i = 1,2 do
-			render.DrawSprite(
-				start,
-				self.s,self.s,
-				color
-			)
-		end
+	local color = self:GetColor()
+	local start = self:GetPos()
 
+	render.SetMaterial( self.Glow )
+	for i = 1,2 do
+		render.DrawSprite(
+			start,
+			self.s,self.s,
+			color
+		)
 	end
 
 end

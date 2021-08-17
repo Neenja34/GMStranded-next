@@ -7,14 +7,12 @@ local wave = Material( "sprites/gmdm_pickups/light" )
 
 function ENT:Draw()
 
-	if self.visible then
+	if !self.visible then return end
 
-		local color = self:GetColor()
-		local start = self:GetPos()
-		render.SetMaterial( wave )
-		render.DrawSprite( start, self.s, self.s, color	)
-
-	end
+	local color = self:GetColor()
+	local start = self:GetPos()
+	render.SetMaterial( wave )
+	render.DrawSprite( start, self.s, self.s, color	)
 
 end
 

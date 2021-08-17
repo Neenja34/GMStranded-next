@@ -5,15 +5,15 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 --Return: Nothing
 ENT.rotate = 0
 function ENT:Draw()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-	if dis > SGS.drawdistance / 8 then 
+
+	if !self.visible then
 		self:DestroyShadow()
-		return 
+		return
 	end
+
 	self:CreateShadow()
-	self.Entity:DrawModel()
+	self:DrawModel()
+
 end
 
 --Called when the SENT is spawned
@@ -37,10 +37,18 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	if SGS.showlights == false then return end
+	if lightdistance == nil then return end
+
 	local pl = LocalPlayer()
 	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if dis > lightdistance:GetInt() then return end
-	if SGS.showlights == false then return end
+	if dis > lightdistance:GetInt() then
+		self.visible = false
+		return
+	else
+		self.visible = true
+	end
 
 	local dlight = DynamicLight( self:EntIndex() )
 	if ( dlight ) then
@@ -50,10 +58,11 @@ function ENT:Think()
 		dlight.b = 50
 		dlight.Brightness = 1.5
 		dlight.MinLight = 0.01
-		dlight.Size = 900	
+		dlight.Size = 900
 		dlight.Decay = 210 * 2
 		dlight.DieTime = CurTime() + 1
 		dlight.Style = 6
 	end
+
 end
 

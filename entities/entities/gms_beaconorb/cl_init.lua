@@ -14,23 +14,24 @@ ENT.Glow = SGS.MaterialFromVMT(
 		"$vertexcolor" 1
 	}]]
 );
-ENT.Shaft = Material("effects/ar2ground2");
-ENT.LightSettings = "cl_staff_dynlights_flight";
+ENT.Shaft = Material("effects/ar2ground2")
+ENT.LightSettings = "cl_staff_dynlights_flight"
 
 function ENT:Draw()
 
-	if(!self.StartPos) then self.StartPos = self:GetPos() end; -- Needed for several workarounds
+	if (!self.StartPos) then self.StartPos = self:GetPos() end -- Needed for several workarounds
 	local color = self:GetColor()
-	local start = self:GetPos();
+	local start = self:GetPos()
 
-	render.SetMaterial(self.Glow);
-	for i =1,2 do
+	render.SetMaterial(self.Glow)
+	for i = 1, 2 do
 		render.DrawSprite(
 			start,
 			self.s,self.s,
 			color
-		);
+		)
 	end
+
 end
 
 --Called when the SENT is spawned
@@ -38,8 +39,8 @@ end
 function ENT:Initialize()
 	self.s = 64
 	self.grow = 1
-	self.Created = CurTime();
-	self.Sizes={self.s,self.s,180}; -- X,Y and shaft-leght!
+	self.Created = CurTime()
+	self.Sizes = { self.s, self.s, 180 } -- X,Y and shaft-leght!
 end
 
 --Return true if this entity is translucent.
@@ -71,4 +72,5 @@ function ENT:Think()
 			self.grow = 1
 		end
 	end
+
 end

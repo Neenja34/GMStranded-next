@@ -13,32 +13,31 @@ ENT.Glow = SGS.MaterialFromVMT(
 		"$vertexcolor" 1
 	}]]
 );
-ENT.Shaft = Material("effects/ar2ground2");
-ENT.LightSettings = "cl_staff_dynlights_flight";
+ENT.Shaft = Material("effects/ar2ground2")
+ENT.LightSettings = "cl_staff_dynlights_flight"
 
 function ENT:Draw()
-	local pl = LocalPlayer()
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if SGS.drawdistance == nil then return end
-	if dis > lightdistance:GetInt() then return end
-	
-	local color = self.Entity:GetColor()
-	local start = self.Entity:GetPos();
-	render.SetMaterial(self.Glow);
-	for i =1,2 do
+
+	if !self.visible then return end
+
+	local color = self:GetColor()
+	local start = self:GetPos()
+	render.SetMaterial(self.Glow)
+	for i = 1, 2 do
 		render.DrawSprite(
 			start,
 			self.Sizes[1],self.Sizes[2],
 			color
-		);
+		)
 	end
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
-	self.Created = CurTime();
-	self.Sizes={16,16}; -- X,Y!
+	self.Created = CurTime()
+	self.Sizes = { 16, 16 } -- X,Y!
 end
 
 --Return true if this entity is translucent.
@@ -54,11 +53,18 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
+
+	if SGS.showlights == false then return end
+	if lightdistance == nil then return end
+
 	local pl = LocalPlayer()
 	local dis = pl:GetPos():DistToSqr(self:GetPos())
-	if dis > lightdistance:GetInt() then return end
-	if SGS.showlights == false then return end
-
+	if dis > lightdistance:GetInt() then
+		self.visible = false
+		return
+	else
+		self.visible = true
+	end
 
 	local dlight = DynamicLight( self:EntIndex() )
 	if ( dlight ) then
@@ -68,9 +74,10 @@ function ENT:Think()
 		dlight.b = 230
 		dlight.Brightness = 0.8
 		dlight.MinLight = 0.03
-		dlight.Size = 726	
+		dlight.Size = 726
 		dlight.Decay = 210 * 2
 		dlight.DieTime = CurTime() + 1
 		dlight.Style = 5
 	end
+
 end

@@ -13,27 +13,30 @@ ENT.Glow = SGS.MaterialFromVMT(
 		"$vertexcolor" 1
 	}]]
 );
-ENT.Shaft = Material("effects/ar2ground2");
-ENT.LightSettings = "cl_staff_dynlights_flight";
+ENT.Shaft = Material("effects/ar2ground2")
+ENT.LightSettings = "cl_staff_dynlights_flight"
 
 function ENT:Draw()
-	local color = self.Entity:GetColor()
-	local start = self.Entity:GetPos();
-	render.SetMaterial(self.Glow);
-	for i =1,2 do
+
+	local color = self:GetColor()
+	local start = self:GetPos()
+
+	render.SetMaterial(self.Glow)
+	for i = 1, 2 do
 		render.DrawSprite(
 			start,
 			self.Sizes[2],self.Sizes[2],
 			color
-		);
+		)
 	end
+
 end
 
 --Called when the SENT is spawned
 --Return: Nothing
 function ENT:Initialize()
-	self.Created = CurTime();
-	self.Sizes={8,8,180}; -- X,Y and shaft-leght!
+	self.Created = CurTime()
+	self.Sizes = { 8, 8, 180 } -- X,Y and shaft-leght!
 end
 
 --Return true if this entity is translucent.
