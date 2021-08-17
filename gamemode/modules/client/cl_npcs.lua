@@ -27,7 +27,7 @@ function DrawNPCName()
 	for class, npcTable in pairs( npcs ) do
 		for k, v in pairs(npcTable) do
 			if !IsValid(v) then continue end
-			if class == "npc_antlion" and v:GetNWBool( "isburrowed" ) then continue end
+			if class == "npc_antlion" and v:GetNWBool( "isburrowed", false ) then continue end
 
 			local target = v:GetPos()
 			local dist = me:DistToSqr( target )
@@ -65,7 +65,7 @@ function GetNpcs()
 	for k, v in pairs( ents.FindByClass( "npc_*" ) ) do
 		local npcTable = npcs[v:GetClass()]
 		if npcTable == nil then continue end
-		if v:GetNWBool( "ispet" ) then continue end
+		if v:GetNWBool( "ispet", false ) then continue end
 		if table.HasValue(npcTable, v) then continue end
 		table.insert(npcTable, v)
 	end
@@ -79,7 +79,7 @@ hook.Add( "PreDrawTranslucentRenderables", "DrawShields", function()
 
     for k, v in pairs(npcsAndPlayers) do
 		if !IsValid(v) then continue end
-        if !v:GetNWBool( "shielded" ) then continue end
+        if !v:GetNWBool( "shielded", false ) then continue end
 		MAT_SHIELD:SetFloat( "$bluramount", 0 )
 		MAT_SHIELD:SetFloat( "$refractamount", 0.01 )
 		render.MaterialOverride(MAT_SHIELD)
