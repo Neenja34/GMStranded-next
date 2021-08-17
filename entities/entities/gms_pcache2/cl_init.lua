@@ -24,19 +24,27 @@ function ENT:Draw()
 end
 
 function ENT:DrawTranslucent()
-	if(!self.StartPos) then self.StartPos = self:GetPos() end; -- Needed for several workarounds
-	local color = self:GetColor()
-	local start = self:GetPos();
 
-	render.SetMaterial(self.Glow);
-	for i =1,2 do
-		render.DrawSprite(
-			start,
-			100,100,
-			color
-		)
+	--Needed for several workarounds
+	if (!self.StartPos) then
+		self.StartPos = self:GetPos()
 	end
-	self:DrawModel()
+
+	local color = self:GetColor()
+	local start = self:GetPos()
+
+	if self.visible then
+		render.SetMaterial(self.Glow)
+		for i = 1, 2 do
+			render.DrawSprite(
+				start,
+				100,100,
+				color
+			)
+		end
+		self:DrawModel()
+	end
+
 end
 
 
