@@ -66,6 +66,7 @@ function GetNpcs()
 		local npcTable = npcs[v:GetClass()]
 		if npcTable == nil then continue end
 		if v:GetNWBool( "ispet" ) then continue end
+		if table.HasValue(npcTable, v) then continue end
 		table.insert(npcTable, v)
 	end
 end
