@@ -60,7 +60,7 @@ function GetShopEntities()
 		local texts = npctexts[v:GetClass()]
 		if texts == nil then continue end
 		if texts.entity != nil && IsValid(texts.entity) then continue end
-		if v:GetNWBool( "ispet" ) == true then continue end
+		if v:GetNWBool( "ispet" ) then continue end
 		texts.entity = v
 	end
 end
