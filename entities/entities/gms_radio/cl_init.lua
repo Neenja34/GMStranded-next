@@ -4,6 +4,7 @@ ENT.RenderGroup = RENDERGROUP_BOTH
 --Return: Nothing
 
 function ENT:Draw()
+
 	local pl = LocalPlayer()
 	local dis = pl:GetPos():DistToSqr(self:GetPos())
 	if SGS.drawdistance == nil then return end
@@ -15,7 +16,6 @@ function ENT:Draw()
 	self:DrawModel()
 
 	local sa = 1
-	local dis = pl:GetPos():DistToSqr(self:GetPos())
 	if dis <= 160000 then
 		sa = 1
 	elseif dis > 160000 and dis <= 360000 then
@@ -56,6 +56,7 @@ function ENT:Draw()
 			draw.RoundedBox( 0, x, y, 140, 30, col )
 		cam.End3D2D()
 	end
+
 end
 
 --Called when the SENT is spawned
