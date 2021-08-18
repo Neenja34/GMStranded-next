@@ -66,8 +66,10 @@ function SGS_AlchemyMenu()
 				end
 			end
 		end
-		icon.DoClick = function ( icon ) 
-			surface.PlaySound( "ui/buttonclickrelease.wav" )
+		icon.DoClick = function ( icon )
+			if LocalPlayer():GetInfo( "sgs_alchemy_volume" ) == "1" then
+				surface.PlaySound( "ui/buttonclickrelease.wav" )
+			end
 			RunConsoleCommand("sgs_xmute", v2.uid)
 			--SGS.alchemymenu:SetVisible(false)
 		end
