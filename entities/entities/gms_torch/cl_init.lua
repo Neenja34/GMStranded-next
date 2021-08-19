@@ -44,7 +44,6 @@ end
 --Return: Nothing
 function ENT:Think()
 
-	if SGS.showlights == false then return end
 	if lightdistance == nil then return end
 
 	local pl = LocalPlayer()
@@ -55,6 +54,8 @@ function ENT:Think()
 	else
 		self.visible = true
 	end
+
+	if SGS.showlights == false then return end
 
 	local dlight = DynamicLight( self:EntIndex() )
 	if ( dlight ) then

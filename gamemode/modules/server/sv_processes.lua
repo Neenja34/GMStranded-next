@@ -4613,8 +4613,10 @@ function SGS_XMute_Start(ply, len, recipee, modi)
 	
 	ply:Freeze( true )
 	ply.inprocess = true
-	ply.sound = CreateSound(ply, "ambient/machines/combine_shield_loop3.wav")
-	ply.sound:Play()
+	if ply:GetInfo("sgs_alchemy_volume") == "1" then
+		ply.sound = CreateSound(ply, "ambient/machines/combine_shield_loop3.wav")
+		ply.sound:Play()
+	end
 	ply.processtype = "xmute"
 		
 	local txt = "Transmuting..."

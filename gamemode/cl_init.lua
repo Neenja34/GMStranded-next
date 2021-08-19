@@ -28,6 +28,7 @@ SGS.pmodels = SGS.pmodels or {}
 SGS.drawdistance = 36000000
 SGS.tier = "1"
 lightdistance = CreateClientConVar( "sgs_lightdistance", "1000000", true, false, "", 0, 50000000 ) or 1000000
+CreateClientConVar( "sgs_alchemy_volume", "1", true, true, "", 0, 1)
 CreateClientConVar( "sgs_viewpunch_enable", "1", true, true, "", 0, 1 )
 SGS.voicechannels = SGS.voicechannels or {}
 SGS.plantcount = 0
