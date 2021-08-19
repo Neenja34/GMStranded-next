@@ -871,35 +871,37 @@ function SGS_SpawnZombieBloodMoon()
 end
 timer.Create( "SpawnZombiesBloodMoon", 2, 0, SGS_SpawnZombieBloodMoon )
 
-function SGS_SpawnZombieOnPlayer( ply )
+function SGS_SpawnZombieOnPlayer( pl )
 
-	if !IsValid( ply ) then return end
-	cpos = ply:GetPos()
-	local frontorback = math.random(1,2)
-	if frontorback == 1 then
-	npos = cpos + Vector(math.random(-300,-100), math.random(-300,-100), 400)
-	elseif frontorback == 2 then
-	npos = cpos + Vector(math.random(300,100), math.random(300,100), 400)
-	end
+	if !IsValid( pl ) then return end
+    local playerPos = pl:GetPos()
 
-	local trace = {}
-	trace.start = npos
-	trace.endpos = trace.start + Vector(0,0,-600)
-	trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
-	trace.filter = ply
+    -- Editable parameters
+    local fov = 200
+    local minDistance = 150
+    local maxDistance = 500
+    local rayStartHeight = 400
 
-	local tr = util.TraceLine(trace)
-	if tr.Hit then
-		if (tr.MatType ~= MAT_SLOSH) then
-			if tr.MatType == MAT_DIRT or tr.MatType == MAT_SAND or tr.MatType == MAT_GRASS or tr.MatType == MAT_SNOW then
-				if tr.HitWorld then
-					npos = tr.HitPos + Vector(0,0,10)
-					SGS_MakeCreature( "npc_zombie", npos )
-				end
-			end
-		end
-	end
+	-- Here we basically take the players angles, and add a random angle to it
+    local angle = math.random(fov / 2, 360 - fov / 2)
+    local eyeAngle = Angle(0, pl:EyeAngles().yaw + angle, 0)
+    local dir = eyeAngle:Forward()
+    local mult = math.random(minDistance, maxDistance)
+    local targetPos = playerPos + Vector(dir.x * mult, dir.y * mult, rayStartHeight)
 
+    local trace = {}
+    trace.start = targetPos
+    trace.endpos = trace.start + Vector(0,0,-(rayStartHeight + 200))
+    trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
+    trace.mins = Vector(-20, -20, 0)
+    trace.maxs = Vector(20, 20, 75)
+    trace.filter = ply
+
+    local tr = util.TraceHull(trace)
+    if !tr.Hit || !tr.HitWorld then return end
+    if tr.MatType != MAT_DIRT && tr.MatType != MAT_SAND && tr.MatType != MAT_GRASS && tr.MatType != MAT_SNOW then return end
+    local spawnPos = tr.HitPos + Vector(0,0,10)
+	SGS_MakeCreature( "npc_zombie", spawnPos )
 end
 
 function SGS_IgniteZombies()
