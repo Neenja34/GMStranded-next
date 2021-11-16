@@ -3,7 +3,7 @@ GM.Tribes.tblTribes = {}
 local PlayerMeta = FindMetaTable( "Player" )
 
 net.Receive( "tribes_sv_network", function( l )
-	if LocalPlayer():GetInitialized() ~= INITSTATE_OK then return end
+	if !LocalPlayer():GetInitialized() == INITSTATE_OK then return end
 	if net.ReadBit() == 1 then
 		GAMEMODE.Tribes.tblTribes = net.ReadTable()
 		GAMEMODE.Tribes:SetUpTeams()
