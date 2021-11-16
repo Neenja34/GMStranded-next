@@ -61,9 +61,32 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
-
-	self:CheckPlant()
-
+	if self.rtotal <= 0 then
+		if IsValid(self.owner) then
+			if self.owner:IsPlayer() then
+				self.owner.tplants = self.owner.tplants - 1
+				self.owner:UpdatePlantCount()
+			end
+			if self.slab then
+				self.slab.locked = false
+			end
+		end
+		self:Remove()
+	end
+	
+	if CurTime() >= self.dtime then
+		if IsValid(self.owner) then
+			if self.owner:IsPlayer() then
+				self.owner.tplants = self.owner.tplants - 1
+				self.owner:UpdatePlantCount()
+			end
+			if self.slab then
+				self.slab.locked = false
+			end
+		end
+		self:Remove()
+	end
+	
 	self:NextThink(CurTime() + 1)
 	return true
 
