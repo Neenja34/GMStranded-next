@@ -28,14 +28,8 @@ function ENT:Initialize()
 	end
 
 	self:CacheEnable()
-	self.tribeid = self.tribeid or 0
-
+	
 	local capacity = 5000
-	local tribe = GAMEMODE.Tribes.tblTribes[ self.tribeid ]
-	if tribe.level >= 10 then capacity = 10000
-	elseif tribe.level >= 8 then capacity = 7500
-	end
-
 	self.max = capacity
 end
 
@@ -81,6 +75,10 @@ function ENT:Use( ply )
 		ply:SendMessage("This cache doesn't belong to your tribe", 60, Color(255, 0, 0, 255))
 		ply.lastuse = CurTime()
 		return
+	end
+
+	if GAMEMODE.Tribes:GetTribeIDLevel( self.tribeid ) >= 10 then self.max = 10000
+	elseif GAMEMODE.Tribes:GetTribeIDLevel( self.tribeid ) >= 8 then self.max = 7500
 	end
 
 	net.Start("UpdateCacheTable")

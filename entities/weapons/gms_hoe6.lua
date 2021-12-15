@@ -32,7 +32,6 @@ function SWEP:PrimaryAttack()
 	if IsFirstTimePredicted() then
 		self.Owner:SetAnimation( PLAYER_ATTACK1 )
 	end
-
 	local modi = 3.6
 	local timemodi = 1.7
     self.Weapon:SetNextPrimaryFire(CurTime() + ( 3 - timemodi ) )
@@ -43,10 +42,12 @@ function SWEP:PrimaryAttack()
 		return
 	end
 	
+	
+	
 	local tr = ply:TraceFromEyes(140)
 	if tr.HitWorld then
 		local mattype = tr.MatType
-		if !mattype == MAT_DIRT or mattype == MAT_SAND or mattype == MAT_GRASS or mattype == MAT_SNOW then return end
+		if !( mattype == MAT_DIRT or mattype == MAT_SAND or mattype == MAT_GRASS or mattype == MAT_SNOW ) then return end
 		for k, v in pairs(ents.FindInSphere( tr.HitPos, 50 )) do
 			if v:GetClass() == "gms_wheat" or v:GetClass() == "gms_liferoot" then
 				SGS_Harvest_Start(ply, 3 - timemodi, v)
