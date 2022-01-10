@@ -9,6 +9,7 @@ world.Bounds	= {
 }
 world.Gravity		= 1.0
 world.ZombieSpawns	= true
+world.AllowBloodmoon = true
 world.Entities	= {
 }
 world.expmod = 1.0
