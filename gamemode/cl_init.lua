@@ -58,23 +58,49 @@ function GM:AddNotify( str, type, duration )
 end
 
 function GM:InitPostEntity()
-
+	--self.World:InitPostEntity()
 	timer.Create(
 		"sgs_readyforinfo",
 		5,
 		0,
 		function()
-
 			if LocalPlayer():GetInitialized() == INITSTATE_ASKING then
 				net.Start( "sgs_readytoload" )
 				net.SendToServer()
 			else
 				timer.Remove( "sgs_readyforinfo" )
+				for k, v in pairs( ents.GetAll() ) do
+					if v:GetNWBool("waterfall") then
+						ParticleEffectAttach( "thw_waterfall_01", PATTACH_ABSORIGIN, v, 0 )
+					end
+					if v:GetNWBool("waterfalltop") then
+						ParticleEffectAttach( "waterfall_topsplash", PATTACH_ABSORIGIN, v, 0 )
+					end
+					if v:GetNWBool("waterfallbase") then
+						ParticleEffectAttach( "waterfall_base_01", PATTACH_ABSORIGIN, v, 0 )
+					end
+				end
 			end
 		end
 	)
-
 end
+
+
+hook.Add("InitPostEntity", "draw_waterfalls", function()
+	timer.Simple( 1, function()
+		for k, v in pairs( ents.GetAll() ) do
+			if v:GetNWBool("waterfall") then
+				ParticleEffectAttach( "thw_waterfall_01", PATTACH_ABSORIGIN, v, 0 )
+			end
+			if v:GetNWBool("waterfalltop") then
+				ParticleEffectAttach( "waterfall_topsplash", PATTACH_ABSORIGIN, v, 0 )
+			end
+			if v:GetNWBool("waterfallbase") then
+				ParticleEffectAttach( "waterfall_base_01", PATTACH_ABSORIGIN, v, 0 )
+			end
+		end
+	end )
+end )
 
 //--ALL CREDIT FOR THE MATERIAL FUNCTIONS BELOW TO AVON FROM THE STARGATE ADDON PACK--//
 function SGS.MaterialFromVMT( name, VMT )
@@ -93,91 +119,78 @@ function SGS.MaterialCopy( name, filename )
 end
 
 function PlayerInit()
-	--surface.CreateFont( "tahoma", 20, 600, true, false, "resource" )
 	surface.CreateFont( "resource", {
 		font	=	"tahoma",
 		size	=	20,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 20, 600, true, false, "resource" )
 	surface.CreateFont( "sign", {
 		font	=	"tahoma",
 		size	=	22,
 		weight	=	800
 		}
 	)
-	--surface.CreateFont( "tahoma", 12, 600, true, false, "resource2" )
 	surface.CreateFont( "resource2", {
 		font	=	"tahoma",
 		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 8, 400, true, false, "proplisticons" )
 	surface.CreateFont( "proplisticons", {
 		font	=	"tahoma",
 		size	=	8,
 		weight	=	400
 		}
 	)
-	--surface.CreateFont( "tahoma", 8, 400, true, false, "proplisticons" )
 	surface.CreateFont( "HotBarnumbers", {
 		font	=	"tahoma",
 		size	=	14,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 8, 400, true, false, "proplisticons" )
 	surface.CreateFont( "farmingoverlayicons", {
 		font	=	"tahoma",
 		size	=	10,
 		weight	=	800
 		}
 	)
-	--surface.CreateFont( "arial", 14, 600, true, false, "SGS_HUD2" )
 	surface.CreateFont( "SGS_HUD2", {
-		font	=	"arial",
-		size	=	14,
+		font	=	"tahoma",
+		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "arial", 14, 600, true, false, "SGS_HUD2" )
 	surface.CreateFont( "SGS_NotAvailable2", {
 		font	=	"tahoma",
 		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 14, 600, true, false, "SGS_HUD3" )
 	surface.CreateFont( "SGS_HUD3", {
 		font	=	"tahoma",
 		size	=	14,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 12, 600, true, false, "SGS_FarmText" )
 	surface.CreateFont( "SGS_FarmText", {
 		font	=	"tahoma",
 		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 12, 600, true, false, "SGS_RCacheMenuText" )
 		surface.CreateFont( "SGS_RCacheMenuText", {
 		font	=	"tahoma",
 		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 12, 600, true, false, "SGS_RCacheMenuText" )
 		surface.CreateFont( "SGS_TCacheMenuText", {
 		font	=	"tahoma",
 		size	=	12,
 		weight	=	600
 		}
 	)
-	--surface.CreateFont( "tahoma", 12, 600, true, false, "SGS_RCacheMenuText" )
 		surface.CreateFont( "SGS_RCacheTitles", {
 		font	=	"tahoma",
 		size	=	18,
@@ -185,7 +198,7 @@ function PlayerInit()
 		}
 	)
 	surface.CreateFont( "SGS_SideInventoryFont2", {
-		font	=	"courier",
+		font	=	"tahoma",
 		size	=	10,
 		weight	=	600
 		}
@@ -1891,14 +1904,14 @@ hook.Add( "RenderScreenspaceEffects", "DrawSunBeamsCL", DrawSunBeamsCL )
 
 surface.CreateFont( "ScoreboardDefault",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 22,
 	weight		= 800
 })
 
 surface.CreateFont( "ScoreboardDefaultTitle",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 32,
 	weight		= 800
 })
