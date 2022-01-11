@@ -35,7 +35,7 @@ surface.CreateFont( "farmingoverlayicons", {
 	}
 )
 surface.CreateFont( "SGS_HUD2", {
-	font	=	"arial",
+	font	=	"tahoma",
 	size	=	14,
 	weight	=	600
 	}
@@ -77,7 +77,7 @@ surface.CreateFont( "SGS_RCacheTitles", {
 	}
 )
 surface.CreateFont( "SGS_SideInventoryFont2", {
-	font	=	"courier",
+	font	=	"tahoma",
 	size	=	10,
 	weight	=	600
 	}

@@ -21,7 +21,7 @@ hook.Add( "HUDPaint", "PvsUpdate", function( intW, intH )
 
 	draw.Text{
 		text = "Loading Entities...",
-		font = "Trebuchet24",
+		font = "tahoma",
 		pos = { x +36, y +2 },
 		xalign = TEXT_ALIGN_LEFT,
 		yalign = TEXT_ALIGN_TOP,

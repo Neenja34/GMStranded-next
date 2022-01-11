@@ -4,7 +4,7 @@ local red = Color( 255, 20, 20, 255 )
 
 surface.CreateFont( "DeathNotice1",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 36,
 	weight		= 800,
 	shadow		= true
@@ -12,7 +12,7 @@ surface.CreateFont( "DeathNotice1",
 
 surface.CreateFont( "DeathNotice2",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 24,
 	weight		= 800,
 	shadow		= true
@@ -20,7 +20,7 @@ surface.CreateFont( "DeathNotice2",
 
 surface.CreateFont( "DeathNotice3",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 14,
 	weight		= 800,
 	shadow		= true
@@ -28,7 +28,7 @@ surface.CreateFont( "DeathNotice3",
 
 surface.CreateFont( "DeathNotice4",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 18,
 	weight		= 800,
 	shadow		= true
@@ -36,7 +36,7 @@ surface.CreateFont( "DeathNotice4",
 
 surface.CreateFont( "DeathNotice5",
 {
-	font		= "Helvetica",
+	font		= "tahoma",
 	size		= 64,
 	weight		= 800,
 	shadow		= false
@@ -44,7 +44,7 @@ surface.CreateFont( "DeathNotice5",
 
 surface.CreateFont( "DeathNotice6",
 {
-	font		= "Tahoma",
+	font		= "tahoma",
 	size		= 124,
 	weight		= 800,
 	shadow		= false

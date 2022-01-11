@@ -3,7 +3,7 @@ include('shared.lua')
 
 --surface.CreateFont( "coolvetica", 64, 500, true, false, "SandboxLabel" )
 surface.CreateFont( "SandboxLabel", {
-	font	=	"coolvetica",
+	font	=	"tahoma",
 	size	=	64,
 	weight	=	500
 	}

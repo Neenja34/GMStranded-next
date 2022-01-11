@@ -8,7 +8,7 @@ local PlayerMeta = FindMetaTable( "Player" )
 ]]
 
 surface.CreateFont("MenuFont1", {
-	font = "Arial", 
+	font = "tahoma", 
 	size = 18, 
 	weight = 800, 
 	blursize = 0, 

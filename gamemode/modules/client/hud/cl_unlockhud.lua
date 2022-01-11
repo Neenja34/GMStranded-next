@@ -4,7 +4,7 @@ local darkgray = Color( 50, 50, 50, 150 )
 
 surface.CreateFont( "UnlockFont1",
 {
-	font		= "Tahoma",
+	font		= "tahoma",
 	size		= 28,
 	weight		= 800,
 	shadow		= false
@@ -12,7 +12,7 @@ surface.CreateFont( "UnlockFont1",
 
 surface.CreateFont( "UnlockFont2",
 {
-	font		= "Tahoma",
+	font		= "tahoma",
 	size		= 18,
 	weight		= 800,
 	shadow		= false

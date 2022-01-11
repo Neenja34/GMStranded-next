@@ -160,7 +160,7 @@ Tribe Menu
 ]]
 
 surface.CreateFont("TribeMenu1", {
-	font = "Courier New", 
+	font = "tahoma", 
 	size = 14, 
 	weight = 600, 
 	blursize = 0, 
@@ -177,7 +177,7 @@ surface.CreateFont("TribeMenu1", {
 })
 
 surface.CreateFont("TribeMenu2", {
-	font = "Arial", 
+	font = "tahoma", 
 	size = 36, 
 	weight = 800, 
 	blursize = 0, 
@@ -194,7 +194,7 @@ surface.CreateFont("TribeMenu2", {
 })
 
 surface.CreateFont("TribeMenu3", {
-	font = "Arial", 
+	font = "tahoma", 
 	size = 24, 
 	weight = 800, 
 	blursize = 0, 
@@ -211,7 +211,7 @@ surface.CreateFont("TribeMenu3", {
 })
 
 surface.CreateFont("TribeMenu4", {
-	font = "Tahoma", 
+	font = "tahoma", 
 	size = 16, 
 	weight = 800, 
 	blursize = 0, 
@@ -228,7 +228,7 @@ surface.CreateFont("TribeMenu4", {
 })
 
 surface.CreateFont("TribeMenu5", {
-	font = "Arial", 
+	font = "tahoma", 
 	size = 18, 
 	weight = 800, 
 	blursize = 0, 

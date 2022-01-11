@@ -44,7 +44,7 @@ surface.CreateFont( "qMenuFont4", {
 	}
 )
 surface.CreateFont("qMenuFont5", {
-	font = "Arial", 
+	font = "tahoma", 
 	size = 18, 
 	weight = 800, 
 	blursize = 0, 

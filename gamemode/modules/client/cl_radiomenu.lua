@@ -1,11 +1,11 @@
 surface.CreateFont( "RadioSmallText", {
-	font = "Tahoma",
+	font = "tahoma",
 	size = 12,
 	weight = 200,
 } )
 
 surface.CreateFont( "ScoreboardText", {
-	font = "Arial",
+	font = "tahoma",
 	size = 16,
 	weight = 600,
 } )
