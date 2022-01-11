@@ -5349,8 +5349,8 @@ function SGS_Entity_Find( ply, con, args)
 
 	local entities = ents.FindInSphere( GAMEMODE.getUser( args[1] ):GetPos(), args[2])
 
-	for k, v in pairs (entities) do
-		ply:SendMessage( tostring(k) .. " " .. tostring(v), 60, Color( 255, 255, 255, 255 ))
+	for _, v in pairs (entities) do
+		ply:SendMessage(tostring(v) .. " pos: [" .. tostring(v:GetPos()) .. "] angles: {" .. tostring(v:GetAngles()) .. "}", 60, Color( 255, 255, 255, 255 ))
 	end
 
 end
@@ -5396,9 +5396,7 @@ hook.Add( "PlayerSay", "SGS_ChatAdminMode", SGS_ChatAdminMode )
 
 function GM:OnPlayerHitGround( ply, bInWater, bOnFloater, flFallSpeed )
 	if ply.amode then return end
-
 	if CurTime() < ply.last_world_change + 1 then return end
-
 	
 	if flFallSpeed >= 420 and flFallSpeed <= 1000 then
 		local dmg = math.abs(( flFallSpeed - 200 ) / 300)
@@ -7843,7 +7841,6 @@ function SGS_SpawnMeteor()
 end
 
 function FindGoodSpot( world )
-
 	local tries = 50
 
 	for i = 1, 50 do
@@ -7858,26 +7855,29 @@ function FindGoodSpot( world )
 			filter = ply
 		})
 
-		if tr.Hit then
-			if ( tr.MatType ~= MAT_SLOSH ) then
-				if tr.MatType == MAT_DIRT or tr.MatType == MAT_SAND or tr.MatType == MAT_GRASS or tr.MatType == MAT_SNOW then
-					if tr.HitWorld then
-						if #ents.FindInSphere( tr.HitPos, 500 ) <= 0 then
-							return tr.HitPos
-						end
-					end
+		if !tr.Hit then return end
+			
+		if tr.MatType == MAT_DIRT or tr.MatType == MAT_SAND or tr.MatType == MAT_GRASS or tr.MatType == MAT_SNOW then
+			if tr.HitWorld then
+				if #ents.FindInSphere( tr.HitPos, 500 ) <= 0 then
+					return tr.HitPos
 				end
 			end
 		end
 	end
-
 end
 
 function ChooseWorld()
-	local tblWorlds = { "3", "4", "6", "7", "9" }
-	local rndWorld = tblWorlds[ math.random( #tblWorlds ) ]
-	local world = GAMEMODE.Worlds.tblWorlds[ tonumber(rndWorld) ]
-	return world
+	local world = 0
+	if game.GetMap() == "gms_g4p_stargate_v11" then
+		local tblWorlds = { "3", "4", "6", "7", "9" }
+		local rndWorld = tblWorlds[ math.random( #tblWorlds ) ]
+		world = GAMEMODE.Worlds.tblWorlds[ tonumber(rndWorld) ]
+		return world
+	else
+		world = 1
+		return world
+	end
 end
 
 hook.Add( "Think", "SpawnMeteorCheck", function()
