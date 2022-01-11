@@ -163,7 +163,11 @@ function SGS_CheckOnShop4()
 	end
 	
 	local newshop4 = ents.Create("npc_gman")
-	newshop4:SetPos(SGS.shopstartpos + Vector(0,-1000,0))
+	if game.GetMap() == "gms_coastal_island_v2" then
+		newshop4:SetPos(SGS.shopstartpos + Vector(0,-250,0))
+	else
+		newshop4:SetPos(SGS.shopstartpos + Vector(0,-1000,0))
+	end
 	newshop4:Spawn()
 	newshop4:SetHealth( newshop4:Health() + 999999999 )
 	newshop4.w_id = 1
