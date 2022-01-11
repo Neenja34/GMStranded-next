@@ -219,6 +219,10 @@ function PlayerMeta:AddExp( skill, amt, shared )
 
 		amt = amt * world_mod
 
+		if self.inpvp then
+			amt = math.ceil(amt * 1.30)
+		end
+
 		if GAMEMODE.Tribes:GetTribeLevel( self ) >= 8 then
 			amt = math.ceil(amt * 1.20)
 		elseif GAMEMODE.Tribes:GetTribeLevel( self ) >= 2 then

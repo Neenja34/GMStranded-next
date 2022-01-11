@@ -23,7 +23,11 @@ function SGS_SpawnRandomBoss()
 end
 
 function SGS_SpawnAntlionBoss()
-	SGS_MakeCreature( "npc_antlionguard", GAMEMODE.Worlds.tblWorlds[8].BossSpawnPos + Vector(200,0,0), nil )
+	if game.GetMap() == "gms_g4p_stargate_v11" then
+		SGS_MakeCreature( "npc_antlionguard", GAMEMODE.Worlds.tblWorlds[8].BossSpawnPos + Vector(200,0,0), nil )
+	else
+		SGS_MakeCreature( "npc_antlionguard", GAMEMODE.Worlds.tblWorlds[2].BossSpawnPos + Vector(200,0,0), nil )
+	end
 	RunConsoleCommand( "ulx", "csay", "The Antlion Boss emerges in the Arena!" )
 	for k, v in pairs(player.GetAll()) do
 		v:SendMessage("The Antlion Boss emerges in the Arena!", 60, Color(255, 255, 0, 255))
@@ -31,7 +35,11 @@ function SGS_SpawnAntlionBoss()
 end
 
 function SGS_SpawnHunterBoss()
-	SGS_MakeCreature( "npc_hunter", GAMEMODE.Worlds.tblWorlds[8].BossSpawnPos + Vector(200,0,0), nil )
+	if game.GetMap() == "gms_g4p_stargate_v11" then
+		SGS_MakeCreature( "npc_hunter", GAMEMODE.Worlds.tblWorlds[8].BossSpawnPos + Vector(200,0,0), nil )
+	else
+		SGS_MakeCreature( "npc_hunter", GAMEMODE.Worlds.tblWorlds[2].BossSpawnPos + Vector(200,0,0), nil )
+	end
 	RunConsoleCommand( "ulx", "csay", "The Hunter Boss emerges in the Arena!" )
 	for k, v in pairs(player.GetAll()) do
 		v:SendMessage("The Hunter Boss has arrived in the Arena!", 60, Color(255, 255, 0, 255))

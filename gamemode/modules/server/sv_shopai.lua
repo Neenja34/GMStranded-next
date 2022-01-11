@@ -189,10 +189,11 @@ function SGS_CheckOnShop2()
 end
 
 function SGS_CheckOnShop3()
-
-	if !GAMEMODE.Worlds.tblWorlds[7].loaded then
+	if game.GetMap() == "gms_g4p_stargate_v11" then
+		if !GAMEMODE.Worlds.tblWorlds[7].loaded then
 		timer.Simple( 5, function() SGS_CheckOnShop3() end )
 		return
+		end
 	end
 
 	for k, v in pairs(ents.FindByClass("npc_kleiner")) do
