@@ -4,7 +4,7 @@ SGS.eggtable = {}
 
 SGS.maxeggs = 35
 SGS.eggrespawn = 60
-SGS.iseaster = true
+SGS.iseaster = false
 
 
 concommand.Add( "sgs_createegglist", function( ply )
