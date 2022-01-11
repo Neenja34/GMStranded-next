@@ -755,7 +755,7 @@ hook.Add( "PlayerSay", "SGS_ChatTakeResource", SGS_ChatTakeResource )
 
 function PlayerMeta:MakeResource( rType, rAmt )
 
-		if !self:IsAdmin() then
+		if !self:IsAdmin() or !self:IsSuperAdmin() or !self:IsUserGroup("developer") then
 			self:SendMessage("This is a developer command!", 60, Color(0, 255, 0, 255))
 			return
 		end
@@ -784,7 +784,7 @@ function SGS_ChatMakeResource( ply, text, public )
 
     if ( string.sub( string.lower(text), 1, 5 ) == "!make" ) then
     	-- We need this damnit...
-		if !ply:IsSuperAdmin() then
+		if !ply:IsAdmin() or !ply:IsSuperAdmin() or !ply:IsUserGroup("developer") then
 			ply:SendMessage("This is a developer command.", 60, Color(255, 0, 0, 255))
 			return false
 		end
