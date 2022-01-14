@@ -7855,27 +7855,28 @@ function FindGoodSpot( world )
 			filter = ply
 		})
 
-		if !tr.Hit then return end
-			
-		if tr.MatType == MAT_DIRT or tr.MatType == MAT_SAND or tr.MatType == MAT_GRASS or tr.MatType == MAT_SNOW then
-			if tr.HitWorld then
-				if #ents.FindInSphere( tr.HitPos, 500 ) <= 0 then
-					return tr.HitPos
+		if tr.Hit then
+			if tr.MatType == MAT_DIRT or tr.MatType == MAT_SAND or tr.MatType == MAT_GRASS or tr.MatType == MAT_SNOW then
+				if tr.HitWorld then
+					if #ents.FindInSphere( tr.HitPos, 500 ) <= 0 then
+						return tr.HitPos
+					end
 				end
 			end
+			return
 		end
 	end
 end
 
 function ChooseWorld()
-	local world = 0
+	local world = nil
 	if game.GetMap() == "gms_g4p_stargate_v11" then
 		local tblWorlds = { "3", "4", "6", "7", "9" }
 		local rndWorld = tblWorlds[ math.random( #tblWorlds ) ]
 		world = GAMEMODE.Worlds.tblWorlds[ tonumber(rndWorld) ]
 		return world
 	else
-		world = 1
+		world = GAMEMODE.Worlds.tblWorlds[1]
 		return world
 	end
 end
