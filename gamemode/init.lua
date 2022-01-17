@@ -2234,8 +2234,8 @@ function PlayerMeta:ElixirEffect(skill)
 	end
 
 	if skill == "speed" then
-		self.trail1 = util.SpriteTrail( self, 7, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
-		self.trail2 = util.SpriteTrail( self, 6, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
+		self.trail1 = util.SpriteTrail( self, 8, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
+		self.trail2 = util.SpriteTrail( self, 9, Color( 255, 255, 255, 255 ), false, 5, 1, 1, 1 / ( 15 + 1 ) * 0.5, "trails/smoke.vmt" )
 	else
 		local ent = ents.Create("gms_elixorb")
 			ent.self = self
