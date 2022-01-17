@@ -4,21 +4,20 @@ function SGS_ConSpawnEntity(ply, com, args)
 		return
 	end
 
-    local tr = util.TraceLine( {
-	start = ply:EyePos(),
-	endpos = ply:EyePos() + ply:EyeAngles():Forward() * 10000,
-	filter = function()
-        if tr.HitWorld then
-            return true
-        end
+    local trace = {}
+	trace.start = ply:EyePos()
+	trace.endpos = ply:EyePos() + ply:EyeAngles():Forward() * 10000
+    trace.filter = ply
+    local tr = util.TraceLine(trace)
+
+    if tr.Hit then
+        local ent = ents.Create(args[1])
+        local position = tr.HitPos + Vector(0, 0, args[2])
+        ent:SetPos(position)
+        ent:Spawn()
+        ent:SetNWString("Owner", "World")
+
+        print(ply:GetName() .. " created " .. args[1] .. " in position: " .. tostring(position))
     end
-    } )
-    print(ply:GetName() .. " created " .. args[1] .. " in position: " .. tostring(tr.HitPos))
-
-    local ent = ents.Create(args[1])
-	ent:SetPos(tr.HitPos)
-	ent:Spawn()
-	ent:SetNWString("Owner", "World")
-
 end
-concommand.Add( "sgs_spawnentity", SGS_ConSpawnEntity )
+concommand.Add("sgs_spawnentity", SGS_ConSpawnEntity)
