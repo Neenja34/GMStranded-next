@@ -127,8 +127,8 @@ function SGS_ConCommandPlacePetFood( ply, com, args )
 		return
 	end
 	
-	if SGS_CountPetFood( ply ) >= 10 then
-		ply:SendMessage("You are only allowed 10 pet food spawned at a time.",3,Color(255,80,80,255))
+	if SGS_CountPetFood( ply ) >= 20 then
+		ply:SendMessage("You can only place 20 pet food at a time.",3,Color(255,80,80,255))
 		return
 	end
 		
