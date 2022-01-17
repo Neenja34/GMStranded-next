@@ -5179,8 +5179,8 @@ function PlayerMeta:UseElixir( potion )
 
 	if statboost == "speed" then
 		if GAMEMODE.Tribes:GetTribeLevel( self ) >= 6 then
-			self:SetWalkSpeed( 192 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
-			self:SetRunSpeed( 288 + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
+			self:SetWalkSpeed( 192 * statmod + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
+			self:SetRunSpeed( 288 * statmod + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
 		else
 			self:SetWalkSpeed( 160 * statmod + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
 			self:SetRunSpeed( 240 * statmod + ( gLevel.cfg.speed * gLevel.getSkill( "gLevel.runSpeed", self ) ) )
