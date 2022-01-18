@@ -1,9 +1,14 @@
 function SGS_LoadWorlds()
 	SGS.WorldEntities = {}
+	SGS.MeteorSpawnPoints = {}
 	for w_id, _ in pairs( GAMEMODE.Worlds.tblWorlds ) do
 		if file.Exists("sgstranded/mapsaves/" .. game.GetMap() .. "_world_" .. tostring(w_id) .. ".txt", "DATA") then 
 			SGS.WorldEntities[w_id] = util.JSONToTable( file.Read("sgstranded/mapsaves/" .. game.GetMap() .. "_world_" .. tostring(w_id) .. ".txt", "DATA") )
 		end
+	end
+
+	if file.Exists("sgstranded/mapsaves/meteorspawnpoints/" .. game.GetMap() .. ".txt", "DATA") then
+		SGS.MeteorSpawnPoints = util.JSONToTable(file.Read("sgstranded/mapsaves/meteorspawnpoints/" .. game.GetMap() .. ".txt", "DATA"))
 	end
 	--[[
 	for w_id, world in pairs( GAMEMODE.Worlds.tblWorlds ) do
