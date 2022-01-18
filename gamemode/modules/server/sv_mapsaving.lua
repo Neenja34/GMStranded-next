@@ -80,6 +80,7 @@ function SGS_BuildEntityList()
 	end
 	SGS_SaveMap()
 end
+--concommand.Add("sgs_buildentitylist", SGS_BuildEntityList)
 
 function SGS_SaveMap()
 		local savegame
@@ -91,9 +92,9 @@ function SGS_SaveMap()
 			for k, ent in pairs( SGS.tosave[i] ) do
 				if ent and ent != NULL and ent:IsValid() then
 					local entry = {}
-					entry["class"] = ent:GetClass()
 					entry["pos"] = ent:GetPos()
 					entry["angles"] = ent:GetAngles()
+					entry["class"] = ent:GetClass()
 					savegame[k] = entry
 				end
 			end
