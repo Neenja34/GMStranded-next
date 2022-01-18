@@ -45,7 +45,7 @@ function SGS_AddMeteorSpawnPoint(ply, com)
 end
 concommand.Add("sgs_addMeteorSpawnPoint", SGS_AddMeteorSpawnPoint)
 
-function SGS_SaveMeteorSpawnPoints()
+function SGS_SaveMeteorSpawnPoints(ply, com)
     if !ply:IsSuperAdmin() then
         ply:SendMessage("This command is reserved for Developers!", 60, Color(255, 0, 0, 255))
         return
