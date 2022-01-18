@@ -15,6 +15,7 @@ hook.Add( "DayLightChangeTime", "DayChangeBossCheck", function( time )
 end)
 
 function SGS_SpawnRandomBoss()
+	if game.GetMap() == "gms_coastal_outlands" then return end
 	if math.random(5) <= 3 then
 		SGS_SpawnAntlionBoss()
 	else
