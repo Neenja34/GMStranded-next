@@ -24,18 +24,14 @@ function ENT:Initialize()
 	self.on = false
 	self.summoned = false
 	self.max = 10
-	
-	
 end
 
 function ENT:Use( ply )
-
-	if !(GAMEMODE.Worlds:GetEntityWorldSpace( self ).BossSpawnPos) then
+	if game.GetMap() ~= "gms_coastal_outlands" and !(GAMEMODE.Worlds:GetEntityWorldSpace( self ).BossSpawnPos) then
 		ply:SendMessage("There doesn't seem to be any boss activity on this world.", 60, Color(255, 0, 0, 255))
 		return
 	end
 	self.on = !self.on
-
 end
 
 
@@ -67,22 +63,20 @@ end
 --Called when the SENT thinks.
 --Return: Nothing
 function ENT:Think()
-
 	if self.on then
 	
 		local ED = EffectData()
-		ED:SetOrigin( self:GetPos() + self:GetUp()*19 )
-		util.Effect( 'cball_explode', ED )
+		ED:SetOrigin(self:GetPos() + self:GetUp() * 19)
+		util.Effect('cball_explode', ED)
 		
 		local ED = EffectData()
-		ED:SetOrigin( self:GetPos() + self:GetUp()*19 )
-		util.Effect( 'smoke_ring', ED )
+		ED:SetOrigin(self:GetPos() + self:GetUp() * 19)
+		util.Effect('smoke_ring', ED)
 		
-		util.ScreenShake( self:GetPos(), 10, 10, 0.3, 750 )
+		util.ScreenShake(self:GetPos(), 10, 10, 0.3, 750)
 		
-		self:EmitSound( 'ambient/energy/spark' .. tostring(math.random(1,3)) .. '.wav', 140, math.Rand( 75, 125 ) )
-		self:EmitSound( 'physics/body/body_medium_impact_soft4.wav', 180, math.Rand( 75, 150 ) )
-		
+		self:EmitSound('ambient/energy/spark' .. tostring(math.random(1, 3)) .. '.wav', 140, math.Rand( 75, 125))
+		self:EmitSound('physics/body/body_medium_impact_soft4.wav', 180, math.Rand( 75, 150))
 		
 		if math.random(1, self.max) == 1 and self.summoned == false then
 			self.summoned = true
@@ -92,17 +86,21 @@ function ENT:Think()
 		end
 	end
 	
-	self:NextThink( CurTime() + 1.5 )
-	return true;
-
+	self:NextThink(CurTime() + 1.5)
+	return true
 end
 
 function ENT:Summon()
-
 	self.on = false
-	SGS_SpawnHunterBoss()
+	if game.GetMap() == "gms_coastal_outlands" then
+		SGS_MakeCreature("npc_hunter", self:GetPos() + Vector(0, 0, 10), nil)
+		for k, v in pairs(player.GetAll()) do
+			v:SendMessage(self:GetNWEntity("OwnerObj", false):Name() .. " spawned a hunter boss in: " .. GAMEMODE.Worlds:GetEntityWorldSpace(self).Name, 60, Color(255, 255, 0, 255))
+		end
+	else
+		SGS_SpawnHunterBoss()
+	end
 	self:Remove()
-
 end
 
 --Called when an entity touches this SENT.
