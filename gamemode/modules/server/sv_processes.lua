@@ -4618,8 +4618,10 @@ function SGS_XMute_Start(ply, len, recipee, modi)
 	
 	ply:Freeze( true )
 	ply.inprocess = true
-	ply.sound = CreateSound(ply, "ambient/machines/combine_shield_loop3.wav")
-	ply.sound:Play()
+	if ply:GetInfo("sgs_alchemy_volume") == "1" then
+		ply.sound = CreateSound(ply, "ambient/machines/combine_shield_loop3.wav")
+		ply.sound:Play()
+	end
 	ply.processtype = "xmute"
 		
 	local txt = "Transmuting..."
@@ -4637,7 +4639,9 @@ function SGS_XMute_Stop(ply, recipee, modi)
 	ply.inprocess = false
 	ply.processtype = "idle"
 	ply:SetNWString("action", "Idle")
-	ply.sound:Stop()
+	if ply:GetInfo("sgs_alchemy_volume") == "1" then
+		ply.sound:Stop()
+	end
 	
 	if ply.level == nil then
 		ply:SendMessage("CRITICAL ERROR #100. Please report this error code.", 60, Color(255, 0, 0, 255))
