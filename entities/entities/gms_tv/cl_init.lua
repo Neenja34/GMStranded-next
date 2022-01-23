@@ -211,7 +211,6 @@ end
 
 function ENT:UpdateVolume()
 	local vol
-	print(self:GetMaxVolume())
 	if self:GetMaxVolume() ~= 0 then
 		local fallOff = 262144
 		local scaler = (fallOff - LocalPlayer():GetPos():DistToSqr(self:GetPos())) / fallOff
