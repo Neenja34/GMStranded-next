@@ -6,11 +6,11 @@ hook.Add( "Think", "NeedsThink", function()
 	if SGS.noneeds or SGS.inedit then return end
 
 	for _, ply in pairs( player.GetAll() ) do
-		if ply.amode then return end
-		if !ply:Alive() then return end
-		if ply.afk then return end
-		if !ply.tosaccept then return end
-		if !ply.needs then return end
+		if ply.amode then continue end
+		if ply.afk then continue end
+		if !ply:Alive() then continue end
+		if !ply.tosaccept then continue end
+		if !ply.needs then continue end
 
 		local thirst_multi = 1
 		local hunger_multi = 1
