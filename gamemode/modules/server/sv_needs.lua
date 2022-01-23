@@ -4,43 +4,40 @@ local EntityMeta = FindMetaTable("Entity")
 hook.Add( "Think", "NeedsThink", function()
 	if CurTime() < ( GAMEMODE.nextneedsthink or CurTime() - 1 ) then return end
 	if SGS.noneeds or SGS.inedit then return end
+
 	for _, ply in pairs( player.GetAll() ) do
-		if !ply.amode then
-			if ply:Alive() then
-				if ply.afk == false then
-					if ply.tosaccept then
-						if ply.needs then
-							local thirst_multi = 1
-							local hunger_multi = 1
-							if ply.sleeping and ply.sheltered then thirst_multi = 5 hunger_multi = 5 end
-							if ply.sleeping and !ply.sheltered then thirst_multi = 15 hunger_multi = 15 end
-							if GAMEMODE.Worlds:GetEntityWorldSpaceID( ply ) == 4 and !ply:Sheltered() then 
-								thirst_multi = thirst_multi * 3 
-								hunger_multi = hunger_multi * 3
-							end
-							if ply.needs["hunger"] >= ( 2 * hunger_multi ) then
-								ply.needs["hunger"] = ply.needs["hunger"] - ( 2 * hunger_multi )
-							else
-								ply.needs["hunger"] = 0
-							end
-							if !ply.sleeping then
-								if ply.needs["fatigue"] >= 1.5 then
-									ply.needs["fatigue"] = ply.needs["fatigue"] - 1.5
-								else
-									ply.needs["fatigue"] = 0
-								end
-							end
-							if ply.needs["thirst"] >= ( 3 * thirst_multi ) then
-								ply.needs["thirst"] = ply.needs["thirst"] - ( 3 * thirst_multi )
-							else
-								ply.needs["thirst"] = 0
-							end
-							ply:SendNeeds()
-						end
-					end
-				end
+		if ply.amode then return end
+		if !ply:Alive() then return end
+		if ply.afk then return end
+		if !ply.tosaccept then return end
+		if !ply.needs then return end
+
+		local thirst_multi = 1
+		local hunger_multi = 1
+		if ply.sleeping and ply.sheltered then thirst_multi = 5 hunger_multi = 5 end
+		if ply.sleeping and !ply.sheltered then thirst_multi = 15 hunger_multi = 15 end
+		if GAMEMODE.Worlds:GetEntityWorldSpaceID( ply ) == 4 and !ply:Sheltered() then 
+			thirst_multi = thirst_multi * 3 
+			hunger_multi = hunger_multi * 3
+		end
+		if ply.needs["hunger"] >= ( 2 * hunger_multi ) then
+			ply.needs["hunger"] = ply.needs["hunger"] - ( 2 * hunger_multi )
+		else
+			ply.needs["hunger"] = 0
+		end
+		if !ply.sleeping then
+			if ply.needs["fatigue"] >= 1.5 then
+				ply.needs["fatigue"] = ply.needs["fatigue"] - 1.5
+			else
+				ply.needs["fatigue"] = 0
 			end
 		end
+		if ply.needs["thirst"] >= ( 3 * thirst_multi ) then
+			ply.needs["thirst"] = ply.needs["thirst"] - ( 3 * thirst_multi )
+		else
+			ply.needs["thirst"] = 0
+		end
+		ply:SendNeeds()
 	end
 	SGS_CheckNeeds()
 	GAMEMODE.nextneedsthink = CurTime() + 2
