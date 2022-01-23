@@ -2260,9 +2260,9 @@ function PlayerMeta:ElixirEffect(skill)
 
 end
 
-function PlayerMeta:Heal( amt )
+function PlayerMeta:Heal(amt)
 
-	if self:Health() + amt <= ( self:GetMaxHealth() + ( gLevel.cfg.health * gLevel.getSkill( "gLevel.healthImprovement", self ) ) ) then
+	if self:Health() + amt <= self:GetMaxHealth() then
 		self:SetHealth(self:Health() + amt)
 	else
 		self:SetHealth(self:GetMaxHealth())

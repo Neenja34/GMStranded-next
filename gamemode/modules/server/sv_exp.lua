@@ -63,9 +63,9 @@ function PlayerMeta:SetSurvivalLevelStats()
 	local pslvl = self.level[ "survival" ]
 
 	--Set Max Health
-	local mhealth = ( (pslvl - 1) * 4 ) + 100
-	self:SetMaxHealth( mhealth )
-	self:SetHealth( self:GetMaxHealth() )
+	local mhealth = (pslvl - 1) * 4 + 100 + ( gLevel.cfg.health * gLevel.getSkill( "gLevel.healthImprovement", self ) )
+	self:SetMaxHealth(mhealth)
+	self:SetHealth(self:GetMaxHealth())
 
 	--Set Max Inventory
 	self:RecalculateMaxInv()
