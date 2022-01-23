@@ -8,7 +8,7 @@ util.AddNetworkString( "gm_tv_rplay" )
 net.Receive( "gm_tv_rplay", function( intMsgLen, pPlayer )
 	local ent, strVideoID = net.ReadEntity(), net.ReadString()
 	if !IsValid( ent ) or !strVideoID then return end
-	if pPlayer:GetPos():Distance( ent:GetPos() ) >ent.m_intUseRange then return end
+	if pPlayer:GetPos():DistToSqr( ent:GetPos() ) > ent.m_intUseRange then return end
 	
 	--if !pPlayer:IsDonator() then
 		--for k, v in pairs( ent.m_tblPresets ) do
@@ -28,7 +28,7 @@ net.Receive( "gm_tv_rplayt", function( intMsgLen, pPlayer )
 	local ent, strVideoID = net.ReadEntity(), net.ReadString()
 	if !IsValid( ent ) or !strVideoID then return end
 	--if !pPlayer:IsDonator() then return end
-	if pPlayer:GetPos():Distance( ent:GetPos() ) >ent.m_intUseRange then return end
+	if pPlayer:GetPos():DistToSqr( ent:GetPos() ) > ent.m_intUseRange then return end
 	
 	ent:PlayTwitch( strVideoID )
 end )
@@ -37,7 +37,7 @@ util.AddNetworkString( "gm_tv_rstop" )
 net.Receive( "gm_tv_rstop", function( intMsgLen, pPlayer )
 	local ent = net.ReadEntity()
 	if !IsValid( ent ) then return end
-	if pPlayer:GetPos():Distance( ent:GetPos() ) >ent.m_intUseRange then return end
+	if pPlayer:GetPos():DistToSqr( ent:GetPos() ) > ent.m_intUseRange then return end
 	
 	ent:StopVideo()
 end )

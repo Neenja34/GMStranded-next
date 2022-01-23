@@ -26,14 +26,14 @@ ITEM.material = "vgui/fixes/citizenradio.png"
 Shop_RegisterShopItem( "structures", ITEM )
 
 
---ITEM = {}
---ITEM.title = "Television"
---ITEM.uid = "structure3"
---ITEM.description = "Somehow it actually works?"
---ITEM.cost = 3000
---ITEM.gives = { gms_tv = 1}
---ITEM.material = "models/props/cs_office/tv_plasma.vmt"
---Shop_RegisterShopItem( "structures", ITEM )
+ITEM = {}
+ITEM.title = "Television"
+ITEM.uid = "structure3"
+ITEM.description = "Somehow it actually works?"
+ITEM.cost = 3000
+ITEM.gives = { gms_tv = 1}
+ITEM.material = "models/props/cs_office/tv_plasma.vmt"
+Shop_RegisterShopItem( "structures", ITEM )
 
 
 //-=relics--//

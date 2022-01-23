@@ -226,7 +226,7 @@ function SGS_SetUpTablesShared()
 		"gms_sink",
 		"gms_bed",
 		"gms_radio",
-		--"gms_tv",
+		"gms_tv",
 		"gms_gardenblock",
 		"gms_gardengnome",
 		"gms_pethouse",
