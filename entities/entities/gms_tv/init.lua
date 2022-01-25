@@ -93,11 +93,17 @@ end )
 
 function ENT:Initialize()
 	self:SetModel( "models/props/cs_office/TV_plasma.mdl" )
-	self:SetCollisionGroup( COLLISION_GROUP_PLAYER )
 	self:PhysicsInit( SOLID_VPHYSICS )
+	self:SetMoveType( MOVETYPE_VPHYSICS )
+	self:SetSolid( SOLID_VPHYSICS )
 	self:DrawShadow( true )
 	self:SetTrigger( true )
 	self:SetUseType( SIMPLE_USE )
+
+	local phys = self:GetPhysicsObject()
+	if phys and phys:IsValid() then
+		phys:EnableMotion(false) -- Freezes the object in place.
+	end
 end
 
 function ENT:Use( pPlayer )

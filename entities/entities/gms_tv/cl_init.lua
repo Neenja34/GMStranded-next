@@ -96,15 +96,16 @@ end
 -- Entity
 -- ----------------------------------------------------------------
 function ENT:Initialize()
-	self.m_vecCamPos = Vector(6.175, -27.821627, 35.345478)
+	self.m_vecCamPos = Vector(6.55, -27.5, 35) --Vector(6.175, -27.821627, 35.345478)
 	self.m_angCamAngs = Angle(0, 90, 90)
-	self.m_intWidth, self.m_intHeight = 1920, 1920
+	self.m_intWidth = 1920
+	self.m_intHeight = 1920
 
 	self.m_tblQuad = {
-		[1] = Vector(0, 0, 0),
-		[2] = Vector(self.m_intWidth, 0, 0),
+		[1] = Vector(-50, -50, 0),
+		[2] = Vector(self.m_intWidth, -50, 0),
 		[3] = Vector(self.m_intWidth, self.m_intHeight, 0),
-		[4] = Vector(0, self.m_intHeight, 0)
+		[4] = Vector(-50, self.m_intHeight, 0)
 	}
 
 	self.m_strUID = "tv_" .. tostring(self:EntIndex()) .. "_uid"
@@ -117,7 +118,7 @@ function ENT:Reload()
 	end
 
 	self.m_pnlWebPage = vgui.Create("DHTML")
-	self.m_pnlWebPage:SetSize(self.m_intWidth, 1128)
+	self.m_pnlWebPage:SetSize(self.m_intWidth + 27.5, 1175) --1128
 	self.m_pnlWebPage:SetPaintedManually(true)
 	self.m_pnlWebPage:SetScrollbars(false)
 	self.m_pnlWebPage:SetAllowLua(true)
@@ -210,6 +211,7 @@ function ENT:GetMaxVolume()
 end
 
 function ENT:UpdateVolume()
+	if !IsValid(self.m_pnlWebPage) then return end
 	local vol
 	if self:GetMaxVolume() ~= 0 then
 		local fallOff = 262144
