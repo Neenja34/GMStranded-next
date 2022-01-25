@@ -7844,11 +7844,11 @@ function FindGoodSpot( world )
 	local tries = 50
 
 	for i = 1, 50 do
-		--[[ local rndPosX = math.random( world.Bounds[ 1 ].Min.x + 50, world.Bounds[ 1 ].Max.x - 50 )
+		local rndPosX = math.random( world.Bounds[ 1 ].Min.x + 50, world.Bounds[ 1 ].Max.x - 50 )
 		local rndPosY = math.random( world.Bounds[ 1 ].Min.y + 50, world.Bounds[ 1 ].Max.y - 50 )
 
-		local pos = Vector( rndPosX, rndPosY, world.SkyPos - 400 ) ]]
-		local pos = SGS.MeteorSpawnPoints[math.random(#SGS.MeteorSpawnPoints)]
+		local pos = Vector( rndPosX, rndPosY, world.SkyPos - 400 )
+		--local pos = SGS.MeteorSpawnPoints[math.random(#SGS.MeteorSpawnPoints)]
 		local tr = util.TraceLine({
 			start = pos,
 			endpos = pos - Vector( 0, 0, 16384 ),
