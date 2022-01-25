@@ -81,6 +81,7 @@ function ENT:Think()
 
 	if IsValid(self.station) then
 		self.station:SetPos( self:GetPos() )
+		self.station:SetVolume(radiovolume:GetInt() / 100)
 	end
 
 	self:NextThink( CurTime() + 0.5 )
@@ -100,27 +101,27 @@ end
 radiovolume = CreateClientConVar( "sgs_radiovolume", "100", true, false, "", 0, 100)
 
 
-net.Receive( "radio_play", function( len )
+net.Receive( "radio_play", function(len)
 	local stationid = net.ReadString()
 	local stationent = net.ReadEntity()
 
 	local stationurl = "http://" .. stationid
 
-	if !IsValid( stationent ) then return end
+	if !IsValid(stationent) then return end
 	if IsValid(stationent.station) then return end
 
 	stationent.on = true
 
-	sound.PlayURL( stationurl, "3d", function( station )
+	sound.PlayURL(stationurl, "3d", function(station)
 		if IsValid(station) then
 			stationent.station = station
-			stationent.station:SetPos( stationent:GetPos() )
-			stationent.station:SetVolume( radiovolume:GetInt() / 100 )
-			stationent.station:Set3DFadeDistance( 300, 1000000000 )
+			stationent.station:SetPos(stationent:GetPos())
+			stationent.station:SetVolume(radiovolume:GetInt() / 100)
+			stationent.station:Set3DFadeDistance(300, 100000000)
 			stationent.station:Play()
 		end
-	end )
-end )
+	end)
+end)
 
 net.Receive( "radio_stop", function( len )
 	local stationent = net.ReadEntity()
