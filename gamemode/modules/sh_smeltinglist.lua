@@ -1,179 +1,8 @@
 SGS.Smelting = {}
-function Shop_RegisterSmelting( category, recipe )
+function Menu_RegisterSmelting( category, recipe )
 	if !SGS.Smelting[category] then SGS.Smelting[category] = {} end
 	SGS.Smelting[category][#SGS.Smelting[category] + 1] = recipe
 end
-
-
-//--Misc--//
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Wood to Coal"
-RECIPE.uid = "misc11"
-RECIPE.description = "Turns wood into coal"
-RECIPE.cost = { wood = 5}
-RECIPE.reqlvl = { smithing = 25}
-RECIPE.gives = { coal = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "misc", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Wood to Coal (x5)"
-RECIPE.uid = "misc12"
-RECIPE.description = "Turns wood into coal"
-RECIPE.cost = { wood = 25}
-RECIPE.reqlvl = { smithing = 25}
-RECIPE.gives = { coal = 5}
-RECIPE.xp = 130
-Shop_RegisterSmelting( "misc", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x10.png"
-RECIPE.title = "Wood to Coal (x10)"
-RECIPE.uid = "misc13"
-RECIPE.description = "Turns wood into coal"
-RECIPE.cost = { wood = 50}
-RECIPE.reqlvl = { smithing = 25}
-RECIPE.gives = { coal = 10}
-RECIPE.xp = 250
-Shop_RegisterSmelting( "misc", RECIPE )
-
-//--Woodworks--//
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Oak Wood to Normal Wood"
-RECIPE.uid = "woodworks1"
-RECIPE.description = "Turns Oak wood into Normal wood, for coal production"
-RECIPE.cost = { oak_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Oak Wood to Normal Wood x5"
-RECIPE.uid = "woodworks2"
-RECIPE.description = "Turns Oak wood into Normal wood, for coal production"
-RECIPE.cost = { oak_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Maple Wood to Normal Wood"
-RECIPE.uid = "woodworks3"
-RECIPE.description = "Turns Maple wood into Normal wood, for coal production"
-RECIPE.cost = { maple_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Maple Wood to Normal Wood x5"
-RECIPE.uid = "woodworks4"
-RECIPE.description = "Turns Maple wood into Normal wood, for coal production"
-RECIPE.cost = { maple_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Pine Wood to Normal Wood"
-RECIPE.uid = "woodworks5"
-RECIPE.description = "Turns Pine wood into Normal wood, for coal production"
-RECIPE.cost = { pine_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Pine Wood to Normal Wood x5"
-RECIPE.uid = "woodworks6"
-RECIPE.description = "Turns Pine wood into Normal wood, for coal production"
-RECIPE.cost = { pine_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Yew Wood to Normal Wood"
-RECIPE.uid = "woodworks7"
-RECIPE.description = "Turns Yew wood into Normal wood, for coal production"
-RECIPE.cost = { yew_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Yew Wood to Normal Wood x5"
-RECIPE.uid = "woodworks8"
-RECIPE.description = "Turns Yew wood into Normal wood, for coal production"
-RECIPE.cost = { yew_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Buckeye Wood to Normal Wood"
-RECIPE.uid = "woodworks9"
-RECIPE.description = "Turns Buckeye wood into Normal wood, for coal production"
-RECIPE.cost = { buckeye_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Buckeye Wood to Normal Wood x5"
-RECIPE.uid = "woodworks10"
-RECIPE.description = "Turns Buckeye wood into Normal wood, for coal production"
-RECIPE.cost = { buckeye_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
-RECIPE.title = "Palm Wood to Normal Wood"
-RECIPE.uid = "woodworks11"
-RECIPE.description = "Turns Palm wood into Normal wood, for coal production"
-RECIPE.cost = { palm_wood = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 1}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
-RECIPE.title = "Palm Wood to Normal Wood x5"
-RECIPE.uid = "woodworks12"
-RECIPE.description = "Turns Palm wood into Normal wood, for coal production"
-RECIPE.cost = { palm_wood = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { wood = 5}
-RECIPE.xp = 30
-Shop_RegisterSmelting( "woodworks", RECIPE )
-
 
 //--Iron--//
 
@@ -186,7 +15,7 @@ RECIPE.cost = { iron_ore = 1}
 RECIPE.reqlvl = { smithing = 3}
 RECIPE.gives = { iron = 1}
 RECIPE.xp = 10
-Shop_RegisterSmelting( "iron", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/iron_x5.png"
@@ -197,7 +26,7 @@ RECIPE.cost = { iron_ore = 5}
 RECIPE.reqlvl = { smithing = 3}
 RECIPE.gives = { iron = 5}
 RECIPE.xp = 45
-Shop_RegisterSmelting( "iron", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/iron_x10.png"
@@ -208,7 +37,31 @@ RECIPE.cost = { iron_ore = 10}
 RECIPE.reqlvl = { smithing = 3}
 RECIPE.gives = { iron = 10}
 RECIPE.xp = 90
-Shop_RegisterSmelting( "iron", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
+
+//--Construction--//
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/metal_x5.png"
+RECIPE.title = "Metal x5"
+RECIPE.uid = "construction1"
+RECIPE.description = "Converts Iron into a metal usable in constructing props"
+RECIPE.cost = { iron = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { metal = 5 }
+RECIPE.xp = 10
+Menu_RegisterSmelting( "ingot", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/metal_x25.png"
+RECIPE.title = "Metal x25"
+RECIPE.uid = "construction2"
+RECIPE.description = "Converts Iron into a metal usable in constructing props"
+RECIPE.cost = { iron = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { metal = 25 }
+RECIPE.xp = 45
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Steel--//
 
@@ -221,7 +74,7 @@ RECIPE.cost = { iron_ore = 1, coal = 2}
 RECIPE.reqlvl = { smithing = 15}
 RECIPE.gives = { steel = 1 }
 RECIPE.xp = 20
-Shop_RegisterSmelting( "steel", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/steel_x5.png"
@@ -232,7 +85,7 @@ RECIPE.cost = { iron_ore = 5, coal = 10}
 RECIPE.reqlvl = { smithing = 15}
 RECIPE.gives = { steel = 5 }
 RECIPE.xp = 90
-Shop_RegisterSmelting( "steel", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/steel_x10.png"
@@ -243,7 +96,7 @@ RECIPE.cost = { iron_ore = 10, coal = 20}
 RECIPE.reqlvl = { smithing = 15}
 RECIPE.gives = { steel = 10 }
 RECIPE.xp = 180
-Shop_RegisterSmelting( "steel", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Silver--//
 
@@ -256,7 +109,7 @@ RECIPE.cost = { silver_ore = 1, coal = 4}
 RECIPE.reqlvl = { smithing = 25}
 RECIPE.gives = { silver = 1 }
 RECIPE.xp = 30
-Shop_RegisterSmelting( "silver", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/silver_x5.png"
@@ -267,7 +120,7 @@ RECIPE.cost = { silver_ore = 5, coal = 20}
 RECIPE.reqlvl = { smithing = 25}
 RECIPE.gives = { silver = 5 }
 RECIPE.xp = 140
-Shop_RegisterSmelting( "silver", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/silver_x10.png"
@@ -278,7 +131,7 @@ RECIPE.cost = { silver_ore = 10, coal = 40}
 RECIPE.reqlvl = { smithing = 25}
 RECIPE.gives = { silver = 10 }
 RECIPE.xp = 275
-Shop_RegisterSmelting( "silver", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Trinium--//
 
@@ -291,7 +144,7 @@ RECIPE.cost = { trinium_ore = 1, coal = 6}
 RECIPE.reqlvl = { smithing = 40}
 RECIPE.gives = { trinium = 1 }
 RECIPE.xp = 50
-Shop_RegisterSmelting( "trinium", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/trin_x5.png"
@@ -302,7 +155,7 @@ RECIPE.cost = { trinium_ore = 5, coal = 30}
 RECIPE.reqlvl = { smithing = 40}
 RECIPE.gives = { trinium = 5 }
 RECIPE.xp = 230
-Shop_RegisterSmelting( "trinium", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/trin_x10.png"
@@ -313,7 +166,7 @@ RECIPE.cost = { trinium_ore = 10, coal = 60}
 RECIPE.reqlvl = { smithing = 40}
 RECIPE.gives = { trinium = 10 }
 RECIPE.xp = 450
-Shop_RegisterSmelting( "trinium", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 
 //--Naquadah--//
@@ -327,7 +180,7 @@ RECIPE.cost = { naquadah_ore = 1, coal = 8}
 RECIPE.reqlvl = { smithing = 53}
 RECIPE.gives = { naquadah = 1 }
 RECIPE.xp = 110
-Shop_RegisterSmelting( "naquadah", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/naq_x5.png"
@@ -338,7 +191,7 @@ RECIPE.cost = { naquadah_ore = 5, coal = 40}
 RECIPE.reqlvl = { smithing = 53}
 RECIPE.gives = { naquadah = 5 }
 RECIPE.xp = 460
-Shop_RegisterSmelting( "naquadah", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/naq_x10.png"
@@ -349,7 +202,7 @@ RECIPE.cost = { naquadah_ore = 10, coal = 80}
 RECIPE.reqlvl = { smithing = 53}
 RECIPE.gives = { naquadah = 10 }
 RECIPE.xp = 850
-Shop_RegisterSmelting( "naquadah", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/reinnaq_x1.png"
@@ -360,7 +213,7 @@ RECIPE.cost = { naquadah = 1, trinium = 10}
 RECIPE.reqlvl = { smithing = 55}
 RECIPE.gives = { reinforced_naquadah = 1 }
 RECIPE.xp = 1000
-Shop_RegisterSmelting( "naquadah", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Mithril--//
 
@@ -373,7 +226,7 @@ RECIPE.cost = { mithril_ore = 1, coal = 10}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { mithril = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "mithril", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/mith_x5.png"
@@ -384,7 +237,7 @@ RECIPE.cost = { mithril_ore = 5, coal = 50}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { mithril = 5 }
 RECIPE.xp = 700
-Shop_RegisterSmelting( "mithril", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/mith_x10.png"
@@ -395,7 +248,7 @@ RECIPE.cost = { mithril_ore = 10, coal = 100}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { mithril = 10 }
 RECIPE.xp = 1300
-Shop_RegisterSmelting( "mithril", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Gold--//
 
@@ -408,7 +261,7 @@ RECIPE.cost = { gold_ore = 1, coal = 2}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { gold = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "gold", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/gold_x5.png"
@@ -419,7 +272,7 @@ RECIPE.cost = { gold_ore = 5, coal = 10}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { gold = 5 }
 RECIPE.xp = 700
-Shop_RegisterSmelting( "gold", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/gold_x10.png"
@@ -430,7 +283,7 @@ RECIPE.cost = { gold_ore = 10, coal = 20}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { gold = 10 }
 RECIPE.xp = 1300
-Shop_RegisterSmelting( "gold", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Platinum--//
 
@@ -443,7 +296,7 @@ RECIPE.cost = { platinum_ore = 1, coal = 12}
 RECIPE.reqlvl = { smithing = 71}
 RECIPE.gives = { platinum = 1 }
 RECIPE.xp = 210
-Shop_RegisterSmelting( "platinum", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/silver_x5.png"
@@ -454,7 +307,7 @@ RECIPE.cost = { platinum_ore = 5, coal = 60}
 RECIPE.reqlvl = { smithing = 71}
 RECIPE.gives = { platinum = 5 }
 RECIPE.xp = 1000
-Shop_RegisterSmelting( "platinum", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/silver_x10.png"
@@ -465,7 +318,7 @@ RECIPE.cost = { platinum_ore = 10, coal = 120}
 RECIPE.reqlvl = { smithing = 71}
 RECIPE.gives = { platinum = 10 }
 RECIPE.xp = 1800
-Shop_RegisterSmelting( "platinum", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--Meteoric--//
 
@@ -478,7 +331,7 @@ RECIPE.cost = { meteoric_iron_ore = 1, coal = 30}
 RECIPE.reqlvl = { smithing = 65}
 RECIPE.gives = { meteoric_iron = 1 }
 RECIPE.xp = 450
-Shop_RegisterSmelting( "meteoric", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/furnace/new/refinedmeteoriciron.png"
@@ -489,110 +342,7 @@ RECIPE.cost = { meteoric_iron = 4, enchanted_metal = 2}
 RECIPE.reqlvl = { smithing = 75}
 RECIPE.gives = { refined_meteoric_iron = 1 }
 RECIPE.xp = 1200
-Shop_RegisterSmelting( "meteoric", RECIPE )
-
-//--Construction--//
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/metal_x5.png"
-RECIPE.title = "Metal x5"
-RECIPE.uid = "construction1"
-RECIPE.description = "Converts Iron into a metal usable in constructing props"
-RECIPE.cost = { iron = 1}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { metal = 5 }
-RECIPE.xp = 10
-Shop_RegisterSmelting( "construction", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/metal_x25.png"
-RECIPE.title = "Metal x25"
-RECIPE.uid = "construction2"
-RECIPE.description = "Converts Iron into a metal usable in constructing props"
-RECIPE.cost = { iron = 5}
-RECIPE.reqlvl = { smithing = 5}
-RECIPE.gives = { metal = 25 }
-RECIPE.xp = 45
-Shop_RegisterSmelting( "construction", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/glass_x1.png"
-RECIPE.title = "Glass"
-RECIPE.uid = "construction3"
-RECIPE.description = "Melt sand into glass for use in construction"
-RECIPE.cost = { sand = 2}
-RECIPE.reqlvl = { smithing = 10}
-RECIPE.gives = { glass = 1 }
-RECIPE.xp = 20
-Shop_RegisterSmelting( "construction", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/glass_x5.png"
-RECIPE.title = "Glass x5"
-RECIPE.uid = "construction4"
-RECIPE.description = "Melt sand into glass for use in construction"
-RECIPE.cost = { sand = 10}
-RECIPE.reqlvl = { smithing = 10}
-RECIPE.gives = { glass = 5 }
-RECIPE.xp = 50
-Shop_RegisterSmelting( "construction", RECIPE )
-
-//--Alchemy--//
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/vial.png"
-RECIPE.title = "Glass Vial"
-RECIPE.uid = "alchemy1"
-RECIPE.description = "Creates a glass vial used in potion brewing"
-RECIPE.cost = { glass = 2}
-RECIPE.reqlvl = { smithing = 1}
-RECIPE.gives = { vial = 1 }
-RECIPE.xp = 10
-Shop_RegisterSmelting( "alchemy", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/thecure.png"
-RECIPE.title = "Melon Aids Cure"
-RECIPE.uid = "alchemy2"
-RECIPE.description = "Creates a Melon Aids Cure"
-RECIPE.cost = { liferoot = 3, pypa_seed = 5, bottled_water = 5}
-RECIPE.reqlvl = { smithing = 1}
-RECIPE.gives = { the_cure = 1 }
-RECIPE.xp = 10
-Shop_RegisterSmelting( "alchemy", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/flask.png"
-RECIPE.title = "Glass Flask"
-RECIPE.uid = "alchemy3"
-RECIPE.description = "Creates a glass flask used in potion brewing"
-RECIPE.cost = { glass = 5, stone = 2}
-RECIPE.reqlvl = { smithing = 12}
-RECIPE.gives = { flask = 1 }
-RECIPE.xp = 60
-Shop_RegisterSmelting( "alchemy", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/heavy_flask.png"
-RECIPE.title = "Heavy Glass Flask"
-RECIPE.uid = "alchemy4"
-RECIPE.description = "Creates a heavy glass flask used in potion brewing"
-RECIPE.cost = { glass = 5, iron_ore = 2}
-RECIPE.reqlvl = { smithing = 25}
-RECIPE.gives = { heavy_flask = 1 }
-RECIPE.xp = 120
-Shop_RegisterSmelting( "alchemy", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/furnace/new/imbued_flask.png"
-RECIPE.title = "Imbued Glass Flask"
-RECIPE.uid = "alchemy5"
-RECIPE.description = "Creates an imbued glass flask used in potion brewing"
-RECIPE.cost = { glass = 5, silver_ore = 2}
-RECIPE.reqlvl = { smithing = 36}
-RECIPE.gives = { imbued_flask = 1 }
-RECIPE.xp = 160
-Shop_RegisterSmelting( "alchemy", RECIPE )
+Menu_RegisterSmelting( "ingot", RECIPE )
 
 //--BToken--//
 
@@ -605,7 +355,7 @@ RECIPE.cost = { btoken = 80}
 RECIPE.reqlvl = { smithing = 50}
 RECIPE.gives = { boss_pcache_core = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "boss", RECIPE )
+Menu_RegisterSmelting( "misc", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/gems/emerald_new.png"
@@ -616,7 +366,7 @@ RECIPE.cost = { btoken = 56}
 RECIPE.reqlvl = { smithing = 50}
 RECIPE.gives = { boss_hatchet_head = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "boss", RECIPE )
+Menu_RegisterSmelting( "misc", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/gems/emerald_new.png"
@@ -627,7 +377,7 @@ RECIPE.cost = { btoken = 48}
 RECIPE.reqlvl = { smithing = 50}
 RECIPE.gives = { boss_pick_head = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "boss", RECIPE )
+Menu_RegisterSmelting( "misc", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/gems/emerald_new.png"
@@ -638,7 +388,7 @@ RECIPE.cost = { btoken = 48}
 RECIPE.reqlvl = { smithing = 50}
 RECIPE.gives = { boss_rod_core = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "boss", RECIPE )
+Menu_RegisterSmelting( "misc", RECIPE )
 
 RECIPE = {}
 RECIPE.material = "vgui/gems/emerald_new.png"
@@ -649,4 +399,254 @@ RECIPE.cost = { btoken = 1}
 RECIPE.reqlvl = { combat = 50}
 RECIPE.gives = { combat_artifact_1 = 1 }
 RECIPE.xp = 160
-Shop_RegisterSmelting( "boss", RECIPE )
+Menu_RegisterSmelting( "misc", RECIPE )
+
+//--Glass--//
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/glass_x1.png"
+RECIPE.title = "Glass"
+RECIPE.uid = "construction3"
+RECIPE.description = "Melt sand into glass for use in construction"
+RECIPE.cost = { sand = 2}
+RECIPE.reqlvl = { smithing = 10}
+RECIPE.gives = { glass = 1 }
+RECIPE.xp = 20
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/glass_x5.png"
+RECIPE.title = "Glass x5"
+RECIPE.uid = "construction4"
+RECIPE.description = "Melt sand into glass for use in construction"
+RECIPE.cost = { sand = 10}
+RECIPE.reqlvl = { smithing = 10}
+RECIPE.gives = { glass = 5 }
+RECIPE.xp = 50
+Menu_RegisterSmelting( "misc", RECIPE )
+
+//--Alchemy--//
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/vial.png"
+RECIPE.title = "Glass Vial"
+RECIPE.uid = "alchemy1"
+RECIPE.description = "Creates a glass vial used in potion brewing"
+RECIPE.cost = { glass = 2}
+RECIPE.reqlvl = { smithing = 1}
+RECIPE.gives = { vial = 1 }
+RECIPE.xp = 10
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/thecure.png"
+RECIPE.title = "Melon Aids Cure"
+RECIPE.uid = "alchemy2"
+RECIPE.description = "Creates a Melon Aids Cure"
+RECIPE.cost = { liferoot = 3, pypa_seed = 5, bottled_water = 5}
+RECIPE.reqlvl = { smithing = 1}
+RECIPE.gives = { the_cure = 1 }
+RECIPE.xp = 10
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/flask.png"
+RECIPE.title = "Glass Flask"
+RECIPE.uid = "alchemy3"
+RECIPE.description = "Creates a glass flask used in potion brewing"
+RECIPE.cost = { glass = 5, stone = 2}
+RECIPE.reqlvl = { smithing = 12}
+RECIPE.gives = { flask = 1 }
+RECIPE.xp = 60
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/heavy_flask.png"
+RECIPE.title = "Heavy Glass Flask"
+RECIPE.uid = "alchemy4"
+RECIPE.description = "Creates a heavy glass flask used in potion brewing"
+RECIPE.cost = { glass = 5, iron_ore = 2}
+RECIPE.reqlvl = { smithing = 25}
+RECIPE.gives = { heavy_flask = 1 }
+RECIPE.xp = 120
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/imbued_flask.png"
+RECIPE.title = "Imbued Glass Flask"
+RECIPE.uid = "alchemy5"
+RECIPE.description = "Creates an imbued glass flask used in potion brewing"
+RECIPE.cost = { glass = 5, silver_ore = 2}
+RECIPE.reqlvl = { smithing = 36}
+RECIPE.gives = { imbued_flask = 1 }
+RECIPE.xp = 160
+Menu_RegisterSmelting( "misc", RECIPE )
+
+//--Woodworks--//
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Oak Wood to Normal Wood"
+RECIPE.uid = "woodworks1"
+RECIPE.description = "Turns Oak wood into Normal wood, for coal production"
+RECIPE.cost = { oak_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Oak Wood to Normal Wood x5"
+RECIPE.uid = "woodworks2"
+RECIPE.description = "Turns Oak wood into Normal wood, for coal production"
+RECIPE.cost = { oak_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Maple Wood to Normal Wood"
+RECIPE.uid = "woodworks3"
+RECIPE.description = "Turns Maple wood into Normal wood, for coal production"
+RECIPE.cost = { maple_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Maple Wood to Normal Wood x5"
+RECIPE.uid = "woodworks4"
+RECIPE.description = "Turns Maple wood into Normal wood, for coal production"
+RECIPE.cost = { maple_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Pine Wood to Normal Wood"
+RECIPE.uid = "woodworks5"
+RECIPE.description = "Turns Pine wood into Normal wood, for coal production"
+RECIPE.cost = { pine_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Pine Wood to Normal Wood x5"
+RECIPE.uid = "woodworks6"
+RECIPE.description = "Turns Pine wood into Normal wood, for coal production"
+RECIPE.cost = { pine_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Yew Wood to Normal Wood"
+RECIPE.uid = "woodworks7"
+RECIPE.description = "Turns Yew wood into Normal wood, for coal production"
+RECIPE.cost = { yew_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Yew Wood to Normal Wood x5"
+RECIPE.uid = "woodworks8"
+RECIPE.description = "Turns Yew wood into Normal wood, for coal production"
+RECIPE.cost = { yew_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Buckeye Wood to Normal Wood"
+RECIPE.uid = "woodworks9"
+RECIPE.description = "Turns Buckeye wood into Normal wood, for coal production"
+RECIPE.cost = { buckeye_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Buckeye Wood to Normal Wood x5"
+RECIPE.uid = "woodworks10"
+RECIPE.description = "Turns Buckeye wood into Normal wood, for coal production"
+RECIPE.cost = { buckeye_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Palm Wood to Normal Wood"
+RECIPE.uid = "woodworks11"
+RECIPE.description = "Turns Palm wood into Normal wood, for coal production"
+RECIPE.cost = { palm_wood = 1}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Palm Wood to Normal Wood x5"
+RECIPE.uid = "woodworks12"
+RECIPE.description = "Turns Palm wood into Normal wood, for coal production"
+RECIPE.cost = { palm_wood = 5}
+RECIPE.reqlvl = { smithing = 5}
+RECIPE.gives = { wood = 5}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+//--Misc--//
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x1.png"
+RECIPE.title = "Wood to Coal"
+RECIPE.uid = "misc11"
+RECIPE.description = "Turns wood into coal"
+RECIPE.cost = { wood = 5}
+RECIPE.reqlvl = { smithing = 25}
+RECIPE.gives = { coal = 1}
+RECIPE.xp = 30
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x5.png"
+RECIPE.title = "Wood to Coal (x5)"
+RECIPE.uid = "misc12"
+RECIPE.description = "Turns wood into coal"
+RECIPE.cost = { wood = 25}
+RECIPE.reqlvl = { smithing = 25}
+RECIPE.gives = { coal = 5}
+RECIPE.xp = 130
+Menu_RegisterSmelting( "misc", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/furnace/new/wood2coal_x10.png"
+RECIPE.title = "Wood to Coal (x10)"
+RECIPE.uid = "misc13"
+RECIPE.description = "Turns wood into coal"
+RECIPE.cost = { wood = 50}
+RECIPE.reqlvl = { smithing = 25}
+RECIPE.gives = { coal = 10}
+RECIPE.xp = 250
+Menu_RegisterSmelting( "misc", RECIPE )

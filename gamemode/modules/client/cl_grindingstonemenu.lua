@@ -1,57 +1,47 @@
-function SGS_SmithingMenu()
+function SGS_GrindingMenu()
 
-	SGS.smithingmenu = vgui.Create( "DFrame" )
-	SGS.smithingmenu:ShowCloseButton(true)
-	SGS.smithingmenu:SetDraggable(false)
-	SGS.smithingmenu:SetSize( 320,370 )
-	SGS.smithingmenu:SetPos( ScrW() / 2 - 160, ScrH() / 2 - 170 )
-	SGS.smithingmenu:SetTitle( "Crafting Menu" )
+	SGS.grindingmenu = vgui.Create( "DFrame" )
+	SGS.grindingmenu:ShowCloseButton(true)
+	SGS.grindingmenu:SetDraggable(false)
+	SGS.grindingmenu:SetSize( 320,340 )
+	SGS.grindingmenu:SetPos( ScrW() / 2 - 160, ScrH() / 2 - 170 )
+	SGS.grindingmenu:SetTitle( "Grinding Menu" )
 
-	local CatList = vgui.Create( "DPanelList", SGS.smithingmenu)
-
+	local CatList = vgui.Create( "DPanelList", SGS.grindingmenu)
+	CatList:AddItem(ToolsCollapseCat)
 	CatList:EnableVerticalScrollbar( true )
 	CatList:EnableHorizontal( false )
-	CatList:SetSize( 300, 330 )
+	CatList:SetSize( 300, 300 )
 	CatList:SetPos( 10, 30 )
-	CatList:SetPadding( 3 )
-	CatList:SetSpacing( 3 )
+	CatList:SetPadding( 4 )
 	
-	
-	
-	for k, v in pairs( SGS.Tools ) do
-		if k == "main" then continue end
-		if k == "construction" then continue end
-		if k == "enchanted" then continue end
-		if k == "woodcutting-sapphire" then continue end
-		if k == "woodcutting-emerald" then continue end
-		if k == "woodcutting-ruby" then continue end
-		if k == "woodcutting-diamond" then continue end
-		if k == "mining-sapphire" then continue end
-		if k == "mining-emerald" then continue end
-		if k == "mining-ruby" then continue end
-		if k == "mining-diamond" then continue end
-		
-		local IconList = vgui.Create( "DIconLayout")
+	for k, v in pairs( SGS.Grind ) do
+
+		local IconList = vgui.Create( "DPanelList")
 		local CollapseCat = vgui.Create( "DCollapsibleCategory" )
 		CatList:AddItem(CollapseCat)
 		
 		CollapseCat:SetSize( 335, 50 )
 		CollapseCat:SetExpanded( 1 )
-		CollapseCat:SetLabel( Cap(k) .. " Tools" )
-	
-
+		CollapseCat:SetLabel( Cap(k) )
 		CollapseCat:SetContents( IconList )
-
-		IconList:SetSpaceY( 4 )
-		IconList:SetSpaceX( 4 )
-
+		CollapseCat.Paint = function()
+			surface.SetDrawColor(black)
+			surface.DrawRect(CollapseCat:GetPos() - 10, CollapseCat:GetPos() - 5, self:GetWide() - 20, 20)
+		end
 		
-		for k2, v2 in pairs(SGS.Tools[k]) do
+		IconList:EnableVerticalScrollbar( true )
+		IconList:EnableHorizontal( true )
+		IconList:SetAutoSize( true )
+		IconList:SetPadding( 4 )
+		IconList:SetSpacing(5)
+		
+		for k2, v2 in pairs(SGS.Grind[k]) do
 			local icon = vgui.Create( "DImageButton", IconList )
-			icon:SetMaterial( v2.icon )
+			icon:SetMaterial( v2.material )
 			icon:SetTooltip( SGS_ToolTip(v2) )
-			icon:SetSize( 64, 64 )
-			IconList:Add( icon )
+			icon:SetSize(64, 64)
+			IconList:AddItem( icon )
 			icon.PaintOver = function()
 				for k3, v3 in pairs( v2.reqlvl ) do
 					local plvl = SGS.levels[ k3 ] or 0
@@ -80,11 +70,11 @@ function SGS_SmithingMenu()
 			end
 			icon.DoClick = function ( icon ) 
 				surface.PlaySound( "ui/buttonclickrelease.wav" )
-				RunConsoleCommand("sgs_smith", v2.entity)
-				--SGS.smithingmenu:SetVisible(false)
+				RunConsoleCommand("sgs_grind", v2.uid)
+				--SGS.grindingmenu:SetVisible(false)
 			end
 		end
 	end
-	SGS.smithingmenu:MakePopup()
+	SGS.grindingmenu:MakePopup()
 end
 

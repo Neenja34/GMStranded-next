@@ -30,7 +30,7 @@ function ENT:Use( ply )
 			ply.lastuse = CurTime()
 			return
 		end
-		ply:SendLua( "SGS_EnchantedSmithingMenu()")
+		ply:SendLua( "SGS_Workbench2Menu()")
 		ply.lastuse = CurTime()
 	end
 	

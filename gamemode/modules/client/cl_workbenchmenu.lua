@@ -16,13 +16,13 @@ local function DrawBlur(panel, amount)
 	end
 end
 
-function SGS_ArcaneForgeMenu()
-	SGS.arcaneforgemenu = vgui.Create("sgs_arcaneforgemenu")
-	SGS.arcaneforgemenu:MakePopup()
-	SGS.arcaneforgemenu:SetVisible(true)
+function SGS_WorkbenchMenu()
+	SGS.workbenchmenu = vgui.Create("sgs_workbenchmenu")
+	SGS.workbenchmenu:MakePopup()
+	SGS.workbenchmenu:SetVisible(true)
 end
 
-local arcaneforgePanel = {
+local workbenchPanel = {
 	Init = function(self)
 		local width = 425
 		local height = 600
@@ -41,26 +41,37 @@ local arcaneforgePanel = {
 		DrawBlur(self, 2)
 
 		surface.SetDrawColor(black)
-		surface.DrawRect(x, y, wide, tall) --Left
+		surface.DrawRect(x, y, wide, tall)
 		surface.DrawRect(x, y, wide, 30)
 		surface.DrawOutlinedRect(x, y, wide, tall, 2)
-		draw.SimpleText("Arcane Forge", "SGS_RCacheTitles", wide / 2, 14, white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw.SimpleText("Workbench", "SGS_RCacheTitles", wide / 2, 14, white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end
 }
 
-function arcaneforgePanel:DrawFrame()
-	local arcaneforge = vgui.Create("DPanel", self)
-	arcaneforge:Dock(FILL)
-	arcaneforge:SetPaintBackground(false)
+function workbenchPanel:DrawFrame()
+	local workbench = vgui.Create("DPanel", self)
+	workbench:Dock(FILL)
+	workbench:SetPaintBackground(false)
 
-	local CatList = vgui.Create("DPanelList", arcaneforge)
+	local CatList = vgui.Create("DPanelList", workbench)
 	CatList:EnableVerticalScrollbar(false)
 	CatList:EnableHorizontal(false)
 	CatList:SetSize(self:GetWide() + 5, self:GetTall() - 58)
 	CatList:SetPos(10, 44)
 	CatList:SetSpacing(4)
 
-	for k, v in pairs(SGS.MagicForge) do
+	for k, v in pairs(SGS.Tools) do
+		if k == "main" then continue end
+		if k == "construction" then continue end
+		if k == "enchanted" then continue end
+		if k == "woodcutting-sapphire" then continue end
+		if k == "woodcutting-emerald" then continue end
+		if k == "woodcutting-ruby" then continue end
+		if k == "woodcutting-diamond" then continue end
+		if k == "mining-sapphire" then continue end
+		if k == "mining-emerald" then continue end
+		if k == "mining-ruby" then continue end
+		if k == "mining-diamond" then continue end
 
 		local IconList = vgui.Create("DIconLayout")
 		local CollapseCat = vgui.Create("DCollapsibleCategory")
@@ -68,7 +79,7 @@ function arcaneforgePanel:DrawFrame()
 
 		CollapseCat:SetSize(335, 50)
 		CollapseCat:SetExpanded(1)
-		CollapseCat:SetLabel("  " .. Cap(k))
+		CollapseCat:SetLabel("  " .. Cap(k) .. " Tools")
 		CollapseCat:SetContents(IconList)
 		CollapseCat.Paint = function()
 			surface.SetDrawColor(black)
@@ -76,11 +87,11 @@ function arcaneforgePanel:DrawFrame()
 		end
 
 		IconList:SetSpaceX(4)
-		IconList:SetSpaceX(4)
+		IconList:SetSpaceY(4)
 
-		for k2, v2 in pairs(SGS.MagicForge[k]) do
+		for k2, v2 in pairs(SGS.Tools[k]) do
 			local icon = vgui.Create("DImageButton", IconList)
-			icon:SetMaterial(v2.material)
+			icon:SetMaterial(v2.icon)
 			icon:SetTooltip(SGS_ToolTip(v2))
 			icon:SetSize(64, 64)
 			IconList:Add(icon)
@@ -112,7 +123,7 @@ function arcaneforgePanel:DrawFrame()
 			end
 			icon.DoClick = function()
 				surface.PlaySound("ui/buttonclickrelease.wav")
-				RunConsoleCommand("sgs_arcaneforge", v2.uid)
+				RunConsoleCommand("sgs_smith", v2.entity)
 			end
 		end
 	end
@@ -129,7 +140,7 @@ function arcaneforgePanel:DrawFrame()
 
 	closeButton.DoClick = function()
 		self:Remove()
-		SGS.arcaneforgemenu:Remove()
+		SGS.workbenchmenu:Remove()
 	end
 end
-vgui.Register("sgs_arcaneforgemenu", arcaneforgePanel, "Panel")
+vgui.Register("sgs_workbenchmenu", workbenchPanel, "Panel")

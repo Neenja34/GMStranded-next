@@ -437,9 +437,10 @@ function SGS_SetUpTablesShared()
 		table.insert(SGS.menupotions, v.mname)
 	end
 
-	for k, v in pairs(SGS.Brewing["strong-elixir"]) do
+	--[[ for k, v in pairs(SGS.Brewing["strong-elixir"]) do
 		table.insert(SGS.menupotions, v.mname)
-	end
+	end ]]
+
 	for k, v in pairs(SGS.Brewing["special_potions"]) do
 		table.insert(SGS.menupotions, v.mname)
 	end

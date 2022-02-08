@@ -35,7 +35,7 @@ function ENT:Use( ply )
 			ply.lastuse = CurTime()
 			return
 		end
-		ply:SendLua( "SGS_CookingMenu()")
+		ply:SendLua( "SGS_StoveMenu()")
 		ply.lastuse = CurTime()
 	end
 	

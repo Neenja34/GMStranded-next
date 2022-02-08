@@ -16,16 +16,16 @@ local function DrawBlur(panel, amount)
 	end
 end
 
-function SGS_ArcaneForgeMenu()
-	SGS.arcaneforgemenu = vgui.Create("sgs_arcaneforgemenu")
-	SGS.arcaneforgemenu:MakePopup()
-	SGS.arcaneforgemenu:SetVisible(true)
+function SGS_Workbench2Menu()
+	SGS.workbench2menu = vgui.Create("sgs_workbench2menu")
+	SGS.workbench2menu:MakePopup()
+	SGS.workbench2menu:SetVisible(true)
 end
 
-local arcaneforgePanel = {
+local workbench2Panel = {
 	Init = function(self)
-		local width = 425
-		local height = 600
+		local width = 288
+		local height = 108
 		self:SetSize(width, height)
 		self:Center()
 		self:SetVisible(false)
@@ -44,43 +44,26 @@ local arcaneforgePanel = {
 		surface.DrawRect(x, y, wide, tall) --Left
 		surface.DrawRect(x, y, wide, 30)
 		surface.DrawOutlinedRect(x, y, wide, tall, 2)
-		draw.SimpleText("Arcane Forge", "SGS_RCacheTitles", wide / 2, 14, white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw.SimpleText("Enchanted Workbench", "SGS_RCacheTitles", wide / 2, 14, white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end
 }
 
-function arcaneforgePanel:DrawFrame()
-	local arcaneforge = vgui.Create("DPanel", self)
-	arcaneforge:Dock(FILL)
-	arcaneforge:SetPaintBackground(false)
+function workbench2Panel:DrawFrame()
+	local workbench2 = vgui.Create("DPanel", self)
+	workbench2:Dock(FILL)
+	workbench2:DockMargin(10, 35, -10, 10)
+	workbench2:SetPaintBackground(false)
 
-	local CatList = vgui.Create("DPanelList", arcaneforge)
-	CatList:EnableVerticalScrollbar(false)
-	CatList:EnableHorizontal(false)
-	CatList:SetSize(self:GetWide() + 5, self:GetTall() - 58)
-	CatList:SetPos(10, 44)
-	CatList:SetSpacing(4)
+	local IconList = vgui.Create("DIconLayout", workbench2)
+	IconList:Dock(FILL)
+	IconList:SetSpaceX(4)
+	IconList:SetSpaceY(4)
 
-	for k, v in pairs(SGS.MagicForge) do
-
-		local IconList = vgui.Create("DIconLayout")
-		local CollapseCat = vgui.Create("DCollapsibleCategory")
-		CatList:AddItem(CollapseCat)
-
-		CollapseCat:SetSize(335, 50)
-		CollapseCat:SetExpanded(1)
-		CollapseCat:SetLabel("  " .. Cap(k))
-		CollapseCat:SetContents(IconList)
-		CollapseCat.Paint = function()
-			surface.SetDrawColor(black)
-			surface.DrawRect(CollapseCat:GetPos() + 4, CollapseCat:GetPos(), self:GetWide() - 30, 20)
-		end
-
-		IconList:SetSpaceX(4)
-		IconList:SetSpaceX(4)
-
-		for k2, v2 in pairs(SGS.MagicForge[k]) do
+	for k, v in pairs(SGS.Tools) do
+		if k ~= "enchanted" then continue end
+		for k2, v2 in pairs(SGS.Tools[k]) do
 			local icon = vgui.Create("DImageButton", IconList)
-			icon:SetMaterial(v2.material)
+			icon:SetMaterial(v2.icon)
 			icon:SetTooltip(SGS_ToolTip(v2))
 			icon:SetSize(64, 64)
 			IconList:Add(icon)
@@ -112,7 +95,7 @@ function arcaneforgePanel:DrawFrame()
 			end
 			icon.DoClick = function()
 				surface.PlaySound("ui/buttonclickrelease.wav")
-				RunConsoleCommand("sgs_arcaneforge", v2.uid)
+				RunConsoleCommand("sgs_smith", v2.entity)
 			end
 		end
 	end
@@ -123,13 +106,11 @@ function arcaneforgePanel:DrawFrame()
 	closeButton:SetColor(white)
 	closeButton:SetSize(16, 16)
 	closeButton:SetPos(self:GetWide() - 23, 5)
-
 	closeButton.Paint = function()
 	end
-
 	closeButton.DoClick = function()
 		self:Remove()
-		SGS.arcaneforgemenu:Remove()
+		SGS.workbench2menu:Remove()
 	end
 end
-vgui.Register("sgs_arcaneforgemenu", arcaneforgePanel, "Panel")
+vgui.Register("sgs_workbench2menu", workbench2Panel, "Panel")

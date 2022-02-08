@@ -1,7 +1,6 @@
 SGS.Brewing = {}
 function Menu_RegisterBrewing( category, recipe )
 	if !SGS.Brewing[category] then SGS.Brewing[category] = {} end
-	
 	SGS.Brewing[category][#SGS.Brewing[category] + 1] = recipe
 end
 
@@ -84,7 +83,7 @@ RECIPE.xp = 15
 RECIPE.salvage = "vial"
 Menu_RegisterBrewing( "curing", RECIPE )
 
-//-=EXP Elixirs--//
+//-=Farming Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/farming.png"
@@ -121,6 +120,25 @@ RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
 RECIPE = {}
+RECIPE.material = "vgui/potions/new/farming_major.png"
+RECIPE.title = "Strong Farming Elixir"
+RECIPE.description = "Boost Farming Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, liechi_seed = 20}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_farming_elixir = 1}
+RECIPE.mname = "strong_farming_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "farming"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Woodcutting Elixirs--//
+
+RECIPE = {}
 RECIPE.material = "vgui/potions/new/woodcutting.png"
 RECIPE.title = "Minor Woodcutting Elixir"
 RECIPE.description = "Boost Woodcutting Experience by 25%\nEffect Lasts: 2 minutes"
@@ -153,6 +171,25 @@ RECIPE.mod = 1.75
 RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/woodcutting_major.png"
+RECIPE.title = "Strong Woodcutting Elixir"
+RECIPE.description = "Boost Woodcutting Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, maple_seed = 5}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_woodcutting_elixir = 1}
+RECIPE.mname = "strong_woodcutting_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "woodcutting"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Fishing Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/fishing.png"
@@ -189,6 +226,25 @@ RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
 RECIPE = {}
+RECIPE.material = "vgui/potions/new/fishing_major.png"
+RECIPE.title = "Strong Fishing Elixir"
+RECIPE.description = "Boost Fishing Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, swordfish = 5}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_fishing_elixir = 1}
+RECIPE.mname = "strong_fishing_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "fishing"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Mining Elixirs--//
+
+RECIPE = {}
 RECIPE.material = "vgui/potions/new/mining.png"
 RECIPE.title = "Minor Mining Elixir"
 RECIPE.description = "Boost Mining Experience by 25%\nEffect Lasts: 2 minutes"
@@ -221,6 +277,25 @@ RECIPE.mod = 1.75
 RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/mining_major.png"
+RECIPE.title = "Strong Mining Elixir"
+RECIPE.description = "Boost Mining Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, trinium_ore = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_mining_elixir = 1}
+RECIPE.mname = "strong_mining_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "mining"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Cooking Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/cooking.png"
@@ -257,6 +332,25 @@ RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
 RECIPE = {}
+RECIPE.material = "vgui/potions/new/cooking_major.png"
+RECIPE.title = "Strong Cooking Elixir"
+RECIPE.description = "Boost Cooking Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, lum_pie = 6}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_cooking_elixir = 1}
+RECIPE.mname = "strong_cooking_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "cooking"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Smithing Elixirs--//
+
+RECIPE = {}
 RECIPE.material = "vgui/potions/new/smithing.png"
 RECIPE.title = "Minor Smithing Elixir"
 RECIPE.description = "Boost Smithing Experience by 25%\nEffect Lasts: 2 minutes"
@@ -290,6 +384,24 @@ RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/smithing_major.png"
+RECIPE.title = "Strong Smithing Elixir"
+RECIPE.description = "Boost Smithing Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, trinium = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_smithing_elixir = 1}
+RECIPE.mname = "strong_smithing_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "smithing"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Construction Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/construction.png"
@@ -325,6 +437,24 @@ RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/construction_major.png"
+RECIPE.title = "Strong Construction Elixir"
+RECIPE.description = "Boost Construction Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, yew_wood = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_construction_elixir = 1}
+RECIPE.mname = "strong_construction_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "construction"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Alchemy Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/alchemy.png"
@@ -361,6 +491,25 @@ RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
 RECIPE = {}
+RECIPE.material = "vgui/potions/new/alchemy_major.png"
+RECIPE.title = "Strong Alchemy Elixir"
+RECIPE.description = "Boost Alchemy Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, burned_fish = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_alchemy_elixir = 1}
+RECIPE.mname = "strong_alchemy_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "alchemy"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Combat Elixirs--//
+
+RECIPE = {}
 RECIPE.material = "vgui/potions/new/combat.png"
 RECIPE.title = "Minor Combat Elixir"
 RECIPE.description = "Boost Combat Experience by 25%\nEffect Lasts: 2 minutes"
@@ -393,6 +542,25 @@ RECIPE.mod = 1.75
 RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
+
+RECIPE = {}
+RECIPE.material = "vgui/potions/new/combat_major.png"
+RECIPE.title = "Strong Combat Elixir"
+RECIPE.description = "Boost Combat Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, antlion_head = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_combat_elixir = 1}
+RECIPE.mname = "strong_combat_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "combat"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Arcane Elixirs--//
 
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/arcane.png"
@@ -429,6 +597,25 @@ RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
 RECIPE = {}
+RECIPE.material = "vgui/potions/new/arcane_major.png"
+RECIPE.title = "Strong Arcane Elixir"
+RECIPE.description = "Boost Arcane Experience by 100%\nEffect Lasts: 3 minutes"
+RECIPE.cost = { imbued_flask = 1, liferoot = 16, inert_stone = 10}
+RECIPE.reqlvl = { alchemy = 60}
+RECIPE.gives = { strong_arcane_elixir = 1}
+RECIPE.mname = "strong_arcane_elixir"
+RECIPE.ptype = "elixir"
+RECIPE.value = "arcane"
+RECIPE.time = 180
+RECIPE.level = 2
+RECIPE.mod = 2
+RECIPE.xp = 600
+RECIPE.salvage = "imbued_flask"
+Menu_RegisterBrewing( "elixir", RECIPE )
+
+//-=Global EXP Elixirs--//
+
+RECIPE = {}
 RECIPE.material = "vgui/potions/new/misc_diarrhea_brown.png"
 RECIPE.title = "Minor Leveling Elixir"
 RECIPE.description = "Boost All Experience by 15%\nEffect Lasts: 2 minutes"
@@ -462,179 +649,6 @@ RECIPE.xp = 300
 RECIPE.salvage = "imbued_flask"
 Menu_RegisterBrewing( "elixir", RECIPE )
 
-
-//-=Strong Elixirs--//
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/farming_major.png"
-RECIPE.title = "Strong Farming Elixir"
-RECIPE.description = "Boost Farming Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, liechi_seed = 20}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_farming_elixir = 1}
-RECIPE.mname = "strong_farming_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "farming"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/woodcutting_major.png"
-RECIPE.title = "Strong Woodcutting Elixir"
-RECIPE.description = "Boost Woodcutting Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, maple_seed = 5}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_woodcutting_elixir = 1}
-RECIPE.mname = "strong_woodcutting_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "woodcutting"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/fishing_major.png"
-RECIPE.title = "Strong Fishing Elixir"
-RECIPE.description = "Boost Fishing Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, swordfish = 5}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_fishing_elixir = 1}
-RECIPE.mname = "strong_fishing_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "fishing"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/mining_major.png"
-RECIPE.title = "Strong Mining Elixir"
-RECIPE.description = "Boost Mining Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, trinium_ore = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_mining_elixir = 1}
-RECIPE.mname = "strong_mining_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "mining"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/cooking_major.png"
-RECIPE.title = "Strong Cooking Elixir"
-RECIPE.description = "Boost Cooking Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, lum_pie = 6}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_cooking_elixir = 1}
-RECIPE.mname = "strong_cooking_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "cooking"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/smithing_major.png"
-RECIPE.title = "Strong Smithing Elixir"
-RECIPE.description = "Boost Smithing Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, trinium = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_smithing_elixir = 1}
-RECIPE.mname = "strong_smithing_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "smithing"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/construction_major.png"
-RECIPE.title = "Strong Construction Elixir"
-RECIPE.description = "Boost Construction Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, yew_wood = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_construction_elixir = 1}
-RECIPE.mname = "strong_construction_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "construction"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/alchemy_major.png"
-RECIPE.title = "Strong Alchemy Elixir"
-RECIPE.description = "Boost Alchemy Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, burned_fish = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_alchemy_elixir = 1}
-RECIPE.mname = "strong_alchemy_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "alchemy"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/combat_major.png"
-RECIPE.title = "Strong Combat Elixir"
-RECIPE.description = "Boost Combat Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, antlion_head = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_combat_elixir = 1}
-RECIPE.mname = "strong_combat_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "combat"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
-RECIPE = {}
-RECIPE.material = "vgui/potions/new/arcane_major.png"
-RECIPE.title = "Strong Arcane Elixir"
-RECIPE.description = "Boost Arcane Experience by 100%\nEffect Lasts: 3 minutes"
-RECIPE.cost = { imbued_flask = 1, liferoot = 16, inert_stone = 10}
-RECIPE.reqlvl = { alchemy = 60}
-RECIPE.gives = { strong_arcane_elixir = 1}
-RECIPE.mname = "strong_arcane_elixir"
-RECIPE.ptype = "elixir"
-RECIPE.value = "arcane"
-RECIPE.time = 180
-RECIPE.level = 2
-RECIPE.mod = 2
-RECIPE.xp = 600
-RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
 RECIPE = {}
 RECIPE.material = "vgui/potions/new/misc_diarrhea_brown_major.png"
 RECIPE.title = "Strong Leveling Elixir"
@@ -650,8 +664,7 @@ RECIPE.level = 2
 RECIPE.mod = 1.5
 RECIPE.xp = 600
 RECIPE.salvage = "imbued_flask"
-Menu_RegisterBrewing( "strong-elixir", RECIPE )
-
+Menu_RegisterBrewing( "elixir", RECIPE )
 
 //-=Special Effects Potions--//
 
