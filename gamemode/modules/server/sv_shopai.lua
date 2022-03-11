@@ -5,20 +5,18 @@ function SGS_ClaimShopNPC()
 
 		SGS.shopent = v
 		SGS.shopentstart = v:GetPos()
-		
+
 		SGS.shopent:SetNWString("Owner", "World")
-		timer.Remove( "checkShop" )
-		timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop() end )
+		timer.Remove("checkShop")
+		timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop() end)
 		--End Joke--
 		SGS_ClaimShopNPC2()
-		
-		
-		
+
 		SGS.shopent.status = "wander"
 		SGS.shopstartpos = SGS.shopent:GetPos()
 		SGS.shopent.spawn = SGS.shopent:GetPos()
-		
-		timer.Simple(1, function() SGS.shopent:EquipHat("farminghat") end )
+
+		timer.Simple(1, function() SGS.shopent:EquipHat("farminghat") end)
 		SGS.shopent:AddRelationship("npc_antlion D_LI 99")
 		SGS.shopent:AddRelationship("npc_antlionguard D_LI 99")
 		SGS.shopent:AddRelationship("npc_headcrab D_LI 99")
@@ -34,26 +32,23 @@ end
 timer.Simple(5, SGS_ClaimShopNPC)
 
 function SGS_ClaimShopNPC2()
-
 	for _, v in pairs(ents.FindByClass("npc_gman")) do
 		if v.ispet == nil then v.ispet = false end
 		if v.ispet then continue end
 
 		SGS.shopent4 = v
 		SGS.shopent4start = SGS.shopentstart
-		
+
 		SGS.shopent4:SetNWString("Owner", "World")
-		timer.Remove( "checkShop" )
-		timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop4() end )
+		timer.Remove("checkShop")
+		timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop4() end)
 		--End Joke--
-		
-		
-		
+
 		SGS.shopent4.status = "wander"
 		SGS.shopstartpos4 = SGS.shopent4:GetPos()
 		SGS.shopent4.spawn = SGS.shopent4:GetPos()
-		
-		timer.Simple(1, function() SGS.shopent4:EquipHat("farminghat") end )
+
+		timer.Simple(1, function() SGS.shopent4:EquipHat("farminghat") end)
 		SGS.shopent4:AddRelationship("npc_antlion D_LI 99")
 		SGS.shopent4:AddRelationship("npc_antlionguard D_LI 99")
 		SGS.shopent4:AddRelationship("npc_headcrab D_LI 99")
@@ -100,18 +95,17 @@ end
 
 function SGS_ClaimHatNPC()
 	for _, v in pairs(ents.FindByClass("npc_kleiner")) do
-		
 		SGS.shopent3 = v
 		SGS.shopent3start = v:GetPos()
-		
+
 		SGS.shopent3:SetNWString("Owner", "World")
-		timer.Simple( 5, function() SGS_CheckOnShop3() end )
+		timer.Simple(5, function() SGS_CheckOnShop3() end)
 
 		SGS.shopent3.status = "wander"
 		SGS.shop3startpos = SGS.shopent3:GetPos()
 		SGS.shopent3.spawn = SGS.shopent3:GetPos()
 
-		timer.Simple(1, function() SGS.shopent:EquipHat("toweringhat") end )
+		timer.Simple(1, function() SGS.shopent:EquipHat("toweringhat") end)
 		SGS.shopent3:AddRelationship("npc_antlion D_LI 99")
 		SGS.shopent3:AddRelationship("npc_antlionguard D_LI 99")
 		SGS.shopent3:AddRelationship("npc_headcrab D_LI 99")
@@ -127,60 +121,54 @@ timer.Simple(5, SGS_ClaimHatNPC)
 
 function SGS_CheckOnShop()
 	SGS_CheckOnShop4()
-	if !GAMEMODE.Worlds.tblWorlds[1].loaded then
-		return
-	end
+	if !GAMEMODE.Worlds.tblWorlds[1].loaded then return end
 
 	for k, v in pairs(ents.FindByClass("npc_vortigaunt")) do
 		if !v.ispet then
-			timer.Remove( "checkShop" )
-			timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop() end )
+			timer.Remove("checkShop")
+			timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop() end)
 			return
 		end
 	end
-	
+
 	local newshop = ents.Create("npc_vortigaunt")
 	newshop:SetPos(SGS.shopstartpos)
 	newshop:Spawn()
 	newshop.w_id = 1
 	SGS_ClaimShopNPC()
-	timer.Remove( "checkShop" )
-	timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop() end )
-	
+	timer.Remove("checkShop")
+	timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop() end)
 end
 
 function SGS_CheckOnShop4()
-	if !GAMEMODE.Worlds.tblWorlds[1].loaded then
-		return
-	end
+	if !GAMEMODE.Worlds.tblWorlds[1].loaded then return end
 
 	for k, v in pairs(ents.FindByClass("npc_gman")) do
 		if !v.ispet then
-			timer.Remove( "checkShop" )
-			timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop4() end )
+			timer.Remove("checkShop")
+			timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop4() end)
 			return
 		end
 	end
-	
+
 	local newshop4 = ents.Create("npc_gman")
 	if game.GetMap() == "gms_coastal_island_v2" then
-		newshop4:SetPos(SGS.shopstartpos + Vector(0,-250,0))
+		newshop4:SetPos(Vector(-9715, -3941, -1))
 	else
-		newshop4:SetPos(Vector(-9715 -3941 -1))
+		newshop4:SetPos(SGS.shopstartpos + Vector(0,-250,0))
 	end
+
 	newshop4:Spawn()
-	newshop4:SetHealth( newshop4:Health() + 999999999 )
+	newshop4:SetHealth(newshop4:Health() + 999999999)
 	newshop4.w_id = 1
 	SGS_ClaimShopNPC2()
-	timer.Remove( "checkShop" )
-	timer.Create( "checkShop", 5, 1, function() SGS_CheckOnShop4() end )
-	
+	timer.Remove("checkShop")
+	timer.Create("checkShop", 5, 1, function() SGS_CheckOnShop4() end)
 end
 
 function SGS_CheckOnShop2()
-
 	for k, v in pairs(ents.FindByClass("npc_breen")) do
-		timer.Simple( 5, function() SGS_CheckOnShop2() end )
+		timer.Simple(5, function() SGS_CheckOnShop2() end)
 		return
 	end
 
@@ -189,65 +177,56 @@ function SGS_CheckOnShop2()
 	newshop:Spawn()
 	SGS_ClaimSpecialNPC()
 	timer.Simple( 5, function() SGS_CheckOnShop2() end )
-	
 end
 
 function SGS_CheckOnShop3()
+	local world_id = nil
 	if game.GetMap() == "gms_g4p_stargate_v11" then
-		if !GAMEMODE.Worlds.tblWorlds[7].loaded then
-		timer.Simple( 5, function() SGS_CheckOnShop3() end )
-		return
-		end
+		world_id = 7
+		if !GAMEMODE.Worlds.tblWorlds[7].loaded then return end
+	else
+		world_id = 1
+		if !GAMEMODE.Worlds.tblWorlds[1].loaded then return end
 	end
 
 	for k, v in pairs(ents.FindByClass("npc_kleiner")) do
-		timer.Simple( 5, function() SGS_CheckOnShop3() end )
+		timer.Simple(5, function() SGS_CheckOnShop3() end)
 		return
 	end
 
 	local newshop = ents.Create("npc_kleiner")
 	newshop:SetPos(SGS.shop3startpos)
 	newshop:Spawn()
-	newshop.w_id = 7
+	newshop.w_id = world_id
 	SGS_ClaimHatNPC()
-	timer.Simple( 5, function() SGS_CheckOnShop3() end )
-	
+	timer.Simple(5, function() SGS_CheckOnShop3() end)
 end
 
 
 function SGS_ShopWalk()
-
-	if IsValid(SGS.shopent) then
-		if SGS.shopent.status == "wander" then
-			SGS_MoveShop(SGS.shopent)
-		end
+	if !IsValid(SGS.shopent) then return end
+	if SGS.shopent.status == "wander" then
+		SGS_MoveShop(SGS.shopent)
 	end
 	timer.Simple(20, SGS_ShopWalk)
-
 end
 timer.Simple(20, SGS_ShopWalk)
 
 function SGS_Shop2Walk()
-
-	if IsValid(SGS.shopent2) then
-		if SGS.shopent2.status == "wander" then
-			SGS_MoveSpecial(SGS.shopent2)
-		end
+	if !IsValid(SGS.shopent2) then return end
+	if SGS.shopent2.status == "wander" then
+		SGS_MoveSpecial(SGS.shopent2)
 	end
 	timer.Simple(20, SGS_Shop2Walk)
-
 end
 timer.Simple(20, SGS_Shop2Walk)
 
 function SGS_Shop3Walk()
-
-	if IsValid(SGS.shopent3) then
-		if SGS.shopent3.status == "wander" then
-			SGS_MoveHatNPC(SGS.shopent3)
-		end
+	if !IsValid(SGS.shopent3) then return end
+	if SGS.shopent3.status == "wander" then
+		SGS_MoveHatNPC(SGS.shopent3)
 	end
 	timer.Simple(20, SGS_Shop3Walk)
-
 end
 timer.Simple(20, SGS_Shop3Walk)
 
@@ -258,20 +237,20 @@ function SGS_MoveShop(ent)
 	if !ent.loop then
 		ent.loop = 0
 	end
-	
-	if ent:GetPos():DistToSqr( SGS.shopentstart ) > 9000000 then
-		ent:SetPos( SGS.shopentstart + Vector( 0, 0, 20 ) )
+
+	if ent:GetPos():DistToSqr(SGS.shopentstart) > 9000000 then
+		ent:SetPos(SGS.shopentstart + Vector(0, 0, 20))
 	end
-	
+
 	if ent:WaterLevel() ~= 0 then
-		ent:SetPos( SGS.shopentstart + Vector( 0, 0, 20 ) )	
+		ent:SetPos(SGS.shopentstart + Vector(0, 0, 20))
 	end
-	
+
 	if SGS.shopent:GetNPCState() == 3 then return end
-	
+
 	local curpos = ent:GetPos()
 	local newpos = curpos + Vector(math.random(-300,300), math.random(-300,300), 200)
-	
+
 	local trace = {}
 	trace.start = newpos
 	trace.endpos = trace.start + Vector(0,0,-500)
@@ -279,12 +258,11 @@ function SGS_MoveShop(ent)
 	trace.filter = ent
 
 	local tr = util.TraceLine(trace)
-	
+
 	if tr.Hit then
-	
 		if tr.MatType == MAT_SLOSH then
 			ent.loop = ent.loop + 1
-			if ent.loop >= 50 then 
+			if ent.loop >= 50 then
 				ent:SetPos(SGS.shopent.spawn)
 				return
 			end
@@ -293,10 +271,8 @@ function SGS_MoveShop(ent)
 			local newpos = tr.HitPos
 			ent.loop = 0
 			ent:SetLastPosition(newpos)
-			ent:SetSchedule( SCHED_FORCED_GO )
+			ent:SetSchedule(SCHED_FORCED_GO)
 		end
-
-	else
 	end
 end
 
@@ -305,16 +281,16 @@ function SGS_MoveSpecial(ent)
 	if !ent.loop then
 		ent.loop = 0
 	end
-	
+
 	if ent:GetPos():DistToSqr( SGS.shopent2start ) > 9000000 then
 		ent:SetPos( SGS.shopent2start + Vector( 0, 0, 20 ) )
 	end
-	
+
 	if SGS.shopent2:GetNPCState() == 3 then return end
-	
+
 	local curpos = ent:GetPos()
 	local newpos = curpos + Vector(math.random(-300,300), math.random(-300,300), 200)
-	
+
 	local trace = {}
 	trace.start = newpos
 	trace.endpos = trace.start + Vector(0,0,-500)
@@ -322,22 +298,20 @@ function SGS_MoveSpecial(ent)
 	trace.filter = ent
 
 	local tr = util.TraceLine(trace)
-	
-	if tr.Hit then
-	
-		if tr.MatType == MAT_SLOSH then
-			ent.loop = ent.loop + 1
-			if ent.loop >= 50 then 
-				ent:SetPos(SGS.shopent2.spawn)
-				return
-			end
-			SGS_MoveSpecial(ent)
-		else
-			local newpos = tr.HitPos
-			ent.loop = 0
-			ent:SetLastPosition(newpos)
-			ent:SetSchedule( SCHED_FORCED_GO )
+
+	if !tr.Hit then return end
+	if tr.MatType == MAT_SLOSH then
+		ent.loop = ent.loop + 1
+		if ent.loop >= 50 then
+			ent:SetPos(SGS.shopent2.spawn)
+			return
 		end
+		SGS_MoveSpecial(ent)
+	else
+		local newpos = tr.HitPos
+		ent.loop = 0
+		ent:SetLastPosition(newpos)
+		ent:SetSchedule( SCHED_FORCED_GO )
 	end
 end
 
@@ -347,16 +321,16 @@ function SGS_MoveHatNPC(ent)
 	if !ent.loop then
 		ent.loop = 0
 	end
-	
+
 	if ent:GetPos():DistToSqr( SGS.shopent3start ) > 9000000 then
 		ent:SetPos( SGS.shopent3start + Vector( 0, 0, 20 ) )
 	end
-	
+
 	if SGS.shopent3:GetNPCState() == 3 then return end
-	
+
 	local curpos = ent:GetPos()
 	local newpos = curpos + Vector(math.random(-300,300), math.random(-300,300), 200)
-	
+
 	local trace = {}
 	trace.start = newpos
 	trace.endpos = trace.start + Vector(0,0,-500)
@@ -364,56 +338,54 @@ function SGS_MoveHatNPC(ent)
 	trace.filter = ent
 
 	local tr = util.TraceLine(trace)
-	
-	if tr.Hit then
-	
-		if tr.MatType == MAT_SLOSH then
-			ent.loop = ent.loop + 1
-			if ent.loop >= 50 then 
-				ent:SetPos(SGS.shopent3.spawn)
-				return
-			end
-			SGS_MoveHatNPC(ent)
-		else
-			local newpos = tr.HitPos
-			ent.loop = 0
-			ent:SetLastPosition(newpos)
-			ent:SetSchedule( SCHED_FORCED_GO )
+
+	if !tr.Hit then return end
+	if tr.MatType == MAT_SLOSH then
+		ent.loop = ent.loop + 1
+		if ent.loop >= 50 then
+			ent:SetPos(SGS.shopent3.spawn)
+			return
 		end
+		SGS_MoveHatNPC(ent)
+	else
+		local newpos = tr.HitPos
+		ent.loop = 0
+		ent:SetLastPosition(newpos)
+		ent:SetSchedule( SCHED_FORCED_GO )
 	end
 end
 
 function SGS_VortPlantSeed()
 	if !IsValid(SGS.shopent) then return end
-	
+
 	if !(SGS.shopent.status == "wander") then return end
-	
+
 	if math.random(1,3) == 1 then return end
-	
+
 	local explants = ents.FindInSphere(SGS.shopent:GetPos(), 3000)
-	
+
 	local epnum = 0
 	for k, v in pairs(explants) do
 		if v:GetClass() == "gms_seed" or v:GetClass() == "gms_plant" or v:GetClass() == "gms_foodseed" or v:GetClass() == "gms_wheat"then
 			epnum = epnum + 1
 		end
 	end
-	
+
 	if epnum >= 15 then return end
-	
+
 	local explants = ents.FindInSphere(SGS.shopent:GetPos(), 50)
-	
+
 	local epnum = 0
 	for k, v in pairs(explants) do
 		if v:GetClass() == "gms_seed" or v:GetClass() == "gms_plant" then
 			epnum = epnum + 1
 		end
 	end
-	
+
 	if epnum > 0 then return end
-	
+
 	local wtp = math.random(1,10)
-	
+
 	if wtp >= 1 and wtp < 6 then
 		local ent = ents.Create("gms_seed")
 			ent:SetPos( SGS.shopent:GetPos() + Vector(0,0,-2))
@@ -464,43 +436,42 @@ timer.Create("SGS_VortPlantSeed", 60, 0, SGS_VortPlantSeed)
 
 function SGS_VortFindPlant()
 	if !IsValid(SGS.shopent) then return end
-	
+
 	local npc = SGS.shopent
 
 	npc.status = "findfruit"
 
 	local explants = ents.FindInSphere(SGS.shopent:GetPos(), 650)
-	
+
 	local eligfruit = {}
-	
+
 	for k, v in pairs(explants) do
 		if v:GetClass() == "gms_fruit" then
 			table.insert(eligfruit, v)
 		end
 	end
-	
-	if #eligfruit == 0 then 
+
+	if #eligfruit == 0 then
 		npc.status = "wander"
-		return 
+		return
 	end
-	
+
 	local winner = table.Random(eligfruit)
-	
+
 	npc:SetLastPosition(winner:GetPos())
 	npc:SetSchedule( SCHED_FORCED_GO )
-	
+
 	timer.Create("shopwanderreset", 30, 1, SGS_VortWander)
 	timer.Create("shopeatfruit", 3, 0, SGS_VortEatPlant)
-
 end
 timer.Create("shop_npc_eatcycle", 120, 0, SGS_VortFindPlant)
 
 function SGS_VortWander()
 	if !IsValid(SGS.shopent) then return end
-	local npc = SGS.shopent	
+	local npc = SGS.shopent
 	npc.status = "wander"
-	timer.Destroy("shopwanderreset")
-	timer.Destroy("shopeatfruit")
+	timer.Remove("shopwanderreset")
+	timer.Remove("shopeatfruit")
 end
 
 function SGS_VortEatPlant()
@@ -511,60 +482,45 @@ function SGS_VortEatPlant()
 	npc.status = "eating"
 
 	local explants = ents.FindInSphere(SGS.shopent:GetPos(), 50)
-	
+
 	local eligfruit = {}
-	
+
 	for k, v in pairs(explants) do
 		if v:GetClass() == "gms_fruit" then
 			table.insert(eligfruit, v)
 		end
 	end
-	
-	if #eligfruit == 0 then 
-		return 
+
+	if #eligfruit == 0 then
+		return
 	end
-	
+
 	local winner = table.Random(eligfruit)
-	
+
 	winner.parent.tfruit = winner.parent.tfruit - 1
 	winner:Remove()
-	
+
 	local sound = {"npc/barnacle/barnacle_crunch2.wav", "npc/barnacle/barnacle_crunch3.wav"}
 	npc:EmitSound(sound[math.random(#sound)], 60, math.random(80,120))
-	
+
 	SGS_VortWander()
 end
 
 function SGS_VortTalkChat()
-
 	if math.random(1,4) == 1 then
-		--[[if math.random(1,10) == 1 then
-			SGS_VortyBickerAtBreen()
-			return
-		end]]
-
 		local ptarget = table.Random(player.GetAll())
 		if !IsValid( ptarget ) then return end
-		
+
 		local tosay = table.Random(SGS.VortChatMessages)
-		
+
 		local substring = string.Replace(tosay, "%P", ptarget:Nick())
-		
+
 		SGS_VortChat( substring )
-		--[[if tosay == "Do you really call THAT a base, %P? I've seen better latrines on Xen." then
-			if math.random(1,3) == 1 then
-				timer.Simple(5, function() if IsValid(ptarget) then SGS_BreenChat( "Don't worry "..ptarget:Nick()..", I rather like your base." ) end end )
-			end
-		end]]
-		
 	end
-	
 end
 timer.Create("shop_npc_talkrandom", 150, 0, SGS_VortTalkChat)
---timer.Create("shop_npc_talkrandom", 2, 0, SGS_VortTalkChat)
 
 function SGS_BreenTalkChat()
-
 	if math.random(1,7) == 1 then
 		if math.random(1,10) == 1 then
 			SGS_BreenBickerAtVorty()
@@ -573,59 +529,46 @@ function SGS_BreenTalkChat()
 
 		local ptarget = table.Random(player.GetAll())
 		if !IsValid( ptarget ) then return end
-		
+
 		local tosay = table.Random(SGS.BreenChatMessages)
-		
+
 		local substring = string.Replace(tosay, "%P", ptarget:Nick())
-		
+
 		SGS_BreenChat( substring )
 		if tosay == "%P, Where did you get that shirt... from Vorty? Bah!" then
 			if math.random(1,3) == 1 then
 				timer.Simple(4, function() if IsValid(ptarget) then SGS_VortChat( "I rather like that shirt!" ) end end )
 			end
 		end
-		
+
 	end
-	
 end
 --timer.Create("shop2_npc_talkrandom", 90, 0, SGS_BreenTalkChat)
---timer.Create("shop2_npc_talkrandom", 4, 0, SGS_BreenTalkChat)
 
 function SGS_VortChat( message )
-
 	GAMEMODE.colorSay(_, { Color(0,0,0), "(", Color(255, 150, 255), "BOT", Color(0,0,0), ")", Color(100,200,200), " Vorty", Color(255,255,255), ": ", message } )
-
 end
 
 function SGS_BreenChat( message )
-
 	GAMEMODE.colorSay(_, { Color(0,0,0), "(", Color(255, 150, 255), "BOT", Color(0,0,0), ")", Color(100,200,200), " Dr. Breen", Color(255,255,255), ": ", message } )
-
 end
 
 function SGS_KlienerChat( message )
-
 	GAMEMODE.colorSay(_, { Color(0,0,0), "(", Color(255, 150, 255), "BOT", Color(0,0,0), ")", Color(100,200,200), " Dr. K", Color(255,255,255), ": ", message } )
-
 end
 
 function SGS_SniperChat( message )
-
 	GAMEMODE.colorSay(_, { Color(0,0,0), "(", Color(255, 150, 255), "BOT", Color(0,0,0), ")", Color(100,200,200), " Guard", Color(255,255,255), ": ", message } )
-
 end
 
 function SGS_VortyBickerAtBreen()
-
 	SGS_VortChat( "Hey Dr. Breen.. I still can't believe that you tried to have me deported..." )
 	timer.Simple( 3, function() SGS_BreenChat( "Shut up, you one eyed freak! You think you're safe?" ) end )
 	timer.Simple( 5, function() SGS_BreenChat( "I'm still working on how to get you out of here." ) end )
 	timer.Simple( 8, function() SGS_VortChat( "Why can't we just be friends..." ) end )
-	
 end
 
 function SGS_BreenBickerAtVorty()
-
 	if math.random(1,3) >= 2 then
 		SGS_BreenChat( "Hey, Walking lizard..." )
 		timer.Simple( 3, function() SGS_VortChat( "I know you're not talking to me..." ) end )
@@ -638,50 +581,41 @@ function SGS_BreenBickerAtVorty()
 		timer.Simple( 3, function() SGS_VortChat( "I'm sorry.. what?" ) end )
 		timer.Simple( 6, function() SGS_BreenChat( "Just shut up.. noone cares..." ) end )
 	end
-	
 end
 
-
-
 function SGS_VortReplies( ply, text, public )
-
-
-	if CurTime() > SGS.lastvorttalk + 10 then
-		if CurTime() < ply.lastvorttalk + 120 then return end
-		for k, v in pairs(SGS.VortHelper) do
-			if ( string.find( string.lower( text ), string.lower( v.trigger ) ) ) then
-				local vsay = string.Replace( v.response, "%P", ply:Nick())
-				timer.Simple(1, function() SGS_VortChat( vsay ) end)
-				SGS.lastvorttalk = CurTime()
-				ply.lastvorttalk = CurTime()
-				break
-			end
+	if CurTime() < SGS.lastvorttalk + 10 then return end
+	if CurTime() < ply.lastvorttalk + 120 then return end
+	for k, v in pairs(SGS.VortHelper) do
+		if ( string.find( string.lower( text ), string.lower( v.trigger ) ) ) then
+			local vsay = string.Replace( v.response, "%P", ply:Nick())
+			timer.Simple(1, function() SGS_VortChat( vsay ) end)
+			SGS.lastvorttalk = CurTime()
+			ply.lastvorttalk = CurTime()
+			break
 		end
 	end
-	
 end
 --hook.Add( "PlayerSay", "SGS_VortReplies", SGS_VortReplies )
 
 function SGS_VortyDamage( ent, dmginfo )
 	local ply = dmginfo:GetInflictor()
-	if ent:IsNPC() then
-		if ent == SGS.shopent then
-			dmginfo:ScaleDamage(0)
-			SGS_VortySetHostile( SGS.shopent, ply )
-			return false
-		end
+	if !ent:IsNPC() then return end
+
+	if ent == SGS.shopent then
+		dmginfo:ScaleDamage(0)
+		SGS_VortySetHostile( SGS.shopent, ply )
+		return false
 	end
 end
 hook.Add("EntityTakeDamage", "SGS_VortyDamage", SGS_VortyDamage)
 
 function SGS_PresidentDamage( ent, dmginfo )
-	local ply = dmginfo:GetInflictor()
-	if ent:IsNPC() then
-		if ent == SGS.shopent4 then
-			dmginfo:ScaleDamage(0)
-			SGS_VortySetHostile( SGS.shopent, ply )
-			return false
-		end
+	if !ent:IsNPC() then return end
+
+	if ent == SGS.shopent4 then
+		dmginfo:ScaleDamage(0)
+		return false
 	end
 end
 hook.Add("EntityTakeDamage", "SGS_PresidentDamage", SGS_PresidentDamage)
@@ -699,18 +633,17 @@ hook.Add("EntityTakeDamage", "SGS_BreenDamage", SGS_BreenDamage)]]
 
 function SGS_KlienerDamage( ent, dmginfo )
 	local ply = dmginfo:GetInflictor()
-	if ent:IsNPC() then
-		if ent == SGS.shopent3 then
-			dmginfo:ScaleDamage(0)
-			SGS_KlienerSetHostile( SGS.shopent3, ply )
-			return false
-		end
+	if !ent:IsNPC() then return end
+
+	if ent == SGS.shopent3 then
+		dmginfo:ScaleDamage(0)
+		SGS_KlienerSetHostile( SGS.shopent3, ply )
+		return false
 	end
 end
 hook.Add("EntityTakeDamage", "SGS_KlienerDamage", SGS_KlienerDamage)
 
 function SGS_VortySetHostile( npc, ply )
-
 	if SGS.shopent:GetNPCState( ) == 1 then
 		SGS_VortChat( "Why would you attack me " .. ply:Nick() .. ". Now I'm angry..." )
 	end
@@ -718,55 +651,44 @@ function SGS_VortySetHostile( npc, ply )
 	npc:AddEntityRelationship(ply, D_HT, 999 )
 	npc:SetNPCState(3)
 	timer.Create( "resethostile_" .. ply:EntIndex(), 30, 1, function() SGS_VortySetNeutral( npc, ply ) end)
-	
 end
 
 function SGS_VortySetNeutral( npc, ply )
-
 	if !IsValid(npc) then return end
 	if !IsValid(ply) then return end
-	
+
 	SGS_VortChat( "Alright " .. ply:Nick() .. ". Let's just be friends now..." )
 
 	npc:AddEntityRelationship(ply, D_LI, 999 )
 	npc:SetNPCState(1)
-	
 end
 
-function SGS_VortyKillsPlayer( ply, weapon, npc )
- 
-	if npc == SGS.shopent then
-	
-		SGS_VortChat( "Maybe next time," .. ply:Nick() .. ", you'll know not to mess with me..." )
-		timer.Destroy("resethostile_" .. ply:EntIndex())
-		npc:AddEntityRelationship(ply, D_LI, 999 )
-		npc:SetNPCState(1)
-		npc:PlayScene ('scenes/npc/vortigaunt/cavechant.vcd', 100 )
-		
-		local vort_kills = util.GetPData( "Vorty", "vorty_kills", 0 )
-		vort_kills = vort_kills + 1
-		util.SetPData( "Vorty", "vorty_kills", vort_kills )
-		
-		if math.random( 3 ) == 1 then
-			timer.Simple( 3, function()
-				SGS_VortChat( "Let's see.. that makes " .. vort_kills .. " kills now." )
-			end )
-		end
+function SGS_VortyKillsPlayer(ply, weapon, npc)
+	if npc ~= SGS.shopent then return end
 
-		
+	SGS_VortChat("Maybe next time," .. ply:Nick() .. ", you'll know not to mess with me...")
+	timer.Remove("resethostile_" .. ply:EntIndex())
+	npc:AddEntityRelationship(ply, D_LI, 999 )
+	npc:SetNPCState(1)
+	npc:PlayScene("scenes/npc/vortigaunt/cavechant.vcd", 100 )
+
+	local vort_kills = util.GetPData( "Vorty", "vorty_kills", 0 )
+	vort_kills = vort_kills + 1
+	util.SetPData( "Vorty", "vorty_kills", vort_kills )
+
+	if math.random(3) == 1 then
+		timer.Simple(3, function() SGS_VortChat("Let's see.. that makes " .. vort_kills .. " kills now.") end)
 	end
-	
 end
-hook.Add( "PlayerDeath", "SGS_VortyKillsPlayer", SGS_VortyKillsPlayer )
+hook.Add("PlayerDeath", "SGS_VortyKillsPlayer", SGS_VortyKillsPlayer)
 
-
-function SGS_KlienerSetHostile( npc, ply )
+function SGS_KlienerSetHostile(npc, ply)
 
 	if !npc.engaged then
-		SGS_KlienerChat( "My My..." )
-		timer.Simple( 1, function()
-			SGS_SniperChat( "Stand down citizen!" )
-			
+		SGS_KlienerChat("My My...")
+		timer.Simple(1, function()
+			SGS_SniperChat("Stand down citizen!")
+
 			newpos = ply:GetPos() + Vector(0, 400, 300)
 			local trace = {}
 			trace.start = newpos
@@ -774,48 +696,45 @@ function SGS_KlienerSetHostile( npc, ply )
 			trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
 			local tr = util.TraceLine(trace)
 			if tr.Hit then
-				SGS_SpawnSniper( ply, tr.HitPos )
+				SGS_SpawnSniper(ply, tr.HitPos)
 			end
-			
+
 			newpos2 = ply:GetPos() + Vector(400, 0, 300)
-			local trace = {}
-			trace.start = newpos2
-			trace.endpos = trace.start + Vector(0,0,-600)
-			trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
-			local tr = util.TraceLine(trace)
-			if tr.Hit then
-				SGS_SpawnSniper( ply, tr.HitPos )
+			local trace2 = {}
+			trace2.start = newpos2
+			trace2.endpos = trace2.start + Vector(0,0,-600)
+			trace2.mask = bit.bor(MASK_WATER , MASK_SOLID)
+			local tr2 = util.TraceLine(trace2)
+			if tr2.Hit then
+				SGS_SpawnSniper(ply, tr2.HitPos)
 			end
-			
+
 			newpos3 = ply:GetPos() + Vector(-400, 0, 300)
-			local trace = {}
-			trace.start = newpos3
-			trace.endpos = trace.start + Vector(0,0,-600)
-			trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
-			local tr = util.TraceLine(trace)
-			if tr.Hit then
-				SGS_SpawnSniper( ply, tr.HitPos )
+			local trace3 = {}
+			trace3.start = newpos3
+			trace3.endpos = trace3.start + Vector(0,0,-600)
+			trace3.mask = bit.bor(MASK_WATER , MASK_SOLID)
+			local tr3 = util.TraceLine(trace3)
+			if tr3.Hit then
+				SGS_SpawnSniper(ply, tr3.HitPos)
 			end
-			
+
 			newpos4 = ply:GetPos() + Vector(0, -400, 300)
-			local trace = {}
-			trace.start = newpos4
-			trace.endpos = trace.start + Vector(0,0,-600)
-			trace.mask = bit.bor(MASK_WATER , MASK_SOLID)
-			local tr = util.TraceLine(trace)
-			if tr.Hit then
-				SGS_SpawnSniper( ply, tr.HitPos )
+			local trace4 = {}
+			trace4.start = newpos4
+			trace4.endpos = trace4.start + Vector(0,0,-600)
+			trace4.mask = bit.bor(MASK_WATER , MASK_SOLID)
+			local tr4 = util.TraceLine(trace4)
+			if tr4.Hit then
+				SGS_SpawnSniper(ply, tr4.HitPos)
 			end
-		end )
-		
+		end)
+
 		npc.engaged = true
 		npc.attacking = ply
 	end
-		
 
-	
-	timer.Create( "resetklienerhostile", 30, 1, function() SGS_KlienerSetNeutral( npc ) end)
-	
+	timer.Create("resetklienerhostile", 30, 1, function() SGS_KlienerSetNeutral(npc) end)
 end
 
 function SGS_KlienerSetNeutral( npc )
@@ -823,20 +742,18 @@ function SGS_KlienerSetNeutral( npc )
 	if !IsValid(npc) then return end
 	npc.engaged = false
 	npc.attacking = nil
-	
-	SGS_KlienerChat( "Alright Gentlemen, stand down." )
+	SGS_KlienerChat("Alright Gentlemen, stand down.")
 
-	for k, v in pairs( ents.FindByClass("npc_sniper") ) do
+	for k, v in pairs(ents.FindByClass("npc_sniper")) do
 		v:Remove()
 	end
-	
 end
 
-function SGS_SpawnSniper( ply, pos )
+function SGS_SpawnSniper(ply, pos)
 	if !IsValid(ply) then return end
-	
-	local sniper = ents.Create( "npc_sniper" )
-	sniper:SetPos( pos )
+
+	local sniper = ents.Create("npc_sniper")
+	sniper:SetPos(pos)
 	sniper.dmg = 1000
 	sniper:Spawn()
 	local aimAngle = ((ply:GetPos() + ply:GetAngles():Forward()) - sniper:GetPos()):Angle()
@@ -844,7 +761,7 @@ function SGS_SpawnSniper( ply, pos )
 	aimAngle.r = 0
 	sniper:SetAngles( aimAngle )
 	sniper:AddRelationship("player D_NU 999")
-			
+
 	sniper:AddRelationship("npc_alyx D_LI 99")
 	sniper:AddRelationship("npc_antlion D_LI 99")
 	sniper:AddRelationship("npc_antlionguard D_LI 99")
@@ -874,41 +791,37 @@ function SGS_SpawnSniper( ply, pos )
 	sniper:AddRelationship("npc_zombie_torso D_LI 99")
 	sniper:AddRelationship("npc_seagull D_LI 99")
 	sniper:AddRelationship("npc_hunter D_LI 99")
-	
+
 	sniper:SetNWString("Owner", "World")
-	
-	sniper:AddEntityRelationship(ply, D_HT, 999 )
+
+	sniper:AddEntityRelationship(ply, D_HT, 999)
 end
 
-function SGS_KlienerKillsPlayer( ply, weapon, npc )
- 
+function SGS_KlienerKillsPlayer(ply, weapon, npc)
 	if npc:GetClass() == "npc_sniper" then
-	
-		SGS_KlienerChat( "Boom! Headshot!" )
+		SGS_KlienerChat("Boom! Headshot!")
 		timer.Remove("resetklienerhostile")
 
-		SGS_KlienerSetNeutral( SGS.shopent3 )
-		
+		SGS_KlienerSetNeutral(SGS.shopent3)
 	end
-	
 end
-hook.Add( "PlayerDeath", "SGS_KlienerKillsPlayer", SGS_KlienerKillsPlayer )
+hook.Add("PlayerDeath", "SGS_KlienerKillsPlayer", SGS_KlienerKillsPlayer)
 
-function SGS_ChatVorty( ply, text, public )
-    if ( string.sub( string.lower(text), 1, 6 ) == "!vorty" ) then
-    	-- We need this damnit...
+function SGS_ChatVorty(ply, text, public)
+	if (string.sub(string.lower(text), 1, 6) == "!vorty") then
+		-- We need this damnit...
 		if !ply:IsAdmin() then
 			ply:SendMessage("This is an admin command.", 60, Color(255, 0, 0, 255))
 			return false
 		end
 		if ply:GetUserGroup() == "moderator" then
 			ply:SendMessage("This is an admin command.", 60, Color(255, 0, 0, 255))
-			return false		
+			return false
 		end
-		
-		 SGS_VortChat(text:sub(8))
-		 
-		 return false
+
+		SGS_VortChat(text:sub(8))
+
+		return false
 	end
 end
-hook.Add( "PlayerSay", "SGS_ChatVorty", SGS_ChatVorty )
+hook.Add("PlayerSay", "SGS_ChatVorty", SGS_ChatVorty)
