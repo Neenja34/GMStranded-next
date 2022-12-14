@@ -1,0 +1,34 @@
+# Config generated using Cap Limits from Stargate Settings Menu.
+# Config generator created by AlexALX (c) 2014
+# Carter Addon Pack - http://sg-carterpack.com/
+
+[cap_convars]
+CAP_staffstat_max = 0
+CAP_mcd_max = 0
+CAP_lantholo_max = 0
+CAP_dispenser_max = 0
+CAP_launchdrone_max = 0
+CAP_horizon_max = 0
+CAP_ships_max = 0
+CAP_shieldcore_max = 0
+CAP_ag3_max = 0
+CAP_asgbeam_max = 0
+CAP_dakara_max = 0
+CAP_destcon_max = 0
+CAP_asuran_beam_max = 0
+CAP_shiprail_max = 0
+CAP_dirn_max = 0
+CAP_destmedium_max = 0
+CAP_sod_obelisk_max = 0
+CAP_destsmall_max = 0
+CAP_ioncannon_max = 0
+CAP_minidrone_max = 0
+CAP_overloader_max = 0
+CAP_anc_obelisk_max = 0
+CAP_applecore_max = 0
+CAP_ori_max = 0
+CAP_ori_beam_max = 0
+CAP_destmain_max = 0
+CAP_agv_max = 0
+CAP_statrail_max = 0
+CAP_iris_comp_max = 0

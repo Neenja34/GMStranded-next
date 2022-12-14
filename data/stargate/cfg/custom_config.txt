@@ -1,0 +1,11 @@
+# Config generated using Config Editor from Stargate Settings Menu.
+# Config generator created by AlexALX (c) 2014
+# Carter Addon Pack - http://sg-carterpack.com/
+
+[stargate]
+autoclose_time = 0.5
+disintegrate = false
+wormholejump = 0
+
+[ring_panel]
+menu = false
