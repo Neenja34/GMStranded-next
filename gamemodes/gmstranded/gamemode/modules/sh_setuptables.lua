@@ -362,7 +362,7 @@ function SGS_SetUpTablesShared()
 		"npc_headcrab_fast" 
 	}
 
-	SGS.adtext = "To report bugs or make suggestions, please visit our Discord at https://discord.gg/6v2urH8Pnc"
+	SGS.adtext = "To report bugs or make suggestions, please visit our Discord at <insert link here>"
 	SGS.adcolors = {
 			Color(255,255,0,255),
 			Color(255,0,255,255),

@@ -3,7 +3,7 @@
 Here is a series of updates that I've made to the G4P Stranded game mode made by Mr. President. This repo also serves as a guide to get
 G4P set up onto a self-hosted dedicated server. Thanks to all the players, Mr. President, Holyshot, Moltenn, Thunderr, Youti, Nerax and our other 
 moderators & donators for the support! You can find the original gamemode by Mr. President here - https://github.com/zpetty33/GMStranded.
-I've included the website files that my server used to use a bonus :)
+I've included the website files, and the player data that my server used to use a bonus :)
 
 How to install as single player only:
 
