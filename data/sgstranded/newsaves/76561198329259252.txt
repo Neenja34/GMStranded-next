@@ -1,0 +1,64 @@
+{
+	"gtokens": {
+		"tokens": 2.0
+	},
+	"achievements": {
+		"welcome": true,
+		"craft1": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 7.0,
+			"gummy_bears": 5.0,
+			"cooked_trout": 0.0,
+			"liferoot_seed": 1.0,
+			"moly_seed": 1.0,
+			"trout": 0.0,
+			"pypa_seed": 1.0,
+			"unidentified_artifact": 1.0,
+			"stone": 1.0,
+			"earth_stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 05/31/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 827.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 18.0,
+		"mining": 111.0,
+		"arcane": 0.0,
+		"woodcutting": 305.0,
+		"smithing": 16.0,
+		"cooking": 18.0,
+		"construction": 36.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 16.0,
+		"smithing1": 2.0,
+		"mining1": 16.0,
+		"general13": 2.0,
+		"fishing1": 1.0,
+		"fishing2": 1.0,
+		"farming2": 3.0,
+		"woodcutting2": 4.0,
+		"woodcutting1": 50.0,
+		"time3": 3.0,
+		"construction3": 2.0,
+		"general1": 2.0,
+		"cooking1": 1.0,
+		"cooking9": 1.0
+	}
+}

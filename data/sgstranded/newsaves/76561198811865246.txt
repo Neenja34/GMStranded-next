@@ -1,0 +1,65 @@
+{
+	"gtokens": {
+		"tokens": 9.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1"
+		],
+		"resources": {
+			"wood": 2.0,
+			"guacca_seed": 3.0,
+			"liechi_seed": 4.0,
+			"perriot_seed": 3.0,
+			"pallie_seed": 1.0,
+			"arctus_seed": 7.0,
+			"pypa_seed": 1.0,
+			"aid_pack": 0.0,
+			"stone": 1.0,
+			"wheat_seed": 7.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 05/18/19",
+	"settings": {
+		"health": 20.0,
+		"melonaids": 4.0
+	},
+	"experience": {
+		"alchemy": 12.0,
+		"fishing": 0.0,
+		"mining": 9.0,
+		"arcane": 0.0,
+		"woodcutting": 476.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 74.0,
+		"farming": 585.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming1": 19.0,
+		"smithing1": 1.0,
+		"time3": 1.0,
+		"alchemy2": 2.0,
+		"alchemy1": 2.0,
+		"general9": 1.0,
+		"construction3": 2.0,
+		"general13": 9.0,
+		"time1": 46.0,
+		"woodcutting2": 7.0,
+		"general4": 5.0,
+		"general5": 1.0,
+		"general1": 20.0,
+		"construction1": 1.0,
+		"woodcutting1": 84.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"general2": 41.0,
+		"mining1": 1.0,
+		"farming2": 33.0
+	}
+}

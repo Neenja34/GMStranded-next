@@ -1,0 +1,63 @@
+{
+	"gtokens": {
+		"tokens": 7.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"berries10": true,
+		"losefish10": true,
+		"welcome": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"gummy_bears": 5.0,
+			"wheat_seed": 9.0,
+			"liechi_seed": 2.0,
+			"liferoot_seed": 2.0,
+			"perriot_seed": 1.0,
+			"lum_seed": 2.0,
+			"herring": 12.0,
+			"karopa_seed": 3.0,
+			"pypa_seed": 4.0,
+			"trout": 23.0,
+			"guacca_seed": 13.0,
+			"chaos_stone": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 04/17/20",
+	"settings": {
+		"last_daily": 152.0,
+		"health": 45.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 630.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 37.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 35.0,
+		"general2": 15.0,
+		"time3": 1.0,
+		"fishing1": 35.0,
+		"fishing2": 13.0,
+		"farming2": 24.0,
+		"general3": 1.0,
+		"general1": 25.0,
+		"general13": 7.0
+	}
+}

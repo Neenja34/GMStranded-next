@@ -1,0 +1,45 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"afk10": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_handtorch"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Sunday 05/03/20",
+	"settings": {
+		"last_daily": 1112.0,
+		"health": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 4.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 2.0,
+		"time2": 15.0,
+		"time3": 1.0,
+		"general7": 2.0,
+		"alchemy2": 1.0,
+		"general1": 8.0,
+		"general3": 1.0,
+		"farming2": 7.0,
+		"time1": 38.0
+	}
+}

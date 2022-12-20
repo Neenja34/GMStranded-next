@@ -1,0 +1,62 @@
+{
+	"gtokens": {
+		"tokens": 10.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true,
+		"bloodchampion1": true,
+		"berries10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 24.0,
+			"gummy_bears": 5.0,
+			"guacca_seed": 2.0,
+			"liechi_seed": 2.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 1.0,
+			"red_liquorice": 4.0,
+			"arctus_seed": 1.0,
+			"pypa_seed": 5.0,
+			"stone": 3.0,
+			"karopa_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 03/02/20",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[0.498 0 1]",
+		"last_daily": 1275.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 270.0,
+		"arcane": 0.0,
+		"woodcutting": 201.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 30.0,
+		"farming": 245.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 24.0,
+		"general2": 14.0,
+		"woodcutting2": 2.0,
+		"time3": 2.0,
+		"farming1": 8.0,
+		"general1": 8.0,
+		"farming2": 10.0,
+		"woodcutting1": 32.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"construction3": 2.0,
+		"mining1": 39.0,
+		"general13": 10.0
+	}
+}

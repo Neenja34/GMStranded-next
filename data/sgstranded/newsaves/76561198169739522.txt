@@ -1,0 +1,75 @@
+{
+	"gtokens": {
+		"tokens": 22.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"weapon_melee1",
+			"weapon_melee1",
+			"gms_hatchet1",
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"wood": 8.0,
+			"guacca_seed": 9.0,
+			"unidentified_artifact": 1.0,
+			"perriot_seed": 1.0,
+			"cooked_herring": 0.0,
+			"chaos_stone": 1.0,
+			"karopa_seed": 1.0,
+			"tree_seed": 4.0,
+			"pypa_seed": 3.0,
+			"combat_relic_1": 1.0,
+			"herring": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 03/22/19",
+	"settings": {
+		"health": 104.0,
+		"playercolor": "[1 0.0196 0.0196]",
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 180.0,
+		"mining": 285.0,
+		"arcane": 0.0,
+		"woodcutting": 2107.0,
+		"smithing": 80.0,
+		"cooking": 108.0,
+		"construction": 204.0,
+		"farming": 36.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 49.0,
+		"smithing1": 9.0,
+		"time3": 2.0,
+		"mining7": 1.0,
+		"fishing1": 10.0,
+		"construction1": 21.0,
+		"construction3": 4.0,
+		"general13": 22.0,
+		"time1": 151.0,
+		"cooking1": 6.0,
+		"farming2": 33.0,
+		"mining1": 40.0,
+		"general7": 2.0,
+		"general8": 1.0,
+		"fishing2": 9.0,
+		"general1": 63.0,
+		"cooking5": 2.0,
+		"woodcutting1": 335.0,
+		"bloodmoon1": 1.0,
+		"general3": 5.0,
+		"general5": 5.0,
+		"woodcutting2": 22.0,
+		"cooking9": 6.0
+	}
+}

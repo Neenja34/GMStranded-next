@@ -1,0 +1,81 @@
+{
+	"gtokens": {
+		"tokens": 82.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_grindingstone",
+			"gms_fishingrod2",
+			"gms_fryingpan",
+			"gms_pickaxe1",
+			"gms_hatchet2",
+			"weapon_melee1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Tuesday 05/07/19",
+	"settings": {
+		"showlights": "true",
+		"health": 0.0,
+		"playercolor": "[1 0 0.749]",
+		"foragetoggle": true,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 57.0,
+		"fishing": 396.0,
+		"mining": 5835.0,
+		"arcane": 8.0,
+		"woodcutting": 3261.8,
+		"smithing": 2142.2,
+		"cooking": 1422.0,
+		"construction": 874.6,
+		"farming": 2197.4,
+		"combat": 165.3
+	},
+	"stats": {
+		"general2": 80.0,
+		"time3": 5.0,
+		"general16": 2.0,
+		"general11": 1.0,
+		"construction3": 11.0,
+		"woodcutting2": 35.0,
+		"general7": 1.0,
+		"combat1": 1.0,
+		"bloodmoon1": 1.0,
+		"cooking2": 2.0,
+		"cooking9": 27.0,
+		"cooking1": 24.0,
+		"arcane1": 2.0,
+		"farming1": 43.0,
+		"smithing1": 30.0,
+		"mining7": 17.0,
+		"alchemy2": 6.0,
+		"construction1": 41.0,
+		"mining8": 2.0,
+		"alchemy1": 9.0,
+		"arcane3": 4.0,
+		"pets3": 1.0,
+		"general13": 47.0,
+		"smithing2": 579.0,
+		"cooking4": 1.0,
+		"construction2": 1.0,
+		"pets9": 1.0,
+		"mining1": 361.0,
+		"combat8": 1.0,
+		"general4": 2.0,
+		"fishing2": 14.0,
+		"general1": 77.0,
+		"farming2": 33.0,
+		"woodcutting1": 546.0,
+		"mining2": 210.0,
+		"general3": 6.0,
+		"general5": 2.0,
+		"time1": 248.0,
+		"fishing1": 24.0
+	}
+}

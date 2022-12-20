@@ -1,0 +1,52 @@
+{
+	"gtokens": {
+		"tokens": 26.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"secretworld": true,
+		"welcome": true,
+		"goldm1": true,
+		"berries10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"lum_seed": 1.0,
+			"inert_stone": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 12/26/20",
+	"settings": {
+		"health": 100.0,
+		"showlights": "false",
+		"last_daily": 136.0,
+		"showfar": "false"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 16.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 153.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 32.0,
+		"general2": 11.0,
+		"mining1": 1.0,
+		"general1": 14.0,
+		"woodcutting1": 2.0,
+		"farming2": 18.0,
+		"general3": 1.0,
+		"general5": 1.0,
+		"farming3": 1.0,
+		"time3": 1.0
+	}
+}

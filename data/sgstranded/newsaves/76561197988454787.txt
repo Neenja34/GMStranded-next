@@ -1,0 +1,60 @@
+{
+	"gtokens": {
+		"tokens": 4.0
+	},
+	"achievements": {
+		"forage50": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"thirsty10": true,
+		"melon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Sunday 09/29/19",
+	"settings": {
+		"melonaids": 5.0,
+		"showlights": "true",
+		"last_daily": 502.0,
+		"grindmode": "on",
+		"health": 0.0,
+		"foragetoggle": false,
+		"showparticles": "true",
+		"person": "first"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 297.0,
+		"arcane": 0.0,
+		"woodcutting": 109.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 427.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 39.0,
+		"general13": 4.0,
+		"farming1": 12.0,
+		"general7": 1.0,
+		"time3": 2.0,
+		"mining7": 2.0,
+		"general4": 1.0,
+		"mining1": 15.0,
+		"farming2": 70.0,
+		"general5": 2.0,
+		"woodcutting1": 12.0,
+		"woodcutting2": 1.0,
+		"general1": 19.0,
+		"general15": 1.0,
+		"general2": 31.0,
+		"general8": 1.0
+	}
+}

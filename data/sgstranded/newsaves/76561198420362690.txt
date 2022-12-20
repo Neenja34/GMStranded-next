@@ -1,0 +1,77 @@
+{
+	"gtokens": {
+		"tokens": 14.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"berries10": true,
+		"welcome": true,
+		"gtoken1": true,
+		"time1": true,
+		"woodc100": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cosmic_stone": 1.0,
+			"guacca_seed": 15.0,
+			"liechi_seed": 6.0,
+			"liferoot_seed": 5.0,
+			"moly_seed": 1.0,
+			"red_liquorice": 5.0,
+			"arctus_seed": 6.0,
+			"aid_pack": 1.0,
+			"void_cache": 1.0,
+			"wood": 16.0,
+			"the_cure": 1.0,
+			"earth_stone": 1.0,
+			"smithing_relic_2": 1.0,
+			"pallie_seed": 3.0,
+			"lum_seed": 2.0,
+			"jelly_beans": 5.0,
+			"chaos_stone": 2.0,
+			"perriot_seed": 2.0,
+			"stone": 13.0,
+			"pypa_seed": 14.0,
+			"tree_seed": 2.0,
+			"wheat_seed": 6.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 01/06/20",
+	"settings": {
+		"health": 81.0,
+		"playercolor": "[0.1922 0.4627 0.2039]",
+		"last_daily": 739.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 177.0,
+		"arcane": 0.0,
+		"woodcutting": 794.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 136.0,
+		"farming": 855.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 70.0,
+		"general2": 53.0,
+		"construction1": 12.0,
+		"mining1": 22.0,
+		"farming2": 40.0,
+		"alchemy2": 1.0,
+		"farming1": 27.0,
+		"general1": 43.0,
+		"construction3": 2.0,
+		"woodcutting1": 130.0,
+		"woodcutting2": 7.0,
+		"general3": 3.0,
+		"time3": 3.0,
+		"general17": 1.0,
+		"general13": 5.0
+	}
+}

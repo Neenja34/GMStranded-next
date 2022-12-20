@@ -1,0 +1,45 @@
+{
+	"gtokens": {
+		"tokens": 3.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 21.0,
+			"pypa_seed": 1.0,
+			"wheat_seed": 4.0,
+			"guacca_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 02/27/22",
+	"settings": {
+		"last_daily": 241.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 122.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 7.0,
+		"woodcutting1": 21.0,
+		"woodcutting2": 1.0,
+		"time3": 1.0,
+		"general2": 2.0,
+		"farming2": 4.0,
+		"general13": 3.0
+	}
+}

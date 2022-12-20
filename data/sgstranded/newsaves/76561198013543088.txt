@@ -1,0 +1,64 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"die1": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_pickaxe1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 7.0,
+			"wheat_seed": 3.0,
+			"brown_pet_egg": 1.0,
+			"liferoot_seed": 1.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 2.0,
+			"arctus_seed": 3.0,
+			"stone": 9.0,
+			"moly_seed": 1.0,
+			"karopa_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 01/24/21",
+	"settings": {
+		"health": 100.0,
+		"showlights": "true",
+		"last_daily": 1185.0,
+		"showparticles": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 332.0,
+		"arcane": 0.0,
+		"woodcutting": 462.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 57.0,
+		"farming": 52.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 24.0,
+		"farming1": 1.0,
+		"smithing1": 3.0,
+		"woodcutting2": 2.0,
+		"general1": 13.0,
+		"time3": 1.0,
+		"woodcutting1": 73.0,
+		"general6": 1.0,
+		"construction3": 4.0,
+		"mining1": 46.0,
+		"farming2": 13.0,
+		"general5": 1.0
+	}
+}

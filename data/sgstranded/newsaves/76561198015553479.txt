@@ -1,0 +1,48 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"secretworld": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"Package": 0.0,
+			"blue_pet_egg": 1.0,
+			"bottled_water": 1.0,
+			"earth_stone": 2.0,
+			"pypa_seed": 4.0,
+			"liechi_seed": 2.0,
+			"moly_seed": 1.0,
+			"wood": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 05/12/19",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[0.5882 0.4902 0.2157]"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 100.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 18.0,
+		"farming": 7.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 12.0,
+		"woodcutting1": 18.0,
+		"general2": 1.0,
+		"time3": 1.0,
+		"farming2": 6.0,
+		"construction1": 3.0,
+		"general1": 4.0
+	}
+}

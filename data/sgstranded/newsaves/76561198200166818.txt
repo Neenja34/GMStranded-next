@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"melon": true,
+		"die1": true,
+		"craft1": true,
+		"welcome": true,
+		"berries10": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Thursday 08/15/19",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 288.0,
+		"melonaids": 8.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 338.0,
+		"arcane": 0.0,
+		"woodcutting": 554.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 21.0,
+		"farming": 357.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 31.0,
+		"general1": 6.0,
+		"farming1": 12.0,
+		"smithing1": 2.0,
+		"time3": 3.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"mining1": 43.0,
+		"farming2": 5.0,
+		"woodcutting2": 5.0,
+		"woodcutting1": 58.0,
+		"bloodmoon1": 1.0,
+		"construction3": 2.0,
+		"general2": 15.0,
+		"time2": 3.0,
+		"general5": 1.0
+	}
+}

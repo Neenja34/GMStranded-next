@@ -1,0 +1,49 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_handtorch",
+			"weapon_melee1",
+			"gms_fishingrod2",
+			"gms_hatchet2"
+		],
+		"resources": {
+			"liechi_seed": 2.0,
+			"liferoot_seed": 1.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 4.0,
+			"chaos_stone": 2.0,
+			"pypa_seed": 1.0,
+			"stone": 5.0,
+			"unidentified_artifact": 2.0,
+			"iron": 12.0,
+			"farming_relic_1": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 03/26/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 18.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 7.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 1.0,
+		"time1": 5.0,
+		"farming2": 5.0
+	}
+}

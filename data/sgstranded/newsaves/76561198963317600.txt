@@ -1,0 +1,46 @@
+{
+	"gtokens": {
+		"tokens": 2.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 12.0,
+			"chaos_stone": 3.0,
+			"arctus_seed": 2.0,
+			"stone": 25.0,
+			"cosmic_stone": 1.0,
+			"wheat_seed": 4.0,
+			"perriot_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 05/14/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 954.0,
+		"arcane": 0.0,
+		"woodcutting": 89.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 9.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 7.0,
+		"time1": 12.0,
+		"woodcutting1": 12.0,
+		"mining1": 25.0,
+		"time3": 2.0,
+		"mining7": 2.0,
+		"general1": 3.0,
+		"general13": 2.0
+	}
+}

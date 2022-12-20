@@ -1,0 +1,52 @@
+{
+	"gtokens": {
+		"tokens": 3.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"welcome": true,
+		"wizzy": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wheat": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 07/25/22",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 1140.0,
+		"person": "third",
+		"showfar": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 18.0,
+		"arcane": 4.0,
+		"woodcutting": 276.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 54.4,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 22.0,
+		"arcane1": 1.0,
+		"general2": 7.0,
+		"mining1": 2.0,
+		"general1": 12.0,
+		"general5": 1.0,
+		"woodcutting1": 42.0,
+		"woodcutting2": 1.0,
+		"time3": 1.0,
+		"arcane3": 2.0,
+		"farming2": 9.0,
+		"general13": 3.0
+	}
+}

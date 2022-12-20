@@ -1,0 +1,52 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"afk10": true,
+		"time1": true,
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"moly_seed": 2.0,
+			"cooked_tuna": 0.0,
+			"bottled_water": 6.0,
+			"guacca_seed": 2.0,
+			"pypa_seed": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 07/18/19",
+	"settings": {
+		"health": 34.0,
+		"last_daily": 693.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 261.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 25.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 4.0,
+		"time2": 19.0,
+		"woodcutting2": 3.0,
+		"general7": 4.0,
+		"farming2": 15.0,
+		"woodcutting1": 34.0,
+		"time1": 85.0,
+		"general1": 20.0,
+		"time3": 2.0
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"lum_seed": 1.0,
+			"red_liquorice": 5.0,
+			"guacca_seed": 2.0,
+			"pypa_seed": 10.0,
+			"liferoot_seed": 2.0,
+			"wood": 8.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 12/29/19",
+	"settings": {
+		"showlights": "true",
+		"last_daily": 253.0,
+		"showfar": "false",
+		"health": 100.0,
+		"person": "first",
+		"showparticles": "false"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 9.0,
+		"arcane": 0.0,
+		"woodcutting": 75.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 3.0,
+		"farming": 10.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"general2": 6.0,
+		"woodcutting2": 1.0,
+		"construction1": 1.0,
+		"woodcutting1": 10.0,
+		"general6": 1.0,
+		"general1": 12.0,
+		"time1": 35.0,
+		"farming2": 10.0,
+		"time3": 1.0
+	}
+}

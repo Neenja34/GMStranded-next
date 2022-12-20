@@ -1,0 +1,57 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_grindingstone",
+			"gms_hoe1"
+		],
+		"resources": {
+			"wooden_splint": 2.0,
+			"wheat": 3.0,
+			"guacca_seed": 1.0,
+			"bread": 1.0,
+			"antlion_meat": 2.0,
+			"liferoot_seed": 2.0,
+			"moly_seed": 1.0,
+			"bottled_water": 3.0,
+			"aid_pack": 1.0,
+			"lum_seed": 1.0,
+			"wood": 30.0,
+			"tree_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 05/18/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 9.0,
+		"fishing": 0.0,
+		"mining": 45.0,
+		"arcane": 0.0,
+		"woodcutting": 111.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 30.0,
+		"farming": 21.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"time3": 1.0,
+		"general7": 1.0,
+		"general1": 3.0,
+		"woodcutting1": 18.0,
+		"alchemy1": 1.0,
+		"construction3": 2.0,
+		"mining1": 5.0,
+		"farming2": 14.0,
+		"time1": 13.0
+	}
+}

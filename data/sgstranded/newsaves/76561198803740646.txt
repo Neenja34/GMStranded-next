@@ -1,0 +1,67 @@
+{
+	"gtokens": {
+		"tokens": 12.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1"
+		],
+		"resources": {
+			"cosmic_stone": 1.0,
+			"wheat_seed": 4.0,
+			"liechi_seed": 3.0,
+			"karopa_seed": 2.0,
+			"moly_seed": 4.0,
+			"water_stone": 1.0,
+			"wood": 24.0,
+			"arctus_seed": 7.0,
+			"fire_stone": 3.0,
+			"pypa_seed": 2.0,
+			"tree_seed": 1.0,
+			"stone": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 03/25/19",
+	"settings": {
+		"health": 50.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 12.0,
+		"fishing": 0.0,
+		"mining": 511.0,
+		"arcane": 0.0,
+		"woodcutting": 618.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 105.5,
+		"farming": 201.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 26.0,
+		"smithing1": 1.0,
+		"time3": 2.0,
+		"mining7": 1.0,
+		"alchemy2": 2.0,
+		"construction1": 9.0,
+		"general9": 1.0,
+		"construction3": 2.0,
+		"general13": 12.0,
+		"time1": 60.0,
+		"mining1": 63.0,
+		"general4": 2.0,
+		"general1": 26.0,
+		"general5": 1.0,
+		"woodcutting1": 100.0,
+		"woodcutting2": 7.0,
+		"general3": 1.0,
+		"farming1": 5.0,
+		"farming2": 47.0,
+		"alchemy1": 2.0
+	}
+}

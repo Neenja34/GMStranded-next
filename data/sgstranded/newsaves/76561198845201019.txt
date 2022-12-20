@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 9.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"weapon_melee1"
+		],
+		"resources": {
+			"wood": 32.0,
+			"moly_seed": 1.0,
+			"stone": 10.0,
+			"karopa_seed": 1.0,
+			"tree_seed": 2.0,
+			"liechi_seed": 2.0,
+			"fire_stone": 1.0,
+			"earth_stone": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 07/03/19",
+	"settings": {
+		"last_daily": 791.0,
+		"health": 44.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 63.0,
+		"arcane": 0.0,
+		"woodcutting": 398.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 10.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 15.0,
+		"smithing1": 2.0,
+		"mining1": 7.0,
+		"general1": 8.0,
+		"woodcutting1": 66.0,
+		"woodcutting2": 2.0,
+		"construction3": 1.0,
+		"time3": 1.0,
+		"farming2": 4.0,
+		"general13": 9.0
+	}
+}

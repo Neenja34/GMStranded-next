@@ -1,0 +1,46 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"nomelon": true,
+		"die1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Tuesday 12/22/20",
+	"settings": {
+		"last_daily": 1201.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 39.6,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 1.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 2.0,
+		"general2": 2.0,
+		"time3": 1.0,
+		"general7": 1.0,
+		"alchemy2": 1.0,
+		"fishing2": 2.0,
+		"general1": 16.0,
+		"general6": 1.0,
+		"time1": 25.0,
+		"farming2": 1.0,
+		"fishing1": 2.0
+	}
+}

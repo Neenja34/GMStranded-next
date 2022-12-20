@@ -1,0 +1,49 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"melon": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"moly_seed": 1.0,
+			"the_cure": 1.0,
+			"yellow_pet_egg": 1.0,
+			"guacca_seed": 2.0,
+			"stone": 10.0,
+			"marshmallow_peeps": 5.0,
+			"liferoot_seed": 2.0,
+			"pallie_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 08/24/21",
+	"settings": {
+		"health": 46.0,
+		"last_daily": 355.0,
+		"melonaids": 3.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 83.0,
+		"arcane": 0.0,
+		"woodcutting": 8.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 7.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 6.0,
+		"general2": 2.0,
+		"time3": 3.0,
+		"mining1": 10.0,
+		"general4": 1.0,
+		"farming2": 4.0
+	}
+}

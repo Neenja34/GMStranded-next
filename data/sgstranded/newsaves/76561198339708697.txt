@@ -1,0 +1,74 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"melon": true,
+		"craft1": true,
+		"welcome": true,
+		"berries10": true,
+		"pbrew1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"weapon_melee1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 15.0,
+			"wheat": 5.0,
+			"guacca_seed": 9.0,
+			"the_cure": 0.0,
+			"liechi_seed": 3.0,
+			"liferoot_seed": 1.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 2.0,
+			"arctus_seed": 7.0,
+			"pypa_seed": 6.0,
+			"stone": 3.0,
+			"aid_pack": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 02/11/22",
+	"settings": {
+		"showlights": "true",
+		"last_daily": 135.0,
+		"showparticles": "false",
+		"health": 100.0,
+		"person": "first",
+		"foragetoggle": true,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 6.0,
+		"fishing": 0.0,
+		"mining": 148.0,
+		"arcane": 0.0,
+		"woodcutting": 511.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 44.0,
+		"farming": 126.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 28.0,
+		"alchemy2": 2.0,
+		"general2": 18.0,
+		"smithing1": 3.0,
+		"time3": 2.0,
+		"alchemy1": 1.0,
+		"general4": 2.0,
+		"general1": 7.0,
+		"construction1": 4.0,
+		"general3": 1.0,
+		"woodcutting1": 84.0,
+		"time2": 3.0,
+		"construction3": 3.0,
+		"farming2": 18.0,
+		"woodcutting2": 3.0,
+		"mining1": 19.0
+	}
+}

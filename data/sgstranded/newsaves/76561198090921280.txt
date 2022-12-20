@@ -1,0 +1,60 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"nomelon": true,
+		"die1": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"stone": 20.0,
+			"wind_stone": 1.0,
+			"earth_stone": 2.0,
+			"wood": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 06/01/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 54.0,
+		"mining": 470.0,
+		"arcane": 0.0,
+		"woodcutting": 493.0,
+		"smithing": 32.0,
+		"cooking": 0.0,
+		"construction": 64.0,
+		"farming": 8.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 2.0,
+		"smithing1": 4.0,
+		"time3": 2.0,
+		"fishing1": 3.0,
+		"construction1": 2.0,
+		"general9": 1.0,
+		"construction3": 3.0,
+		"bloodmoon3": 1.0,
+		"time1": 38.0,
+		"woodcutting2": 5.0,
+		"general4": 1.0,
+		"general1": 6.0,
+		"woodcutting1": 83.0,
+		"bloodmoon1": 1.0,
+		"general5": 3.0,
+		"mining1": 66.0,
+		"farming2": 5.0
+	}
+}

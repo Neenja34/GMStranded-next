@@ -1,0 +1,41 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 1.0,
+			"jelly_beans": 5.0,
+			"karopa_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 04/05/20",
+	"settings": {
+		"last_daily": 131.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 16.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 1.0,
+		"woodcutting1": 1.0,
+		"time3": 1.0,
+		"time1": 2.0,
+		"general2": 1.0
+	}
+}

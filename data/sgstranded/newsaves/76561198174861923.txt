@@ -1,0 +1,38 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"stone": 2.0,
+			"moly_seed": 1.0,
+			"wheat_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/02/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 29.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 5.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 2.0,
+		"general2": 1.0,
+		"time3": 1.0,
+		"mining1": 2.0,
+		"farming2": 3.0
+	}
+}

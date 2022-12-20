@@ -1,0 +1,69 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cosmic_stone": 2.0,
+			"bottled_water": 4.0,
+			"wheat_seed": 15.0,
+			"liechi_seed": 4.0,
+			"liferoot_seed": 3.0,
+			"moly_seed": 4.0,
+			"arctus_seed": 8.0,
+			"void_cache": 1.0,
+			"wood": 7.0,
+			"pallie_seed": 4.0,
+			"lum_seed": 4.0,
+			"karopa_seed": 2.0,
+			"pypa_seed": 13.0,
+			"perriot_seed": 1.0,
+			"stone": 23.0,
+			"cooked_herring": 3.0,
+			"guacca_seed": 7.0,
+			"white_pet_egg": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 06/03/19",
+	"settings": {
+		"health": 100.0,
+		"foragetoggle": false,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 295.0,
+		"arcane": 0.0,
+		"woodcutting": 267.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 50.0,
+		"farming": 470.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"farming1": 13.0,
+		"time3": 1.0,
+		"farming2": 67.0,
+		"general9": 1.0,
+		"construction3": 1.0,
+		"time1": 48.0,
+		"mining1": 46.0,
+		"general4": 1.0,
+		"general1": 21.0,
+		"general5": 1.0,
+		"woodcutting1": 41.0,
+		"general17": 1.0,
+		"general3": 2.0,
+		"construction1": 22.0,
+		"woodcutting2": 2.0,
+		"general2": 22.0
+	}
+}

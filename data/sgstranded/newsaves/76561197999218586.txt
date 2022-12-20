@@ -1,0 +1,74 @@
+{
+	"gtokens": {
+		"tokens": 33.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"thirsty10": true,
+		"gtoken1": true,
+		"ored10": true,
+		"melon": true,
+		"forage50": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cosmic_stone": 5.0,
+			"vial": 1.0,
+			"guacca_seed": 7.0,
+			"the_cure": 0.0,
+			"liechi_seed": 2.0,
+			"lum_seed": 1.0,
+			"stone": 3.0,
+			"wood": 8.0,
+			"pypa_seed": 0.0,
+			"inert_stone": 6.0,
+			"wheat_seed": 4.0,
+			"iron_ore": 23.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 08/21/20",
+	"settings": {
+		"health": 104.0,
+		"last_daily": 1091.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 4201.0,
+		"arcane": 0.0,
+		"woodcutting": 342.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 36.0,
+		"farming": 1311.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 62.0,
+		"time3": 2.0,
+		"mining7": 11.0,
+		"alchemy2": 1.0,
+		"farming2": 104.0,
+		"construction3": 2.0,
+		"general13": 33.0,
+		"time1": 81.0,
+		"woodcutting2": 3.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"general1": 27.0,
+		"mining1": 45.0,
+		"mining2": 23.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"woodcutting1": 34.0,
+		"farming1": 35.0,
+		"general5": 1.0
+	}
+}

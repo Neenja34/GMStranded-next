@@ -1,0 +1,63 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1"
+		],
+		"resources": {
+			"wood": 2.0,
+			"guacca_seed": 8.0,
+			"liechi_seed": 4.0,
+			"liferoot_seed": 1.0,
+			"lum_seed": 1.0,
+			"moly_seed": 1.0,
+			"chaos_stone": 1.0,
+			"stone": 1.0,
+			"pypa_seed": 8.0,
+			"wooden_splint": 0.0,
+			"wheat_seed": 5.0,
+			"aid_pack": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 07/16/19",
+	"settings": {
+		"health": 13.0,
+		"last_daily": 607.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 87.0,
+		"arcane": 0.0,
+		"woodcutting": 254.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 21.0,
+		"farming": 18.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 41.0,
+		"general2": 12.0,
+		"smithing1": 1.0,
+		"time3": 2.0,
+		"general7": 1.0,
+		"alchemy2": 4.0,
+		"general5": 1.0,
+		"farming2": 13.0,
+		"woodcutting2": 3.0,
+		"woodcutting1": 42.0,
+		"general1": 32.0,
+		"general3": 1.0,
+		"construction3": 2.0,
+		"mining1": 12.0,
+		"mining7": 1.0
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"woodc100": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_hatchet1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Thursday 08/26/21",
+	"settings": {
+		"last_daily": 1180.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 289.0,
+		"arcane": 0.0,
+		"woodcutting": 703.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 13.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 3.0,
+		"mining1": 42.0,
+		"general7": 2.0,
+		"general1": 6.0,
+		"time3": 1.0,
+		"woodcutting1": 121.0,
+		"general6": 1.0,
+		"time1": 52.0,
+		"woodcutting2": 7.0,
+		"farming2": 11.0,
+		"general17": 1.0
+	}
+}

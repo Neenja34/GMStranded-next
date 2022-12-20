@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 14.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee5"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Wednesday 04/03/19",
+	"settings": {
+		"health": 0.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 219.0,
+		"arcane": 0.0,
+		"woodcutting": 1129.0,
+		"smithing": 28.0,
+		"cooking": 0.0,
+		"construction": 156.0,
+		"farming": 535.0,
+		"combat": 360.0
+	},
+	"stats": {
+		"combat8": 6.0,
+		"smithing1": 3.0,
+		"time3": 2.0,
+		"farming2": 37.0,
+		"construction3": 2.0,
+		"general8": 2.0,
+		"time1": 96.0,
+		"construction2": 4.0,
+		"woodcutting2": 6.0,
+		"general7": 1.0,
+		"construction1": 11.0,
+		"farming1": 17.0,
+		"general1": 56.0,
+		"mining1": 28.0,
+		"woodcutting1": 178.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"general13": 14.0,
+		"general2": 32.0,
+		"general5": 4.0
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 6.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"cooked_herring": 4.0,
+			"liechi_seed": 2.0,
+			"stone": 29.0,
+			"arctus_seed": 1.0,
+			"pypa_seed": 5.0,
+			"cooked_salmon": 3.0,
+			"liferoot_seed": 1.0,
+			"wood": 20.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 05/27/19",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[0.7569 0.102 0.102]"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 130.75,
+		"arcane": 0.0,
+		"woodcutting": 196.0,
+		"smithing": 20.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 5.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 24.0,
+		"smithing1": 2.0,
+		"mining1": 16.0,
+		"general1": 9.0,
+		"woodcutting1": 28.0,
+		"time3": 1.0,
+		"general3": 1.0,
+		"woodcutting2": 2.0,
+		"farming2": 4.0,
+		"general13": 6.0
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_handtorch",
+			"weapon_melee1",
+			"weapon_melee1"
+		],
+		"resources": {
+			"wood": 1.0,
+			"chaos_stone": 1.0,
+			"wheat_seed": 1.0,
+			"tree_seed": 1.0,
+			"perriot_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 07/01/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 406.0,
+		"arcane": 0.0,
+		"woodcutting": 268.0,
+		"smithing": 36.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 385.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 4.0,
+		"time2": 9.0,
+		"smithing1": 4.0,
+		"time3": 1.0,
+		"general7": 3.0,
+		"woodcutting2": 2.0,
+		"time1": 93.0,
+		"farming2": 28.0,
+		"general2": 25.0,
+		"woodcutting1": 47.0,
+		"general6": 1.0,
+		"general3": 2.0,
+		"general1": 18.0,
+		"farming1": 7.0,
+		"mining1": 60.0
+	}
+}

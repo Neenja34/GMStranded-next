@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"liechi_seed": 2.0,
+			"perriot_seed": 1.0,
+			"moly_seed": 1.0,
+			"pallie_seed": 1.0,
+			"arctus_seed": 1.0,
+			"stone": 12.0,
+			"lum_seed": 1.0,
+			"pypa_seed": 1.0,
+			"void_cache": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 02/22/20",
+	"settings": {
+		"last_daily": 399.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 192.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 13.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 8.0,
+		"general17": 1.0,
+		"mining1": 12.0,
+		"time3": 1.0,
+		"farming2": 8.0
+	}
+}

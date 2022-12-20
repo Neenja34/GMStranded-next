@@ -1,0 +1,53 @@
+{
+	"gtokens": {
+		"tokens": 7.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"afk10": true,
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 0.0,
+			"liechi_seed": 1.0,
+			"wheat": 1.0,
+			"wheat_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 09/29/19",
+	"settings": {
+		"last_daily": 559.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 40.0,
+		"arcane": 0.0,
+		"woodcutting": 132.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 17.0,
+		"farming": 39.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 2.0,
+		"time2": 22.0,
+		"time3": 1.0,
+		"general7": 2.0,
+		"farming2": 18.0,
+		"general2": 3.0,
+		"woodcutting1": 25.0,
+		"construction1": 4.0,
+		"time1": 50.0,
+		"general1": 20.0,
+		"mining1": 1.0,
+		"general13": 7.0
+	}
+}

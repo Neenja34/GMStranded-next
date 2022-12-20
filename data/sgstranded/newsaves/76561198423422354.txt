@@ -1,0 +1,55 @@
+{
+	"gtokens": {
+		"tokens": 5.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1"
+		],
+		"resources": {
+			"wood": 1.0,
+			"wheat_seed": 2.0,
+			"stone": 3.0,
+			"guacca_seed": 2.0,
+			"pypa_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 06/29/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 93.0,
+		"arcane": 0.0,
+		"woodcutting": 265.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 36.0,
+		"farming": 62.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 21.0,
+		"farming1": 2.0,
+		"smithing1": 1.0,
+		"woodcutting2": 3.0,
+		"mining1": 14.0,
+		"general1": 5.0,
+		"farming2": 6.0,
+		"woodcutting1": 45.0,
+		"bloodmoon1": 1.0,
+		"construction3": 3.0,
+		"time3": 3.0,
+		"general2": 2.0,
+		"general13": 5.0
+	}
+}

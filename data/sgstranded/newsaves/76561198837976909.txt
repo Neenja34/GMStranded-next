@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"weapon_melee1"
+		],
+		"resources": {
+			"wood": 1.0,
+			"emerald": 1.0,
+			"wheat_seed": 2.0,
+			"pypa_seed": 2.0,
+			"moly_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 07/24/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 1121.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 378.0,
+		"smithing": 20.0,
+		"cooking": 0.0,
+		"construction": 19.0,
+		"farming": 11.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 22.0,
+		"smithing1": 2.0,
+		"time3": 2.0,
+		"general1": 4.0,
+		"woodcutting1": 49.0,
+		"general6": 1.0,
+		"construction3": 1.0,
+		"farming2": 7.0,
+		"woodcutting2": 3.0,
+		"general5": 1.0
+	}
+}

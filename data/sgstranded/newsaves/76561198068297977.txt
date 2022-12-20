@@ -1,0 +1,65 @@
+{
+	"gtokens": {
+		"tokens": 15.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 0.0,
+			"guacca_seed": 0.0,
+			"liferoot_seed": 0.0,
+			"cooked_herring": 0.0,
+			"lum_seed": 0.0,
+			"fire_stone": 2.0,
+			"pypa_seed": 0.0,
+			"stone": 0.0,
+			"iron_ore": 11.0,
+			"wheat_seed": 0.0,
+			"moly_seed": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 05/19/19",
+	"settings": {
+		"health": 80.0,
+		"playercolor": "[0.9216 0 0]",
+		"foragetoggle": true
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 2542.0,
+		"arcane": 0.0,
+		"woodcutting": 50.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 212.0,
+		"farming": 53.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 43.0,
+		"general13": 15.0,
+		"general2": 10.0,
+		"smithing1": 3.0,
+		"time3": 1.0,
+		"mining7": 5.0,
+		"mining1": 234.0,
+		"general1": 12.0,
+		"farming2": 7.0,
+		"construction3": 3.0,
+		"mining2": 11.0,
+		"construction1": 16.0,
+		"general3": 1.0,
+		"woodcutting1": 9.0,
+		"general5": 1.0,
+		"general8": 1.0
+	}
+}

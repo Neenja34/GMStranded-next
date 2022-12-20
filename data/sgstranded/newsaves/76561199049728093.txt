@@ -1,0 +1,49 @@
+{
+	"gtokens": {
+		"tokens": 5.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"lum_seed": 1.0,
+			"wheat_seed": 2.0,
+			"stone": 26.0,
+			"liferoot_seed": 1.0,
+			"red_apple": 0.0,
+			"wood": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 08/19/22",
+	"settings": {
+		"last_daily": 575.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 213.0,
+		"arcane": 0.0,
+		"woodcutting": 60.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 6.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 11.0,
+		"farming2": 4.0,
+		"woodcutting1": 10.0,
+		"general1": 11.0,
+		"construction3": 1.0,
+		"mining1": 32.0,
+		"time3": 1.0,
+		"general13": 5.0
+	}
+}

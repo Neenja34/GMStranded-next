@@ -1,0 +1,60 @@
+{
+	"gtokens": {
+		"tokens": 57681.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"treasurehat2": true,
+		"welcome": true,
+		"relic1": true,
+		"die1": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"pcache2": [],
+		"tools": [],
+		"resources": {
+			"wood": 33.0,
+			"wheat": 6.0,
+			"guacca_seed": 1.0,
+			"gms_pcache2": 0.0,
+			"chaos_stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 08/19/22",
+	"settings": {
+		"last_daily": 409.0,
+		"grindmode": "off",
+		"health": 100.0,
+		"playercolor": "[0 0 0]",
+		"person": "third",
+		"foragetoggle": false
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 116.0,
+		"arcane": 0.0,
+		"woodcutting": 313.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 162.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"general10": 1.0,
+		"general2": 3.0,
+		"time3": 1.0,
+		"general14": 2075.0,
+		"farming2": 4.0,
+		"woodcutting1": 33.0,
+		"general11": 1.0,
+		"general1": 29.0,
+		"time1": 38.0,
+		"woodcutting2": 3.0,
+		"general13": 6.0
+	}
+}

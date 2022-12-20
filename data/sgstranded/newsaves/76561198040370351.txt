@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"nomelon": true,
+		"die1": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"weapon_melee1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Wednesday 02/02/22",
+	"settings": {
+		"last_daily": 671.0,
+		"health": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 54.0,
+		"mining": 67.0,
+		"arcane": 0.0,
+		"woodcutting": 173.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 13.0,
+		"general2": 6.0,
+		"smithing1": 2.0,
+		"time3": 1.0,
+		"fishing1": 3.0,
+		"fishing2": 5.0,
+		"farming2": 6.0,
+		"woodcutting1": 30.0,
+		"woodcutting2": 1.0,
+		"combat2": 1.0,
+		"mining1": 8.0,
+		"general5": 1.0
+	}
+}

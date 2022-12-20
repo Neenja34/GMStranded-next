@@ -1,0 +1,53 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Wednesday 03/20/19",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[0 0 0]"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 90.0,
+		"mining": 9.0,
+		"arcane": 0.0,
+		"woodcutting": 318.0,
+		"smithing": 16.0,
+		"cooking": 36.0,
+		"construction": 14.0,
+		"farming": 10.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"cooking1": 2.0,
+		"general2": 1.0,
+		"smithing1": 2.0,
+		"time3": 1.0,
+		"combat6": 1.0,
+		"construction1": 4.0,
+		"time1": 60.0,
+		"woodcutting2": 3.0,
+		"combat5": 2.0,
+		"general5": 3.0,
+		"cooking5": 3.0,
+		"general1": 20.0,
+		"mining1": 1.0,
+		"woodcutting1": 47.0,
+		"general6": 2.0,
+		"general3": 3.0,
+		"fishing1": 5.0,
+		"farming2": 10.0,
+		"cooking9": 2.0
+	}
+}

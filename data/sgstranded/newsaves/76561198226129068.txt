@@ -1,0 +1,94 @@
+{
+	"gtokens": {
+		"tokens": 41.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"bloodchampion1": true,
+		"craft10": true,
+		"craft1": true,
+		"antlion10": true,
+		"woodf10": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"gms_hatchet1",
+			"weapon_melee1",
+			"gms_hoe1",
+			"gms_pickaxe1",
+			"gms_hatchet1",
+			"gms_fishingrod1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 8.0,
+			"cooked_trout": 0.0,
+			"guacca_seed": 1.0,
+			"pypa_seed": 1.0,
+			"antlion_meat": 2.0,
+			"smithing_relic_2": 1.0,
+			"wheat": 1.0,
+			"lum_seed": 1.0,
+			"antlion_leg": 6.0,
+			"trout": 0.0,
+			"unidentified_artifact": 1.0,
+			"stone": 63.0,
+			"chaos_stone": 2.0,
+			"antlion_head": 4.0,
+			"void_cache": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 01/22/22",
+	"settings": {
+		"health": 104.0,
+		"last_daily": 432.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 90.0,
+		"mining": 1215.0,
+		"arcane": 0.0,
+		"woodcutting": 1030.0,
+		"smithing": 88.0,
+		"cooking": 18.0,
+		"construction": 59.0,
+		"farming": 47.0,
+		"combat": 748.0
+	},
+	"stats": {
+		"cooking1": 1.0,
+		"combat8": 5.0,
+		"smithing1": 11.0,
+		"time3": 4.0,
+		"bloodmoon2": 3.0,
+		"fishing1": 5.0,
+		"construction1": 1.0,
+		"construction3": 4.0,
+		"general8": 1.0,
+		"time1": 65.0,
+		"general17": 1.0,
+		"farming2": 23.0,
+		"general5": 2.0,
+		"woodcutting2": 11.0,
+		"general13": 41.0,
+		"bloodmoon1": 1.0,
+		"combat1": 10.0,
+		"general1": 41.0,
+		"fishing2": 9.0,
+		"woodcutting1": 155.0,
+		"general6": 1.0,
+		"general3": 1.0,
+		"general2": 2.0,
+		"mining1": 160.0,
+		"cooking9": 1.0
+	}
+}

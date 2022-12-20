@@ -1,0 +1,42 @@
+{
+	"gtokens": {
+		"tokens": 52.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"stone": 43.0,
+			"marshmallow_peeps": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 11/29/20",
+	"settings": {
+		"last_daily": 437.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 293.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 9.0,
+		"general1": 1.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"mining1": 43.0,
+		"general13": 2.0
+	}
+}

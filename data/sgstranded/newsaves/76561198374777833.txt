@@ -1,0 +1,57 @@
+{
+	"gtokens": {
+		"tokens": 34.0
+	},
+	"achievements": {
+		"forage50": true,
+		"die1": true,
+		"welcome": true,
+		"thirsty10": true,
+		"gtoken1": true,
+		"ored10": true,
+		"time1": true,
+		"afk10": true,
+		"forage500": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Sunday 01/09/22",
+	"settings": {
+		"last_daily": 1414.0,
+		"health": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 4517.0,
+		"arcane": 0.0,
+		"woodcutting": 366.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 786.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 112.0,
+		"general10": 1.0,
+		"time2": 31.0,
+		"woodcutting2": 5.0,
+		"mining1": 23.0,
+		"general7": 5.0,
+		"time3": 1.0,
+		"mining7": 10.0,
+		"farming2": 667.0,
+		"general5": 8.0,
+		"mining2": 3.0,
+		"bloodmoon1": 1.0,
+		"general6": 2.0,
+		"woodcutting1": 33.0,
+		"general1": 22.0,
+		"general13": 34.0
+	}
+}

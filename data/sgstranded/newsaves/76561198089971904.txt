@@ -1,0 +1,68 @@
+{
+	"gtokens": {
+		"tokens": 28.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"gtoken1": true,
+		"welcome": true,
+		"bloodchampion1": true,
+		"time1": true,
+		"relic1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 29.0,
+			"black_pet_egg": 1.0,
+			"liferoot_seed": 3.0,
+			"farming_relic_1": 0.0,
+			"jelly_beans": 1.0,
+			"fishing_relic_1": 0.0,
+			"pypa_seed": 7.0,
+			"stone": 13.0,
+			"iron_ore": 33.0,
+			"farming_relic_2": 0.0,
+			"void_cache": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 12/17/21",
+	"settings": {
+		"last_daily": 856.0,
+		"health": 30.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 96.0,
+		"mining": 2868.0,
+		"arcane": 0.0,
+		"woodcutting": 311.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 447.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 1.0,
+		"time3": 1.0,
+		"mining7": 3.0,
+		"farming2": 13.0,
+		"general11": 3.0,
+		"general13": 28.0,
+		"time1": 77.0,
+		"woodcutting2": 2.0,
+		"general17": 1.0,
+		"general1": 41.0,
+		"general5": 1.0,
+		"woodcutting1": 53.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"general8": 1.0,
+		"mining1": 108.0,
+		"mining2": 33.0
+	}
+}

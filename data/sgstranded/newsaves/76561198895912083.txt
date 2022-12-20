@@ -1,0 +1,44 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cosmic_stone": 5.0,
+			"arctus_seed": 1.0,
+			"pypa_seed": 2.0,
+			"wheat_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 08/26/19",
+	"settings": {
+		"health": 54.0,
+		"last_daily": 258.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 2.0,
+		"general2": 2.0,
+		"time3": 3.0,
+		"time1": 4.0,
+		"general1": 10.0
+	}
+}

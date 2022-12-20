@@ -1,0 +1,61 @@
+{
+	"gtokens": {
+		"tokens": 4.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true,
+		"craft1": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"wood": 5.0,
+			"gms_firework_rainbow": 2.0,
+			"wheat_seed": 7.0,
+			"liechi_seed": 3.0,
+			"liferoot_seed": 1.0,
+			"perriot_seed": 1.0,
+			"chaos_stone": 2.0,
+			"fire_stone": 3.0,
+			"mining_relic_1": 1.0,
+			"pypa_seed": 5.0,
+			"white_pet_egg": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 07/11/21",
+	"settings": {
+		"last_daily": 873.0,
+		"health": 27.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 868.0,
+		"arcane": 0.0,
+		"woodcutting": 619.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 19.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 17.0,
+		"smithing1": 1.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"general1": 7.0,
+		"general15": 1.0,
+		"woodcutting1": 32.0,
+		"bloodmoon1": 1.0,
+		"construction3": 1.0,
+		"farming2": 17.0,
+		"woodcutting2": 6.0,
+		"general13": 4.0
+	}
+}

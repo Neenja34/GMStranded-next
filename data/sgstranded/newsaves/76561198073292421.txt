@@ -1,0 +1,48 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"berries10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"pypa_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 06/24/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 198.0,
+		"arcane": 0.0,
+		"woodcutting": 201.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 22.0,
+		"farming": 261.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 36.0,
+		"general2": 26.0,
+		"mining1": 28.0,
+		"general4": 1.0,
+		"time3": 2.0,
+		"farming2": 36.0,
+		"general9": 1.0,
+		"woodcutting1": 31.0,
+		"general1": 11.0,
+		"woodcutting2": 2.0,
+		"farming1": 6.0,
+		"construction1": 1.0,
+		"general5": 1.0
+	}
+}

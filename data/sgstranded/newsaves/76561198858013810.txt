@@ -1,0 +1,93 @@
+{
+	"gtokens": {
+		"tokens": 187.0
+	},
+	"achievements": {
+		"time1": true,
+		"time2": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_seedextractor",
+			"gms_hoe3",
+			"gms_sifter2",
+			"weapon_melee1"
+		],
+		"resources": {
+			"wood": 3.0,
+			"iron_ore": 0.0,
+			"iron": 85.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 03/11/19",
+	"settings": {
+		"health": 128.0,
+		"hidefromteam": "off",
+		"person": "first",
+		"showlights": "true",
+		"showfar": "false",
+		"melonaids": -1.0,
+		"grindmode": "off",
+		"showparticles": "false",
+		"foragetoggle": false
+	},
+	"experience": {
+		"alchemy": 7.2,
+		"fishing": 18.0,
+		"mining": 18039.6,
+		"arcane": 0.0,
+		"woodcutting": 13634.8,
+		"smithing": 14363.0,
+		"cooking": 0.0,
+		"construction": 11976.2,
+		"farming": 8301.8,
+		"combat": 1140.0
+	},
+	"stats": {
+		"general15": 5.0,
+		"combat8": 20.0,
+		"time3": 7.0,
+		"bloodmoon2": 11.0,
+		"general14": 75.0,
+		"general9": 3.0,
+		"construction3": 99.0,
+		"general8": 1.0,
+		"woodcutting2": 145.0,
+		"general7": 1.0,
+		"bloodmoon1": 7.0,
+		"cooking9": 6.0,
+		"mining3": 46.0,
+		"bloodmoon3": 4.0,
+		"farming1": 160.0,
+		"smithing1": 136.0,
+		"smithing2": 3024.0,
+		"mining7": 73.0,
+		"alchemy2": 2.0,
+		"time2": 433.0,
+		"construction1": 135.0,
+		"smithing4": 1.0,
+		"general17": 2.0,
+		"mining8": 2.0,
+		"mining2": 757.0,
+		"smithing3": 352.0,
+		"farming3": 2.0,
+		"general13": 262.0,
+		"general5": 13.0,
+		"alchemy1": 2.0,
+		"construction2": 79.0,
+		"cooking1": 6.0,
+		"mining1": 1254.0,
+		"general2": 213.0,
+		"general4": 9.0,
+		"fishing2": 1.0,
+		"general1": 257.0,
+		"bloodmoon4": 1.0,
+		"woodcutting1": 2285.0,
+		"farming2": 155.0,
+		"general3": 30.0,
+		"fishing1": 1.0,
+		"time1": 772.0,
+		"combat5": 1.0
+	}
+}

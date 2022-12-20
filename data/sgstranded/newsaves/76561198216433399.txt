@@ -1,0 +1,55 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"melon": true,
+		"berries10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"ruby": 1.0,
+			"stone": 5.0,
+			"guacca_seed": 5.0,
+			"pypa_seed": 6.0,
+			"the_cure": 1.0,
+			"liferoot_seed": 2.0,
+			"wheat_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 07/31/19",
+	"settings": {
+		"melonaids": 4.0,
+		"last_daily": 726.0,
+		"grindmode": "on",
+		"health": 50.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"foragetoggle": true
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 38.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 5.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 5.0,
+		"time1": 14.0,
+		"general2": 10.0,
+		"time3": 1.0,
+		"mining1": 5.0,
+		"general1": 7.0,
+		"general4": 2.0,
+		"general3": 1.0
+	}
+}

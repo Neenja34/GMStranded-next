@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 17.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 14.0,
+			"brown_pet_egg": 1.0,
+			"karopa_seed": 1.0,
+			"pypa_seed": 2.0,
+			"liechi_seed": 2.0,
+			"liferoot_seed": 1.0,
+			"stone": 19.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 09/25/19",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 603.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 131.0,
+		"arcane": 0.0,
+		"woodcutting": 91.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 8.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 11.0,
+		"general1": 3.0,
+		"woodcutting1": 14.0,
+		"time3": 2.0,
+		"mining1": 19.0,
+		"farming2": 6.0,
+		"general15": 1.0,
+		"general13": 9.0
+	}
+}

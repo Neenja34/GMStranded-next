@@ -1,0 +1,69 @@
+{
+	"gtokens": {
+		"tokens": 8.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"gtoken1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"relic1": true,
+		"time1": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"gms_firework_purple": 1.0,
+			"wheat": 3.0,
+			"wheat_seed": 3.0,
+			"unidentified_artifact": 1.0,
+			"cooked_herring": 3.0,
+			"chaos_stone": 4.0,
+			"karopa_seed": 1.0,
+			"pypa_seed": 7.0,
+			"stone": 11.0,
+			"guacca_seed": 6.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 07/29/19",
+	"settings": {
+		"showlights": "false",
+		"last_daily": 171.0,
+		"grindmode": "on",
+		"health": 104.0,
+		"person": "first",
+		"foragetoggle": false
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 2212.0,
+		"arcane": 0.0,
+		"woodcutting": 878.0,
+		"smithing": 96.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 114.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 63.0,
+		"general2": 17.0,
+		"general5": 1.0,
+		"woodcutting2": 9.0,
+		"general7": 1.0,
+		"general1": 21.0,
+		"time3": 1.0,
+		"farming2": 8.0,
+		"general11": 1.0,
+		"woodcutting1": 93.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"mining1": 18.0,
+		"mining7": 4.0,
+		"general13": 8.0
+	}
+}

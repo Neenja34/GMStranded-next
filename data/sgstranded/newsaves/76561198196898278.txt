@@ -1,0 +1,64 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"weapon_melee1",
+			"gms_pickaxe1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 5.0,
+			"chaos_stone": 1.0,
+			"cooked_trout": 5.0,
+			"stone": 3.0,
+			"trout": 0.0,
+			"red_apple": 0.0,
+			"unidentified_artifact": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/09/19",
+	"settings": {
+		"health": 16.0,
+		"foragetoggle": true
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 18.0,
+		"mining": 298.0,
+		"arcane": 0.0,
+		"woodcutting": 668.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 21.0,
+		"mining1": 3.0,
+		"woodcutting1": 105.0,
+		"time3": 1.0,
+		"general3": 1.0,
+		"woodcutting2": 5.0,
+		"fishing1": 1.0,
+		"general1": 7.0
+	}
+}

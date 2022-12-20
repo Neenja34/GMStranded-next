@@ -1,0 +1,63 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"craft1": true,
+		"welcome": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"wheat_seed": 2.0,
+			"liechi_seed": 1.0,
+			"gms_workbench": 1.0,
+			"trout": 1.0,
+			"tree_seed": 1.0,
+			"pypa_seed": 6.0,
+			"earth_stone": 1.0,
+			"red_apple": 1.0,
+			"stone": 10.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 07/27/19",
+	"settings": {
+		"last_daily": 963.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 36.0,
+		"mining": 152.0,
+		"arcane": 0.0,
+		"woodcutting": 206.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 21.0,
+		"farming": 9.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 21.0,
+		"smithing1": 1.0,
+		"mining1": 21.0,
+		"time3": 1.0,
+		"fishing1": 2.0,
+		"fishing2": 1.0,
+		"general1": 15.0,
+		"woodcutting2": 4.0,
+		"woodcutting1": 35.0,
+		"general6": 1.0,
+		"construction3": 2.0,
+		"farming2": 11.0,
+		"bloodmoon1": 1.0,
+		"general5": 1.0
+	}
+}

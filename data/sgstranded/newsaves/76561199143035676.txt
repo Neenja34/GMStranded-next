@@ -1,0 +1,59 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"die1": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 2.0,
+			"wheat": 10.0,
+			"guacca_seed": 2.0,
+			"liechi_seed": 2.0,
+			"liferoot_seed": 1.0,
+			"karopa_seed": 1.0,
+			"pypa_seed": 5.0,
+			"wheat_seed": 3.0,
+			"aid_pack": 2.0,
+			"stone": 9.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 08/29/21",
+	"settings": {
+		"last_daily": 150.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 434.0,
+		"arcane": 0.0,
+		"woodcutting": 125.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 59.0,
+		"farming": 308.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 2.0,
+		"time3": 1.0,
+		"general7": 1.0,
+		"general1": 12.0,
+		"mining1": 61.0,
+		"farming2": 13.0,
+		"time1": 33.0,
+		"woodcutting1": 18.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"construction3": 1.0,
+		"general6": 1.0,
+		"construction1": 6.0
+	}
+}

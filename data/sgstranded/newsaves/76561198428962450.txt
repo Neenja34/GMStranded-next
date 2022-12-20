@@ -1,0 +1,72 @@
+{
+	"gtokens": {
+		"tokens": 119.0
+	},
+	"achievements": {
+		"melon": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"thirsty10": true,
+		"ored10": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"guacca_seed": 0.0,
+			"inert_stone": 0.0,
+			"liechi_seed": 0.0,
+			"wheat_seed": 0.0,
+			"quest_token": 0.0,
+			"wind_stone": 0.0,
+			"unidentified_artifact": 0.0,
+			"pallie_seed": 0.0,
+			"stone": 0.0,
+			"construction_relic_2": 0.0,
+			"water_stone": 0.0,
+			"arctus_seed": 0.0,
+			"pypa_seed": 2.0,
+			"iron_ore": 0.0,
+			"iron": 0.0,
+			"earth_stone": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 06/13/20",
+	"settings": {
+		"health": 50.0,
+		"last_daily": 830.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 4228.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 20.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 47.0,
+		"general2": 40.0,
+		"mining1": 533.0,
+		"mining7": 15.0,
+		"general4": 2.0,
+		"farming2": 20.0,
+		"general1": 10.0,
+		"time3": 1.0,
+		"mining2": 117.0,
+		"alchemy2": 1.0,
+		"general3": 1.0,
+		"general7": 1.0,
+		"general5": 1.0,
+		"general13": 19.0
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"stone": 12.0,
+			"marshmallow_peeps": 5.0,
+			"wind_stone": 1.0,
+			"pallie_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 08/26/21",
+	"settings": {
+		"last_daily": 532.0,
+		"grindmode": "on",
+		"health": 100.0,
+		"showparticles": "true",
+		"foragetoggle": false
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 215.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 2.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 1.0,
+		"time3": 1.0,
+		"mining1": 12.0,
+		"general1": 10.0,
+		"time1": 10.0
+	}
+}

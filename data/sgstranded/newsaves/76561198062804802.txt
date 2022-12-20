@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"berries10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 31.0,
+			"ruby": 1.0,
+			"guacca_seed": 4.0,
+			"liechi_seed": 4.0,
+			"moly_seed": 2.0,
+			"lum_seed": 1.0,
+			"arctus_seed": 3.0,
+			"karopa_seed": 3.0,
+			"stone": 22.0,
+			"pypa_seed": 13.0,
+			"tree_seed": 1.0,
+			"wheat_seed": 3.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 04/19/20",
+	"settings": {
+		"last_daily": 809.0,
+		"health": 81.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 191.0,
+		"arcane": 0.0,
+		"woodcutting": 213.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 413.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 30.0,
+		"time1": 16.0,
+		"farming1": 13.0,
+		"general1": 6.0,
+		"time3": 1.0,
+		"mining1": 22.0,
+		"woodcutting1": 31.0,
+		"general2": 15.0
+	}
+}

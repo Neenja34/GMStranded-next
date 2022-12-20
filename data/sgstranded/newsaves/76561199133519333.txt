@@ -1,0 +1,41 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"lum_seed": 0.0,
+			"liechi_seed": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 06/07/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 829.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 2.0,
+		"general7": 1.0,
+		"general5": 1.0,
+		"time1": 17.0
+	}
+}

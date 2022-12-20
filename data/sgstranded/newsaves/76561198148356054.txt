@@ -1,0 +1,101 @@
+{
+	"gtokens": {
+		"tokens": 49.0
+	},
+	"achievements": {
+		"time1": true,
+		"bloodchampion1": true,
+		"die1": true,
+		"berries10": true,
+		"afk10": true,
+		"forage50": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"woodf10": true,
+		"craft1": true,
+		"pbrew1": true,
+		"melon": true,
+		"wizzy": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"gms_hoe1",
+			"gms_handtorch",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"cosmic_stone": 1.0,
+			"guacca_seed": 6.0,
+			"liferoot_seed": 6.0,
+			"aid_pack": 0.0,
+			"iron_ore": 0.0,
+			"wood": 47.0,
+			"unidentified_artifact": 1.0,
+			"wind_stone": 1.0,
+			"stone": 53.0,
+			"gms_rcache": 1.0,
+			"gms_workbench": 1.0,
+			"inert_stone": 1.0,
+			"chaos_stone": 3.0,
+			"mining_relic_2": 1.0,
+			"fire_stone": 6.0,
+			"gms_stove": 1.0,
+			"cooked_herring": 0.0,
+			"gms_aidbench": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 07/01/22",
+	"settings": {
+		"last_daily": 1217.0,
+		"showfar": "false",
+		"health": 104.0,
+		"hidefromteam": "off",
+		"foragetoggle": true,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 6.0,
+		"fishing": 0.0,
+		"mining": 2817.0,
+		"arcane": 4.0,
+		"woodcutting": 1743.0,
+		"smithing": 68.0,
+		"cooking": 0.0,
+		"construction": 238.0,
+		"farming": 1109.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"arcane1": 1.0,
+		"farming1": 33.0,
+		"smithing1": 8.0,
+		"time3": 7.0,
+		"mining7": 6.0,
+		"alchemy1": 1.0,
+		"general9": 1.0,
+		"construction3": 9.0,
+		"arcane3": 2.0,
+		"general13": 14.0,
+		"time1": 98.0,
+		"time2": 13.0,
+		"mining1": 277.0,
+		"construction1": 8.0,
+		"general4": 3.0,
+		"general5": 2.0,
+		"general1": 42.0,
+		"mining2": 28.0,
+		"woodcutting1": 293.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"farming2": 53.0,
+		"woodcutting2": 19.0,
+		"general2": 55.0
+	}
+}

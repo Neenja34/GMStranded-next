@@ -1,0 +1,53 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"melon": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 8.0,
+			"karopa_seed": 1.0,
+			"the_cure": 1.0,
+			"wheat_seed": 1.0,
+			"stone": 9.0,
+			"liechi_seed": 1.0,
+			"liferoot_seed": 2.0,
+			"pypa_seed": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 04/10/20",
+	"settings": {
+		"health": 48.0,
+		"last_daily": 626.0,
+		"melonaids": 6.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 115.0,
+		"arcane": 0.0,
+		"woodcutting": 100.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 6.0,
+		"farming": 244.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 12.0,
+		"general2": 7.0,
+		"mining1": 15.0,
+		"general4": 1.0,
+		"general1": 6.0,
+		"woodcutting1": 16.0,
+		"construction3": 1.0,
+		"time3": 1.0,
+		"farming1": 8.0,
+		"farming2": 6.0
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"guacca_seed": 1.0,
+			"liechi_seed": 1.0,
+			"herring": 4.0,
+			"wheat_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 04/01/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 72.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 4.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 3.0,
+		"general2": 4.0,
+		"time3": 1.0,
+		"time1": 15.0,
+		"fishing1": 4.0,
+		"general1": 9.0
+	}
+}

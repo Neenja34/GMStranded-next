@@ -1,0 +1,106 @@
+{
+	"gtokens": {
+		"tokens": 41.0
+	},
+	"achievements": {
+		"time1": true,
+		"gems1": true,
+		"die1": true,
+		"forage50": true,
+		"welcome": true,
+		"woodf10": true,
+		"wizzy": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"burn1": true,
+		"craft1": true,
+		"craft10": true,
+		"relic1": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"ptcache": {
+			"gms_hatchet2": 1.0,
+			"gms_hatchet1": 1.0,
+			"gms_fishingrod2": 1.0,
+			"weapon_melee2": 1.0
+		},
+		"tools": [
+			"weapon_melee1",
+			"gms_handtorch",
+			"gms_hoe1",
+			"gms_pickaxe1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"gms_spawnpoint": 1.0,
+			"sapphire": 1.0,
+			"wheat_seed": 1.0,
+			"liechi_seed": 1.0,
+			"gms_furnace": 1.0,
+			"metal": 22.0,
+			"gms_door2": 1.0,
+			"inert_stone": 3.0,
+			"wood": 1.0,
+			"gms_door1": 1.0,
+			"gms_tcache": 1.0,
+			"wind_stone": 1.0,
+			"gms_workbench": 1.0,
+			"tree_seed": 1.0,
+			"chaos_stone": 1.0,
+			"gms_ptcache": 1.0,
+			"stone": 11.0,
+			"guacca_seed": 1.0,
+			"iron": 27.0,
+			"gms_stove": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 08/13/22",
+	"settings": {
+		"last_daily": 73.0,
+		"health": 108.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 252.0,
+		"mining": 4717.0,
+		"arcane": 80.0,
+		"woodcutting": 3162.0,
+		"smithing": 1804.0,
+		"cooking": 0.0,
+		"construction": 1434.0,
+		"farming": 111.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 2.0,
+		"arcane1": 10.0,
+		"smithing1": 18.0,
+		"time3": 1.0,
+		"mining7": 8.0,
+		"fishing1": 7.0,
+		"construction1": 34.0,
+		"mining8": 1.0,
+		"construction3": 11.0,
+		"arcane3": 20.0,
+		"general13": 41.0,
+		"time1": 121.0,
+		"general17": 1.0,
+		"farming2": 55.0,
+		"woodcutting2": 24.0,
+		"general7": 6.0,
+		"general5": 7.0,
+		"fishing2": 5.0,
+		"general1": 15.0,
+		"mining1": 332.0,
+		"mining2": 64.0,
+		"general6": 1.0,
+		"woodcutting1": 310.0,
+		"smithing2": 203.0,
+		"cooking5": 7.0,
+		"general11": 1.0
+	}
+}

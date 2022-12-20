@@ -1,0 +1,40 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"weapon_melee1"
+		],
+		"resources": {
+			"stone": 3.0,
+			"cooked_swordfish": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/30/19",
+	"settings": {
+		"health": 85.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 14.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 98.0
+	},
+	"stats": {
+		"general1": 7.0,
+		"combat8": 2.0,
+		"general3": 1.0,
+		"mining1": 3.0,
+		"time1": 27.0,
+		"time3": 1.0
+	}
+}

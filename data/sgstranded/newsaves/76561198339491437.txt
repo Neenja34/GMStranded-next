@@ -1,0 +1,41 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"moly_seed": 1.0,
+			"green_pet_egg": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 09/24/21",
+	"settings": {
+		"health": 19.0,
+		"last_daily": 19.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 3.0,
+		"farming2": 1.0,
+		"time1": 29.0,
+		"bloodmoon1": 1.0
+	}
+}

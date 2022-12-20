@@ -1,0 +1,61 @@
+{
+	"gtokens": {
+		"tokens": 3.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 14.0,
+			"bottled_water": 9.0,
+			"wheat_seed": 1.0,
+			"stone": 14.0,
+			"liferoot_seed": 1.0,
+			"guacca_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 03/22/19",
+	"settings": {
+		"health": 77.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 376.0,
+		"arcane": 0.0,
+		"woodcutting": 395.0,
+		"smithing": 32.0,
+		"cooking": 0.0,
+		"construction": 36.0,
+		"farming": 101.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 18.0,
+		"smithing1": 4.0,
+		"time3": 3.0,
+		"farming2": 37.0,
+		"construction3": 2.0,
+		"farming3": 2.0,
+		"general13": 3.0,
+		"time1": 51.0,
+		"woodcutting2": 5.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"general1": 13.0,
+		"woodcutting1": 66.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"mining1": 52.0,
+		"general5": 2.0
+	}
+}

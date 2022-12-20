@@ -1,0 +1,96 @@
+{
+	"gtokens": {
+		"tokens": 25.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"bloodchampion1": true,
+		"craft1": true,
+		"losefish10": true,
+		"burn1": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"gms_firework_rainbow": 1.0,
+			"cooked_trout": 1.0,
+			"guacca_seed": 3.0,
+			"brown_pet_egg": 1.0,
+			"liechi_seed": 3.0,
+			"liferoot_seed": 1.0,
+			"moly_seed": 1.0,
+			"arctus_seed": 3.0,
+			"tree_seed": 1.0,
+			"wood": 3.0,
+			"pypa_seed": 1.0,
+			"trout": 0.0,
+			"green_pet_egg": 1.0,
+			"cooked_herring": 0.0,
+			"stone": 16.0,
+			"chaos_stone": 1.0,
+			"lum_seed": 3.0,
+			"earth_stone": 3.0,
+			"marshmallow_peeps": 9.0,
+			"red_apple": 1.0,
+			"wheat_seed": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 05/16/20",
+	"settings": {
+		"last_daily": 495.0,
+		"health": 95.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 288.0,
+		"mining": 881.0,
+		"arcane": 0.0,
+		"woodcutting": 988.0,
+		"smithing": 48.0,
+		"cooking": 108.0,
+		"construction": 182.0,
+		"farming": 522.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"farming1": 17.0,
+		"smithing1": 5.0,
+		"general17": 1.0,
+		"mining7": 1.0,
+		"fishing1": 16.0,
+		"construction1": 11.0,
+		"construction3": 6.0,
+		"general2": 29.0,
+		"general13": 25.0,
+		"time1": 100.0,
+		"farming2": 25.0,
+		"time3": 1.0,
+		"fishing2": 12.0,
+		"woodcutting2": 9.0,
+		"general7": 1.0,
+		"bloodmoon1": 1.0,
+		"cooking5": 10.0,
+		"general1": 29.0,
+		"mining1": 119.0,
+		"woodcutting1": 162.0,
+		"general6": 1.0,
+		"general3": 3.0,
+		"general5": 2.0,
+		"cooking1": 6.0,
+		"cooking9": 6.0
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"gtokens": {
+		"tokens": 4.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_hatchet2",
+			"weapon_melee2",
+			"gms_hoe1",
+			"gms_fishingrod1",
+			"gms_pickaxe2"
+		],
+		"resources": {
+			"gummy_bears": 5.0,
+			"red_liquorice": 0.0,
+			"wheat_seed": 1.0,
+			"stone": 13.0,
+			"marshmallow_peeps": 4.0,
+			"liferoot_seed": 1.0,
+			"perriot_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 12/22/20",
+	"settings": {
+		"health": 78.0,
+		"playercolor": "[0.8314 0 1]",
+		"last_daily": 1274.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 70.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 6.2,
+		"combat": 0.0
+	},
+	"stats": {
+		"general1": 26.0,
+		"farming2": 3.0,
+		"general2": 1.0,
+		"time1": 26.0,
+		"mining1": 13.0,
+		"general5": 1.0,
+		"time3": 1.0,
+		"general8": 1.0
+	}
+}

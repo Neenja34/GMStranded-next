@@ -1,0 +1,67 @@
+{
+	"gtokens": {
+		"tokens": 1.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_hoe1",
+			"gms_fishingrod1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 5.0,
+			"cooked_trout": 1.0,
+			"guacca_seed": 1.0,
+			"liechi_seed": 2.0,
+			"unidentified_artifact": 1.0,
+			"water_stone": 1.0,
+			"lum_seed": 1.0,
+			"wheat_seed": 4.0,
+			"chaos_stone": 1.0,
+			"karopa_seed": 1.0,
+			"stone": 15.0,
+			"gms_firework_green": 1.0,
+			"red_apple": 1.0,
+			"pypa_seed": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 03/18/19",
+	"settings": {
+		"health": 37.0,
+		"melonaids": 3.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 405.0,
+		"arcane": 0.0,
+		"woodcutting": 518.0,
+		"smithing": 56.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 253.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 12.0,
+		"smithing1": 7.0,
+		"time3": 1.0,
+		"farming2": 14.0,
+		"construction3": 1.0,
+		"general13": 1.0,
+		"time1": 25.0,
+		"time2": 26.0,
+		"mining1": 57.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"general1": 11.0,
+		"woodcutting1": 84.0,
+		"bloodmoon1": 1.0,
+		"farming1": 8.0,
+		"woodcutting2": 2.0,
+		"general5": 1.0
+	}
+}

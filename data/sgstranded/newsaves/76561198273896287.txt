@@ -1,0 +1,62 @@
+{
+	"gtokens": {
+		"tokens": 3.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 1.0,
+			"wheat_seed": 2.0,
+			"liechi_seed": 1.0,
+			"perriot_seed": 1.0,
+			"lum_seed": 1.0,
+			"wind_stone": 1.0,
+			"cosmic_stone": 1.0,
+			"pypa_seed": 2.0,
+			"guacca_seed": 2.0,
+			"moly_seed": 1.0,
+			"stone": 6.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 11/06/20",
+	"settings": {
+		"foragetoggle": false,
+		"last_daily": 640.0,
+		"grindmode": "on",
+		"health": 100.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"showfar": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 80.0,
+		"arcane": 0.0,
+		"woodcutting": 359.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 16.0,
+		"farming": 11.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 12.0,
+		"general2": 7.0,
+		"woodcutting2": 2.0,
+		"time2": 1.0,
+		"construction1": 3.0,
+		"mining1": 12.0,
+		"woodcutting1": 16.0,
+		"general1": 2.0,
+		"construction3": 1.0,
+		"time3": 1.0,
+		"farming2": 6.0,
+		"general13": 3.0
+	}
+}

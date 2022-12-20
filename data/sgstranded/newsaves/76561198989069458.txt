@@ -1,0 +1,51 @@
+{
+	"gtokens": {
+		"tokens": 12.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"die1": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"pypa_seed": 1.0,
+			"gummy_bears": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 05/18/21",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[1 0 0]",
+		"last_daily": 520.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 412.0,
+		"arcane": 0.0,
+		"woodcutting": 215.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 19.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 73.0,
+		"general2": 3.0,
+		"mining1": 30.0,
+		"general7": 1.0,
+		"general1": 37.0,
+		"woodcutting1": 28.0,
+		"general6": 3.0,
+		"general5": 4.0,
+		"farming2": 24.0,
+		"time3": 3.0,
+		"woodcutting2": 2.0
+	}
+}

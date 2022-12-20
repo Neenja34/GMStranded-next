@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"secretworld": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Saturday 12/26/20",
+	"settings": {
+		"last_daily": 355.0,
+		"health": 100.0,
+		"playercolor": "[0.1137 0 0.6392]",
+		"showparticles": "true",
+		"foragetoggle": true
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 106.0,
+		"arcane": 0.0,
+		"woodcutting": 187.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 12.0,
+		"farming": 28.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 37.0,
+		"general2": 2.0,
+		"time3": 1.0,
+		"farming2": 24.0,
+		"woodcutting2": 2.0,
+		"general1": 4.0,
+		"mining1": 13.0,
+		"woodcutting1": 32.0,
+		"general6": 1.0,
+		"construction3": 1.0,
+		"general3": 1.0,
+		"construction1": 3.0,
+		"general5": 2.0
+	}
+}

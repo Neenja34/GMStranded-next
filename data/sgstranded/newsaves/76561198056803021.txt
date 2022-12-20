@@ -1,0 +1,44 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 26.0,
+			"liechi_seed": 5.0,
+			"pypa_seed": 3.0,
+			"guacca_seed": 3.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 07/23/19",
+	"settings": {
+		"health": 100.0,
+		"playercolor": "[0.2471 0 0.498]",
+		"last_daily": 228.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 160.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 8.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 4.0,
+		"woodcutting1": 26.0,
+		"woodcutting2": 2.0,
+		"general2": 8.0,
+		"farming2": 5.0,
+		"time3": 1.0
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"berries10": true,
+		"die1": true,
+		"wizzy": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Monday 06/27/22",
+	"settings": {
+		"melonaids": 0.0,
+		"showlights": "false",
+		"last_daily": 290.0,
+		"grindmode": "on",
+		"health": 100.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"showfar": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 1022.0,
+		"arcane": 4.0,
+		"woodcutting": 90.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 2.0,
+		"farming": 86.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 33.0,
+		"arcane1": 1.0,
+		"general2": 25.0,
+		"woodcutting2": 1.0,
+		"mining7": 1.0,
+		"construction1": 1.0,
+		"time3": 6.0,
+		"farming2": 38.0,
+		"mining1": 8.0,
+		"woodcutting1": 11.0,
+		"general1": 1.0,
+		"general3": 1.0,
+		"arcane3": 2.0,
+		"general7": 1.0,
+		"general5": 1.0
+	}
+}

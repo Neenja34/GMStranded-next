@@ -1,0 +1,81 @@
+{
+	"gtokens": {
+		"tokens": 61.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_grindingstone",
+			"gms_hatchet1",
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_hoe1",
+			"weapon_melee1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Thursday 04/04/19",
+	"settings": {
+		"health": 112.0,
+		"grindmode": "off",
+		"melonaids": -1.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"showfar": "true"
+	},
+	"experience": {
+		"alchemy": 16.0,
+		"fishing": 342.0,
+		"mining": 6787.0,
+		"arcane": 0.0,
+		"woodcutting": 2970.0,
+		"smithing": 1282.0,
+		"cooking": 322.0,
+		"construction": 476.0,
+		"farming": 949.0,
+		"combat": 494.0
+	},
+	"stats": {
+		"general2": 31.0,
+		"time3": 3.0,
+		"general9": 1.0,
+		"general11": 3.0,
+		"construction3": 6.0,
+		"general8": 1.0,
+		"woodcutting2": 24.0,
+		"general7": 2.0,
+		"combat1": 3.0,
+		"general6": 1.0,
+		"combat2": 1.0,
+		"cooking9": 19.0,
+		"cooking1": 17.0,
+		"farming1": 21.0,
+		"smithing1": 47.0,
+		"mining7": 15.0,
+		"smithing3": 23.0,
+		"farming2": 119.0,
+		"fishing1": 19.0,
+		"alchemy2": 2.0,
+		"farming3": 1.0,
+		"general13": 61.0,
+		"general5": 6.0,
+		"cooking4": 2.0,
+		"time2": 19.0,
+		"alchemy1": 2.0,
+		"mining1": 226.0,
+		"smithing4": 40.0,
+		"general4": 2.0,
+		"cooking5": 3.0,
+		"general1": 38.0,
+		"fishing2": 4.0,
+		"woodcutting1": 375.0,
+		"mining2": 103.0,
+		"general3": 5.0,
+		"smithing2": 116.0,
+		"time1": 204.0,
+		"construction1": 3.0
+	}
+}

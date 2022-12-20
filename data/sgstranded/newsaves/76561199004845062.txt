@@ -1,0 +1,45 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_pickaxe1",
+			"weapon_melee1",
+			"gms_hatchet1",
+			"gms_hoe1"
+		],
+		"resources": {
+			"cooked_shark": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 03/28/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 1382.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 4.0,
+		"time1": 27.0,
+		"general1": 11.0
+	}
+}

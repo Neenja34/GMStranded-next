@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 44.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 3.0,
+			"wheat": 4.0,
+			"guacca_seed": 3.0,
+			"pypa_seed": 9.0,
+			"earth_stone": 2.0,
+			"unidentified_artifact": 1.0,
+			"pallie_seed": 3.0,
+			"fire_stone": 3.0,
+			"stone": 31.0,
+			"chaos_stone": 2.0,
+			"tree_seed": 1.0,
+			"water_stone": 2.0,
+			"wheat_seed": 6.0,
+			"wooden_splint": 1.0,
+			"cooked_trout": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 08/04/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 536.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 3.0,
+		"general1": 19.0,
+		"general2": 2.0,
+		"time1": 9.0
+	}
+}

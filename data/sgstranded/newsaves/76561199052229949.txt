@@ -1,0 +1,70 @@
+{
+	"gtokens": {
+		"tokens": 34.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"thirsty10": true,
+		"craft1": true,
+		"losefish10": true,
+		"gtoken1": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"quest_token": 1.0,
+			"trout": 4.0,
+			"herring": 4.0,
+			"stone": 20.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 11/16/20",
+	"settings": {
+		"last_daily": 618.0,
+		"health": 104.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 972.0,
+		"mining": 613.0,
+		"arcane": 0.0,
+		"woodcutting": 522.0,
+		"smithing": 32.0,
+		"cooking": 0.0,
+		"construction": 54.0,
+		"farming": 682.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 21.0,
+		"smithing1": 4.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"fishing1": 54.0,
+		"farming2": 16.0,
+		"construction3": 3.0,
+		"general13": 31.0,
+		"time1": 69.0,
+		"mining1": 87.0,
+		"fishing2": 28.0,
+		"general1": 19.0,
+		"bloodmoon4": 1.0,
+		"woodcutting1": 85.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"farming1": 23.0,
+		"woodcutting2": 5.0,
+		"general5": 3.0
+	}
+}

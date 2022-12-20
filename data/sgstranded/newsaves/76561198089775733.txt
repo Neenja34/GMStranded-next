@@ -1,0 +1,68 @@
+{
+	"gtokens": {
+		"tokens": 17.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"afk10": true,
+		"relic1": true,
+		"thirsty10": true,
+		"gtoken1": true,
+		"craft1": true,
+		"losefish10": true,
+		"welcome": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"stone": 59.0,
+			"green_pet_egg": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 01/03/22",
+	"settings": {
+		"health": 79.0,
+		"playercolor": "[0.749 0.498 1]",
+		"last_daily": 3.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 738.0,
+		"mining": 560.0,
+		"arcane": 0.0,
+		"woodcutting": 311.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 8.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 1.0,
+		"smithing1": 2.0,
+		"time3": 2.0,
+		"fishing1": 41.0,
+		"farming2": 6.0,
+		"general11": 1.0,
+		"general8": 1.0,
+		"time1": 60.0,
+		"time2": 29.0,
+		"woodcutting2": 2.0,
+		"general7": 1.0,
+		"fishing2": 14.0,
+		"general1": 10.0,
+		"woodcutting1": 32.0,
+		"bloodmoon1": 1.0,
+		"mining1": 80.0,
+		"general5": 2.0,
+		"general13": 17.0
+	}
+}

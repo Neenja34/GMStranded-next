@@ -1,0 +1,75 @@
+{
+	"gtokens": {
+		"tokens": 51.0
+	},
+	"achievements": {
+		"time1": true,
+		"gems1": true,
+		"die1": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"craft1": true,
+		"craft10": true,
+		"woodf10": true,
+		"melon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod2",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_hatchet1",
+			"gms_hatchet1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Sunday 06/02/19",
+	"settings": {
+		"health": 0.0,
+		"melonaids": -1.0,
+		"person": "first",
+		"grindmode": "off"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 5247.3,
+		"arcane": 0.0,
+		"woodcutting": 2702.0,
+		"smithing": 104.0,
+		"cooking": 0.0,
+		"construction": 502.0,
+		"farming": 37.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 4.0,
+		"smithing1": 13.0,
+		"time3": 4.0,
+		"mining7": 10.0,
+		"alchemy2": 1.0,
+		"farming2": 30.0,
+		"mining8": 1.0,
+		"construction3": 7.0,
+		"general13": 47.0,
+		"general5": 9.0,
+		"time2": 5.0,
+		"mining1": 394.0,
+		"general7": 9.0,
+		"general4": 1.0,
+		"general1": 16.0,
+		"woodcutting1": 265.0,
+		"mining2": 31.0,
+		"general3": 1.0,
+		"construction1": 17.0,
+		"woodcutting2": 24.0,
+		"time1": 162.0
+	}
+}

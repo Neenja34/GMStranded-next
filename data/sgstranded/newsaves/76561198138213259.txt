@@ -1,0 +1,42 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"pypa_seed": 1.0,
+			"gms_firework_rainbow": 1.0,
+			"wood": 3.0,
+			"pallie_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 03/06/19",
+	"settings": {
+		"health": 35.0,
+		"melonaids": 3.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 27.0,
+		"arcane": 0.0,
+		"woodcutting": 17.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 2.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 7.0,
+		"general2": 7.0,
+		"woodcutting1": 3.0,
+		"time3": 1.0,
+		"farming2": 1.0,
+		"general4": 1.0,
+		"general1": 4.0
+	}
+}

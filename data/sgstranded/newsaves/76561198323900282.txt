@@ -1,0 +1,74 @@
+{
+	"gtokens": {
+		"tokens": 49.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"afk10": true,
+		"pbrew1": true,
+		"forage50": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"melon": true,
+		"craft1": true,
+		"gtoken1": true,
+		"welcome": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hatchet1",
+			"weapon_melee1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Thursday 06/13/19",
+	"settings": {
+		"health": -3.0,
+		"playercolor": "[1 1 1]",
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 12.0,
+		"fishing": 144.0,
+		"mining": 707.0,
+		"arcane": 0.0,
+		"woodcutting": 1374.0,
+		"smithing": 64.0,
+		"cooking": 0.0,
+		"construction": 162.0,
+		"farming": 907.25,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming1": 25.0,
+		"smithing1": 7.0,
+		"time3": 14.0,
+		"alchemy2": 2.0,
+		"construction1": 10.0,
+		"construction3": 6.0,
+		"general13": 14.0,
+		"time1": 114.0,
+		"farming2": 60.0,
+		"time2": 29.0,
+		"fishing1": 8.0,
+		"woodcutting2": 8.0,
+		"general5": 3.0,
+		"general4": 1.0,
+		"fishing2": 8.0,
+		"general1": 26.0,
+		"general2": 46.0,
+		"woodcutting1": 200.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"combat6": 1.0,
+		"alchemy1": 2.0,
+		"mining1": 103.0
+	}
+}

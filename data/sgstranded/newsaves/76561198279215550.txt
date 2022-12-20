@@ -1,0 +1,75 @@
+{
+	"gtokens": {
+		"tokens": 29.0
+	},
+	"achievements": {
+		"welcome": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_fishingrod1",
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_pickaxe1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Sunday 06/02/19",
+	"settings": {
+		"showlights": "true",
+		"showfar": "true",
+		"health": 104.0,
+		"playercolor": "[0 0 0]",
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 418.0,
+		"mining": 2563.0,
+		"arcane": 5.0,
+		"woodcutting": 337.0,
+		"smithing": 44.0,
+		"cooking": 220.0,
+		"construction": 96.0,
+		"farming": 82.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"cooking1": 12.0,
+		"arcane1": 1.0,
+		"general2": 41.0,
+		"smithing1": 5.0,
+		"time3": 1.0,
+		"mining7": 3.0,
+		"fishing1": 23.0,
+		"farming2": 16.0,
+		"construction3": 4.0,
+		"arcane3": 2.0,
+		"farming3": 1.0,
+		"general13": 19.0,
+		"general5": 2.0,
+		"general10": 1.0,
+		"time1": 94.0,
+		"mining1": 177.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"fishing2": 15.0,
+		"general1": 34.0,
+		"woodcutting2": 4.0,
+		"woodcutting1": 51.0,
+		"cooking5": 2.0,
+		"general3": 3.0,
+		"mining2": 9.0,
+		"general14": 300.0,
+		"cooking9": 12.0
+	}
+}

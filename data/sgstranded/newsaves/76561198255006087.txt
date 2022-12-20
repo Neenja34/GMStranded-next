@@ -1,0 +1,55 @@
+{
+	"gtokens": {
+		"tokens": 8.0
+	},
+	"achievements": {
+		"welcome": true,
+		"melon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 6.0,
+			"wheat": 1.0,
+			"guacca_seed": 4.0,
+			"the_cure": 1.0,
+			"liechi_seed": 2.0,
+			"moly_seed": 1.0,
+			"chaos_stone": 2.0,
+			"stone": 9.0,
+			"wheat_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 02/27/22",
+	"settings": {
+		"health": 28.0,
+		"playercolor": "[1 0 0]",
+		"last_daily": 480.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 74.0,
+		"arcane": 0.0,
+		"woodcutting": 34.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 29.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 9.0,
+		"general2": 4.0,
+		"time3": 1.0,
+		"general4": 1.0,
+		"farming2": 5.0,
+		"woodcutting1": 6.0,
+		"mining1": 9.0,
+		"woodcutting2": 1.0,
+		"general13": 8.0
+	}
+}

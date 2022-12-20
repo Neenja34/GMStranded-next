@@ -1,0 +1,79 @@
+{
+	"gtokens": {
+		"tokens": 8.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"craft1": true,
+		"welcome": true,
+		"burn1": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"weapon_melee1",
+			"gms_hoe1",
+			"gms_fishingrod1",
+			"gms_handtorch",
+			"gms_handtorch",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 2.0,
+			"cooked_lobster": 11.0,
+			"herring": 0.0,
+			"liechi_seed": 4.0,
+			"liferoot_seed": 1.0,
+			"perriot_seed": 1.0,
+			"lum_seed": 1.0,
+			"moly_seed": 1.0,
+			"trout": 0.0,
+			"karopa_seed": 1.0,
+			"stone": 14.0,
+			"burned_fish": 4.0,
+			"cooked_herring": 1.0,
+			"cooked_cod": 8.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 05/08/20",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 691.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 144.0,
+		"mining": 204.0,
+		"arcane": 0.0,
+		"woodcutting": 407.0,
+		"smithing": 40.0,
+		"cooking": 18.0,
+		"construction": 15.0,
+		"farming": 19.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"cooking1": 1.0,
+		"smithing1": 5.0,
+		"time3": 2.0,
+		"fishing1": 8.0,
+		"farming2": 10.0,
+		"construction3": 1.0,
+		"general5": 1.0,
+		"woodcutting2": 4.0,
+		"cooking5": 7.0,
+		"general1": 18.0,
+		"fishing2": 2.0,
+		"woodcutting1": 64.0,
+		"bloodmoon1": 1.0,
+		"time1": 43.0,
+		"general6": 1.0,
+		"mining1": 31.0,
+		"cooking9": 1.0
+	}
+}

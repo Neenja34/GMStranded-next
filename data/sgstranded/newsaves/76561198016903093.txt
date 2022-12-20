@@ -1,0 +1,46 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"secretworld": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 6.0,
+			"guacca_seed": 4.0,
+			"stone": 5.0,
+			"tree_seed": 1.0,
+			"perriot_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 05/10/20",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 658.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 38.0,
+		"arcane": 0.0,
+		"woodcutting": 35.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 3.0,
+		"woodcutting1": 6.0,
+		"time3": 2.0,
+		"mining1": 5.0,
+		"time1": 13.0,
+		"general2": 2.0
+	}
+}

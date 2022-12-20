@@ -1,0 +1,57 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"thirsty10": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hoe1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 19.0,
+			"guacca_seed": 3.0,
+			"liechi_seed": 4.0,
+			"perriot_seed": 1.0,
+			"lum_seed": 1.0,
+			"arctus_seed": 1.0,
+			"stone": 6.0,
+			"karopa_seed": 1.0,
+			"wheat_seed": 1.0,
+			"pypa_seed": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 09/28/21",
+	"settings": {
+		"last_daily": 877.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 154.0,
+		"arcane": 0.0,
+		"woodcutting": 202.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 24.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general1": 26.0,
+		"farming2": 17.0,
+		"woodcutting1": 37.0,
+		"smithing1": 3.0,
+		"mining1": 21.0,
+		"time1": 18.0,
+		"woodcutting2": 2.0,
+		"time3": 1.0
+	}
+}

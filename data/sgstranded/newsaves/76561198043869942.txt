@@ -1,0 +1,49 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 8.0,
+			"jelly_beans": 4.0,
+			"wheat": 3.0,
+			"wheat_seed": 1.0,
+			"pypa_seed": 1.0,
+			"liechi_seed": 1.0,
+			"liferoot_seed": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 08/03/21",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 1435.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 44.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 245.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 58.0,
+		"general2": 8.0,
+		"bloodmoon1": 1.0,
+		"time3": 2.0,
+		"farming2": 6.0,
+		"woodcutting1": 8.0,
+		"farming1": 6.0
+	}
+}

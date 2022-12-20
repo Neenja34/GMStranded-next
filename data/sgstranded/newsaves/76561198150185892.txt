@@ -1,0 +1,60 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1"
+		],
+		"resources": {
+			"wood": 8.0,
+			"farming_artifact_1": 8.0,
+			"wheat_seed": 4.0,
+			"fishing_artifact_1": 11.0,
+			"lum_seed": 1.0,
+			"moly_seed": 1.0,
+			"alchemy_relic_2": 0.0,
+			"farming_artifact_2": 3.0,
+			"earth_stone": 2.0,
+			"combat_relic_1": 1.0,
+			"perriot_seed": 1.0,
+			"pypa_seed": 1.0,
+			"farming_relic_1": 4.0,
+			"farming_relic_2": 4.0,
+			"stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 01/16/22",
+	"settings": {
+		"last_daily": 590.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 47.0,
+		"arcane": 0.0,
+		"woodcutting": 177.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 11.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 11.0,
+		"general2": 1.0,
+		"smithing1": 1.0,
+		"mining1": 6.0,
+		"farming2": 7.0,
+		"woodcutting1": 29.0,
+		"construction3": 1.0,
+		"time3": 1.0,
+		"woodcutting2": 2.0
+	}
+}

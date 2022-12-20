@@ -1,0 +1,53 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"guacca_seed": 12.0,
+			"fried_antlion_legs": 6.0,
+			"liechi_seed": 1.0,
+			"cooked_bass": 3.0,
+			"cod": 27.0,
+			"liferoot_seed": 4.0,
+			"herring": 27.0,
+			"gold_ore": 26.0,
+			"lobster": 2.0,
+			"iron_ore": 5.0,
+			"iron": 3.0,
+			"coal": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 07/12/22",
+	"settings": {
+		"last_daily": 568.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 9.0,
+		"arcane": 0.0,
+		"woodcutting": 50.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 8.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 11.0,
+		"woodcutting1": 8.0,
+		"farming2": 2.0,
+		"time3": 1.0,
+		"general7": 1.0,
+		"construction1": 1.0,
+		"general5": 1.0
+	}
+}

@@ -1,0 +1,84 @@
+{
+	"gtokens": {
+		"tokens": 26.0
+	},
+	"achievements": {
+		"welcome": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_pickaxe1",
+			"gms_hatchet1",
+			"weapon_melee1"
+		],
+		"resources": {
+			"herring": 0.0,
+			"trout": 0.0,
+			"bottled_water": 3.0,
+			"guacca_seed": 1.0,
+			"antlion_leg": 2.0,
+			"antlion_meat": 1.0,
+			"stone": 53.0,
+			"earth_stone": 2.0,
+			"cooked_herring": 4.0,
+			"pypa_seed": 1.0,
+			"emerald": 1.0,
+			"water_stone": 1.0,
+			"fire_stone": 1.0,
+			"burned_fish": 2.0,
+			"antlion_head": 1.0,
+			"void_cache": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 06/27/19",
+	"settings": {
+		"showlights": "true",
+		"grindmode": "off",
+		"health": 104.0,
+		"person": "first",
+		"showfar": "false"
+	},
+	"experience": {
+		"alchemy": 15.0,
+		"fishing": 288.0,
+		"mining": 1385.0,
+		"arcane": 0.0,
+		"woodcutting": 1171.0,
+		"smithing": 48.0,
+		"cooking": 198.0,
+		"construction": 182.6,
+		"farming": 65.0,
+		"combat": 59.4
+	},
+	"stats": {
+		"cooking1": 11.0,
+		"smithing1": 6.0,
+		"time3": 1.0,
+		"mining7": 2.0,
+		"fishing1": 16.0,
+		"alchemy1": 2.0,
+		"construction3": 10.0,
+		"general17": 1.0,
+		"farming2": 62.0,
+		"general13": 26.0,
+		"general5": 5.0,
+		"general10": 1.0,
+		"time1": 81.0,
+		"mining1": 188.0,
+		"woodcutting2": 10.0,
+		"general7": 1.0,
+		"general8": 3.0,
+		"cooking5": 2.0,
+		"general1": 54.0,
+		"alchemy2": 2.0,
+		"woodcutting1": 183.0,
+		"fishing2": 3.0,
+		"general3": 1.0,
+		"combat1": 2.0,
+		"construction1": 4.0,
+		"cooking9": 11.0
+	}
+}

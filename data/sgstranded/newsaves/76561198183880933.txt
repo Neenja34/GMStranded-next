@@ -1,0 +1,61 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"nomelon": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"wood": 6.0,
+			"trout": 1.0,
+			"pypa_seed": 0.0,
+			"lum_seed": 0.0,
+			"herring": 4.0,
+			"perriot_seed": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 09/29/19",
+	"settings": {
+		"health": 3.0,
+		"last_daily": 1424.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 306.0,
+		"mining": 150.0,
+		"arcane": 0.0,
+		"woodcutting": 93.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 11.0,
+		"farming": 16.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 88.0,
+		"general2": 10.0,
+		"time3": 4.0,
+		"general7": 2.0,
+		"fishing1": 17.0,
+		"fishing2": 9.0,
+		"farming2": 10.0,
+		"general5": 4.0,
+		"woodcutting1": 15.0,
+		"mining1": 19.0,
+		"general3": 1.0,
+		"general1": 22.0,
+		"construction1": 4.0,
+		"general8": 2.0
+	}
+}

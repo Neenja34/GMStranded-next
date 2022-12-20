@@ -1,0 +1,65 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"bloodchampion1": true,
+		"die1": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_hoe1"
+		],
+		"resources": {
+			"wood": 11.0,
+			"ruby": 1.0,
+			"bottled_water": 1.0,
+			"wheat_seed": 4.0,
+			"quest_token": 1.0,
+			"liechi_seed": 4.0,
+			"liferoot_seed": 1.0,
+			"pallie_seed": 1.0,
+			"red_liquorice": 2.0,
+			"stone": 13.0,
+			"pypa_seed": 4.0,
+			"marshmallow_peeps": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 02/06/20",
+	"settings": {
+		"health": 44.0,
+		"last_daily": 770.0,
+		"showfar": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 381.0,
+		"arcane": 0.0,
+		"woodcutting": 386.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 60.0,
+		"farming": 16.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 46.0,
+		"smithing1": 2.0,
+		"time3": 1.0,
+		"general7": 1.0,
+		"general5": 1.0,
+		"general1": 5.0,
+		"mining1": 59.0,
+		"woodcutting1": 63.0,
+		"bloodmoon1": 1.0,
+		"general3": 1.0,
+		"woodcutting2": 4.0,
+		"construction3": 4.0,
+		"farming2": 15.0
+	}
+}

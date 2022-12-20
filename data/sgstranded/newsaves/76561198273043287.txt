@@ -1,0 +1,57 @@
+{
+	"gtokens": {
+		"tokens": 11.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 10.0,
+			"cooked_lobster": 9.0,
+			"wheat_seed": 3.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 1.0,
+			"cooked_cod": 3.0,
+			"emerald": 1.0,
+			"gummy_bears": 5.0,
+			"pypa_seed": 8.0,
+			"cooked_tuna": 6.0,
+			"stone": 31.0,
+			"earth_stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 08/27/20",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 848.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 277.0,
+		"arcane": 0.0,
+		"woodcutting": 97.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 10.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"mining1": 39.0,
+		"general1": 7.0,
+		"woodcutting1": 13.0,
+		"general6": 1.0,
+		"time3": 3.0,
+		"farming2": 8.0,
+		"time1": 47.0,
+		"general13": 11.0
+	}
+}

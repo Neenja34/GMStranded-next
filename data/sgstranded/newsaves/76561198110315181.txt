@@ -1,0 +1,52 @@
+{
+	"gtokens": {
+		"tokens": 9.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 0.0,
+			"combat_relic_1": 0.0,
+			"guacca_seed": 4.0,
+			"stone": 22.0,
+			"cosmic_stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 05/03/19",
+	"settings": {
+		"health": 100.0,
+		"foragetoggle": true,
+		"grindmode": "off"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 758.0,
+		"arcane": 0.0,
+		"woodcutting": 154.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 0.0,
+		"combat": 96.0
+	},
+	"stats": {
+		"time1": 16.0,
+		"general2": 5.0,
+		"smithing1": 2.0,
+		"mining1": 33.0,
+		"mining7": 1.0,
+		"general1": 3.0,
+		"woodcutting1": 27.0,
+		"general11": 1.0,
+		"construction3": 1.0,
+		"time3": 1.0,
+		"woodcutting2": 3.0,
+		"general13": 9.0
+	}
+}

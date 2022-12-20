@@ -1,0 +1,50 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_fishingrod1"
+		],
+		"resources": {
+			"smithing_relic_3": 1.0,
+			"pypa_seed": 2.0,
+			"scrambled_brains": 3.0,
+			"arctus_seed": 2.0,
+			"stone": 64.0,
+			"wood": 1.0,
+			"wheat_seed": 1.0,
+			"perriot_seed": 5.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 10/03/20",
+	"settings": {
+		"last_daily": 487.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 8.0,
+		"farming": 4.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming2": 5.0,
+		"general2": 5.0,
+		"time3": 1.0,
+		"time1": 10.0,
+		"construction1": 1.0
+	}
+}

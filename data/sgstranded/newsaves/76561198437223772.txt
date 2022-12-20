@@ -1,0 +1,66 @@
+{
+	"gtokens": {
+		"tokens": 27.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"welcome": true,
+		"goldm1": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 11.0,
+			"wheat": 3.0,
+			"wheat_seed": 1.0,
+			"stone": 84.0,
+			"liechi_seed": 2.0,
+			"unidentified_artifact": 1.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 1.0,
+			"jelly_beans": 3.0,
+			"pypa_seed": 2.0,
+			"moly_seed": 1.0,
+			"tree_seed": 1.0,
+			"gms_firework_green": 2.0,
+			"liferoot_seed": 1.0,
+			"guacca_seed": 6.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 04/27/20",
+	"settings": {
+		"last_daily": 205.0,
+		"health": 40.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 2461.0,
+		"arcane": 0.0,
+		"woodcutting": 141.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 200.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 32.0,
+		"general2": 3.0,
+		"woodcutting2": 2.0,
+		"general7": 1.0,
+		"mining7": 5.0,
+		"general1": 16.0,
+		"farming2": 15.0,
+		"time3": 1.0,
+		"mining2": 2.0,
+		"mining1": 126.0,
+		"general5": 1.0,
+		"woodcutting1": 21.0,
+		"farming3": 1.0,
+		"general13": 27.0
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"gtokens": {
+		"tokens": 4.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true,
+		"nomelon": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_hoe1",
+			"gms_handtorch"
+		],
+		"resources": {
+			"wood": 16.0,
+			"cooked_trout": 1.0,
+			"cotton_candy": 4.0,
+			"unidentified_artifact": 2.0,
+			"cooked_herring": 1.0,
+			"herring": 0.0,
+			"stone": 25.0,
+			"chaos_stone": 2.0,
+			"tree_seed": 1.0,
+			"trout": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/07/20",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 932.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 54.0,
+		"mining": 442.0,
+		"arcane": 0.0,
+		"woodcutting": 555.0,
+		"smithing": 28.0,
+		"cooking": 54.0,
+		"construction": 53.0,
+		"farming": 0.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 18.0,
+		"smithing1": 3.0,
+		"mining1": 54.0,
+		"general13": 4.0,
+		"fishing1": 3.0,
+		"fishing2": 3.0,
+		"general1": 3.0,
+		"time3": 2.0,
+		"woodcutting1": 87.0,
+		"woodcutting2": 6.0,
+		"construction3": 3.0,
+		"cooking1": 3.0,
+		"construction1": 2.0,
+		"cooking9": 3.0
+	}
+}

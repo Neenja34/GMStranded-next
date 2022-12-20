@@ -1,0 +1,105 @@
+{
+	"gtokens": {
+		"tokens": 290.0
+	},
+	"achievements": {
+		"time1": true,
+		"time2": true
+	},
+	"inventory": {
+		"ptcache": {
+			"gms_hatchet2": 0.0,
+			"weapon_melee2": 1.0,
+			"gms_handtorch": 1.0,
+			"gms_grindingstone": 1.0,
+			"gms_hatchet1": 1.0,
+			"gms_sifter": 1.0,
+			"gms_hoe2": 1.0,
+			"weapon_melee1": 0.0,
+			"gms_pickaxe2": 0.0,
+			"gms_hammer": 2.0,
+			"gms_fishingrod1": 1.0,
+			"gms_pickaxe1": 1.0,
+			"gms_hoe1": 1.0,
+			"gms_fishingrod2": 1.0,
+			"gms_fryingpan": 1.0
+		},
+		"tools": [
+			"weapon_melee1"
+		],
+		"resources": {
+			"gms_lamp": 1.0,
+			"gms_sink": 1.0,
+			"gms_bed": 1.0,
+			"cooked_tuna": 36.0,
+			"gms_firebrazier": 1.0,
+			"oak_wood": 61.0,
+			"gms_furnace": 1.0,
+			"gms_workbench": 1.0,
+			"gms_spawnpoint": 1.0,
+			"gms_stove": 1.0,
+			"gms_lamp2": 1.0,
+			"gms_ptcache": 1.0,
+			"gms_alchlab": 1.0,
+			"iron": 100.0,
+			"gms_aidbench": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/16/19",
+	"settings": {
+		"health": 128.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 25.2,
+		"fishing": 12270.0,
+		"mining": 18850.4,
+		"arcane": 0.0,
+		"woodcutting": 8353.2,
+		"smithing": 4231.4,
+		"cooking": 11590.8,
+		"construction": 2142.6,
+		"farming": 875.2,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 4.0,
+		"general2": 131.0,
+		"time3": 5.0,
+		"general9": 2.0,
+		"construction3": 19.0,
+		"woodcutting2": 95.0,
+		"general7": 1.0,
+		"bloodmoon1": 22.0,
+		"cooking9": 576.0,
+		"mining3": 84.0,
+		"farming1": 18.0,
+		"smithing1": 95.0,
+		"mining7": 81.0,
+		"alchemy2": 2.0,
+		"alchemy1": 7.0,
+		"construction1": 35.0,
+		"mining8": 4.0,
+		"time1": 647.0,
+		"smithing2": 1373.0,
+		"farming3": 1.0,
+		"general13": 290.0,
+		"general5": 4.0,
+		"fishing1": 591.0,
+		"construction2": 8.0,
+		"time2": 4140.0,
+		"mining1": 1028.0,
+		"cooking1": 576.0,
+		"general4": 5.0,
+		"fishing2": 315.0,
+		"general1": 240.0,
+		"general17": 3.0,
+		"mining2": 882.0,
+		"woodcutting1": 1491.0,
+		"general3": 25.0,
+		"cooking5": 15.0,
+		"farming2": 181.0,
+		"smithing3": 199.0
+	}
+}

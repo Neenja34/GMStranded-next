@@ -1,0 +1,62 @@
+{
+	"gtokens": {
+		"tokens": 1.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"craft1": true,
+		"welcome": true,
+		"gtoken1": true,
+		"woodc100": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cooked_herring": 4.0,
+			"cooked_tuna": 2.0,
+			"guacca_seed": 1.0,
+			"liechi_seed": 1.0,
+			"wood": 2.0,
+			"pallie_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 08/25/19",
+	"settings": {
+		"health": 55.0,
+		"last_daily": 1375.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 78.0,
+		"arcane": 0.0,
+		"woodcutting": 664.0,
+		"smithing": 8.0,
+		"cooking": 0.0,
+		"construction": 94.0,
+		"farming": 21.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 5.0,
+		"smithing1": 1.0,
+		"time3": 2.0,
+		"construction1": 11.0,
+		"construction3": 1.0,
+		"general13": 1.0,
+		"time1": 59.0,
+		"woodcutting2": 7.0,
+		"general7": 1.0,
+		"general1": 13.0,
+		"mining1": 11.0,
+		"woodcutting1": 102.0,
+		"general6": 1.0,
+		"general3": 1.0,
+		"general8": 1.0,
+		"farming2": 16.0,
+		"general5": 3.0
+	}
+}

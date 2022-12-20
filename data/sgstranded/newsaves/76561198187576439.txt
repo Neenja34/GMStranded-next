@@ -1,0 +1,69 @@
+{
+	"gtokens": {
+		"tokens": 6.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true,
+		"melon": true,
+		"craft1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 8.0,
+			"wheat": 2.0,
+			"guacca_seed": 9.0,
+			"the_cure": 0.0,
+			"liechi_seed": 8.0,
+			"liferoot_seed": 2.0,
+			"perriot_seed": 3.0,
+			"lum_seed": 4.0,
+			"tree_seed": 1.0,
+			"arctus_seed": 2.0,
+			"pypa_seed": 11.0,
+			"wheat_seed": 3.0,
+			"stone": 29.0,
+			"moly_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 04/10/20",
+	"settings": {
+		"health": 91.0,
+		"last_daily": 1017.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 293.0,
+		"arcane": 0.0,
+		"woodcutting": 169.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 3.0,
+		"farming": 88.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 20.0,
+		"general2": 7.0,
+		"smithing1": 3.0,
+		"mining1": 46.0,
+		"general4": 1.0,
+		"general1": 7.0,
+		"construction1": 1.0,
+		"farming2": 33.0,
+		"woodcutting1": 28.0,
+		"woodcutting2": 2.0,
+		"general3": 1.0,
+		"time3": 1.0,
+		"alchemy2": 1.0,
+		"general13": 6.0
+	}
+}

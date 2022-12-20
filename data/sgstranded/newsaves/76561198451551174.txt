@@ -1,0 +1,69 @@
+{
+	"gtokens": {
+		"tokens": 1.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"craft1": true,
+		"gtoken1": true,
+		"nomelon": true,
+		"pbrew1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Friday 07/12/19",
+	"settings": {
+		"last_daily": 282.0,
+		"health": 100.0,
+		"playercolor": "[1 0 0]",
+		"person": "third",
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 21.0,
+		"fishing": 252.0,
+		"mining": 28.75,
+		"arcane": 0.0,
+		"woodcutting": 973.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 51.0,
+		"farming": 297.5,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 14.0,
+		"smithing1": 2.0,
+		"time3": 2.0,
+		"alchemy2": 2.0,
+		"farming2": 32.0,
+		"construction3": 3.0,
+		"general13": 1.0,
+		"time1": 93.0,
+		"alchemy1": 3.0,
+		"fishing1": 14.0,
+		"farming1": 6.0,
+		"mining1": 4.0,
+		"general7": 1.0,
+		"general8": 1.0,
+		"fishing2": 7.0,
+		"general1": 17.0,
+		"general6": 2.0,
+		"woodcutting1": 156.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"construction1": 2.0,
+		"general5": 9.0,
+		"woodcutting2": 7.0
+	}
+}

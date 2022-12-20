@@ -1,0 +1,65 @@
+{
+	"gtokens": {
+		"tokens": 9.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_fishingrod1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 10.0,
+			"chaos_stone": 2.0,
+			"nature_stone": 1.0,
+			"water_stone": 3.0,
+			"iron_ore": 8.0,
+			"stone": 92.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 05/05/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": 1.0
+	},
+	"experience": {
+		"alchemy": 6.0,
+		"fishing": 108.0,
+		"mining": 170.0,
+		"arcane": 0.0,
+		"woodcutting": 1018.0,
+		"smithing": 44.0,
+		"cooking": 0.0,
+		"construction": 123.0,
+		"farming": 81.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming1": 2.0,
+		"smithing1": 5.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"fishing1": 6.0,
+		"farming2": 23.0,
+		"construction3": 3.0,
+		"general13": 9.0,
+		"time1": 46.0,
+		"general5": 2.0,
+		"construction1": 8.0,
+		"woodcutting2": 12.0,
+		"mining1": 24.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"fishing2": 6.0,
+		"general1": 12.0,
+		"cooking5": 4.0,
+		"woodcutting1": 143.0,
+		"general6": 1.0,
+		"general3": 1.0,
+		"alchemy1": 1.0,
+		"alchemy2": 1.0,
+		"general2": 14.0
+	}
+}

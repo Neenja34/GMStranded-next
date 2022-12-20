@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 4.0
+	},
+	"achievements": {
+		"welcome": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 4.0,
+			"wheat_seed": 1.0,
+			"stone": 15.0,
+			"marshmallow_peeps": 5.0,
+			"karopa_seed": 1.0,
+			"guacca_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 01/13/22",
+	"settings": {
+		"melonaids": 0.0,
+		"foragetoggle": true,
+		"last_daily": 431.0,
+		"grindmode": "on",
+		"health": 100.0,
+		"hidefromteam": "on",
+		"person": "first",
+		"showfar": "false"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 81.0,
+		"arcane": 0.0,
+		"woodcutting": 25.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 6.0,
+		"general1": 2.0,
+		"time2": 2.0,
+		"farming2": 3.0,
+		"time3": 3.0,
+		"mining1": 15.0,
+		"woodcutting1": 4.0,
+		"general13": 4.0
+	}
+}

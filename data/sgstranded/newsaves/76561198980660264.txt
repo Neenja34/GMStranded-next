@@ -1,0 +1,68 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wheat_seed": 9.0,
+			"antlion_meat": 5.0,
+			"liferoot_seed": 4.0,
+			"bass": 29.0,
+			"moly_seed": 3.0,
+			"gold_ore": 16.0,
+			"antlion_head": 7.0,
+			"wood": 1.0,
+			"cloth": 1.0,
+			"pallie_seed": 2.0,
+			"liechi_seed": 2.0,
+			"stone": 11.0,
+			"guacca_seed": 4.0,
+			"arctus_seed": 5.0,
+			"pypa_seed": 1.0,
+			"nature_stone": 1.0,
+			"antlion_leg": 9.0,
+			"buckeye_wood": 9.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 07/12/22",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 755.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 147.0,
+		"arcane": 0.0,
+		"woodcutting": 125.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 17.0,
+		"farming": 154.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"time2": 9.0,
+		"time3": 3.0,
+		"general7": 1.0,
+		"construction1": 2.0,
+		"general1": 3.0,
+		"farming2": 29.0,
+		"time1": 35.0,
+		"woodcutting1": 20.0,
+		"bloodmoon1": 1.0,
+		"construction3": 2.0,
+		"farming1": 4.0,
+		"general2": 3.0,
+		"mining1": 23.0
+	}
+}

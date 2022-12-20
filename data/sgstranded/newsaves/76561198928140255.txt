@@ -1,0 +1,84 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"thirsty10": true,
+		"die1": true,
+		"craft1": true,
+		"welcome": true,
+		"berries10": true,
+		"time1": true,
+		"relic1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"cooking_relic_1": 0.0,
+			"cooked_trout": 0.0,
+			"guacca_seed": 0.0,
+			"marshmallow_peeps": 5.0,
+			"liferoot_seed": 0.0,
+			"moly_seed": 0.0,
+			"karopa_seed": 0.0,
+			"iron_ore": 0.0,
+			"wood": 14.0,
+			"ruby": 0.0,
+			"wheat": 1.0,
+			"pallie_seed": 0.0,
+			"lum_seed": 0.0,
+			"gms_workbench": 1.0,
+			"earth_stone": 0.0,
+			"arctus_seed": 0.0,
+			"pypa_seed": 2.0,
+			"stone": 78.0,
+			"wheat_seed": 1.0,
+			"gummy_bears": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 08/03/21",
+	"settings": {
+		"melonaids": 0.0,
+		"showlights": "false",
+		"last_daily": 936.0,
+		"showfar": "true",
+		"health": 100.0,
+		"hidefromteam": "on",
+		"showparticles": "false",
+		"playercolor": "[0 0.2471 1]"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 873.0,
+		"arcane": 0.0,
+		"woodcutting": 280.0,
+		"smithing": 16.0,
+		"cooking": 96.0,
+		"construction": 36.0,
+		"farming": 571.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 1.0,
+		"general1": 19.0,
+		"general2": 21.0,
+		"smithing1": 2.0,
+		"time3": 3.0,
+		"general7": 1.0,
+		"mining1": 100.0,
+		"time1": 75.0,
+		"farming2": 47.0,
+		"general3": 2.0,
+		"woodcutting1": 46.0,
+		"general11": 1.0,
+		"construction3": 2.0,
+		"woodcutting2": 2.0,
+		"farming1": 17.0,
+		"mining7": 1.0
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 1.0,
+			"gms_firework_purple": 1.0,
+			"cooked_cod": 25.0,
+			"cooked_shark": 37.0,
+			"stone": 13.0,
+			"cooked_salmon": 39.0,
+			"cooked_bass": 2.0,
+			"cooked_herring": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 01/15/22",
+	"settings": {
+		"last_daily": 254.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 112.0,
+		"arcane": 0.0,
+		"woodcutting": 25.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 8.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 5.0,
+		"general2": 2.0,
+		"time3": 1.0,
+		"mining1": 13.0,
+		"farming2": 6.0,
+		"woodcutting1": 4.0
+	}
+}

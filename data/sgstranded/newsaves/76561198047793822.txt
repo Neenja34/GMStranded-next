@@ -1,0 +1,48 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"die1": true,
+		"melon": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"marshmallow_peeps": 5.0,
+			"wheat": 1.0,
+			"arctus_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 04/24/20",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 801.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 246.0,
+		"arcane": 0.0,
+		"woodcutting": 93.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 40.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 16.0,
+		"general2": 6.0,
+		"time3": 2.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"farming2": 18.0,
+		"woodcutting1": 15.0,
+		"mining1": 32.0,
+		"general5": 1.0
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"melon": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"relic1": true,
+		"woodf10": true,
+		"craft1": true,
+		"thirsty10": true,
+		"forage50": true,
+		"woodc100": true,
+		"pbrew1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"gms_handtorch",
+			"gms_pickaxe1",
+			"gms_fishingrod1",
+			"gms_hatchet1"
+		],
+		"resources": {
+			"wood": 28.0,
+			"bottled_water": 5.0,
+			"pypa_seed": 10.0,
+			"water_stone": 3.0,
+			"wooden_splint": 0.0,
+			"stone": 0.0,
+			"tree_seed": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 07/26/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": -1.0,
+		"foragetoggle": true,
+		"last_daily": 670.0
+	},
+	"experience": {
+		"alchemy": 15.0,
+		"fishing": 0.0,
+		"mining": 481.0,
+		"arcane": 0.0,
+		"woodcutting": 1027.0,
+		"smithing": 164.0,
+		"cooking": 0.0,
+		"construction": 88.0,
+		"farming": 499.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"farming1": 15.0,
+		"smithing1": 8.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"alchemy2": 2.0,
+		"construction1": 4.0,
+		"general11": 1.0,
+		"construction3": 4.0,
+		"general8": 1.0,
+		"time1": 45.0,
+		"mining1": 66.0,
+		"general4": 1.0,
+		"general1": 12.0,
+		"farming2": 54.0,
+		"woodcutting1": 168.0,
+		"general2": 22.0,
+		"general3": 1.0,
+		"woodcutting2": 10.0,
+		"general5": 1.0,
+		"alchemy1": 2.0
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"gtokens": {
+		"tokens": 49.0
+	},
+	"achievements": {
+		"welcome": true,
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_handtorch",
+			"gms_pickaxe1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Tuesday 06/25/19",
+	"settings": {
+		"health": 0.0,
+		"melonaids": 4.0
+	},
+	"experience": {
+		"alchemy": 21.0,
+		"fishing": 54.0,
+		"mining": 1116.0,
+		"arcane": 0.0,
+		"woodcutting": 1809.0,
+		"smithing": 52.0,
+		"cooking": 0.0,
+		"construction": 357.0,
+		"farming": 870.0,
+		"combat": 96.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 79.0,
+		"smithing1": 6.0,
+		"time3": 1.0,
+		"mining7": 1.0,
+		"fishing1": 3.0,
+		"construction1": 22.0,
+		"general9": 1.0,
+		"general11": 2.0,
+		"construction3": 5.0,
+		"mining1": 154.0,
+		"general13": 22.0,
+		"time1": 158.0,
+		"cooking5": 3.0,
+		"time2": 58.0,
+		"general5": 5.0,
+		"woodcutting2": 16.0,
+		"general7": 4.0,
+		"general4": 2.0,
+		"fishing2": 1.0,
+		"general1": 52.0,
+		"alchemy1": 3.0,
+		"woodcutting1": 284.0,
+		"bloodmoon1": 1.0,
+		"general3": 5.0,
+		"alchemy2": 3.0,
+		"farming1": 28.0,
+		"farming2": 32.0
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"gtokens": {
+		"tokens": 20.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 21.0,
+			"yellow_pet_egg": 1.0,
+			"liferoot_seed": 1.0,
+			"perriot_seed": 1.0,
+			"moly_seed": 1.0,
+			"stone": 12.0,
+			"tree_seed": 1.0,
+			"fishing_relic_2": 1.0,
+			"red_apple": 1.0,
+			"pypa_seed": 12.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 06/12/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": 9.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 246.0,
+		"arcane": 0.0,
+		"woodcutting": 418.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 73.0,
+		"farming": 110.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 22.0,
+		"farming1": 3.0,
+		"mining1": 32.0,
+		"woodcutting2": 5.0,
+		"general7": 1.0,
+		"general4": 1.0,
+		"time3": 1.0,
+		"farming2": 19.0,
+		"construction1": 8.0,
+		"woodcutting1": 63.0,
+		"general5": 1.0,
+		"general1": 13.0,
+		"general2": 4.0,
+		"general15": 1.0,
+		"general13": 20.0
+	}
+}

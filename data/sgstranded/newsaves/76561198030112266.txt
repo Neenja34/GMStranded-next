@@ -1,0 +1,67 @@
+{
+	"gtokens": {
+		"tokens": 37.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"welcome": true,
+		"woodc100": true,
+		"woodf10": true,
+		"craft1": true,
+		"burn1": true,
+		"thirsty10": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"gms_hatchet1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Monday 08/29/22",
+	"settings": {
+		"health": 0.0,
+		"last_daily": 688.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 234.0,
+		"mining": 618.0,
+		"arcane": 0.0,
+		"woodcutting": 1086.0,
+		"smithing": 32.0,
+		"cooking": 36.0,
+		"construction": 57.0,
+		"farming": 63.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"cooking1": 2.0,
+		"general2": 5.0,
+		"smithing1": 4.0,
+		"time3": 2.0,
+		"mining7": 1.0,
+		"fishing1": 13.0,
+		"farming2": 11.0,
+		"construction3": 4.0,
+		"general13": 37.0,
+		"general5": 4.0,
+		"time2": 3.0,
+		"woodcutting2": 11.0,
+		"general7": 1.0,
+		"cooking5": 11.0,
+		"general1": 23.0,
+		"time1": 69.0,
+		"woodcutting1": 136.0,
+		"general6": 2.0,
+		"general3": 2.0,
+		"mining1": 77.0,
+		"fishing2": 2.0,
+		"cooking9": 2.0
+	}
+}

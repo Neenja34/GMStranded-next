@@ -1,0 +1,99 @@
+{
+	"gtokens": {
+		"tokens": 326.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"pbrew1": true,
+		"craft1": true,
+		"burn1": true,
+		"relic1": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"weapon_melee1",
+			"gms_fishingrod1",
+			"gms_fishingrod1",
+			"gms_hatchet1",
+			"gms_handtorch",
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1",
+			"gms_pickaxe1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"gummy_bears": 5.0,
+			"wheat_seed": 3.0,
+			"liechi_seed": 2.0,
+			"arctus_seed": 2.0,
+			"aid_pack": 1.0,
+			"void_cache": 1.0,
+			"wood": 5.0,
+			"wind_stone": 2.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 1.0,
+			"gms_aidbench": 1.0,
+			"gms_stove": 1.0,
+			"water_stone": 1.0,
+			"fire_stone": 1.0,
+			"stone": 21.0,
+			"gms_workbench": 1.0,
+			"arcane_relic_1": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 02/02/20",
+	"settings": {
+		"showfar": "false",
+		"last_daily": 424.0,
+		"grindmode": "off",
+		"health": 104.0,
+		"hidefromteam": "off",
+		"foragetoggle": true,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 7.0,
+		"fishing": 80.0,
+		"mining": 1413.0,
+		"arcane": 104.0,
+		"woodcutting": 1002.0,
+		"smithing": 83.0,
+		"cooking": 0.0,
+		"construction": 285.0,
+		"farming": 72.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming1": 1.0,
+		"smithing1": 9.0,
+		"general17": 1.0,
+		"mining7": 1.0,
+		"fishing1": 4.0,
+		"construction1": 8.0,
+		"general11": 2.0,
+		"construction3": 4.0,
+		"general13": 26.0,
+		"time1": 97.0,
+		"general5": 2.0,
+		"mining1": 248.0,
+		"general7": 2.0,
+		"farming2": 30.0,
+		"fishing2": 4.0,
+		"general1": 18.0,
+		"general2": 5.0,
+		"woodcutting1": 147.0,
+		"time3": 5.0,
+		"general3": 2.0,
+		"woodcutting2": 7.0,
+		"alchemy1": 1.0,
+		"cooking5": 4.0
+	}
+}

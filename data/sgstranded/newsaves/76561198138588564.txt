@@ -1,0 +1,80 @@
+{
+	"gtokens": {
+		"tokens": 97.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_grindingstone",
+			"gms_fishingrod1",
+			"gms_sifter",
+			"gms_handtorch",
+			"gms_pickaxe1",
+			"weapon_melee1"
+		],
+		"resources": {
+			"Package": 0.0,
+			"trout": 0.0,
+			"stone": 0.0,
+			"wood": 0.0,
+			"fishing_relic_1": 0.0,
+			"cooked_herring": 0.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 05/04/19",
+	"settings": {
+		"health": 48.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 18.0,
+		"fishing": 744.0,
+		"mining": 6483.0,
+		"arcane": 0.0,
+		"woodcutting": 1524.0,
+		"smithing": 32.0,
+		"cooking": 414.0,
+		"construction": 504.0,
+		"farming": 37.2,
+		"combat": 125.7
+	},
+	"stats": {
+		"general15": 1.0,
+		"general2": 10.0,
+		"general17": 1.0,
+		"combat6": 1.0,
+		"general9": 1.0,
+		"general11": 2.0,
+		"construction3": 8.0,
+		"general8": 2.0,
+		"woodcutting2": 16.0,
+		"general7": 2.0,
+		"combat1": 1.0,
+		"combat2": 1.0,
+		"cooking9": 23.0,
+		"cooking1": 23.0,
+		"smithing1": 4.0,
+		"mining7": 15.0,
+		"alchemy2": 2.0,
+		"farming2": 32.0,
+		"general13": 94.0,
+		"time1": 194.0,
+		"time2": 3.0,
+		"fishing1": 36.0,
+		"mining1": 220.0,
+		"construction1": 85.0,
+		"general4": 1.0,
+		"fishing2": 22.0,
+		"general1": 69.0,
+		"cooking5": 1.0,
+		"mining2": 33.0,
+		"woodcutting1": 211.0,
+		"general3": 4.0,
+		"time3": 2.0,
+		"general5": 7.0,
+		"alchemy1": 2.0
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"gtokens": {
+		"tokens": 7.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Saturday 07/20/19",
+	"settings": {
+		"health": 0.0,
+		"playercolor": "[1 0 0]",
+		"last_daily": 1013.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 70.0,
+		"arcane": 0.0,
+		"woodcutting": 790.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 134.0,
+		"farming": 442.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 3.0,
+		"general13": 7.0,
+		"general2": 18.0,
+		"time1": 51.0,
+		"mining1": 9.0,
+		"general7": 2.0,
+		"construction1": 16.0,
+		"construction3": 1.0,
+		"farming2": 30.0,
+		"general1": 13.0,
+		"woodcutting1": 131.0,
+		"time3": 1.0,
+		"general3": 1.0,
+		"farming1": 14.0,
+		"woodcutting2": 10.0,
+		"general8": 1.0
+	}
+}

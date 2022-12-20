@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"wood": 20.0,
+			"cooked_lobster": 7.0,
+			"wheat_seed": 1.0,
+			"pypa_seed": 3.0,
+			"stone": 19.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 07/03/19",
+	"settings": {
+		"last_daily": 1117.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 251.0,
+		"arcane": 0.0,
+		"woodcutting": 300.0,
+		"smithing": 24.0,
+		"cooking": 0.0,
+		"construction": 15.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 22.0,
+		"smithing1": 3.0,
+		"mining1": 36.0,
+		"time3": 1.0,
+		"general1": 4.0,
+		"farming2": 2.0,
+		"woodcutting1": 56.0,
+		"general6": 1.0,
+		"general3": 1.0,
+		"woodcutting2": 4.0,
+		"construction3": 1.0,
+		"general5": 1.0
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"gtokens": {
+		"tokens": 86.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"pcache": {
+			"wood": 45.0,
+			"oak_wood": 134.0
+		},
+		"tools": [
+			"gms_pickaxe1",
+			"gms_hatchet2"
+		],
+		"resources": {
+			"cosmic_stone": 1.0,
+			"ruby": 1.0,
+			"bottled_water": 3.0,
+			"nature_stone": 1.0,
+			"black_pet_egg": 1.0,
+			"wind_stone": 1.0,
+			"oak_wood": 15.0,
+			"cooked_herring": 4.0,
+			"wood": 33.0,
+			"chaos_stone": 4.0,
+			"guacca_seed": 4.0,
+			"pypa_seed": 1.0,
+			"stone": 2.0,
+			"red_apple": 1.0,
+			"white_pet_egg": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Monday 05/13/19",
+	"settings": {
+		"showlights": "true",
+		"health": 104.0,
+		"melonaids": 9.0,
+		"foragetoggle": true,
+		"showparticles": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 234.0,
+		"arcane": 8.0,
+		"woodcutting": 7872.0,
+		"smithing": 16.0,
+		"cooking": 0.0,
+		"construction": 24.0,
+		"farming": 158.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general15": 2.0,
+		"arcane1": 2.0,
+		"general2": 61.0,
+		"smithing1": 2.0,
+		"time3": 3.0,
+		"mining7": 1.0,
+		"farming2": 13.0,
+		"construction3": 1.0,
+		"arcane3": 4.0,
+		"general13": 82.0,
+		"time1": 160.0,
+		"general10": 1.0,
+		"time2": 6.0,
+		"woodcutting2": 70.0,
+		"general7": 2.0,
+		"general4": 2.0,
+		"general1": 82.0,
+		"woodcutting1": 1079.0,
+		"bloodmoon1": 1.0,
+		"general3": 4.0,
+		"general5": 3.0,
+		"mining1": 42.0,
+		"farming1": 5.0
+	}
+}

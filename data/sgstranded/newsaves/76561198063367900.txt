@@ -1,0 +1,70 @@
+{
+	"gtokens": {
+		"tokens": 32.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"gtoken1": true,
+		"goldm1": true,
+		"craft1": true,
+		"burn1": true,
+		"relic1": true,
+		"nomelon": true,
+		"bloodchampion1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_pickaxe1",
+			"gms_handtorch"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Tuesday 09/21/21",
+	"settings": {
+		"health": 100.0,
+		"showlights": "true",
+		"last_daily": 285.0,
+		"showparticles": "true"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 198.0,
+		"mining": 758.0,
+		"arcane": 0.0,
+		"woodcutting": 665.0,
+		"smithing": 36.0,
+		"cooking": 0.0,
+		"construction": 409.0,
+		"farming": 77.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"farming1": 1.0,
+		"smithing1": 4.0,
+		"time3": 1.0,
+		"fishing1": 11.0,
+		"farming2": 20.0,
+		"general11": 1.0,
+		"construction3": 4.0,
+		"farming3": 1.0,
+		"general8": 1.0,
+		"time1": 95.0,
+		"woodcutting2": 7.0,
+		"general7": 2.0,
+		"fishing2": 4.0,
+		"cooking5": 8.0,
+		"general1": 33.0,
+		"mining1": 106.0,
+		"woodcutting1": 113.0,
+		"bloodmoon1": 1.0,
+		"general3": 2.0,
+		"general5": 3.0,
+		"general13": 17.0,
+		"construction1": 4.0
+	}
+}

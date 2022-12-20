@@ -1,0 +1,54 @@
+{
+	"gtokens": {
+		"tokens": 3.0
+	},
+	"achievements": {
+		"welcome": true,
+		"melon": true,
+		"goldm1": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 5.0,
+			"the_cure": 1.0,
+			"guacca_seed": 3.0,
+			"pypa_seed": 1.0,
+			"wheat_seed": 2.0,
+			"unidentified_artifact": 1.0,
+			"stone": 4.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 10/16/20",
+	"settings": {
+		"health": 73.0,
+		"last_daily": 1022.0,
+		"melonaids": 6.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 36.0,
+		"arcane": 0.0,
+		"woodcutting": 33.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 31.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 20.0,
+		"general2": 2.0,
+		"time3": 1.0,
+		"general4": 1.0,
+		"general1": 2.0,
+		"woodcutting1": 5.0,
+		"mining1": 4.0,
+		"farming2": 4.0,
+		"farming3": 1.0,
+		"general13": 3.0
+	}
+}

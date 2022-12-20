@@ -1,0 +1,48 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true,
+		"secretworld": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1"
+		],
+		"resources": [],
+		"pethouse": []
+	},
+	"date": "Tuesday 07/09/19",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 358.0,
+		"foragetoggle": true
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 1022.0,
+		"arcane": 0.0,
+		"woodcutting": 257.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 10.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 46.0,
+		"general2": 2.0,
+		"time3": 1.0,
+		"general7": 4.0,
+		"farming2": 4.0,
+		"general5": 4.0,
+		"woodcutting1": 33.0,
+		"bloodmoon1": 2.0,
+		"woodcutting2": 2.0,
+		"mining1": 67.0,
+		"mining7": 1.0,
+		"time2": 352.0
+	}
+}

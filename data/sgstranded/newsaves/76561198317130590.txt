@@ -1,0 +1,101 @@
+{
+	"gtokens": {
+		"tokens": 12.0
+	},
+	"achievements": {
+		"time1": true,
+		"die1": true,
+		"berries10": true,
+		"welcome": true,
+		"woodc100": true,
+		"thirsty10": true,
+		"structurem5": true,
+		"craft1": true,
+		"burn1": true,
+		"pbrew1": true,
+		"nomelon": true,
+		"gtoken1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_fishingrod1",
+			"gms_hoe1",
+			"gms_hatchet1",
+			"gms_pickaxe1"
+		],
+		"resources": {
+			"arcane_relic_1": 2.0,
+			"cooking_relic_1": 1.0,
+			"arctus_seed": 2.0,
+			"guacca_seed": 5.0,
+			"fishing_relic_1": 1.0,
+			"liechi_seed": 6.0,
+			"alchemy_relic_1": 2.0,
+			"wheat_seed": 3.0,
+			"moly_seed": 1.0,
+			"stone": 30.0,
+			"red_liquorice": 5.0,
+			"construction_relic_1": 1.0,
+			"aid_pack": 1.0,
+			"burned_fish": 1.0,
+			"alchemy_relic_2": 1.0,
+			"lum_seed": 2.0,
+			"wood": 11.0,
+			"mining_relic_1": 2.0,
+			"wheat": 3.0,
+			"jelly_beans": 5.0,
+			"smithing_relic_1": 2.0,
+			"wind_stone": 2.0,
+			"smithing_relic_2": 1.0,
+			"perriot_seed": 1.0,
+			"farming_relic_1": 1.0,
+			"arcane_relic_2": 2.0,
+			"chaos_stone": 1.0,
+			"fishing_relic_2": 1.0,
+			"pypa_seed": 2.0,
+			"tree_seed": 1.0,
+			"red_apple": 1.0,
+			"cooking_relic_2": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 04/02/22",
+	"settings": {
+		"health": 100.0,
+		"last_daily": 428.0,
+		"melonaids": 0.0
+	},
+	"experience": {
+		"alchemy": 6.0,
+		"fishing": 18.0,
+		"mining": 438.0,
+		"arcane": 0.0,
+		"woodcutting": 979.0,
+		"smithing": 32.0,
+		"cooking": 0.0,
+		"construction": 125.0,
+		"farming": 92.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 10.0,
+		"smithing1": 4.0,
+		"time3": 3.0,
+		"fishing1": 1.0,
+		"farming2": 24.0,
+		"construction3": 5.0,
+		"general13": 12.0,
+		"time1": 66.0,
+		"woodcutting2": 7.0,
+		"general7": 1.0,
+		"fishing2": 1.0,
+		"general1": 10.0,
+		"general5": 2.0,
+		"woodcutting1": 153.0,
+		"general6": 1.0,
+		"mining1": 68.0,
+		"construction1": 7.0,
+		"alchemy1": 1.0,
+		"cooking5": 1.0
+	}
+}

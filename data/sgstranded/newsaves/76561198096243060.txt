@@ -1,0 +1,112 @@
+{
+	"gtokens": {
+		"tokens": 81.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"pcache": {
+			"cosmic_stone": 1.0,
+			"gms_firework_rainbow": 2.0,
+			"gms_firework_yellow": 1.0,
+			"liechi_seed": 6.0,
+			"unidentified_artifact": 1.0,
+			"moly_seed": 1.0,
+			"arctus_seed": 5.0,
+			"tree_seed": 3.0,
+			"inert_stone": 10.0,
+			"void_cache": 1.0,
+			"cloth": 1.0,
+			"gms_firework_white": 1.0,
+			"pallie_seed": 1.0,
+			"lum_seed": 1.0,
+			"chaos_stone": 5.0,
+			"earth_stone": 2.0,
+			"fire_stone": 1.0,
+			"stone": 47.0,
+			"karopa_seed": 1.0,
+			"guacca_seed": 5.0
+		},
+		"tools": [
+			"gms_fishingrod2",
+			"gms_sifter",
+			"gms_grindingstone",
+			"gms_hoe2",
+			"gms_hatchet2",
+			"gms_pickaxe2",
+			"weapon_melee2"
+		],
+		"resources": {
+			"metal": 1.0,
+			"arctus_seed": 5.0,
+			"water_stone": 1.0,
+			"antlion_meat": 1.0,
+			"antlion_head": 2.0,
+			"coal": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 03/23/19",
+	"settings": {
+		"foragetoggle": true,
+		"health": 120.0,
+		"playercolor": "[0 0 0]",
+		"person": "third",
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 28.0,
+		"fishing": 560.0,
+		"mining": 7994.0,
+		"arcane": 15.0,
+		"woodcutting": 4343.0,
+		"smithing": 2967.0,
+		"cooking": 786.0,
+		"construction": 2903.0,
+		"farming": 6124.0,
+		"combat": 1154.0
+	},
+	"stats": {
+		"general15": 1.0,
+		"combat8": 11.0,
+		"general17": 1.0,
+		"general11": 1.0,
+		"construction3": 14.0,
+		"woodcutting2": 32.0,
+		"general7": 1.0,
+		"combat1": 11.0,
+		"bloodmoon1": 1.0,
+		"cooking9": 32.0,
+		"mining3": 7.0,
+		"arcane1": 3.0,
+		"farming1": 87.0,
+		"smithing1": 38.0,
+		"mining7": 25.0,
+		"fishing1": 28.0,
+		"alchemy1": 4.0,
+		"smithing3": 110.0,
+		"time3": 3.0,
+		"woodcutting1": 611.0,
+		"alchemy2": 4.0,
+		"arcane3": 6.0,
+		"farming3": 1.0,
+		"general13": 81.0,
+		"general5": 2.0,
+		"cooking4": 4.0,
+		"time2": 45.0,
+		"general2": 75.0,
+		"mining1": 341.0,
+		"cooking1": 28.0,
+		"general4": 1.0,
+		"fishing2": 11.0,
+		"general1": 154.0,
+		"farming2": 114.0,
+		"mining2": 350.0,
+		"general6": 1.0,
+		"general3": 13.0,
+		"smithing2": 960.0,
+		"time1": 328.0,
+		"construction1": 50.0
+	}
+}

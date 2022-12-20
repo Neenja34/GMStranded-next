@@ -1,0 +1,44 @@
+{
+	"gtokens": {
+		"tokens": 8.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 11.0,
+			"red_liquorice": 5.0,
+			"karopa_seed": 1.0,
+			"stone": 14.0,
+			"cosmic_stone": 1.0,
+			"moly_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Sunday 02/16/20",
+	"settings": {
+		"last_daily": 166.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 100.0,
+		"arcane": 0.0,
+		"woodcutting": 75.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 6.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 6.0,
+		"woodcutting1": 11.0,
+		"time3": 1.0,
+		"mining1": 14.0,
+		"farming2": 2.0
+	}
+}

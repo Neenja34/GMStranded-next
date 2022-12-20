@@ -1,0 +1,47 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 49.0,
+			"farming_relic_2": 1.0,
+			"scrambled_white_eggs": 3.0,
+			"tree_seed": 5.0,
+			"liechi_seed": 2.0,
+			"red_apple": 3.0,
+			"black_pet_egg": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 04/06/19",
+	"settings": {
+		"health": 69.0,
+		"melonaids": 0.0,
+		"foragetoggle": true,
+		"grindmode": "on"
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 0.0,
+		"arcane": 0.0,
+		"woodcutting": 3332.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 2.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 11.0,
+		"woodcutting1": 49.0,
+		"general1": 3.0,
+		"time3": 3.0,
+		"general15": 1.0,
+		"farming2": 2.0,
+		"woodcutting2": 34.0
+	}
+}

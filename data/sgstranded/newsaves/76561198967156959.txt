@@ -1,0 +1,46 @@
+{
+	"gtokens": {
+		"tokens": 1.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cooked_eel": 107.0,
+			"naquadah_powder": 12.0,
+			"stone": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Saturday 06/22/19",
+	"settings": {
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 235.25,
+		"arcane": 0.0,
+		"woodcutting": 56.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 44.25,
+		"combat": 0.0
+	},
+	"stats": {
+		"general5": 3.0,
+		"mining1": 11.0,
+		"general7": 2.0,
+		"farming2": 15.0,
+		"time3": 1.0,
+		"woodcutting1": 7.0,
+		"general6": 1.0,
+		"time1": 46.0,
+		"general1": 19.0,
+		"bloodmoon1": 1.0,
+		"general13": 1.0
+	}
+}

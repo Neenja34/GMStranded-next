@@ -1,0 +1,107 @@
+{
+	"gtokens": {
+		"tokens": 98.0
+	},
+	"achievements": {
+		"melon": true,
+		"welcome": true,
+		"berries100": true,
+		"relic1": true,
+		"structurem5": true,
+		"plants50": true,
+		"cute": true,
+		"gtoken1": true,
+		"time1": true,
+		"gems1": true,
+		"die1": true,
+		"berries10": true,
+		"afk10": true,
+		"thirsty10": true,
+		"forage50": true,
+		"sleepy10": true,
+		"craft1": true,
+		"pbrew1": true,
+		"bloodchampion1": true,
+		"ored10": true,
+		"pdrink5": true
+	},
+	"inventory": {
+		"ptcache": {
+			"gms_hatchet2": 1.0,
+			"gms_seedextractor": 1.0,
+			"gms_handtorch": 0.0,
+			"gms_hoe2": 1.0,
+			"weapon_melee1": 1.0,
+			"gms_pickaxe2": 0.0,
+			"gms_sifter": 1.0,
+			"gms_fishingrod2": 0.0,
+			"weapon_melee2": 1.0
+		},
+		"tools": [
+			"gms_handtorch",
+			"gms_pickaxe2"
+		],
+		"resources": {
+			"stone": 68.0,
+			"liechi_seed": 24.0,
+			"wheat": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 07/30/19",
+	"settings": {
+		"last_daily": 356.0,
+		"grindmode": "off",
+		"health": 96.0,
+		"playercolor": "[0 0 0]",
+		"foragetoggle": true,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 414.0,
+		"fishing": 0.0,
+		"mining": 14988.0,
+		"arcane": 0.0,
+		"woodcutting": 234.0,
+		"smithing": 27.0,
+		"cooking": 0.0,
+		"construction": 1520.0,
+		"farming": 6974.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"general2": 136.0,
+		"time3": 2.0,
+		"general16": 1.0,
+		"general11": 1.0,
+		"construction3": 8.0,
+		"general8": 1.0,
+		"woodcutting2": 2.0,
+		"general7": 2.0,
+		"bloodmoon1": 3.0,
+		"cooking9": 1.0,
+		"cooking1": 1.0,
+		"pets9": 1.0,
+		"farming1": 115.0,
+		"smithing1": 2.0,
+		"mining7": 49.0,
+		"alchemy2": 8.0,
+		"farming2": 114.0,
+		"mining8": 2.0,
+		"general13": 98.0,
+		"time1": 318.0,
+		"time2": 10.0,
+		"mining1": 1166.0,
+		"general17": 1.0,
+		"general4": 2.0,
+		"construction1": 38.0,
+		"general1": 130.0,
+		"woodcutting1": 62.0,
+		"mining2": 408.0,
+		"alchemy1": 12.0,
+		"general3": 11.0,
+		"general5": 3.0,
+		"smithing2": 1.0,
+		"mining3": 61.0
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"gtokens": {
+		"tokens": 0.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"cotton_candy": 5.0,
+			"jelly_beans": 5.0,
+			"sapphire": 1.0,
+			"liferoot_seed": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Thursday 05/07/20",
+	"settings": {
+		"last_daily": 144.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 14.0,
+		"arcane": 0.0,
+		"woodcutting": 0.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 2.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time3": 1.0,
+		"time1": 2.0,
+		"farming2": 2.0
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"gtokens": {
+		"tokens": 51.0
+	},
+	"achievements": {
+		"time1": true
+	},
+	"inventory": {
+		"tools": [
+			"gms_hatchet1",
+			"gms_fishingrod1",
+			"gms_grindingstone",
+			"gms_pickaxe1",
+			"gms_hoe1",
+			"gms_pickaxe1",
+			"gms_handtorch",
+			"gms_handtorch",
+			"weapon_melee1"
+		],
+		"resources": {
+			"gms_rcache": 1.0,
+			"gms_spawnpoint": 1.0,
+			"cooked_trout": 0.0,
+			"gms_tcache": 1.0,
+			"antlion_leg": 2.0
+		},
+		"pethouse": []
+	},
+	"date": "Tuesday 03/26/19",
+	"settings": {
+		"showlights": "true",
+		"health": 43.0,
+		"hidefromteam": "on",
+		"foragetoggle": true,
+		"showparticles": "true"
+	},
+	"experience": {
+		"alchemy": 12.0,
+		"fishing": 725.4,
+		"mining": 1621.0,
+		"arcane": 4.0,
+		"woodcutting": 865.0,
+		"smithing": 553.0,
+		"cooking": 782.4,
+		"construction": 98.0,
+		"farming": 85.0,
+		"combat": 155.4
+	},
+	"stats": {
+		"cooking1": 37.0,
+		"arcane1": 1.0,
+		"general2": 23.0,
+		"smithing1": 7.0,
+		"time3": 1.0,
+		"mining7": 3.0,
+		"fishing1": 40.0,
+		"farming2": 73.0,
+		"general5": 1.0,
+		"general11": 3.0,
+		"construction3": 5.0,
+		"arcane3": 2.0,
+		"woodcutting2": 10.0,
+		"general13": 51.0,
+		"time1": 146.0,
+		"cooking4": 1.0,
+		"alchemy1": 2.0,
+		"construction1": 4.0,
+		"mining1": 160.0,
+		"smithing4": 48.0,
+		"fishing2": 15.0,
+		"combat1": 2.0,
+		"general1": 106.0,
+		"alchemy2": 2.0,
+		"woodcutting1": 139.0,
+		"bloodmoon1": 1.0,
+		"general3": 6.0,
+		"cooking5": 2.0,
+		"general8": 1.0,
+		"cooking9": 38.0
+	}
+}

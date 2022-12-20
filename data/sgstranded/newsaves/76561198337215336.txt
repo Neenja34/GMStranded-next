@@ -1,0 +1,45 @@
+{
+	"gtokens": {
+		"tokens": 6.0
+	},
+	"achievements": [],
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"lum_seed": 1.0,
+			"stone": 8.0
+		},
+		"pethouse": []
+	},
+	"date": "Friday 03/22/19",
+	"settings": {
+		"health": 100.0,
+		"melonaids": -1.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 996.0,
+		"arcane": 0.0,
+		"woodcutting": 8.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 27.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 26.0,
+		"general2": 15.0,
+		"time3": 3.0,
+		"mining7": 3.0,
+		"general4": 1.0,
+		"farming2": 24.0,
+		"general9": 1.0,
+		"woodcutting1": 1.0,
+		"general1": 29.0,
+		"mining1": 46.0,
+		"general5": 1.0,
+		"general13": 6.0
+	}
+}

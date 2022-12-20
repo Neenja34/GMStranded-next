@@ -1,0 +1,45 @@
+{
+	"gtokens": {
+		"tokens": 2.0
+	},
+	"achievements": {
+		"welcome": true
+	},
+	"inventory": {
+		"tools": [],
+		"resources": {
+			"wood": 1.0,
+			"chaos_stone": 1.0,
+			"karopa_seed": 1.0,
+			"stone": 1.0,
+			"pypa_seed": 1.0
+		},
+		"pethouse": []
+	},
+	"date": "Wednesday 08/21/19",
+	"settings": {
+		"last_daily": 282.0,
+		"health": 100.0
+	},
+	"experience": {
+		"alchemy": 0.0,
+		"fishing": 0.0,
+		"mining": 9.0,
+		"arcane": 0.0,
+		"woodcutting": 8.0,
+		"smithing": 0.0,
+		"cooking": 0.0,
+		"construction": 0.0,
+		"farming": 3.0,
+		"combat": 0.0
+	},
+	"stats": {
+		"time1": 5.0,
+		"general2": 1.0,
+		"mining1": 1.0,
+		"time3": 1.0,
+		"general1": 1.0,
+		"farming2": 1.0,
+		"woodcutting1": 1.0
+	}
+}
