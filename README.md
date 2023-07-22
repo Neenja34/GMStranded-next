@@ -7,13 +7,20 @@ I've included the website files, and the player data that my server used to use 
 
 How to install as single player only:
 
+Note: Unfortunately this version of Stranded will conflict with the classic version of Stranded: https://steamcommunity.com/sharedfiles/filedetails/?id=133364818&searchtext=stranded - this means you will have to unsubscribe from that version to install this version. Sorry!
+
 Step 1: Download the gamemode here https://github.com/zpetty33/GMStranded and then download this repo.
 
 Step 2: Copy the following folders from GMStranded-master (the original gamemode) to steamapps\common\GarrysMod\garrysmod (Overwrite if it asks you to).
-		1. gamemodes
-		2. maps
-		3. particles
-		4. data
+
+a) gamemodes
+
+b) maps
+
+c) particles
+
+d) data
+
 Step 3: Copy everything from GMStranded-next-main (the Project Gull updates) except the README & Website folder to steamapps\common\GarrysMod\garrysmod (Overwrite if it asks you to).
 		
 		(It's important that step 2 and 3 are done in order!)
